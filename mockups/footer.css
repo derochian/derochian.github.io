@@ -1,0 +1,190 @@
+/* ─────────────────────────────────────────────────────────────────────
+   Kolben — shared 3-tier site footer.
+
+   Identical across every page; consumed via:
+     <link rel="stylesheet" href="footer.css">
+     <script defer src="footer-i18n.js"></script>
+
+   Markup lives at the end of every page <body>. The existing
+   "Become a Distributor" CTA band remains ABOVE this footer where present.
+   ───────────────────────────────────────────────────────────────────── */
+
+.site-footer { font-family: 'Inter', system-ui, sans-serif; }
+.site-footer .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+/* Tier 1 — value band */
+.ft-band { background: #f6f5f3; padding: 38px 0; border-top: 1px solid rgba(0,0,0,.08); }
+.ft-band__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 34px; }
+.ft-band__item { display: flex; gap: 14px; align-items: flex-start; }
+.ft-band__item svg { width: 26px; height: 26px; color: #DE1F26; flex: 0 0 auto; }
+.ft-band__h { font: 600 13px/1.2 'Jost', system-ui, sans-serif; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 4px; color: #0a0a0a; }
+.ft-band__p { font: 400 12.5px/1.5 'Inter', system-ui, sans-serif; color: rgba(0,0,0,.6); margin: 0; }
+
+/* Tier 2 — navigation */
+.ft-nav { background: #0a0a0a; color: #fff; padding: 54px 0 42px; }
+.ft-nav__grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1.5fr; gap: 40px; }
+.ft-nav__head { font: 600 11px/1 'Jost', system-ui, sans-serif; letter-spacing: .18em; text-transform: uppercase; color: #FDCF09; margin: 0 0 18px; }
+.ft-nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.ft-nav a { color: rgba(255,255,255,.72); text-decoration: none; font: 400 13.5px/1 'Inter', system-ui, sans-serif; transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1); }
+.ft-nav a:hover { color: #fff; }
+.ft-nav__contact { font: 400 13.5px/1.7 'Inter', system-ui, sans-serif; color: rgba(255,255,255,.72); }
+.ft-nav__contact a { color: rgba(255,255,255,.72); }
+.ft-nav__social { display: flex; gap: 9px; margin-top: 16px; }
+.ft-nav__social a {
+  width: 34px; height: 34px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 2px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,.72);
+  transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ft-nav__social a:hover { color: #fff; border-color: rgba(255,255,255,.4); }
+.ft-nav__social svg { width: 16px; height: 16px; }
+.ft-nav__news { display: flex; margin-top: 18px; max-width: 330px; }
+.ft-nav__news input {
+  flex: 1; min-width: 0;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+  color: #fff; padding: 10px 12px;
+  font: 400 13px 'Inter', system-ui, sans-serif;
+  border-radius: 2px 0 0 2px;
+}
+.ft-nav__news input::placeholder { color: rgba(255,255,255,.45); }
+.ft-nav__news input:focus { outline: 2px solid #DE1F26; outline-offset: 2px; }
+.ft-nav__news button {
+  background: #DE1F26; color: #fff; border: 0;
+  padding: 0 16px;
+  font: 600 12px 'Jost', system-ui, sans-serif;
+  letter-spacing: .06em; text-transform: uppercase;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+  transition: background 200ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ft-nav__news button:hover { background: #b41a20; }
+
+/* Tier 3 — bottom bar */
+.ft-base { background: #000; border-top: 2px solid #DE1F26; padding: 20px 0; }
+.ft-base__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.ft-base__left { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.ft-base__left img { height: 24px; filter: brightness(0) invert(1); }
+.ft-base__copy { font: 400 12px/1.4 'Inter', system-ui, sans-serif; color: rgba(255,255,255,.5); }
+.ft-base__certs {
+  font: 500 10px/1 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.4);
+  padding-left: 18px;
+  border-left: 1px solid rgba(255,255,255,.14);
+}
+.ft-base__right { display: flex; align-items: center; gap: 18px; font: 400 12px 'Inter', system-ui, sans-serif; }
+.ft-base__right a { color: rgba(255,255,255,.55); text-decoration: none; transition: color 200ms cubic-bezier(0.16, 1, 0.3, 1); }
+.ft-base__right a:hover { color: rgba(255,255,255,.9); }
+.ft-base__tag {
+  font: 600 11px/1 'Jost', system-ui, sans-serif;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: rgba(255,255,255,.7);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   PAGE CTA — LIGHT VARIANT
+   Applied via .is-light modifier on the existing closing CTA sections
+   (.qcta, .dist, .news-band). Recasts the band as an off-white surface
+   with dark text and a red accent so the page descends light → dark
+   into the footer's value band (no dark→light→dark sandwich).
+   ───────────────────────────────────────────────────────────────────── */
+.qcta.is-light,
+.dist.is-light,
+.news-band.is-light {
+  background: #f6f5f3;
+  color: #0a0a0a;
+  border-top: 1px solid rgba(0,0,0,.08);
+  /* Kill the red 3px rule and any decorative inset gradients these
+     sections carry in their dark variant. */
+  border-bottom: 0;
+}
+.qcta.is-light::before,
+.dist.is-light::before,
+.news-band.is-light::before { display: none !important; }
+
+.qcta.is-light .qcta__eyebrow,
+.dist.is-light .dist__eyebrow,
+.news-band.is-light .news-band__eyebrow {
+  color: #0a0a0a;
+}
+.qcta.is-light .qcta__eyebrow::before,
+.dist.is-light .dist__eyebrow::before,
+.news-band.is-light .news-band__eyebrow::before {
+  background: #DE1F26;
+}
+.qcta.is-light .qcta__h,
+.dist.is-light .dist__h,
+.dist.is-light .dist__title,
+.news-band.is-light .news-band__h {
+  color: #0a0a0a;
+}
+.qcta.is-light .qcta__h em,
+.dist.is-light .dist__h em,
+.dist.is-light .dist__title em,
+.news-band.is-light .news-band__h em {
+  color: #DE1F26;
+}
+.qcta.is-light .qcta__sub,
+.dist.is-light .dist__sub,
+.news-band.is-light .news-band__sub {
+  color: rgba(0,0,0,.65);
+}
+
+/* btn--ghost-light is engineered for dark surfaces (white outline →
+   filled white on hover). Re-skin it on the light variant so the
+   outline stays legible and inverts to filled black on hover. */
+.qcta.is-light .btn--ghost-light,
+.dist.is-light .btn--ghost-light,
+.news-band.is-light .btn--ghost-light {
+  color: #0a0a0a;
+  border: 1.5px solid #0a0a0a;
+  background: transparent;
+}
+.qcta.is-light .btn--ghost-light:hover,
+.dist.is-light .btn--ghost-light:hover,
+.news-band.is-light .btn--ghost-light:hover {
+  background: #0a0a0a;
+  color: #fff;
+  border-color: #0a0a0a;
+}
+
+/* Newsletter band — recast the inline field for a light surface.
+   Original styling targets var(--gold) on black; we want a sharper
+   red/black treatment that matches the rest of the light CTA band. */
+.news-band.is-light .nl-field {
+  border: 1px solid rgba(0,0,0,.16);
+  background: #fff;
+}
+.news-band.is-light .nl-field:focus-within {
+  border-color: #DE1F26;
+  box-shadow: 0 0 0 3px rgba(222,31,38,.15);
+}
+.news-band.is-light .nl-field input { color: #0a0a0a; }
+.news-band.is-light .nl-field input::placeholder { color: rgba(0,0,0,.45); }
+.news-band.is-light .nl-field button {
+  background: #DE1F26;
+  color: #fff;
+}
+.news-band.is-light .nl-field button:hover { background: #b41a20; }
+.news-band.is-light .nl-foot { color: rgba(0,0,0,.55); }
+.news-band.is-light .nl-foot b { color: #DE1F26; }
+
+/* When a page already has its own newsletter band (e.g. news.html), we
+   suppress the footer's newsletter input to avoid a double-signup. The
+   page sets `data-no-footer-news` on <body>. */
+body[data-no-footer-news] .site-footer .ft-nav__news { display: none; }
+body[data-no-footer-news] .site-footer .ft-nav__social { margin-top: 4px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ft-nav__grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .ft-band__grid { grid-template-columns: 1fr; gap: 22px; }
+}
+@media (max-width: 560px) {
+  .ft-nav__grid { grid-template-columns: 1fr; }
+  .ft-base__inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .ft-base__certs { padding-left: 0; border-left: 0; }
+}

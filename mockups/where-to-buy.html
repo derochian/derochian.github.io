@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kolben — Where to Buy</title>
+<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
+<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───────── TOKENS — locked brand palette ───────── */
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --silver-50:  #e9eaec;
+    --silver-100: #d3d5d9;
+    --silver-200: #b9bcc2;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --on-black-primary: rgba(255,255,255,.85);
+    --on-black-muted:   rgba(255,255,255,.70);
+    --on-black-border:  rgba(255,255,255,.16);
+    --on-black-hover:   rgba(255,255,255,.12);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a, input, select, textarea { font: inherit; color: inherit; }
+  button, a { cursor: pointer; }
+  button { border: 0; background: none; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ───────── UTILITY BAR ───────── */
+  .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid var(--on-black-border); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: var(--on-black-hover); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ───────── BUTTONS ───────── */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
+  .btn--sm { padding: 11px 18px; font-size: 11px; }
+  .btn--lg { padding: 17px 28px; font-size: 13px; }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--ghost-light { background: transparent; color: var(--white); border: 1.5px solid var(--on-black-border); }
+  .btn--ghost-light:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     HERO — black, 80×80 radial-masked grid
+  ═══════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative; overflow: hidden;
+    background: var(--black); color: var(--white);
+    padding: 96px 0 92px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--red) 0, var(--red) 50%, var(--gold) 50%, var(--gold) 100%);
+    z-index: 2;
+  }
+  .hero__grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    pointer-events: none;
+  }
+  .hero__inner { position: relative; display: grid; grid-template-columns: 1.45fr 1fr; gap: 64px; align-items: end; }
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 14px; margin-bottom: 22px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white);
+  }
+  .hero__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .hero__h1 {
+    font-family: 'Jost'; font-weight: 700;
+    font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+    line-height: 0.98; letter-spacing: -0.035em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 22px;
+    text-wrap: balance;
+    max-width: 16ch;
+  }
+  .hero__h1 em { font-style: normal; color: var(--gold); }
+  .hero__sub {
+    font: 400 17px/1.55 'Inter'; color: var(--on-black-primary);
+    max-width: 56ch;
+    margin-bottom: 36px;
+  }
+  .hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .hero__meta {
+    display: flex; flex-direction: column; gap: 16px;
+    border-left: 1px solid var(--on-black-border);
+    padding: 6px 0 6px 28px;
+    align-self: end;
+    min-width: 260px;
+  }
+  .hero__meta-h {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--on-black-muted);
+  }
+  .hero__meta-list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--on-black-border); }
+  .hero__meta-row {
+    display: flex; align-items: baseline; justify-content: space-between; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--on-black-border);
+  }
+  .hero__meta-row b {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--white); font-weight: 500;
+  }
+  .hero__meta-row span {
+    font: 400 13px/1.4 'Inter'; color: var(--on-black-muted); text-align: right;
+  }
+  .hero__chips { display: flex; flex-wrap: wrap; gap: 6px; padding-top: 6px; }
+  .hero__chip {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--on-black-primary);
+    padding: 7px 10px;
+    border: 1px solid var(--on-black-border);
+    border-radius: 2px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     SECTION HEAD (reused)
+  ═══════════════════════════════════════════════════════════ */
+  .sh { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
+  .sh__left { max-width: 720px; }
+  .sh__eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); }
+  .sh__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .sh__eyebrow.is-light { color: var(--white); }
+  .sh__h { font: 700 clamp(1.6rem, 2.6vw, 2.1rem)/1.05 'Jost'; letter-spacing: -0.025em; text-transform: uppercase; color: var(--black); margin-bottom: 10px; text-wrap: balance; max-width: 22ch; }
+  .sh__h em { font-style: normal; color: var(--red); }
+  .sh__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); max-width: 60ch; }
+  .sh__count { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); align-self: end; padding-bottom: 6px; }
+  .sh__count b { color: var(--black); font-weight: 500; padding-right: 6px; }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWO-PATH ROUTER BAND
+  ═══════════════════════════════════════════════════════════ */
+  .router-sec { background: var(--offwhite); padding: 64px 0 72px; border-bottom: 1px solid var(--rule); }
+  .router { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); background: var(--rule); }
+  .route {
+    background: var(--white);
+    padding: 36px 36px 32px;
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: start;
+    gap: 24px;
+    position: relative; overflow: hidden;
+    transition: background 220ms var(--ease);
+    min-height: 180px;
+  }
+  .route::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .route:hover { background: var(--offwhite); }
+  .route:hover::after { transform: scaleX(1); }
+  .route__icon { width: 44px; height: 44px; color: var(--black); }
+  .route__icon svg { width: 100%; height: 100%; }
+  .route__body { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+  .route__label { font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--red); }
+  .route__h { font: 700 22px/1.12 'Jost'; letter-spacing: -0.015em; text-transform: uppercase; color: var(--black); text-wrap: balance; }
+  .route__line { font: 400 14px/1.55 'Inter'; color: var(--muted); }
+  .route__arrow {
+    align-self: end; padding-bottom: 4px;
+    font: 600 14px/1 'JetBrains Mono'; letter-spacing: 0; color: var(--black);
+    transition: transform 220ms var(--ease);
+  }
+  .route:hover .route__arrow { transform: translateX(4px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     WHERE TO FIND — partner / distribution band
+  ═══════════════════════════════════════════════════════════ */
+  .partners-sec { background: var(--white); padding: 88px 0 96px; }
+  .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .pcard {
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 24px 22px 20px;
+    display: flex; flex-direction: column;
+    min-height: 220px;
+    position: relative; overflow: hidden;
+    transition: border-color 220ms var(--ease), transform 220ms var(--ease);
+  }
+  .pcard:hover { border-color: rgba(0,0,0,.30); transform: translateY(-2px); }
+  .pcard::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .pcard:hover::after { transform: scaleX(1); }
+  .pcard__top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding-bottom: 16px; margin-bottom: 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pcard__icon { width: 32px; height: 32px; color: var(--black); }
+  .pcard__icon svg { width: 100%; height: 100%; }
+  .pcard__tag {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+  }
+  .pcard__name { font: 700 17px/1.18 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; text-wrap: balance; }
+  .pcard__line { font: 400 13.5px/1.5 'Inter'; color: var(--muted); flex: 1; margin-bottom: 18px; }
+  .pcard__foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding-top: 14px; border-top: 1px solid var(--rule);
+  }
+  .pcard__city { font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .16em; text-transform: uppercase; color: var(--black); }
+  .pcard__link {
+    font: 600 10.5px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--red);
+    display: inline-flex; align-items: center; gap: 6px;
+    transition: opacity 200ms var(--ease);
+  }
+  .pcard__link:hover { opacity: .75; }
+  .pcard__link .arrow { transition: transform 220ms var(--ease); }
+  .pcard__link:hover .arrow { transform: translateX(3px); }
+
+  /* Empty-state default — the honest "we're building" block */
+  .partners-empty {
+    border: 1px solid var(--rule);
+    background: var(--white);
+    padding: 40px 40px 36px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px; align-items: center;
+    position: relative; overflow: hidden;
+  }
+  .partners-empty::before {
+    content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+    background: var(--red);
+  }
+  .partners-empty__h {
+    font: 700 22px/1.18 'Jost'; letter-spacing: -0.015em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 12px; max-width: 26ch; text-wrap: balance;
+  }
+  .partners-empty__sub { font: 400 14.5px/1.55 'Inter'; color: var(--muted); max-width: 48ch; }
+  .partners-empty__right { display: flex; flex-direction: column; gap: 16px; align-items: flex-start; }
+  .partners-empty__chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .partners-empty__chip {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--black); padding: 7px 10px; border: 1px solid var(--rule); border-radius: 2px;
+  }
+
+  /* Toggle UI — show populated vs default (graceful) state */
+  .partners-toggle {
+    display: inline-flex; align-items: stretch; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden;
+    margin-left: auto; align-self: end; padding-bottom: 4px;
+  }
+  .partners-toggle button {
+    padding: 9px 14px; font: 600 10.5px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); background: var(--white); border-right: 1px solid var(--rule);
+    transition: all 200ms var(--ease);
+  }
+  .partners-toggle button:last-child { border-right: 0; }
+  .partners-toggle button.active { background: var(--black); color: var(--white); }
+  .partners-toggle button:not(.active):hover { background: var(--offwhite); color: var(--black); }
+
+  /* ═══════════════════════════════════════════════════════════
+     REQUEST A SUPPLIER — form
+  ═══════════════════════════════════════════════════════════ */
+  .form-sec { background: var(--offwhite); padding: 96px 0 104px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .form-wrap {
+    display: grid;
+    grid-template-columns: 0.95fr 1.4fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .form-aside .sh__eyebrow { margin-bottom: 18px; }
+  .form-aside__h {
+    font: 700 clamp(1.8rem, 3.2vw, 2.4rem)/1.04 'Jost';
+    letter-spacing: -0.03em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 18px;
+    text-wrap: balance;
+  }
+  .form-aside__h em { font-style: normal; color: var(--red); }
+  .form-aside__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); margin-bottom: 26px; max-width: 42ch; }
+  .form-aside__list { display: flex; flex-direction: column; gap: 0; border-top: 1px solid var(--rule); }
+  .form-aside__row {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .form-aside__row b {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--black); font-weight: 500;
+    min-width: 92px;
+  }
+  .form-aside__row span { font: 400 14px/1.45 'Inter'; color: var(--muted); }
+
+  .form {
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 40px 40px 36px;
+    border-radius: 2px;
+    position: relative;
+  }
+  .form::before {
+    content: ''; position: absolute; left: -1px; right: -1px; top: -1px; height: 3px;
+    background: var(--red);
+  }
+  .form__h {
+    font: 600 12px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 4px;
+  }
+  .form__sub { font: 400 13.5px/1.55 'Inter'; color: var(--muted); margin-bottom: 26px; }
+  .form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+  .field { display: flex; flex-direction: column; gap: 8px; }
+  .field--full { grid-column: 1 / -1; }
+  .field__label {
+    font: 500 10.5px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--black);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .field__req { color: var(--red); font-family: 'JetBrains Mono'; font-size: 10px; }
+  .field__input, .field__select, .field__textarea {
+    appearance: none;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 12px 14px;
+    font: 400 14px/1.4 'Inter';
+    color: var(--ink);
+    transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
+    width: 100%;
+  }
+  .field__select {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path fill='none' stroke='%23000' stroke-width='1.4' d='M1 1l4 4 4-4'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 10px 6px;
+    padding-right: 36px;
+  }
+  .field__textarea { min-height: 120px; resize: vertical; font-family: 'Inter'; }
+  .field__input:focus, .field__select:focus, .field__textarea:focus {
+    outline: none;
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(222,31,38,.12);
+  }
+  .field__hint { font: 400 11.5px/1.4 'Inter'; color: var(--muted); }
+
+  /* product checkbox chips */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    font: 500 11px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+    background: var(--white); cursor: pointer;
+    transition: all 200ms var(--ease);
+  }
+  .chip input { position: absolute; opacity: 0; pointer-events: none; }
+  .chip .chip__box {
+    width: 14px; height: 14px; border: 1.5px solid var(--rule); border-radius: 2px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: transparent; transition: all 200ms var(--ease);
+  }
+  .chip:hover { border-color: rgba(0,0,0,.30); }
+  .chip:has(input:checked) {
+    background: var(--black); color: var(--white); border-color: var(--black);
+  }
+  .chip:has(input:checked) .chip__box { border-color: var(--white); background: var(--white); color: var(--black); }
+  .chip__box svg { width: 10px; height: 10px; }
+
+  .form__footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    margin-top: 28px; padding-top: 22px; border-top: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+  .form__note { font: 400 12.5px/1.5 'Inter'; color: var(--muted); max-width: 42ch; }
+  .form__note b { color: var(--black); font-weight: 600; }
+
+  /* ═══════════════════════════════════════════════════════════
+     DEFERRED LOCATOR — secondary, data-gated
+  ═══════════════════════════════════════════════════════════ */
+  .locator-sec { background: var(--white); padding: 88px 0 96px; position: relative; }
+  .locator-flag {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 12px;
+    background: var(--black); color: var(--on-black-primary);
+    border-radius: 2px;
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .locator-flag .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  .locator { display: grid; grid-template-columns: 360px 1fr; gap: 0; border: 1px solid var(--rule); }
+  .locator__aside { background: var(--offwhite); padding: 28px 28px 24px; border-right: 1px solid var(--rule); }
+  .locator__aside-h {
+    font: 600 11px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 16px;
+  }
+  .locator__select-wrap { margin-bottom: 18px; }
+  .locator__legend {
+    margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--rule);
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .locator__legend h4 {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+    font-family: 'JetBrains Mono';
+  }
+  .locator__legend-row {
+    display: flex; align-items: center; gap: 10px;
+    font: 400 12.5px/1 'Inter'; color: var(--ink);
+  }
+  .legend-dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+    border: 1.5px solid var(--black);
+  }
+  .legend-dot.retailer { background: var(--red); border-color: var(--red); }
+  .legend-dot.jobber { background: var(--black); }
+  .legend-dot.distributor { background: var(--white); }
+  .legend-dot.fleet { background: var(--gold); border-color: var(--black); }
+
+  .locator__list { background: var(--white); padding: 0; min-height: 360px; display: flex; flex-direction: column; }
+  .locator__list-head {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 18px 28px; border-bottom: 1px solid var(--rule);
+  }
+  .locator__list-head h4 {
+    font: 600 11px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase; color: var(--black);
+  }
+  .locator__list-count {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+  }
+  .locator__list-count b { color: var(--black); font-weight: 500; }
+
+  .locator__items { display: flex; flex-direction: column; }
+  .locator__empty {
+    flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 14px; padding: 64px 28px; text-align: center;
+  }
+  .locator__empty-icon { width: 38px; height: 38px; color: var(--muted); opacity: .6; }
+  .locator__empty-h {
+    font: 700 16px/1.2 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black);
+    max-width: 32ch;
+  }
+  .locator__empty-sub { font: 400 13.5px/1.55 'Inter'; color: var(--muted); max-width: 44ch; }
+  .locator__empty-link {
+    font: 600 11px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase; color: var(--red);
+    display: inline-flex; align-items: center; gap: 6px;
+    padding-top: 4px;
+  }
+  .locator__empty-link .arrow { transition: transform 220ms var(--ease); }
+  .locator__empty-link:hover .arrow { transform: translateX(3px); }
+
+  .stockist {
+    display: grid; grid-template-columns: 32px 1fr auto; gap: 16px; align-items: start;
+    padding: 18px 28px; border-bottom: 1px solid var(--rule);
+    transition: background 200ms var(--ease);
+  }
+  .stockist:hover { background: var(--offwhite); }
+  .stockist:last-child { border-bottom: 0; }
+  .stockist__dot { width: 12px; height: 12px; border-radius: 50%; margin-top: 6px; }
+  .stockist__dot.retailer { background: var(--red); }
+  .stockist__dot.jobber { background: var(--black); }
+  .stockist__dot.distributor { background: var(--white); border: 1.5px solid var(--black); }
+  .stockist__dot.fleet { background: var(--gold); border: 1.5px solid var(--black); }
+  .stockist__name { font: 700 15px/1.2 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black); margin-bottom: 6px; }
+  .stockist__meta {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    font: 500 10.5px/1.4 'JetBrains Mono'; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+  }
+  .stockist__meta b { color: var(--black); font-weight: 500; }
+  .stockist__link {
+    font: 600 11px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase; color: var(--red);
+    display: inline-flex; align-items: center; gap: 6px; align-self: center;
+  }
+  .stockist__link .arrow { transition: transform 220ms var(--ease); }
+  .stockist__link:hover .arrow { transform: translateX(3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     DISTRIBUTOR CROSS-CTA BAND (black)
+  ═══════════════════════════════════════════════════════════ */
+  .qcta {
+    background: var(--black); color: var(--white);
+    padding: 72px 0;
+    position: relative; overflow: hidden;
+    border-top: 3px solid var(--red);
+  }
+  .qcta::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+  }
+  .qcta__inner { position: relative; display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: center; }
+  .qcta__eyebrow { display: inline-flex; align-items: center; gap: 12px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+  .qcta__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .qcta__h {
+    font: 700 clamp(1.8rem, 3.4vw, 2.6rem)/1.02 'Jost';
+    letter-spacing: -0.03em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 14px; text-wrap: balance;
+  }
+  .qcta__h em { font-style: normal; color: var(--gold); }
+  .qcta__sub { font: 400 15.5px/1.55 'Inter'; color: var(--on-black-primary); max-width: 52ch; }
+  .qcta__actions {
+    display: flex; flex-direction: column; gap: 12px; align-items: stretch;
+    justify-self: end; min-width: 280px;
+  }
+  .qcta__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
+
+  /* ───────── FOOTER ───────── */
+  .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
+  .footer__brand img { height: 28px; filter: brightness(0) invert(1); }
+  .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
+  .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
+
+  /* ───────── RESPONSIVE ───────── */
+  @media (max-width: 1180px) {
+    .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero__meta { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
+    .router { grid-template-columns: 1fr; }
+    .partners-grid { grid-template-columns: repeat(2, 1fr); }
+    .partners-empty { grid-template-columns: 1fr; gap: 24px; }
+    .form-wrap { grid-template-columns: 1fr; gap: 40px; }
+    .locator { grid-template-columns: 1fr; }
+    .locator__aside { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .qcta__inner { grid-template-columns: 1fr; gap: 32px; }
+    .qcta__actions { justify-self: start; }
+    .nav { display: none; }
+    .util__left { gap: 14px; }
+  }
+  @media (max-width: 720px) {
+    .container { padding: 0 22px; }
+    .util__inner { padding: 9px 22px; }
+    .partners-grid { grid-template-columns: 1fr; }
+    .form__grid { grid-template-columns: 1fr; }
+    .form { padding: 28px 22px 24px; }
+    .route { grid-template-columns: 40px 1fr; }
+    .route__arrow { grid-column: 2; padding-top: 8px; align-self: start; }
+    .stockist { grid-template-columns: 16px 1fr; padding: 16px 20px; }
+    .stockist__link { grid-column: 2; padding-top: 6px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+</head>
+<body data-screen-label="08 Where to Buy">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span data-i18n="util.distributor">Find a Distributor</span>
+      </a>
+      <a class="util__item" data-i18n="util.compliance">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"></path></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;" id="lang-switch">
+        <span class="util__lang active" data-lang="en">EN</span>
+        <span class="util__lang" data-lang="fr">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
+      <div class="nav__item"><a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products</a></div>
+      <div class="nav__item"><a class="nav__link" href="industries.html" data-i18n="nav.industries">Industries</a></div>
+      <div class="nav__item"><a class="nav__link" data-i18n="nav.about">About</a></div>
+      <div class="nav__item"><a class="nav__link" data-i18n="nav.news">News</a></div>
+      <div class="nav__item"><a class="nav__link" data-i18n="nav.contact">Contact</a></div>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--dark btn--sm active-link" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary btn--sm" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero" data-comment-anchor="wtb-hero">
+  <div class="hero__grid"></div>
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__eyebrow" data-i18n="hero.eyebrow">Where to Buy</div>
+      <h1 class="hero__h1" data-i18n="hero.h1">Find <em>Kolben</em> near you.</h1>
+      <p class="hero__sub" data-i18n="hero.sub">Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need — our team will route you to the nearest stocking partner.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary btn--lg" href="#request">
+          <span data-i18n="hero.ctaA">Request a Supplier</span>
+          <span class="arrow">→</span>
+        </a>
+        <a class="btn btn--ghost-light btn--lg" href="#partners">
+          <span data-i18n="hero.ctaB">See Stocking Partners</span>
+          <span class="arrow">↓</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero__meta">
+      <div class="hero__meta-h" data-i18n="hero.metaH">Buyer service</div>
+      <div class="hero__meta-list">
+        <div class="hero__meta-row">
+          <b data-i18n="hero.metaK1">Response</b><span data-i18n="hero.metaV1">1 business day · EN or FR</span>
+        </div>
+        <div class="hero__meta-row">
+          <b data-i18n="hero.metaK2">Coverage</b><span data-i18n="hero.metaV2">Canada-wide · 48 H from YYZ / YEG</span>
+        </div>
+        <div class="hero__meta-row">
+          <b data-i18n="hero.metaK3">Catalogue</b><span data-i18n="hero.metaV3">Full Kolben range · 180+ SKUs</span>
+        </div>
+      </div>
+      <div class="hero__chips">
+        <span class="hero__chip" data-i18n="hero.chipA">EN · FR labels</span>
+        <span class="hero__chip" data-i18n="hero.chipB">WHMIS · CCCR · TDG</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TWO-PATH ROUTER BAND
+═══════════════════════════════════════════════════════════ -->
+<section class="router-sec">
+  <div class="container">
+    <div class="router">
+      <a class="route" href="#request">
+        <div class="route__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h14l1 4h2v2h-2l-1 11H5L4 10H2V8h2l1-4z"/><path d="M9 13v4"/><path d="M14 13v4"/><path d="M8 8h8"/></svg>
+        </div>
+        <div class="route__body">
+          <div class="route__label" data-i18n="router.aLabel">For buyers</div>
+          <div class="route__h" data-i18n="router.aH">I want to buy Kolben.</div>
+          <div class="route__line" data-i18n="router.aLine">Find a stocking partner in your region — or request a supplier and we&rsquo;ll route you to the nearest match within one business day.</div>
+        </div>
+        <div class="route__arrow">→</div>
+      </a>
+      <a class="route" href="become-a-distributor.html">
+        <div class="route__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-13l9 -4l9 4v13"/><path d="M13 13h4v8h-10v-6h6"/><path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"/></svg>
+        </div>
+        <div class="route__body">
+          <div class="route__label" data-i18n="router.bLabel">For trade partners</div>
+          <div class="route__h" data-i18n="router.bH">I want to carry Kolben.</div>
+          <div class="route__line" data-i18n="router.bLine">Add the line to your shelves — bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.</div>
+        </div>
+        <div class="route__arrow">→</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHERE TO FIND — distribution band
+═══════════════════════════════════════════════════════════ -->
+<section class="partners-sec" id="partners">
+  <div class="container">
+    <div class="sh">
+      <div class="sh__left">
+        <div class="sh__eyebrow" data-i18n="partners.eyebrow">Where to find Kolben</div>
+        <h2 class="sh__h" data-i18n="partners.h">Distributed by <em>trusted Canadian partners.</em></h2>
+        <p class="sh__sub" data-i18n="partners.sub">Founding distributors stocking the Kolben line across the country. Our network is in active rollout — if you don&rsquo;t see your region, request a supplier below.</p>
+      </div>
+      <div class="partners-toggle" id="partners-toggle">
+        <button data-state="founding" class="active" data-i18n="partners.tA">Partners</button>
+        <button data-state="empty" data-i18n="partners.tB">Network rollout</button>
+      </div>
+    </div>
+
+    <div id="partners-stage">
+      <!-- populated by JS: 4 partner cards OR the empty/default state -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     REQUEST A SUPPLIER — primary conversion
+═══════════════════════════════════════════════════════════ -->
+<section class="form-sec" id="request">
+  <div class="container">
+    <div class="form-wrap">
+      <aside class="form-aside">
+        <div class="sh__eyebrow" data-i18n="form.eyebrow">Request a Supplier</div>
+        <h2 class="form-aside__h" data-i18n="form.h">Tell us what you need — we&rsquo;ll <em>route you.</em></h2>
+        <p class="form-aside__sub" data-i18n="form.sub">Basic contact only. We pair your request with the nearest stocking partner — or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.</p>
+        <div class="form-aside__list">
+          <div class="form-aside__row"><b data-i18n="form.k1">Response</b><span data-i18n="form.v1">Within one business day · EN or FR</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k2">Routing</b><span data-i18n="form.v2">Nearest stocking partner or direct ship</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k3">Coverage</b><span data-i18n="form.v3">Canada-wide · 48 H from YYZ / YEG</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k4">Contact</b><span>buyers@kolben.ca · 1-800-KOLBEN-1</span></div>
+        </div>
+      </aside>
+      <form class="form" id="request-form" novalidate>
+        <div class="form__h" data-i18n="form.title">Request a supplier</div>
+        <p class="form__sub" data-i18n="form.lead">Fields marked <span style="color:var(--red); font-family:'JetBrains Mono'; font-weight:500;">*</span> are required. We&rsquo;ll never share your details outside our buyer-services team.</p>
+        <div class="form__grid">
+          <div class="field">
+            <label class="field__label" for="name"><span data-i18n="form.f.name">Name</span><span class="field__req">*</span></label>
+            <input class="field__input" id="name" name="name" type="text" required />
+          </div>
+          <div class="field">
+            <label class="field__label" for="email"><span data-i18n="form.f.email">Work email</span><span class="field__req">*</span></label>
+            <input class="field__input" id="email" name="email" type="email" required />
+          </div>
+          <div class="field">
+            <label class="field__label" for="phone"><span data-i18n="form.f.phone">Phone</span><span class="field__hint" style="margin-left:6px; letter-spacing:.04em; text-transform:none; font-family:'Inter'; font-weight:400; color:var(--muted);" data-i18n="form.f.phoneOpt">(optional)</span></label>
+            <input class="field__input" id="phone" name="phone" type="tel" />
+          </div>
+          <div class="field">
+            <label class="field__label" for="province"><span data-i18n="form.f.province">Province / Region</span><span class="field__req">*</span></label>
+            <select class="field__select" id="province" name="province" required>
+              <option value="" data-i18n="form.f.provinceP">Select a province or region…</option>
+              <option value="ab" data-i18n="prov.ab">Alberta</option>
+              <option value="bc" data-i18n="prov.bc">British Columbia</option>
+              <option value="mb" data-i18n="prov.mb">Manitoba</option>
+              <option value="nb" data-i18n="prov.nb">New Brunswick</option>
+              <option value="nl" data-i18n="prov.nl">Newfoundland &amp; Labrador</option>
+              <option value="ns" data-i18n="prov.ns">Nova Scotia</option>
+              <option value="on" data-i18n="prov.on">Ontario</option>
+              <option value="pe" data-i18n="prov.pe">Prince Edward Island</option>
+              <option value="qc" data-i18n="prov.qc">Quebec</option>
+              <option value="sk" data-i18n="prov.sk">Saskatchewan</option>
+              <option value="ter" data-i18n="prov.ter">Territories (YT · NT · NU)</option>
+            </select>
+          </div>
+          <div class="field field--full">
+            <label class="field__label"><span data-i18n="form.f.products">Product(s) of interest</span><span class="field__req">*</span></label>
+            <div class="chips" id="product-chips">
+              <label class="chip"><input type="checkbox" name="products" value="cleaners" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.cleaners">Cleaners &amp; flushes</span></label>
+              <label class="chip"><input type="checkbox" name="products" value="additives" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.additives">Fuel &amp; oil additives</span></label>
+              <label class="chip"><input type="checkbox" name="products" value="lubricants" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.lubricants">Lubricants &amp; greases</span></label>
+              <label class="chip"><input type="checkbox" name="products" value="brake" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.brake">Brake chemistry</span></label>
+              <label class="chip"><input type="checkbox" name="products" value="ac" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.ac">A/C &amp; cooling</span></label>
+              <label class="chip"><input type="checkbox" name="products" value="full" /><span class="chip__box"><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6l3 3 5-6"/></svg></span><span data-i18n="prod.full">Full line / not sure</span></label>
+            </div>
+          </div>
+          <div class="field field--full">
+            <label class="field__label" for="message"><span data-i18n="form.f.message">Message</span></label>
+            <textarea class="field__textarea" id="message" name="message" rows="4" data-i18n-ph="form.f.messageP" placeholder="Use case (shop / fleet / industrial), volumes, and how soon you need product."></textarea>
+          </div>
+        </div>
+        <div class="form__footer">
+          <p class="form__note">
+            <b data-i18n="form.note.b">EN / FR.</b>
+            <span data-i18n="form.note.body"> Our buyer-services team responds within one business day in English or French. No financial or identity information collected.</span>
+          </p>
+          <button type="submit" class="btn btn--primary btn--lg">
+            <span data-i18n="form.submit">Request a Supplier</span>
+            <span class="arrow">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DEFERRED LOCATOR — secondary, data-gated, NO MAP
+═══════════════════════════════════════════════════════════ -->
+<section class="locator-sec" id="locator">
+  <div class="container">
+    <div class="sh">
+      <div class="sh__left">
+        <div class="sh__eyebrow" data-i18n="locator.eyebrow">Stockist locator</div>
+        <h2 class="sh__h" data-i18n="locator.h">Browse by <em>region.</em></h2>
+        <p class="sh__sub" data-i18n="locator.sub">Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density — if your region is empty, request a supplier above and we&rsquo;ll route you directly.</p>
+      </div>
+      <div class="sh__count"><b id="locator-count">00</b><span data-i18n="locator.count">Listed stockists</span></div>
+    </div>
+
+    <div class="locator">
+      <aside class="locator__aside">
+        <div class="locator__aside-h" data-i18n="locator.asideH">Filter by region</div>
+        <div class="locator__select-wrap">
+          <select class="field__select" id="locator-province">
+            <option value="all" data-i18n="locator.all">All of Canada</option>
+            <option value="ab" data-i18n="prov.ab">Alberta</option>
+            <option value="bc" data-i18n="prov.bc">British Columbia</option>
+            <option value="mb" data-i18n="prov.mb">Manitoba</option>
+            <option value="nb" data-i18n="prov.nb">New Brunswick</option>
+            <option value="nl" data-i18n="prov.nl">Newfoundland &amp; Labrador</option>
+            <option value="ns" data-i18n="prov.ns">Nova Scotia</option>
+            <option value="on" data-i18n="prov.on">Ontario</option>
+            <option value="pe" data-i18n="prov.pe">Prince Edward Island</option>
+            <option value="qc" data-i18n="prov.qc">Quebec</option>
+            <option value="sk" data-i18n="prov.sk">Saskatchewan</option>
+            <option value="ter" data-i18n="prov.ter">Territories (YT · NT · NU)</option>
+          </select>
+        </div>
+        <div class="locator__legend">
+          <h4 data-i18n="locator.legendH">Partner type</h4>
+          <div class="locator__legend-row"><span class="legend-dot retailer"></span><span data-i18n="type.retailer">Retailer</span></div>
+          <div class="locator__legend-row"><span class="legend-dot jobber"></span><span data-i18n="type.jobber">Jobber</span></div>
+          <div class="locator__legend-row"><span class="legend-dot distributor"></span><span data-i18n="type.distributor">Distributor</span></div>
+          <div class="locator__legend-row"><span class="legend-dot fleet"></span><span data-i18n="type.fleet">Fleet supplier</span></div>
+        </div>
+      </aside>
+      <div class="locator__list">
+        <div class="locator__list-head">
+          <h4 data-i18n="locator.resultsH">Results</h4>
+          <div class="locator__list-count"><b id="locator-results">00</b> <span data-i18n="locator.in">in</span> <span id="locator-region" data-i18n="locator.all">All of Canada</span></div>
+        </div>
+        <div class="locator__items" id="locator-items"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DISTRIBUTOR CROSS-CTA BAND
+═══════════════════════════════════════════════════════════ -->
+<section class="qcta is-light">
+  <div class="container qcta__inner">
+    <div>
+      <div class="qcta__eyebrow" data-i18n="qcta.eyebrow">For trade partners</div>
+      <h2 class="qcta__h" data-i18n="qcta.h">Want to carry the <em>Kolben line?</em></h2>
+      <p class="qcta__sub" data-i18n="qcta.sub">Apply to add Kolben to your shelves — distributor terms across Canada.</p>
+    </div>
+    <div class="qcta__actions">
+      <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
+        <span data-i18n="qcta.a">Become a Distributor</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   CHANNEL ICONS — reused vocabulary from become-a-distributor
+═══════════════════════════════════════════════════════════ */
+const ICONS = {
+  retailer: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l18 0"/><path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"/><path d="M5 21l0 -10.15"/><path d="M19 21l0 -10.15"/><path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"/></svg>`,
+  jobber: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18v4H3z"/><path d="M5 8v12h14V8"/><path d="M10 12h4"/></svg>`,
+  fleet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"/></svg>`,
+  distributor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-13l9 -4l9 4v13"/><path d="M13 13h4v8h-10v-6h6"/><path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"/></svg>`,
+};
+
+/* ═══════════════════════════════════════════════════════════
+   FOUNDING PARTNERS — small set, intentional with 2 listed
+   "Realistic placeholder partners that clearly read as examples"
+═══════════════════════════════════════════════════════════ */
+const PARTNERS = [
+  {
+    name: { en: 'Nordwerk Auto Supply', fr: 'Nordwerk Auto Supply' },
+    type: 'distributor',
+    typeTag: { en: 'Distributor · ON · QC', fr: 'Distributeur · ON · QC' },
+    line: { en: 'Founding Canadian distributor for the full Kolben range — central Canada coverage with weekly truck routes from Mississauga.',
+            fr: 'Distributeur fondateur de la gamme Kolben — couverture du centre du Canada avec lignes camion hebdomadaires depuis Mississauga.' },
+    city: { en: 'Mississauga · ON',  fr: 'Mississauga · ON' },
+    link: { en: 'Visit partner →',   fr: 'Visiter →' },
+  },
+  {
+    name: { en: 'Pacific Drivetrain Supply', fr: 'Pacific Drivetrain Supply' },
+    type: 'jobber',
+    typeTag: { en: 'Jobber · BC · AB', fr: 'Grossiste · BC · AB' },
+    line: { en: 'Western Canada jobber network carrying Kolben brake, cleaner and additive lines into shops and service centres.',
+            fr: 'Réseau de grossistes de l’Ouest portant les gammes freins, nettoyants et additifs Kolben en ateliers et centres de service.' },
+    city: { en: 'Burnaby · BC',     fr: 'Burnaby · BC' },
+    link: { en: 'Visit partner →',  fr: 'Visiter →' },
+  },
+];
+
+/* Demo stockist set for the locator — empty by design, becomes a list
+   once partners list themselves. Keep [] to show the empty default. */
+const STOCKISTS = [
+  // Example entries (visible if uncommented) — left empty by default to
+  // demonstrate the graceful empty-state for a brand-new network.
+  // { name: 'Nordwerk Auto Supply', type: 'distributor', province: 'on', city: 'Mississauga', contact: 'sales@nordwerk.ca' },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   I18N
+═══════════════════════════════════════════════════════════ */
+const I18N = {
+  en: {
+    'util.distributor': 'Find a Distributor',
+    'util.compliance':  'Compliance & SDS',
+    'nav.home':         'Home',
+    'nav.products':     'Products',
+    'nav.industries':   'Industries',
+    'nav.about':        'About',
+    'nav.news':         'News',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Where to Buy',
+    'nav.distributor':  'Become a Distributor',
+
+    'hero.eyebrow':     'Where to Buy',
+    'hero.h1':          'Find <em>Kolben</em> near you.',
+    'hero.sub':         'Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need — our team will route you to the nearest stocking partner.',
+    'hero.ctaA':        'Request a Supplier',
+    'hero.ctaB':        'See Stocking Partners',
+    'hero.metaH':       'Buyer service',
+    'hero.metaK1':      'Response',
+    'hero.metaV1':      '1 business day · EN or FR',
+    'hero.metaK2':      'Coverage',
+    'hero.metaV2':      'Canada-wide · 48 H from YYZ / YEG',
+    'hero.metaK3':      'Catalogue',
+    'hero.metaV3':      'Full Kolben range · 180+ SKUs',
+    'hero.chipA':       'EN · FR labels',
+    'hero.chipB':       'WHMIS · CCCR · TDG',
+
+    'router.aLabel':    'For buyers',
+    'router.aH':        'I want to buy Kolben.',
+    'router.aLine':     'Find a stocking partner in your region — or request a supplier and we&rsquo;ll route you to the nearest match within one business day.',
+    'router.bLabel':    'For trade partners',
+    'router.bH':        'I want to carry Kolben.',
+    'router.bLine':     'Add the line to your shelves — bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.',
+
+    'partners.eyebrow': 'Where to find Kolben',
+    'partners.h':       'Distributed by <em>trusted Canadian partners.</em>',
+    'partners.sub':     'Founding distributors stocking the Kolben line across the country. Our network is in active rollout — if you don&rsquo;t see your region, request a supplier below.',
+    'partners.tA':      'Partners',
+    'partners.tB':      'Network rollout',
+    'partners.emptyH':  'We&rsquo;re building our Canadian distributor network.',
+    'partners.emptySub':'Kolben is a young brand on this side of the Atlantic. We&rsquo;re onboarding founding distributors province by province. Request a supplier below and we&rsquo;ll connect you to a partner in your region — or ship direct from YYZ / YEG until one is stood up.',
+    'partners.emptyCta':'Request a Supplier',
+    'partners.emptyChipA':'Direct ship · YYZ / YEG',
+    'partners.emptyChipB':'48 H · EN · FR',
+    'partners.emptyChipC':'Provincial rollout · 2026',
+
+    'form.eyebrow':     'Request a Supplier',
+    'form.h':           'Tell us what you need — we&rsquo;ll <em>route you.</em>',
+    'form.sub':         'Basic contact only. We pair your request with the nearest stocking partner — or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.',
+    'form.k1':          'Response',
+    'form.v1':          'Within one business day · EN or FR',
+    'form.k2':          'Routing',
+    'form.v2':          'Nearest stocking partner or direct ship',
+    'form.k3':          'Coverage',
+    'form.v3':          'Canada-wide · 48 H from YYZ / YEG',
+    'form.k4':          'Contact',
+    'form.title':       'Request a supplier',
+    'form.lead':        'Fields marked <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> are required. We&rsquo;ll never share your details outside our buyer-services team.',
+    'form.f.name':      'Name',
+    'form.f.email':     'Work email',
+    'form.f.phone':     'Phone',
+    'form.f.phoneOpt':  '(optional)',
+    'form.f.province':  'Province / Region',
+    'form.f.provinceP': 'Select a province or region…',
+    'form.f.products':  'Product(s) of interest',
+    'form.f.message':   'Message',
+    'form.f.messageP':  'Use case (shop / fleet / industrial), volumes, and how soon you need product.',
+    'form.note.b':      'EN / FR.',
+    'form.note.body':   ' Our buyer-services team responds within one business day in English or French. No financial or identity information collected.',
+    'form.submit':      'Request a Supplier',
+
+    'prod.cleaners':   'Cleaners & flushes',
+    'prod.additives':  'Fuel & oil additives',
+    'prod.lubricants': 'Lubricants & greases',
+    'prod.brake':      'Brake chemistry',
+    'prod.ac':         'A/C & cooling',
+    'prod.full':       'Full line / not sure',
+
+    'prov.ab': 'Alberta',
+    'prov.bc': 'British Columbia',
+    'prov.mb': 'Manitoba',
+    'prov.nb': 'New Brunswick',
+    'prov.nl': 'Newfoundland & Labrador',
+    'prov.ns': 'Nova Scotia',
+    'prov.on': 'Ontario',
+    'prov.pe': 'Prince Edward Island',
+    'prov.qc': 'Quebec',
+    'prov.sk': 'Saskatchewan',
+    'prov.ter':'Territories (YT · NT · NU)',
+
+    'locator.flag':     'Beta · Hidden until network has coverage',
+    'locator.eyebrow':  'Stockist locator',
+    'locator.h':        'Browse by <em>region.</em>',
+    'locator.sub':      'Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density — if your region is empty, request a supplier above and we&rsquo;ll route you directly.',
+    'locator.count':    'Listed stockists',
+    'locator.asideH':   'Filter by region',
+    'locator.legendH':  'Partner type',
+    'locator.resultsH': 'Results',
+    'locator.in':       'in',
+    'locator.all':      'All of Canada',
+    'locator.emptyH':   'No listed stockists in this region yet.',
+    'locator.emptySub': 'We publish each province once it crosses a useful threshold of listed partners. While we onboard, request a supplier above — we&rsquo;ll route you within one business day.',
+    'locator.emptyCta': 'Request a Supplier →',
+
+    'type.retailer':    'Retailer',
+    'type.jobber':      'Jobber',
+    'type.distributor': 'Distributor',
+    'type.fleet':       'Fleet supplier',
+
+    'qcta.eyebrow':     'For trade partners',
+    'qcta.h':           'Want to carry the <em>Kolben line?</em>',
+    'qcta.sub':         'Apply to add Kolben to your shelves — distributor terms across Canada.',
+    'qcta.a':           'Become a Distributor',
+    'qcta.b':           'Download Line Sheet (PDF)',
+
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
+  },
+  fr: {
+    'util.distributor': 'Trouver un distributeur',
+    'util.compliance':  'Conformité et FDS',
+    'nav.home':         'Accueil',
+    'nav.products':     'Produits',
+    'nav.industries':   'Industries',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Où acheter',
+    'nav.distributor':  'Devenir distributeur',
+
+    'hero.eyebrow':     'Où acheter',
+    'hero.h1':          'Trouvez <em>Kolben</em> près de chez vous.',
+    'hero.sub':         'Kolben se déploie au Canada via un réseau sélectionné de distributeurs automobiles, grossistes et fournisseurs de flottes. Dites-nous où vous êtes et ce qu’il vous faut — notre équipe vous oriente vers le partenaire stockiste le plus proche.',
+    'hero.ctaA':        'Trouver un fournisseur',
+    'hero.ctaB':        'Voir les partenaires stockistes',
+    'hero.metaH':       'Service acheteurs',
+    'hero.metaK1':      'Réponse',
+    'hero.metaV1':      '1 jour ouvré · EN ou FR',
+    'hero.metaK2':      'Couverture',
+    'hero.metaV2':      'Partout au Canada · 48 H depuis YYZ / YEG',
+    'hero.metaK3':      'Catalogue',
+    'hero.metaV3':      'Toute la gamme Kolben · 180+ réf.',
+    'hero.chipA':       'Étiquettes EN · FR',
+    'hero.chipB':       'SIMDUT · RPCC · TMD',
+
+    'router.aLabel':    'Pour les acheteurs',
+    'router.aH':        'Je veux acheter Kolben.',
+    'router.aLine':     'Trouvez un partenaire stockiste dans votre région — ou faites une demande, nous vous orientons vers la meilleure correspondance sous un jour ouvré.',
+    'router.bLabel':    'Pour les partenaires commerciaux',
+    'router.bH':        'Je veux distribuer Kolben.',
+    'router.bLine':     'Ajoutez la gamme à vos rayons — étiquettes bilingues, marges distributeur, expédition 48 H. Postulez pour devenir partenaire stockiste Kolben.',
+
+    'partners.eyebrow': 'Où trouver Kolben',
+    'partners.h':       'Distribué par <em>des partenaires canadiens de confiance.</em>',
+    'partners.sub':     'Distributeurs fondateurs portant la gamme Kolben à l’échelle nationale. Le réseau est en déploiement actif — si votre région n’y figure pas, demandez un fournisseur ci-dessous.',
+    'partners.tA':      'Partenaires',
+    'partners.tB':      'Déploiement réseau',
+    'partners.emptyH':  'Nous construisons notre réseau de distributeurs canadiens.',
+    'partners.emptySub':'Kolben est une marque jeune de ce côté de l’Atlantique. Nous intégrons des distributeurs fondateurs province par province. Demandez un fournisseur ci-dessous : nous vous connectons à un partenaire de votre région — ou expédions directement depuis YYZ / YEG en attendant qu’un partenaire local soit prêt.',
+    'partners.emptyCta':'Trouver un fournisseur',
+    'partners.emptyChipA':'Expédition directe · YYZ / YEG',
+    'partners.emptyChipB':'48 H · EN · FR',
+    'partners.emptyChipC':'Déploiement provincial · 2026',
+
+    'form.eyebrow':     'Trouver un fournisseur',
+    'form.h':           'Dites-nous ce qu’il vous faut — nous vous <em>orientons.</em>',
+    'form.sub':         'Contact de base uniquement. Nous associons votre demande au partenaire stockiste le plus proche — ou, en cas d’absence de couverture, nous expédions directement depuis nos entrepôts YYZ / YEG le temps d’intégrer un partenaire local.',
+    'form.k1':          'Réponse',
+    'form.v1':          'Sous un jour ouvré · EN ou FR',
+    'form.k2':          'Orientation',
+    'form.v2':          'Partenaire stockiste le plus proche ou expédition directe',
+    'form.k3':          'Couverture',
+    'form.v3':          'Partout au Canada · 48 H depuis YYZ / YEG',
+    'form.k4':          'Contact',
+    'form.title':       'Demander un fournisseur',
+    'form.lead':        'Les champs marqués <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> sont obligatoires. Vos coordonnées restent au sein de notre équipe service-acheteurs.',
+    'form.f.name':      'Nom',
+    'form.f.email':     'Adresse courriel professionnelle',
+    'form.f.phone':     'Téléphone',
+    'form.f.phoneOpt':  '(facultatif)',
+    'form.f.province':  'Province / région',
+    'form.f.provinceP': 'Sélectionnez une province ou région…',
+    'form.f.products':  'Produit(s) souhaité(s)',
+    'form.f.message':   'Message',
+    'form.f.messageP':  'Cas d’usage (atelier / flotte / industriel), volumes et délai souhaité.',
+    'form.note.b':      'EN / FR.',
+    'form.note.body':   ' Notre équipe service-acheteurs répond sous un jour ouvré, en anglais ou en français. Aucune information financière ni d’identité collectée.',
+    'form.submit':      'Trouver un fournisseur',
+
+    'prod.cleaners':   'Nettoyants et rinçages',
+    'prod.additives':  'Additifs carburant et huile',
+    'prod.lubricants': 'Lubrifiants et graisses',
+    'prod.brake':      'Chimie freins',
+    'prod.ac':         'Climatisation et refroidissement',
+    'prod.full':       'Gamme complète / je ne sais pas',
+
+    'prov.ab': 'Alberta',
+    'prov.bc': 'Colombie-Britannique',
+    'prov.mb': 'Manitoba',
+    'prov.nb': 'Nouveau-Brunswick',
+    'prov.nl': 'Terre-Neuve-et-Labrador',
+    'prov.ns': 'Nouvelle-Écosse',
+    'prov.on': 'Ontario',
+    'prov.pe': 'Île-du-Prince-Édouard',
+    'prov.qc': 'Québec',
+    'prov.sk': 'Saskatchewan',
+    'prov.ter':'Territoires (YT · NT · NU)',
+
+    'locator.flag':     'Bêta · Masqué tant que le réseau n’a pas atteint une couverture utile',
+    'locator.eyebrow':  'Localisateur de stockistes',
+    'locator.h':        'Parcourir par <em>région.</em>',
+    'locator.sub':      'Choisissez une province pour voir les stockistes listés. Nous publions ce module région par région à mesure que le réseau atteint une densité utile — si votre région est vide, demandez un fournisseur ci-dessus et nous vous orienterons directement.',
+    'locator.count':    'Stockistes listés',
+    'locator.asideH':   'Filtrer par région',
+    'locator.legendH':  'Type de partenaire',
+    'locator.resultsH': 'Résultats',
+    'locator.in':       'dans',
+    'locator.all':      'Tout le Canada',
+    'locator.emptyH':   'Aucun stockiste listé dans cette région pour l’instant.',
+    'locator.emptySub': 'Nous publions chaque province dès qu’elle dépasse un seuil utile de partenaires listés. Pendant l’intégration, demandez un fournisseur ci-dessus — nous vous orientons sous un jour ouvré.',
+    'locator.emptyCta': 'Trouver un fournisseur →',
+
+    'type.retailer':    'Détaillant',
+    'type.jobber':      'Grossiste',
+    'type.distributor': 'Distributeur',
+    'type.fleet':       'Fournisseur flottes',
+
+    'qcta.eyebrow':     'Pour les partenaires commerciaux',
+    'qcta.h':           'Vous voulez distribuer la <em>gamme Kolben&nbsp;?</em>',
+    'qcta.sub':         'Postulez pour ajouter Kolben à vos rayons — conditions distributeur partout au Canada.',
+    'qcta.a':           'Devenir distributeur',
+    'qcta.b':           'Télécharger la fiche-gamme (PDF)',
+
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
+  },
+};
+
+let state = { lang: 'en', partnersView: 'founding', province: 'all' };
+
+/* ═══════════════════════════════════════════════════════════
+   RENDERERS
+═══════════════════════════════════════════════════════════ */
+function renderPartners() {
+  const stage = document.getElementById('partners-stage');
+  if (state.partnersView === 'empty') {
+    const t = I18N[state.lang];
+    stage.innerHTML = `
+      <div class="partners-empty">
+        <div>
+          <div class="partners-empty__h">${t['partners.emptyH']}</div>
+          <p class="partners-empty__sub">${t['partners.emptySub']}</p>
+        </div>
+        <div class="partners-empty__right">
+          <a class="btn btn--primary" href="#request">
+            <span>${t['partners.emptyCta']}</span><span class="arrow">→</span>
+          </a>
+          <div class="partners-empty__chips">
+            <span class="partners-empty__chip">${t['partners.emptyChipA']}</span>
+            <span class="partners-empty__chip">${t['partners.emptyChipB']}</span>
+            <span class="partners-empty__chip">${t['partners.emptyChipC']}</span>
+          </div>
+        </div>
+      </div>
+    `;
+    return;
+  }
+  // Founding partners — 2 real cards + 2 "in onboarding" cards to keep the
+  // grid feeling intentional with so few listed partners.
+  const items = PARTNERS.map(p => `
+    <div class="pcard">
+      <div class="pcard__top">
+        <div class="pcard__icon">${ICONS[p.type]}</div>
+        <div class="pcard__tag">${p.typeTag[state.lang]}</div>
+      </div>
+      <div class="pcard__name">${p.name[state.lang]}</div>
+      <div class="pcard__line">${p.line[state.lang]}</div>
+      <div class="pcard__foot">
+        <div class="pcard__city">${p.city[state.lang]}</div>
+        <a class="pcard__link" href="#"><span>${p.link[state.lang]}</span></a>
+      </div>
+    </div>
+  `);
+  // 2 "in onboarding" placeholders — intentional, not empty
+  const onboardingLabel = state.lang === 'fr' ? 'En intégration' : 'In onboarding';
+  const onboardingLine = state.lang === 'fr'
+    ? 'Partenaires régionaux en cours d’intégration. Disponible dès la fin du processus.'
+    : 'Regional partners currently onboarding. Listed here once go-live is confirmed.';
+  const onboardingRegions = state.lang === 'fr'
+    ? ['Québec · Maritimes', 'Prairies · Saskatchewan']
+    : ['Quebec · Maritimes', 'Prairies · Saskatchewan'];
+  const onboardingCards = onboardingRegions.map(r => `
+    <div class="pcard" style="border-style: dashed; background: var(--offwhite); opacity:.92;">
+      <div class="pcard__top">
+        <div class="pcard__icon" style="color:var(--muted);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <div class="pcard__tag">${onboardingLabel}</div>
+      </div>
+      <div class="pcard__name" style="color:var(--muted);">${r}</div>
+      <div class="pcard__line">${onboardingLine}</div>
+      <div class="pcard__foot">
+        <div class="pcard__city">— — —</div>
+        <a class="pcard__link" href="#request"><span>${state.lang === 'fr' ? 'Demander →' : 'Request →'}</span></a>
+      </div>
+    </div>
+  `);
+  stage.innerHTML = `<div class="partners-grid">${items.concat(onboardingCards).join('')}</div>`;
+}
+
+function renderLocator() {
+  const t = I18N[state.lang];
+  const items = document.getElementById('locator-items');
+  const region = state.province;
+  const filtered = STOCKISTS.filter(s => region === 'all' || s.province === region);
+  document.getElementById('locator-results').textContent = String(filtered.length).padStart(2, '0');
+  document.getElementById('locator-count').textContent = String(STOCKISTS.length).padStart(2, '0');
+  const regionLabel = region === 'all' ? t['locator.all'] : t['prov.' + region];
+  document.getElementById('locator-region').textContent = regionLabel;
+
+  if (filtered.length === 0) {
+    items.innerHTML = `
+      <div class="locator__empty">
+        <div class="locator__empty-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="locator__empty-h">${t['locator.emptyH'].replace('this region', regionLabel).replace('cette région', regionLabel)}</div>
+        <div class="locator__empty-sub">${t['locator.emptySub']}</div>
+        <a class="locator__empty-link" href="#request"><span>${t['locator.emptyCta']}</span><span class="arrow"></span></a>
+      </div>
+    `;
+  } else {
+    items.innerHTML = filtered.map(s => `
+      <div class="stockist">
+        <div class="stockist__dot ${s.type}"></div>
+        <div>
+          <div class="stockist__name">${s.name}</div>
+          <div class="stockist__meta">
+            <span><b>${t['type.' + s.type]}</b></span>
+            <span>${s.city} · ${t['prov.' + s.province]}</span>
+            <span>${s.contact}</span>
+          </div>
+        </div>
+        <a class="stockist__link" href="#"><span>${state.lang === 'fr' ? 'Contacter' : 'Contact'}</span><span class="arrow">→</span></a>
+      </div>
+    `).join('');
+  }
+}
+
+function applyI18n(lang) {
+  const t = I18N[lang];
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if (t[k] !== undefined) el.setAttribute('placeholder', t[k]);
+  });
+  document.querySelectorAll('#lang-switch .util__lang').forEach(s => {
+    s.classList.toggle('active', s.dataset.lang === lang);
+  });
+}
+
+function rerender() {
+  applyI18n(state.lang);
+  renderPartners();
+  renderLocator();
+}
+
+document.getElementById('lang-switch').addEventListener('click', e => {
+  const t = e.target.closest('[data-lang]');
+  if (!t) return;
+  state.lang = t.dataset.lang;
+  rerender();
+});
+
+document.getElementById('partners-toggle').addEventListener('click', e => {
+  const t = e.target.closest('[data-state]');
+  if (!t) return;
+  state.partnersView = t.dataset.state;
+  document.querySelectorAll('#partners-toggle button').forEach(b => {
+    b.classList.toggle('active', b.dataset.state === state.partnersView);
+  });
+  renderPartners();
+});
+
+document.getElementById('locator-province').addEventListener('change', e => {
+  state.province = e.target.value;
+  renderLocator();
+});
+
+document.getElementById('request-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const btn = e.target.querySelector('button[type="submit"]');
+  const orig = btn.innerHTML;
+  btn.innerHTML = `<span>${state.lang === 'fr' ? 'Reçu — merci' : 'Received — thank you'}</span><span class="arrow">✓</span>`;
+  btn.style.background = 'var(--black)';
+  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2400);
+});
+
+rerender();
+</script>
+</body>
+</html>

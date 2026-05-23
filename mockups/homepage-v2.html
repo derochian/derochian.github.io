@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kolben Homepage · v2 mockup (above fold + 2 sections)</title>
+<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
+<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --silver-50: #e9eaec;
+    --silver-100: #d3d5d9;
+    --silver-200: #b9bcc2;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --brushed:
+      linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 26%, rgba(0,0,0,.05) 78%, rgba(0,0,0,.18) 100%),
+      repeating-linear-gradient(90deg,
+        rgba(255,255,255,.5) 0px, rgba(255,255,255,.5) 1px,
+        rgba(255,255,255,0) 2px, rgba(255,255,255,0) 3px,
+        rgba(0,0,0,.04) 4px, rgba(0,0,0,.04) 5px,
+        rgba(255,255,255,0) 6px, rgba(255,255,255,0) 9px),
+      linear-gradient(90deg, #c8cad0 0%, #e6e7ea 35%, #f2f3f5 50%, #e6e7ea 65%, #b9bcc2 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a { font: inherit; cursor: pointer; }
+  button { border: 0; background: none; color: inherit; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ───────── UTILITY BAR (CRC pattern) ───────── */
+  .util {
+    background: var(--black); color: rgba(255,255,255,.85);
+    font: 500 12px/1 'Jost'; letter-spacing: .04em;
+  }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid rgba(255,255,255,.16); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: rgba(255,255,255,.12); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__lang.active:hover { background: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,.7); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 50; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 10px 16px;
+    font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black);
+    border-radius: 2px;
+  }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+  .nav__caret { width: 8px; height: 5px; }
+
+  /* MEGA MENU */
+  .mega {
+    position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 720px; background: var(--white);
+    border: 1px solid var(--rule); border-top: 3px solid var(--red);
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    opacity: 0; pointer-events: none; transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Invisible bridge across the 12px gap between the nav link and the menu
+     so the hover doesn't drop while the cursor is travelling down to the panel. */
+  .mega::before {
+    content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px;
+  }
+  .nav__item:hover .mega,
+  .nav__item.is-open .mega { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .mega__col h5 {
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .mega__list { display: flex; flex-direction: column; gap: 2px; }
+  .mega__row {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px;
+    padding: 8px 10px; border-radius: 2px;
+    align-items: start;
+  }
+  .mega__row:hover { background: var(--offwhite); }
+  .mega__row strong { font: 600 13px/1.2 'Jost'; color: var(--black); }
+  .mega__row span { font: 400 11px/1.4 'Inter'; color: var(--muted); }
+  .mega__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    color: var(--red); margin-top: 1px;
+  }
+
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 13px 22px;
+    font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase;
+    border-radius: 2px; transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    white-space: nowrap;
+  }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--lg { padding: 17px 32px; font-size: 13px; }
+  .btn .arrow { transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ───────── HERO ───────── */
+  .hero { position: relative; padding: 96px 0 80px; overflow: hidden; }
+  .hero__grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 80% 60% at 30% 60%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 30% 60%, black, transparent 75%);
+    pointer-events: none;
+  }
+  .hero__inner {
+    position: relative; display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 80px; align-items: center;
+  }
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-bottom: 28px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+  }
+  .hero__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .hero__eyebrow .yr { color: var(--muted); padding-left: 12px; border-left: 1px solid var(--rule); }
+
+  .hero__title {
+    font-family: 'Jost'; font-weight: 700; font-size: clamp(3rem, 6.2vw, 5.6rem);
+    line-height: 0.96; letter-spacing: -0.035em; color: var(--black);
+    margin-bottom: 26px; text-transform: uppercase;
+  }
+  .hero__title .stripe { display: inline-block; position: relative; padding: 0 4px; }
+  .hero__title .stripe::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 6px; height: 20px;
+    background: var(--gold); z-index: -1; opacity: 1;
+  }
+  .hero__sub {
+    font: 400 18px/1.55 'Inter'; color: var(--muted); max-width: 560px; margin-bottom: 40px;
+  }
+  .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+  .specs { display: grid; grid-template-columns: repeat(4, 1fr); padding-top: 32px; border-top: 1px solid var(--rule); }
+  .spec { padding-right: 24px; }
+  .spec + .spec { padding-left: 24px; border-left: 1px solid var(--rule); }
+  .spec__v { font: 700 32px/1 'Jost'; letter-spacing: -0.025em; }
+  .spec__l { font: 500 11px/1.35 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
+  /* Brushed-aluminum showcase (carousel: bg stays put, bottle slides) */
+  .showcase {
+    position: relative; width: 100%; aspect-ratio: 3 / 4;
+    background: var(--brushed); border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 -1px 0 rgba(0,0,0,.15) inset,
+      0 30px 60px -20px rgba(0,0,0,.25),
+      0 10px 30px -10px rgba(0,0,0,.15);
+    overflow: hidden;
+  }
+  .showcase__chevron { position: absolute; top: 0; left: 0; right: 0; height: 6px; display: flex; z-index: 4; }
+  .showcase__chevron div:nth-child(1) { flex: 1; background: var(--red); }
+  .showcase__chevron div:nth-child(2) { flex: 1; background: var(--gold); }
+
+  /* Carousel mechanics — STEPPED SWIPE.
+     Each "swipe" is a CSS transition fired by the JS controller. The JS
+     ticks every HOLD_MS, but a `paused` flag (driven by hover) only skips
+     the NEXT tick — any in-flight transition completes naturally, so the
+     bottle always lands on a slide before the carousel rests. */
+  .carousel {
+    --swipe-duration: 800ms;
+    --swipe-ease: cubic-bezier(0.65, 0.02, 0.25, 1);
+    container-type: inline-size;
+  }
+
+  .showcase__track {
+    position: relative;
+    display: flex;
+    width: max-content; height: 100%;
+    transition: transform var(--swipe-duration) var(--swipe-ease);
+    will-change: transform;
+  }
+  .showcase__track.no-transition,
+  .showcase__caption-track.no-transition { transition: none; }
+  .showcase__slide {
+    flex: 0 0 auto;
+    width: 100cqw; height: 100%;
+    position: relative;
+  }
+  .showcase__slide img {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    height: 88%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 30px 30px rgba(0,0,0,.35));
+  }
+
+  /* FEATURED tag in the corner */
+  .showcase__tag-featured {
+    position: absolute; top: 18px; right: 18px; z-index: 4;
+    font: 600 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--black); background: rgba(255,255,255,.78);
+    backdrop-filter: blur(6px); padding: 7px 10px; border: 1px solid var(--rule);
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .showcase__tag-featured::before {
+    content: ''; width: 6px; height: 6px; background: var(--red); border-radius: 50%;
+    animation: pulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+
+  /* Fade edges so slides enter/exit gracefully (background still 100% visible) */
+  .showcase::before,
+  .showcase::after {
+    content: ''; position: absolute; top: 6px; bottom: 0; width: 60px; z-index: 3; pointer-events: none;
+  }
+  .showcase::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(232,234,236,.85), rgba(232,234,236,0));
+  }
+  .showcase::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(185,188,194,.85), rgba(185,188,194,0));
+  }
+
+  /* (keyframes removed — carousel is now driven by JS so hover-pause can
+     wait for the in-flight transition to complete before resting.) */
+
+  /* Caption viewport mirrors the carousel — same width units, same animation */
+  .showcase__caption {
+    margin-top: 16px;
+    padding-top: 14px; border-top: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .showcase__caption-track {
+    display: flex;
+    width: max-content;
+    transition: transform var(--swipe-duration) var(--swipe-ease);
+    will-change: transform;
+  }
+  .showcase__caption-cell {
+    flex: 0 0 auto;
+    width: 100cqw;
+    display: flex; align-items: baseline; justify-content: space-between; gap: 16px;
+    padding-right: 24px;
+  }
+
+  /* Hover-pause is handled by JS (see end of body) so an in-flight swipe
+     completes before the carousel rests. */
+  .showcase__caption-l { display: flex; flex-direction: column; gap: 4px; }
+  .showcase__caption .sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--red); }
+  .showcase__caption .name { font: 600 16px/1.1 'Jost'; letter-spacing: -0.01em; color: var(--black); }
+  .showcase__caption-r { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .12em; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
+  .pin {
+    position: absolute; display: inline-flex; align-items: center; gap: 10px;
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 7px 11px 7px 7px; border-radius: 2px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+    font: 500 11px/1 'JetBrains Mono'; color: var(--black); letter-spacing: .04em;
+  }
+  .pin__dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; }
+  .pin--1 { top: 18%; left: 8%; }
+  .pin--2 { bottom: 30%; right: 6%; }
+  .pin--3 { bottom: 9%; left: 10%; background: var(--black); color: var(--white); border-color: var(--black); }
+  .pin--3 .pin__dot { background: var(--gold); }
+  .showcase__tag {
+    position: absolute; bottom: 18px; right: 18px;
+    background: var(--black); color: var(--white); padding: 12px 16px;
+    min-width: 180px; display: flex; flex-direction: column; gap: 4px;
+  }
+  .showcase__tag .sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--gold); }
+  .showcase__tag .name { font: 600 16px/1.1 'Jost'; letter-spacing: -0.01em; }
+  .showcase__tag .meta { font: 500 11px/1 'JetBrains Mono'; color: rgba(255,255,255,.6); margin-top: 2px; }
+
+  /* ───────── TICKER ───────── */
+  .ticker {
+    background: var(--black); color: var(--white);
+    padding: 16px 0; overflow: hidden;
+    border-top: 3px solid var(--red);
+  }
+  .ticker__track {
+    display: flex; gap: 56px; align-items: center;
+    white-space: nowrap; animation: ticker 40s linear infinite;
+    animation-direction: reverse;
+    font: 600 12px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+  }
+  .ticker__track span::after {
+    content: '·'; color: var(--red); margin-left: 56px; font-size: 18px;
+  }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+
+  /* ───────── TACKLE CATEGORY GRID (GUNK pattern) ───────── */
+  .tackle { padding: 96px 0 80px; background: var(--white); }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 48px; }
+  .section-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 14px;
+  }
+  .section-eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .section-title { font: 700 clamp(2rem, 4.2vw, 3.25rem)/1.02 'Jost'; letter-spacing: -0.03em; text-transform: uppercase; }
+  .section-title em { font-style: normal; color: var(--red); }
+
+  .tile-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+  }
+  .tile {
+    background: var(--white); padding: 32px 28px;
+    display: flex; flex-direction: column; gap: 16px;
+    min-height: 220px;
+    transition: background 200ms;
+    position: relative; overflow: hidden;
+  }
+  .tile::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left; transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .tile:hover { background: var(--offwhite); }
+  .tile:hover::before { transform: scaleX(1); }
+  .tile:hover .tile__arrow { transform: translate(4px, -4px); }
+  .tile__icon {
+    width: 44px; height: 44px; color: var(--black);
+    background: var(--offwhite); display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--rule);
+  }
+  .tile__name { font: 700 18px/1.1 'Jost'; letter-spacing: -0.01em; text-transform: uppercase; }
+  .tile__count { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
+  .tile__arrow {
+    position: absolute; top: 24px; right: 24px;
+    width: 18px; height: 18px; color: var(--black);
+    transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* ───────── BROWSE BY INDUSTRY ───────── */
+  .industry { padding: 80px 0 96px; background: var(--offwhite); border-top: 1px solid var(--rule); }
+  .industry-grid {
+    display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
+  }
+  .ind-card {
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 22px 20px; min-height: 140px;
+    display: flex; flex-direction: column; justify-content: space-between;
+    transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+  }
+  .ind-card:hover { background: var(--black); color: var(--white); border-color: var(--black); transform: translateY(-2px); }
+  .ind-card:hover .ind-card__svg { color: var(--gold); }
+  .ind-card__svg { width: 28px; height: 28px; color: var(--red); transition: color 200ms; }
+  .ind-card__name { font: 600 14px/1.2 'Jost'; letter-spacing: 0; text-transform: uppercase; }
+
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+</head>
+<body>
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        Find a Distributor
+      </a>
+      <a class="util__item">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"/></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;">
+        <span class="util__lang active">EN</span>
+        <span class="util__lang">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="#"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link active">Home</a></div>
+      <div class="nav__item">
+        <a class="nav__link">Products
+          <svg class="nav__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="mega">
+          <div class="mega__col">
+            <h5>Featured Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg>
+                <div><strong>Brake Cleaners</strong><br/><span>Fast-dry, non-chlorinated &amp; high-pressure formulations</span></div>
+              </a>
+              <a class="mega__row">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg>
+                <div><strong>Engine Additives</strong><br/><span>Flushes, system cleaners, top-end conditioners</span></div>
+              </a>
+              <a class="mega__row">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg>
+                <div><strong>Fuel Additives</strong><br/><span>Diesel &amp; petrol injector cleaners, performance boosters</span></div>
+              </a>
+              <a class="mega__row">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg>
+                <div><strong>Lubricants &amp; Grease</strong><br/><span>Synthetic greases, penetrating oils, dry lubes</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="mega__col">
+            <h5>All Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"></path>
+  <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"></path>
+  <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"></path>
+  <path d="M4.5 16h15"></path>
+  <path d="M19.5 8h-15"></path></svg><div><strong>Oils &amp; Fluids</strong><br/><span>Engine, ATF, brake, coolant</span></div></a>
+              <a class="mega__row"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg><div><strong>Maintenance Sprays</strong><br/><span>Contact cleaner, throttle body, electronic</span></div></a>
+              <a class="mega__row"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18.963 14.938a6.54 6.54 0 0 0 -.899 -4.06l-4.89 -7.26c-.42 -.626 -1.287 -.804 -1.936 -.398a1.376 1.376 0 0 0 -.41 .397l-1.282 1.9m-1.625 2.415l-1.986 2.946c-1.695 2.837 -1.035 6.44 1.567 8.545c2.602 2.105 6.395 2.105 8.996 0a6.83 6.83 0 0 0 1.376 -1.499"></path>
+  <path d="M3 3l18 18"></path></svg><div><strong>Sealants &amp; Stop Leaks</strong><br/><span>Cooling, transmission, power steering</span></div></a>
+              <a class="mega__row"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6"></path></svg><div><strong>Car Care</strong><br/><span>Detailing, interior, exterior</span></div></a>
+              <a class="mega__row"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__item"><a class="nav__link">Industries</a></div>
+      <div class="nav__item"><a class="nav__link">About</a></div>
+      <div class="nav__item"><a class="nav__link">News</a></div>
+      <div class="nav__item"><a class="nav__link">Contact</a></div>
+    </nav>
+    <div class="header__actions">
+      <button class="btn btn--dark" style="font-size:11px; padding:11px 18px;">Where to Buy</button>
+      <button class="btn btn--primary" style="font-size:11px; padding:11px 18px;">Become a Distributor</button>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── HERO ───────── -->
+<section class="hero">
+  <div class="hero__grid"></div>
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__eyebrow">German Engineering<span class="yr">Since 2006</span></div>
+      <h1 class="hero__title">Toughest chemicals.<br /><span class="stripe">OEM-grade</span> performance.</h1>
+      <p class="hero__sub">Premium automotive chemicals, additives, and lubricants — engineered in Hannover, OEM-certified, distributed across Canada by professional shops, fleets, and parts retailers.</p>
+      <div class="hero__actions">
+        <button class="btn btn--primary btn--lg">Explore Products <span class="arrow">→</span></button>
+        <button class="btn btn--ghost-dark btn--lg">Find a Distributor</button>
+      </div>
+      <div class="specs">
+        <div class="spec"><div class="spec__v">20+</div><div class="spec__l">Years of<br/>Engineering</div></div>
+        <div class="spec"><div class="spec__v">50M</div><div class="spec__l">Bottles<br/>Annual Capacity</div></div>
+        <div class="spec"><div class="spec__v">10K+</div><div class="spec__l">Global<br/>Customers</div></div>
+        <div class="spec"><div class="spec__v">140K</div><div class="spec__l">ft²<br/>Facility</div></div>
+      </div>
+    </div>
+    <div class="carousel" id="hero-carousel">
+      <div class="showcase">
+        <div class="showcase__chevron"><div></div><div></div></div>
+        <div class="showcase__track">
+          <!-- Drop in real product PNGs by swapping the `src` on each slide.
+               IMPORTANT: keep the two halves identical — second half is a duplicate
+               of the first so the loop is seamless. -->
+          <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Brake Cleaner 400g" /></div>
+          <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Engine Flush 300mL" /></div>
+          <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Diesel Injector Cleaner 250mL" /></div>
+          <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Synthetic Chain Lube 400g" /></div>
+          <!-- duplicate set -->
+          <div class="showcase__slide" aria-hidden="true"><img src="../assets/products/brake-cleaner.png" alt="" /></div>
+          <div class="showcase__slide" aria-hidden="true"><img src="../assets/products/brake-cleaner.png" alt="" /></div>
+          <div class="showcase__slide" aria-hidden="true"><img src="../assets/products/brake-cleaner.png" alt="" /></div>
+          <div class="showcase__slide" aria-hidden="true"><img src="../assets/products/brake-cleaner.png" alt="" /></div>
+        </div>
+      </div>
+      <div class="showcase__caption">
+        <div class="showcase__caption-track">
+          <div class="showcase__caption-cell">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-210 · MAINTENANCE</div>
+              <div class="name">Brake Cleaner</div>
+            </div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-340 · ENGINE</div>
+              <div class="name">Engine Flush</div>
+            </div>
+            <div class="showcase__caption-r">300 mL · LIQUID · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-512 · FUEL</div>
+              <div class="name">Diesel Injector Cleaner</div>
+            </div>
+            <div class="showcase__caption-r">250 mL · LIQUID · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-088 · LUBE</div>
+              <div class="name">Synthetic Chain Lube</div>
+            </div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
+          </div>
+          <!-- duplicate set, hidden from a11y but keeps the loop seamless -->
+          <div class="showcase__caption-cell" aria-hidden="true">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-210 · MAINTENANCE</div>
+              <div class="name">Brake Cleaner</div>
+            </div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell" aria-hidden="true">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-340 · ENGINE</div>
+              <div class="name">Engine Flush</div>
+            </div>
+            <div class="showcase__caption-r">300 mL · LIQUID · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell" aria-hidden="true">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-512 · FUEL</div>
+              <div class="name">Diesel Injector Cleaner</div>
+            </div>
+            <div class="showcase__caption-r">250 mL · LIQUID · GERMAN ENGINEERED</div>
+          </div>
+          <div class="showcase__caption-cell" aria-hidden="true">
+            <div class="showcase__caption-l">
+              <div class="sku">KB-088 · LUBE</div>
+              <div class="name">Synthetic Chain Lube</div>
+            </div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── TICKER ───────── -->
+<div class="ticker">
+  <div class="ticker__track">
+    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power · Performance · Kolben</span>
+    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power · Performance · Kolben</span>
+  </div>
+</div>
+
+<!-- ───────── TACKLE YOUR TOUGHEST JOBS (GUNK pattern) ───────── -->
+<section class="tackle">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">Solutions</div>
+        <h2 class="section-title">Tackle your <em>toughest</em> jobs.</h2>
+      </div>
+      <a class="btn btn--ghost-dark">View Full Catalog <span class="arrow">→</span></a>
+    </div>
+    <div class="tile-grid">
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg></div>
+        <div><div class="tile__name">Brake Service</div><div class="tile__count" style="margin-top:4px;">12 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg></div>
+        <div><div class="tile__name">Engine Cleaning</div><div class="tile__count" style="margin-top:4px;">8 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg></div>
+        <div><div class="tile__name">Fuel System</div><div class="tile__count" style="margin-top:4px;">14 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg></div>
+        <div><div class="tile__name">Lubricants</div><div class="tile__count" style="margin-top:4px;">22 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M10 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M17 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M3 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M10 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M5 8l0 8"></path>
+  <path d="M12 8l0 8"></path>
+  <path d="M19 8v2a2 2 0 0 1 -2 2h-12"></path></svg></div>
+        <div><div class="tile__name">Transmission</div><div class="tile__count" style="margin-top:4px;">9 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M10 4l2 1l2 -1"></path>
+  <path d="M12 2v6.5l3 1.72"></path>
+  <path d="M17.928 6.268l.134 2.232l1.866 1.232"></path>
+  <path d="M20.66 7l-5.629 3.25l.01 3.458"></path>
+  <path d="M19.928 14.268l-1.866 1.232l-.134 2.232"></path>
+  <path d="M20.66 17l-5.629 -3.25l-2.99 1.738"></path>
+  <path d="M14 20l-2 -1l-2 1"></path>
+  <path d="M12 22v-6.5l-3 -1.72"></path>
+  <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232"></path>
+  <path d="M3.34 17l5.629 -3.25l-.01 -3.458"></path>
+  <path d="M4.072 9.732l1.866 -1.232l.134 -2.232"></path>
+  <path d="M3.34 7l5.629 3.25l2.99 -1.738"></path></svg></div>
+        <div><div class="tile__name">Cooling &amp; Radiator</div><div class="tile__count" style="margin-top:4px;">7 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5"></path>
+  <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5"></path>
+  <path d="M3 21l2.5 -2.5"></path>
+  <path d="M18.5 5.5l2.5 -2.5"></path>
+  <path d="M10 11l-2 2"></path>
+  <path d="M13 14l-2 2"></path></svg></div>
+        <div><div class="tile__name">Electrical Contact</div><div class="tile__count" style="margin-top:4px;">6 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+      <a class="tile">
+        <div class="tile__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg></div>
+        <div><div class="tile__name">Detailing &amp; Care</div><div class="tile__count" style="margin-top:4px;">11 SKUs</div></div>
+        <svg class="tile__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── BROWSE BY INDUSTRY (CRC pattern) ───────── -->
+<section class="industry">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="section-eyebrow">For Professionals</div>
+        <h2 class="section-title">Browse by <em>industry</em>.</h2>
+      </div>
+      <a class="btn btn--ghost-dark">All Industries <span class="arrow">→</span></a>
+    </div>
+    <div class="industry-grid">
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"></path></svg>
+        <div class="ind-card__name">Automotive Repair</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"></path></svg>
+        <div class="ind-card__name">Heavy Truck &amp; Fleet</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 21c1.147 -4.02 1.983 -8.027 2 -12h6c.017 3.973 .853 7.98 2 12"></path>
+  <path d="M12.5 13h4.5c.025 2.612 .894 5.296 2 8"></path>
+  <path d="M9 5a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1"></path>
+  <path d="M3 21l19 0"></path></svg>
+        <div class="ind-card__name">Industrial &amp; Mfg</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1"></path>
+  <path d="M4 18l-1 -3h18l-1 3"></path>
+  <path d="M11 12h7l-7 -9v9"></path>
+  <path d="M8 7l-2 5"></path></svg>
+        <div class="ind-card__name">Marine</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M12 4a9 9 0 0 1 5.656 16h-11.312a9 9 0 0 1 5.656 -16"></path>
+  <path d="M20 9h-8.8a1 1 0 0 0 -.968 1.246c.507 2 1.596 3.418 3.268 4.254c2 1 4.333 1.5 7 1.5"></path></svg>
+        <div class="ind-card__name">Motorsport</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14.639 10.258l4.83 -1.294a2 2 0 1 1 1.035 3.863l-14.489 3.883l-4.45 -5.02l2.897 -.776l2.45 1.414l2.897 -.776l-3.743 -6.244l2.898 -.777l5.675 5.727"></path>
+  <path d="M3 21h18"></path></svg>
+        <div class="ind-card__name">Aviation</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 21l18 0"></path>
+  <path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"></path>
+  <path d="M5 21l0 -10.15"></path>
+  <path d="M19 21l0 -10.15"></path>
+  <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"></path></svg>
+        <div class="ind-card__name">Parts Retailers</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M2 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M11 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M13 19l-9 0"></path>
+  <path d="M4 15l9 0"></path>
+  <path d="M8 12v-5h2a3 3 0 0 1 3 3v5"></path>
+  <path d="M5 15v-2a1 1 0 0 1 1 -1h7"></path>
+  <path d="M21.12 9.88l-3.12 -4.88l-5 5"></path>
+  <path d="M21.12 9.88a3 3 0 0 1 -2.12 5.12a3 3 0 0 1 -2.12 -.88l4.24 -4.24"></path></svg>
+        <div class="ind-card__name">Mining &amp; Heavy</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+  <path d="M7 15l0 .01"></path>
+  <path d="M17 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+  <path d="M10.5 17l6.5 0"></path>
+  <path d="M20 15.2v-4.2a1 1 0 0 0 -1 -1h-6l-2 -5h-6v6.5"></path>
+  <path d="M18 5h-1a1 1 0 0 0 -1 1v4"></path></svg>
+        <div class="ind-card__name">Agriculture</div>
+      </a>
+      <a class="ind-card">
+        <svg class="ind-card__svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 21v-13l9 -4l9 4v13"></path>
+  <path d="M13 13h4v8h-10v-6h6"></path>
+  <path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"></path></svg>
+        <div class="ind-card__name">Distributors</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── TWEAKS PANEL ───────── -->
+<div id="tweaks-root"></div>
+<script type="text/babel">
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "red": "#DE1F26"
+  }/*EDITMODE-END*/;
+
+  function TweaksApp() {
+    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+    // Apply the tweak to the live CSS custom property whenever it changes.
+    React.useEffect(() => {
+      document.documentElement.style.setProperty('--red', t.red);
+    }, [t.red]);
+
+    return (
+      <TweaksPanel title="Tweaks">
+        <TweakSection title="Brand">
+          <TweakColor
+            label="Primary red"
+            value={t.red}
+            options={["#DE1F26", "#db1f26"]}
+            onChange={(v) => setTweak('red', v)}
+          />
+        </TweakSection>
+      </TweaksPanel>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<TweaksApp />);
+</script>
+
+<script>
+  /* Hero product carousel — JS controller.
+     Why not pure CSS animation? Because `animation-play-state: paused`
+     freezes the track MID-swipe, which looks broken. Here, each "swipe" is
+     a CSS transition fired by JS. A `paused` flag (driven by hover) only
+     gates whether the NEXT tick fires — any in-flight transition completes
+     naturally, so the bottle always lands cleanly on a slide before resting.
+
+     Track has 4 unique slides + 4 duplicates (8 total). The visible cycle
+     translates between 5 stops; when it reaches the final stop (0cqw, which
+     visually equals the duplicate of the first slide) it snaps back to
+     -400cqw on the next tick with NO transition — seamless loop. */
+  (function () {
+    const carousel = document.getElementById('hero-carousel');
+    if (!carousel) return;
+    const track    = carousel.querySelector('.showcase__track');
+    const capTrack = carousel.querySelector('.showcase__caption-track');
+
+    const STOPS    = [-400, -300, -200, -100, 0]; // cqw positions, rightward order
+    const HOLD_MS  = 3800;
+    const SWIPE_MS = 800;
+    let i = 0;
+    let paused = false;
+
+    function applyStop(snap) {
+      const t = 'translateX(' + STOPS[i] + 'cqw)';
+      if (snap) {
+        track.classList.add('no-transition');
+        capTrack.classList.add('no-transition');
+        track.style.transform = t;
+        capTrack.style.transform = t;
+        // force reflow so the upcoming transition takes effect
+        void track.offsetWidth;
+        track.classList.remove('no-transition');
+        capTrack.classList.remove('no-transition');
+      } else {
+        track.style.transform = t;
+        capTrack.style.transform = t;
+      }
+    }
+
+    function tick() {
+      if (paused) return;
+      const next = (i + 1) % STOPS.length;
+      const isWrap = next === 0; // wrapped past the last stop → snap reset
+      i = next;
+      applyStop(isWrap);
+    }
+
+    applyStop(true);                                  // initial position, no animation
+    setInterval(tick, HOLD_MS + SWIPE_MS);
+
+    carousel.addEventListener('mouseenter', () => { paused = true; });
+    carousel.addEventListener('mouseleave', () => { paused = false; });
+  })();
+</script>
+
+<!-- ───────── i18n (EN ↔ Quebec French) ───────── -->
+<script src="i18n.js"></script>
+
+<script>
+  /* Mega-menu hover with grace period.
+     Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
+     bounding box, which makes diagonal/lateral travel toward the panel feel
+     fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
+     mouseleave — the timer is cancelled if the cursor re-enters either the
+     nav__item OR the .mega within ~220ms, so cursor paths in any direction
+     are forgiving. CSS still honours :hover so the menu also works without JS. */
+  (function () {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      const mega = item.querySelector('.mega');
+      if (!mega) return; // only items WITH a mega panel need grace handling
+      let closeTimer = null;
+      const open = function () {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        item.classList.add('is-open');
+      };
+      const close = function () {
+        closeTimer = setTimeout(function () {
+          item.classList.remove('is-open');
+          closeTimer = null;
+        }, 220);
+      };
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', close);
+      mega.addEventListener('mouseenter', open);
+      mega.addEventListener('mouseleave', close);
+    });
+  })();
+</script>
+
+
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+
+</body>
+</html>

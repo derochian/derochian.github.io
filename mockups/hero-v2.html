@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kolben Hero · v2 mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #000000;
+    --red: #DE1F26;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --silver-50: #e9eaec;
+    --silver-100: #d3d5d9;
+    --silver-200: #b9bcc2;
+    --silver-300: #989ca3;
+    --silver-shadow: rgba(0,0,0,.18);
+    --rule: rgba(0,0,0,.10);
+    --muted: rgba(0,0,0,.62);
+
+    /* Brushed-aluminum surface — fine vertical streaks + soft top-light */
+    --brushed-aluminum:
+      linear-gradient(180deg, rgba(255,255,255,.65) 0%, rgba(255,255,255,0) 24%, rgba(0,0,0,.05) 76%, rgba(0,0,0,.18) 100%),
+      repeating-linear-gradient(90deg,
+        rgba(255,255,255,.55) 0px, rgba(255,255,255,.55) 1px,
+        rgba(255,255,255,0) 2px, rgba(255,255,255,0) 3px,
+        rgba(0,0,0,.04) 4px, rgba(0,0,0,.04) 5px,
+        rgba(255,255,255,0) 6px, rgba(255,255,255,0) 9px),
+      linear-gradient(90deg, #c8cad0 0%, #e6e7ea 35%, #f2f3f5 50%, #e6e7ea 65%, #b9bcc2 100%);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--black); }
+  img, svg { display: block; max-width: 100%; }
+  button { font: inherit; cursor: pointer; border: 0; background: none; }
+
+  /* ─── Header (kept light/transparent, sits on white) ─── */
+  .header { position: absolute; top: 0; left: 0; right: 0; z-index: 5; padding: 22px 0; }
+  .header__inner { max-width: 1440px; margin: 0 auto; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .header__logo { display: flex; align-items: center; }
+  .header__logo img { height: 44px; }
+  .nav { display: flex; gap: 0; }
+  .nav a {
+    padding: 8px 14px; cursor: pointer; text-decoration: none;
+    font: 500 13px/1 'Jost'; color: var(--black); letter-spacing: .02em;
+    border-radius: 2px; transition: background 150ms;
+  }
+  .nav a:hover { background: rgba(0,0,0,.06); }
+  .nav a.active { background: var(--black); color: var(--white); }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+  .lang { display: inline-flex; align-items: center; gap: 6px; padding: 8px 12px; border: 1px solid rgba(0,0,0,.18); border-radius: 2px; font: 500 11px/1 'Jost'; letter-spacing: .14em; color: var(--black); }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 26px;
+    font: 600 13px/1 'Jost'; letter-spacing: .08em; text-transform: uppercase;
+    border-radius: 2px; transition: all 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: #c01a20; transform: translateY(-1px); box-shadow: 0 10px 24px rgba(222,31,38,.32); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--sm { padding: 10px 16px; font-size: 11px; }
+  .btn--lg { padding: 17px 32px; font-size: 14px; }
+
+  /* ─── Hero ─── */
+  .hero { position: relative; min-height: 100vh; padding: 140px 0 80px; overflow: hidden; }
+  .hero__bg-rule {
+    position: absolute; right: 6%; top: 0; bottom: 0; width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--rule) 14%, var(--rule) 86%, transparent);
+  }
+  .hero__bg-grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    background-position: -1px -1px;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 80% 60% at 30% 60%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 30% 60%, black, transparent 75%);
+  }
+  .hero__container {
+    position: relative; max-width: 1440px; margin: 0 auto; padding: 0 40px;
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 80px; align-items: center;
+  }
+
+  /* Left column */
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-bottom: 32px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+  }
+  .hero__eyebrow::before {
+    content: ''; width: 36px; height: 3px; background: var(--red);
+  }
+  .hero__eyebrow .yr { color: var(--muted); font-weight: 500; padding-left: 12px; border-left: 1px solid var(--rule); }
+
+  .hero__title {
+    font-family: 'Jost'; font-weight: 800; font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.96; letter-spacing: -0.035em; color: var(--black);
+    margin-bottom: 28px; text-wrap: balance;
+  }
+  .hero__title .stripe {
+    display: inline-block; position: relative; padding-right: 6px;
+  }
+  .hero__title .stripe::after {
+    content: ''; position: absolute; left: -2px; right: -2px; bottom: 8px; height: 18px;
+    background: var(--gold); z-index: -1; opacity: .95;
+  }
+
+  .hero__sub {
+    font: 400 18px/1.55 'Inter'; color: var(--muted); max-width: 540px; margin-bottom: 40px;
+  }
+
+  .hero__actions { display: flex; gap: 14px; align-items: center; margin-bottom: 56px; flex-wrap: wrap; }
+  .hero__actions .arrow { display: inline-block; transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); }
+  .hero__actions .btn:hover .arrow { transform: translateX(3px); }
+
+  /* Spec strip */
+  .specs {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; padding-top: 32px; border-top: 1px solid var(--rule);
+  }
+  .spec { padding: 0 24px 0 0; position: relative; }
+  .spec + .spec { padding-left: 24px; border-left: 1px solid var(--rule); }
+  .spec__v { font: 800 32px/1 'Jost'; letter-spacing: -0.025em; color: var(--black); }
+  .spec__l { font: 500 11px/1.35 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-top: 8px; }
+
+  /* Right column: silver brushed-aluminum surface */
+  .showcase {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background: var(--brushed-aluminum);
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 -1px 0 rgba(0,0,0,.15) inset,
+      0 30px 60px -20px rgba(0,0,0,.25),
+      0 10px 30px -10px rgba(0,0,0,.15);
+    overflow: hidden;
+  }
+
+  /* Red corner wedge — references the logo chevron */
+  .showcase__chevron {
+    position: absolute; top: 0; left: 0; width: 100%; height: 6px;
+    display: flex;
+  }
+  .showcase__chevron div:nth-child(1) { flex: 1; background: var(--red); }
+  .showcase__chevron div:nth-child(2) { flex: 1; background: var(--gold); }
+
+  /* Specimen plate (the bottle) */
+  .showcase__bottle {
+    position: absolute; left: 50%; top: 52%; transform: translate(-50%, -50%);
+    height: 88%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 30px 30px rgba(0,0,0,.35));
+  }
+
+  /* Floating spec callouts on the can */
+  .pin {
+    position: absolute; display: flex; align-items: center; gap: 10px;
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 6px 10px 6px 6px; border-radius: 2px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.18);
+    font: 500 11px/1 'JetBrains Mono'; color: var(--black);
+    letter-spacing: .04em;
+  }
+  .pin__dot { width: 8px; height: 8px; background: var(--red); border-radius: 50%; }
+  .pin__line { position: absolute; height: 1px; background: var(--black); transform-origin: left center; }
+  .pin--1 { top: 18%; left: 8%; }
+  .pin--2 { bottom: 28%; right: 6%; }
+  .pin--3 { bottom: 7%; left: 10%; background: var(--black); color: var(--white); }
+  .pin--3 .pin__dot { background: var(--gold); }
+
+  /* Catalog tag, bottom-right of showcase */
+  .showcase__tag {
+    position: absolute; bottom: 18px; right: 18px;
+    background: var(--black); color: var(--white);
+    padding: 12px 16px; min-width: 180px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .showcase__tag .sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--gold); }
+  .showcase__tag .name { font: 700 16px/1.1 'Jost'; letter-spacing: -0.015em; }
+  .showcase__tag .meta { font: 500 11px/1 'JetBrains Mono'; color: rgba(255,255,255,.6); margin-top: 2px; }
+
+  /* Bottom strip across hero */
+  .ticker {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: var(--black); color: var(--white);
+    padding: 14px 0; overflow: hidden;
+  }
+  .ticker__track {
+    display: flex; gap: 56px; align-items: center;
+    white-space: nowrap; animation: ticker 40s linear infinite;
+    font: 500 12px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase;
+  }
+  .ticker__track span { display: inline-flex; align-items: center; gap: 12px; }
+  .ticker__track span::after {
+    content: ''; width: 4px; height: 4px; background: var(--red); border-radius: 50%; margin-left: 56px;
+  }
+  @keyframes ticker { to { transform: translateX(-50%); } }
+
+  /* Annotation card to the left of showcase */
+  .annotation {
+    position: absolute; left: -180px; bottom: 12%;
+    background: var(--white); padding: 14px 18px; border-left: 3px solid var(--gold);
+    box-shadow: 0 18px 40px rgba(0,0,0,.12);
+    max-width: 220px;
+  }
+  .annotation .h { font: 600 10px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .annotation .b { font: 500 13px/1.45 'Jost'; color: var(--black); letter-spacing: -0.005em; }
+
+  /* Responsive (down to ~1100px) */
+  @media (max-width: 1180px) {
+    .hero__container { gap: 48px; }
+    .annotation { display: none; }
+  }
+  @media (max-width: 940px) {
+    .hero__container { grid-template-columns: 1fr; }
+    .showcase { max-width: 480px; margin: 0 auto; }
+    .specs { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
+    .spec:nth-child(3) { border-left: 0; padding-left: 0; }
+  }
+</style>
+</head>
+<body data-screen-label="Hero v2 Mockup">
+
+<header class="header">
+  <div class="header__inner">
+    <a class="header__logo" href="#"><img src="../assets/kolben-logo-v10.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <a class="active">Home</a>
+      <a>About</a>
+      <a>Products</a>
+      <a>Compliance</a>
+      <a>Contact</a>
+    </nav>
+    <div class="header__actions">
+      <button class="lang">
+        <svg width="11" height="11" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="8"/><path d="M10 2c3 4 3 12 0 16M10 2c-3 4-3 12 0 16M2 10h16"/></svg>
+        EN
+      </button>
+      <button class="btn btn--primary btn--sm">Become a Distributor</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__bg-rule"></div>
+  <div class="hero__bg-grid"></div>
+
+  <div class="hero__container">
+    <!-- LEFT -->
+    <div class="hero__copy">
+      <div class="hero__eyebrow">
+        Experts in Automotive
+        <span class="yr">Since 2006</span>
+      </div>
+
+      <h1 class="hero__title">
+        German precision.<br />
+        <span class="stripe">Engine</span> perfection.
+      </h1>
+
+      <p class="hero__sub">
+        Premium automotive chemicals, additives, and lubricants — engineered in Hannover, OEM-certified, distributed across Canada.
+      </p>
+
+      <div class="hero__actions">
+        <button class="btn btn--primary btn--lg">
+          Explore Products
+          <span class="arrow">→</span>
+        </button>
+        <button class="btn btn--ghost-dark btn--lg">Download Catalog</button>
+      </div>
+
+      <div class="specs">
+        <div class="spec"><div class="spec__v">20+</div><div class="spec__l">Years<br />of Engineering</div></div>
+        <div class="spec"><div class="spec__v">50M</div><div class="spec__l">Bottles<br />Annual Capacity</div></div>
+        <div class="spec"><div class="spec__v">10K+</div><div class="spec__l">Global<br />Customers</div></div>
+        <div class="spec"><div class="spec__v">140K</div><div class="spec__l">ft²<br />Facility</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT — silver/brushed-aluminum showcase -->
+    <div class="hero__visual">
+      <div class="showcase">
+        <div class="showcase__chevron"><div></div><div></div></div>
+
+        <img class="showcase__bottle" src="../assets/products/brake-cleaner.png" alt="Kolben Brake Cleaner 400g" />
+
+        <div class="pin pin--1">
+          <span class="pin__dot"></span>
+          ISO 9001 · IATF · SGS
+        </div>
+        <div class="pin pin--2">
+          <span class="pin__dot"></span>
+          NON-CHLORINATED
+        </div>
+        <div class="pin pin--3">
+          <span class="pin__dot"></span>
+          EN · FR LABEL
+        </div>
+
+        <div class="showcase__tag">
+          <div class="sku">KB-210 · MAINTENANCE</div>
+          <div class="name">Brake Cleaner</div>
+          <div class="meta">400 g · AEROSOL · GERMAN ENGINEERED</div>
+        </div>
+      </div>
+
+      <div class="annotation">
+        <div class="h">Reference Spec</div>
+        <div class="b">Brushed aluminum surface — silver as a real brand material, lifted from the Brake Cleaner can.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker">
+    <div class="ticker__track">
+      <span>German Engineered</span>
+      <span>OEM Certified</span>
+      <span>Canadian Distribution</span>
+      <span>ISO 9001</span>
+      <span>IATF 16949</span>
+      <span>SGS Verified</span>
+      <span>Power · Performance · Kolben</span>
+      <!-- repeat for seamless loop -->
+      <span>German Engineered</span>
+      <span>OEM Certified</span>
+      <span>Canadian Distribution</span>
+      <span>ISO 9001</span>
+      <span>IATF 16949</span>
+      <span>SGS Verified</span>
+      <span>Power · Performance · Kolben</span>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kolben — News &amp; Press</title>
+<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
+<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───────── TOKENS — locked brand palette ───────── */
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --silver-50: #e9eaec;
+    --silver-100: #d3d5d9;
+    --silver-200: #b9bcc2;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --on-black-primary: rgba(255,255,255,.85);
+    --on-black-muted:   rgba(255,255,255,.70);
+    --on-black-border:  rgba(255,255,255,.16);
+    --on-black-hover:   rgba(255,255,255,.12);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+    /* Brushed metal — placeholder image surface */
+    --brushed:
+      linear-gradient(180deg,
+        rgba(255,255,255,.55) 0%,
+        rgba(255,255,255,0) 26%,
+        rgba(0,0,0,.05) 78%,
+        rgba(0,0,0,.18) 100%),
+      repeating-linear-gradient(90deg,
+        rgba(255,255,255,.5) 0px, rgba(255,255,255,.5) 1px,
+        rgba(255,255,255,0) 2px, rgba(255,255,255,0) 3px,
+        rgba(0,0,0,.04) 4px, rgba(0,0,0,.04) 5px,
+        rgba(255,255,255,0) 6px, rgba(255,255,255,0) 9px),
+      linear-gradient(90deg,
+        #c8cad0 0%, #e6e7ea 35%, #f2f3f5 50%, #e6e7ea 65%, #b9bcc2 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a, input, select, textarea { font: inherit; color: inherit; }
+  button, a { cursor: pointer; }
+  button { border: 0; background: none; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ───────── UTILITY BAR ───────── */
+  .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid var(--on-black-border); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: var(--on-black-hover); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ───────── BUTTONS ───────── */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
+  .btn--sm { padding: 11px 18px; font-size: 11px; }
+  .btn--lg { padding: 17px 28px; font-size: 13px; }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--ghost-light { background: transparent; color: var(--white); border: 1.5px solid var(--on-black-border); }
+  .btn--ghost-light:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     HERO
+  ═══════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative; overflow: hidden;
+    background: var(--black); color: var(--white);
+    padding: 96px 0 84px;
+  }
+  .hero::after {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--red) 0, var(--red) 50%, var(--gold) 50%, var(--gold) 100%);
+    z-index: 2;
+  }
+  .hero__grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    pointer-events: none;
+  }
+  .hero__inner { position: relative; display: grid; grid-template-columns: 1.6fr 1fr; gap: 64px; align-items: end; }
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 14px; margin-bottom: 22px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white);
+  }
+  .hero__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .hero__eyebrow .mono {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .2em; color: var(--gold);
+    padding-left: 14px; border-left: 1px solid var(--on-black-border);
+  }
+  .hero__h1 {
+    font-family: 'Jost'; font-weight: 700;
+    font-size: clamp(2.4rem, 5.4vw, 4.6rem);
+    line-height: 0.98; letter-spacing: -0.035em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 22px;
+    text-wrap: balance;
+    max-width: 18ch;
+  }
+  .hero__h1 em { font-style: normal; color: var(--gold); }
+  .hero__sub {
+    font: 400 17px/1.55 'Inter'; color: var(--on-black-primary);
+    max-width: 56ch;
+  }
+  .hero__rss {
+    align-self: end;
+    display: flex; flex-direction: column; gap: 14px;
+    padding-left: 28px; border-left: 1px solid var(--on-black-border);
+  }
+  .hero__rss-eyebrow { font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--on-black-muted); }
+  .hero__rss-links {
+    display: flex; flex-direction: column; gap: 6px;
+    font: 500 13px/1.5 'JetBrains Mono'; letter-spacing: .04em; color: var(--white);
+  }
+  .hero__rss-links a {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--on-black-border);
+    color: var(--white);
+  }
+  .hero__rss-links a:last-child { border-bottom: 0; }
+  .hero__rss-links a span.arrow { color: var(--gold); transition: transform 220ms var(--ease); }
+  .hero__rss-links a:hover span.arrow { transform: translate(3px, -3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     FILTERS + SEARCH
+  ═══════════════════════════════════════════════════════════ */
+  .filters-sec {
+    background: var(--white);
+    padding: 28px 0 32px;
+    position: sticky; top: 76px; z-index: 50;
+    border-bottom: 1px solid var(--rule);
+  }
+  .filters {
+    display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: center;
+  }
+  .chips {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--white);
+    font: 600 11px/1 'Jost'; letter-spacing: .16em; text-transform: uppercase; color: var(--black);
+    transition: all 200ms var(--ease);
+    cursor: pointer; white-space: nowrap;
+  }
+  .chip .ct { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .12em; color: var(--muted); }
+  .chip:hover { background: var(--offwhite); border-color: rgba(0,0,0,.22); }
+  .chip.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
+  .chip.is-active .ct { color: var(--gold); }
+
+  .search-wrap {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    display: grid;
+    grid-template-columns: 24px 1fr;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
+    width: 320px;
+  }
+  .search-wrap:focus-within {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(222,31,38,.12);
+  }
+  .search-wrap__icon { width: 16px; height: 16px; color: var(--black); }
+  .search-wrap__icon svg { width: 100%; height: 100%; }
+  .search-wrap input {
+    appearance: none; background: transparent; border: 0; outline: none;
+    font: 400 13.5px/1 'JetBrains Mono'; letter-spacing: .04em;
+    padding: 13px 0;
+    color: var(--ink);
+    width: 100%;
+  }
+  .search-wrap input::placeholder { color: rgba(0,0,0,.42); }
+
+  /* ═══════════════════════════════════════════════════════════
+     CATEGORY TAG TREATMENTS
+     - Press Releases:  red text (signature)
+     - Product News:    black filled tag (white text)
+     - Technical:       hairline outlined, black mono text
+     - Company:         muted text, simple
+  ═══════════════════════════════════════════════════════════ */
+  .ctag {
+    display: inline-flex; align-items: center;
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    height: 22px; padding: 0 8px; border-radius: 2px;
+    white-space: nowrap;
+  }
+  .ctag--press   { color: var(--red); padding-left: 0; padding-right: 0; }
+  .ctag--press::before {
+    content: ''; display: inline-block; width: 18px; height: 1.5px; background: var(--red);
+    margin-right: 10px;
+  }
+  .ctag--product { background: var(--black); color: var(--white); }
+  .ctag--technical { background: transparent; color: var(--black); border: 1px solid var(--rule); font-family: 'JetBrains Mono'; font-weight: 500; letter-spacing: .18em; }
+  .ctag--company { color: var(--muted); padding-left: 0; padding-right: 0; }
+  .ctag--company::before {
+    content: ''; display: inline-block; width: 18px; height: 1.5px; background: var(--muted);
+    margin-right: 10px;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     FEATURED / LEAD
+  ═══════════════════════════════════════════════════════════ */
+  .lead-sec { background: var(--white); padding: 56px 0 0; }
+  .lead {
+    display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
+    border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--white);
+    position: relative; overflow: hidden;
+    transition: background 220ms var(--ease);
+  }
+  .lead::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .lead:hover { background: var(--offwhite); }
+  .lead:hover::after { transform: scaleX(1); }
+  .lead:hover .lead__arrow { transform: translateX(6px); }
+
+  .lead__img {
+    position: relative;
+    background: var(--brushed);
+    aspect-ratio: 16/10;
+    min-height: 360px;
+    border-right: 1px solid var(--rule);
+  }
+  .lead__img-label {
+    position: absolute; left: 18px; bottom: 18px;
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: rgba(0,0,0,.55);
+    background: rgba(255,255,255,.85);
+    padding: 7px 10px; border-radius: 2px; border: 1px solid var(--rule);
+  }
+  .lead__featured {
+    position: absolute; left: 18px; top: 18px;
+    font: 600 10px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(6px);
+    padding: 8px 10px; border-radius: 2px;
+  }
+  .lead__featured::before {
+    content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    background: var(--red); margin-right: 8px; vertical-align: -1px;
+    box-shadow: 0 0 0 3px rgba(222,31,38,.20);
+  }
+  .lead__body {
+    padding: 44px 44px 40px;
+    display: flex; flex-direction: column; gap: 18px; justify-content: space-between;
+  }
+  .lead__meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .lead__date {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; color: var(--muted);
+  }
+  .lead__rt {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; color: var(--muted);
+    padding-left: 16px; border-left: 1px solid var(--rule);
+  }
+  .lead__title {
+    font: 700 clamp(1.8rem, 3.2vw, 2.5rem)/1.06 'Jost';
+    letter-spacing: -0.025em; text-transform: none; color: var(--black);
+    text-wrap: balance;
+  }
+  .lead__title em { font-style: normal; color: var(--red); }
+  .lead__excerpt {
+    font: 400 16px/1.55 'Inter'; color: var(--ink);
+    max-width: 48ch;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .lead__cta {
+    display: inline-flex; align-items: center; gap: 12px;
+    font: 600 12px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+    padding-top: 6px;
+  }
+  .lead__arrow {
+    display: inline-block;
+    transition: transform 220ms var(--ease);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     ARTICLE GRID
+  ═══════════════════════════════════════════════════════════ */
+  .grid-sec { background: var(--white); padding: 56px 0 88px; }
+  .grid-head {
+    display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 28px; flex-wrap: wrap;
+  }
+  .sh__eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 12px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); }
+  .sh__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .grid-head__h {
+    font: 700 clamp(1.6rem, 2.6vw, 2rem)/1.04 'Jost';
+    letter-spacing: -0.025em; text-transform: uppercase; color: var(--black);
+  }
+  .grid-head__h em { font-style: normal; color: var(--red); }
+  .grid-head__count {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+  }
+  .grid-head__count b { color: var(--black); }
+
+  .grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+
+  .acard {
+    display: flex; flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    position: relative; overflow: hidden;
+    transition: background 220ms var(--ease);
+  }
+  .acard::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+    z-index: 2;
+  }
+  .acard:hover { background: var(--offwhite); }
+  .acard:hover::after { transform: scaleX(1); }
+  .acard:hover .acard__arrow { transform: translateX(4px); }
+  .acard.is-hidden { display: none; }
+
+  .acard__img {
+    position: relative;
+    background: var(--brushed);
+    aspect-ratio: 16/9;
+    border-bottom: 1px solid var(--rule);
+  }
+  .acard__img.is-dark { background: var(--black); }
+  .acard__img.is-dark::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 60% 60% at 30% 70%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 60% at 30% 70%, black, transparent 75%);
+  }
+  .acard__img-label {
+    position: absolute; left: 12px; bottom: 12px;
+    font: 500 9.5px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase;
+    color: rgba(0,0,0,.55); background: rgba(255,255,255,.82);
+    padding: 6px 8px; border-radius: 2px; border: 1px solid var(--rule);
+  }
+  .acard__img.is-dark .acard__img-label {
+    color: var(--on-black-muted); background: rgba(0,0,0,.6); border-color: var(--on-black-border);
+  }
+
+  .acard__body {
+    padding: 20px 22px 22px;
+    display: flex; flex-direction: column; gap: 12px; flex: 1;
+  }
+  .acard__top {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .acard__meta {
+    display: flex; align-items: center; gap: 10px;
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--muted);
+  }
+  .acard__meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--rule); }
+  .acard__title {
+    font: 600 18px/1.22 'Jost'; letter-spacing: -0.005em; color: var(--black);
+    text-transform: none;
+    text-wrap: balance;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .acard__excerpt {
+    font: 400 13.5px/1.55 'Inter'; color: var(--muted);
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .acard__cta {
+    margin-top: auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 14px; border-top: 1px solid var(--rule);
+    font: 600 11px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+  }
+  .acard__arrow { transition: transform 220ms var(--ease); }
+
+  /* No-results */
+  .noresults {
+    grid-column: 1 / -1;
+    background: var(--offwhite);
+    padding: 56px 40px;
+    text-align: center;
+    border: 1px dashed rgba(0,0,0,.18);
+    display: none;
+  }
+  .grid.is-empty .noresults { display: block; }
+  .grid.is-empty .acard { display: none; }
+  .noresults__h { font: 700 22px/1.1 'Jost'; letter-spacing: -0.01em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
+  .noresults__sub { font: 400 14px/1.55 'Inter'; color: var(--muted); }
+
+  /* ═══════════════════════════════════════════════════════════
+     PAGINATION
+  ═══════════════════════════════════════════════════════════ */
+  .pag {
+    margin-top: 48px;
+    display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
+  }
+  .pag__btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 40px; height: 40px; padding: 0 14px;
+    border: 1px solid var(--rule); border-radius: 2px;
+    background: var(--white);
+    font: 600 12px/1 'JetBrains Mono'; letter-spacing: .12em; color: var(--black);
+    transition: all 200ms var(--ease);
+    cursor: pointer;
+  }
+  .pag__btn:hover { background: var(--offwhite); border-color: rgba(0,0,0,.22); }
+  .pag__btn.is-active { background: var(--red); color: var(--white); border-color: var(--red); cursor: default; }
+  .pag__btn.is-prev, .pag__btn.is-next { font-family: 'Jost'; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; padding: 0 16px; }
+  .pag__btn.is-disabled { opacity: .35; pointer-events: none; }
+  .pag__spacer { font: 500 12px/1 'JetBrains Mono'; color: var(--muted); padding: 0 6px; }
+
+  /* ═══════════════════════════════════════════════════════════
+     NEWSLETTER
+  ═══════════════════════════════════════════════════════════ */
+  .news-band {
+    position: relative; overflow: hidden;
+    background: var(--black); color: var(--white);
+    padding: 88px 0 92px;
+    border-top: 3px solid var(--red);
+  }
+  .news-band::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+  }
+  .news-band__inner {
+    position: relative;
+    display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center;
+  }
+  .news-band__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white);
+  }
+  .news-band__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--gold); }
+  .news-band__h {
+    font: 700 clamp(1.8rem, 3.4vw, 2.6rem)/1.02 'Jost';
+    letter-spacing: -0.03em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 14px; text-wrap: balance; max-width: 18ch;
+  }
+  .news-band__h em { font-style: normal; color: var(--gold); }
+  .news-band__sub {
+    font: 400 15.5px/1.55 'Inter'; color: var(--on-black-primary);
+    max-width: 52ch;
+  }
+  .news-band__form {
+    display: flex; flex-direction: column; gap: 12px;
+    justify-self: end; width: 100%; max-width: 460px;
+  }
+  .nl-field {
+    display: grid; grid-template-columns: 1fr auto; gap: 0;
+    border: 1px solid var(--on-black-border);
+    border-radius: 2px;
+    background: rgba(255,255,255,.04);
+    transition: border-color 200ms var(--ease), box-shadow 200ms var(--ease);
+    overflow: hidden;
+  }
+  .nl-field:focus-within { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(253,207,9,.18); }
+  .nl-field input {
+    appearance: none; background: transparent; border: 0; outline: none;
+    font: 400 15px/1 'Inter'; color: var(--white);
+    padding: 17px 18px;
+    width: 100%;
+  }
+  .nl-field input::placeholder { color: rgba(255,255,255,.50); font-family: 'JetBrains Mono'; font-size: 13px; letter-spacing: .04em; }
+  .nl-field button {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--gold); color: var(--black);
+    font: 600 12px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    padding: 0 22px;
+    cursor: pointer; transition: background 200ms var(--ease);
+    border-radius: 0;
+  }
+  .nl-field button:hover { background: var(--white); }
+  .nl-field button .arrow { transition: transform 220ms var(--ease); }
+  .nl-field button:hover .arrow { transform: translateX(3px); }
+  .nl-foot {
+    font: 400 12px/1.5 'Inter'; color: var(--on-black-muted);
+    display: flex; gap: 16px; flex-wrap: wrap;
+  }
+  .nl-foot b { color: var(--gold); font-weight: 600; font-family: 'JetBrains Mono'; letter-spacing: .12em; }
+
+  /* ═══════════════════════════════════════════════════════════
+     FOOTER
+  ═══════════════════════════════════════════════════════════ */
+  .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
+  .footer__brand img { height: 28px; filter: brightness(0) invert(1); }
+  .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
+  .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
+
+  /* ───────── RESPONSIVE ───────── */
+  @media (max-width: 1180px) {
+    .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero__rss { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
+    .filters { grid-template-columns: 1fr; }
+    .search-wrap { width: 100%; }
+    .lead { grid-template-columns: 1fr; }
+    .lead__img { border-right: 0; border-bottom: 1px solid var(--rule); aspect-ratio: 16/8; min-height: 280px; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .news-band__inner { grid-template-columns: 1fr; gap: 32px; }
+    .news-band__form { justify-self: start; }
+    .nav { display: none; }
+    .util__left { gap: 14px; }
+  }
+  @media (max-width: 720px) {
+    .container { padding: 0 22px; }
+    .util__inner { padding: 9px 22px; }
+    .grid { grid-template-columns: 1fr; }
+    .lead__body { padding: 28px 22px; }
+    .filters-sec { position: static; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+</head>
+<body data-screen-label="12 News &amp; Press">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"></path></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item" href="where-to-buy.html">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <span data-i18n="util.distributor">Find a Distributor</span>
+      </a>
+      <a class="util__item" href="compliance-sds.html" data-i18n="util.compliance">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"></path></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;" id="lang-switch">
+        <span class="util__lang active" data-lang="en">EN</span>
+        <span class="util__lang" data-lang="fr">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
+      <div class="nav__item"><a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products</a></div>
+      <div class="nav__item"><a class="nav__link" href="industries.html" data-i18n="nav.industries">Industries</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></div>
+      <div class="nav__item"><a class="nav__link active" data-i18n="nav.news">News</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--dark btn--sm" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary btn--sm" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero" data-comment-anchor="news-hero">
+  <div class="hero__grid"></div>
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__eyebrow">
+        <span data-i18n="hero.eyebrow">News</span>
+        <span class="mono" data-i18n="hero.mono">2026 · ISSUE 03</span>
+      </div>
+      <h1 class="hero__h1" data-i18n="hero.h1">News &amp; <em>press.</em></h1>
+      <p class="hero__sub" data-i18n="hero.sub">Releases, product news, and technical writing from the Kolben Canada team — engineering notes for distributors, fleets, and shops carrying the line.</p>
+    </div>
+    <div class="hero__rss">
+      <div class="hero__rss-eyebrow" data-i18n="hero.rss.eyebrow">Subscribe</div>
+      <div class="hero__rss-links">
+        <a href="#newsletter">
+          <span data-i18n="hero.rss.a">Newsletter — EN · FR</span>
+          <span class="arrow">↗</span>
+        </a>
+        <a href="#">
+          <span data-i18n="hero.rss.b">RSS feed</span>
+          <span class="arrow">↗</span>
+        </a>
+        <a href="contact.html?inquiry=media">
+          <span data-i18n="hero.rss.c">Press contact</span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FILTERS + SEARCH
+═══════════════════════════════════════════════════════════ -->
+<section class="filters-sec">
+  <div class="container filters">
+    <div class="chips" id="chips">
+      <button class="chip is-active" data-filter="all"><span data-i18n="chip.all">All</span><span class="ct">9</span></button>
+      <button class="chip" data-filter="press"><span data-i18n="chip.press">Press Releases</span><span class="ct">3</span></button>
+      <button class="chip" data-filter="product"><span data-i18n="chip.product">Product News</span><span class="ct">3</span></button>
+      <button class="chip" data-filter="technical"><span data-i18n="chip.technical">Technical</span><span class="ct">2</span></button>
+      <button class="chip" data-filter="company"><span data-i18n="chip.company">Company</span><span class="ct">1</span></button>
+    </div>
+    <div class="search-wrap">
+      <div class="search-wrap__icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </div>
+      <input id="search" type="search" autocomplete="off" data-i18n-ph="search.ph" placeholder="Search articles…" />
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURED / LEAD
+═══════════════════════════════════════════════════════════ -->
+<section class="lead-sec">
+  <div class="container">
+    <a class="lead" href="#" data-comment-anchor="news-lead" data-filter="press">
+      <div class="lead__img">
+        <div class="lead__img-label" data-i18n="lead.imgLabel">Image · Hannover plant · 16:10</div>
+      </div>
+      <div class="lead__body">
+        <div>
+          <div class="ctag ctag--press" data-i18n="lead.tag">Press Release</div>
+          <div class="lead__meta" style="margin-top: 14px;">
+            <span class="lead__date">2026-05-14</span>
+            <span class="lead__rt" data-i18n="lead.rt">4 MIN READ</span>
+          </div>
+        </div>
+        <h2 class="lead__title" data-i18n="lead.title">Kolben Canada opens <em>Mississauga distribution hub</em> to serve Eastern fleets.</h2>
+        <p class="lead__excerpt" data-i18n="lead.excerpt">A 140,000 ft² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy — confirm location and metrics before public release.</p>
+        <div class="lead__cta">
+          <span data-i18n="lead.cta">Read article</span>
+          <span class="lead__arrow">→</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     GRID
+═══════════════════════════════════════════════════════════ -->
+<section class="grid-sec">
+  <div class="container">
+    <div class="grid-head">
+      <div>
+        <div class="sh__eyebrow" data-i18n="grid.eyebrow">Latest articles</div>
+        <h2 class="grid-head__h" data-i18n="grid.h">Latest from <em>Kolben Canada.</em></h2>
+      </div>
+      <div class="grid-head__count">
+        <span data-i18n="grid.show">Showing</span>
+        <b id="result-count">8</b>
+        <span data-i18n="grid.of">of</span>
+        <b>8</b>
+        <span data-i18n="grid.articles">articles</span>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+      <!-- Cards rendered via JS for tidiness -->
+      <div class="noresults" id="noresults">
+        <div class="noresults__h" data-i18n="noresults.h">No articles matched.</div>
+        <div class="noresults__sub" data-i18n="noresults.sub">Clear the filter or try a different search term — we publish technical notes and product news monthly.</div>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="pag" aria-label="Pagination">
+      <button class="pag__btn is-prev is-disabled">
+        <span data-i18n="pag.prev">← Prev</span>
+      </button>
+      <button class="pag__btn is-active">01</button>
+      <button class="pag__btn">02</button>
+      <button class="pag__btn">03</button>
+      <span class="pag__spacer">·</span>
+      <button class="pag__btn">07</button>
+      <button class="pag__btn is-next">
+        <span data-i18n="pag.next">Next →</span>
+      </button>
+    </nav>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NEWSLETTER BAND
+═══════════════════════════════════════════════════════════ -->
+<section class="news-band is-light" id="newsletter" data-comment-anchor="news-newsletter">
+  <div class="container news-band__inner">
+    <div>
+      <div class="news-band__eyebrow" data-i18n="nl.eyebrow">Newsletter</div>
+      <h2 class="news-band__h" data-i18n="nl.h">One bulletin a month. <em>No marketing fluff.</em></h2>
+      <p class="news-band__sub" data-i18n="nl.sub">Releases, product additions, technical notes, and SDS revisions — bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.</p>
+    </div>
+    <form class="news-band__form" id="nl-form" novalidate>
+      <label class="nl-field" for="nl-email">
+        <input id="nl-email" type="email" required data-i18n-ph="nl.ph" placeholder="work-email@company.ca" />
+        <button type="submit">
+          <span data-i18n="nl.submit">Subscribe</span>
+          <span class="arrow">→</span>
+        </button>
+      </label>
+      <div class="nl-foot">
+        <span data-i18n="nl.foot1"><b>EN · FR.</b> One email per month. Distributor &amp; trade-partner desk only — no consumer spam.</span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   ARTICLES — EN / FR registry.
+   Categories: press · product · technical · company
+═══════════════════════════════════════════════════════════ */
+const ARTICLES = [
+  { id: 'a1', filter: 'product', dark: false,
+    date: '2026-05-08', rt: '3 MIN',
+    title: { en: 'Three new SKUs added to the engine-care line for 2026.',
+             fr: 'Trois nouvelles UGS ajoutées à la gamme entretien moteur 2026.' },
+    excerpt: { en: 'Kolben extends the additive range with two diesel-specific cleaners and an oil-system stabilizer for high-mileage fleets.',
+               fr: 'Kolben élargit la gamme d’additifs avec deux nettoyants diesel spécifiques et un stabilisateur du circuit d’huile pour flottes à kilométrage élevé.' },
+    imgLabel: { en: 'Image · KB-340 product trio · 16:9',
+                fr: 'Image · trio produits KB-340 · 16:9' } },
+
+  { id: 'a2', filter: 'technical', dark: false,
+    date: '2026-05-02', rt: '6 MIN',
+    title: { en: 'How to choose a non-chlorinated brake cleaner for shop and fleet use.',
+             fr: 'Comment choisir un nettoyant freins non chloré pour atelier et flotte.' },
+    excerpt: { en: 'Solvent class, flash point, residue, and OEM-approval implications — a side-by-side guide for service techs and procurement.',
+               fr: 'Classe de solvant, point d’éclair, résidus et implications d’homologation OEM — un guide comparatif pour techniciens et acheteurs.' },
+    imgLabel: { en: 'Image · brake-caliper detail · 16:9',
+                fr: 'Image · détail étrier de frein · 16:9' } },
+
+  { id: 'a3', filter: 'press', dark: true,
+    date: '2026-04-22', rt: '2 MIN',
+    title: { en: 'Kolben joins Mécanex Montréal 2026 trade event in October.',
+             fr: 'Kolben sera présente au salon Mécanex Montréal 2026 en octobre.' },
+    excerpt: { en: 'The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder — confirm date.',
+               fr: 'La marque confirme sa première participation à un salon canadien, partageant un stand avec deux partenaires distribution. Placeholder — date à confirmer.' },
+    imgLabel: { en: 'Image · event hall placeholder · 16:9',
+                fr: 'Image · salle d’événement placeholder · 16:9' } },
+
+  { id: 'a4', filter: 'technical', dark: false,
+    date: '2026-04-15', rt: '5 MIN',
+    title: { en: 'Why coolant matters: long-life OAT versus conventional formulations.',
+             fr: 'Pourquoi le liquide de refroidissement compte : OAT longue durée contre formules conventionnelles.' },
+    excerpt: { en: 'A field note on coolant chemistry, OEM-approval coverage, and the cost-per-kilometre case for switching to a long-life OAT.',
+               fr: 'Une note terrain sur la chimie des liquides, la couverture d’homologations OEM et le coût-au-kilomètre du passage à un OAT longue durée.' },
+    imgLabel: { en: 'Image · radiator cap macro · 16:9',
+                fr: 'Image · macro bouchon radiateur · 16:9' } },
+
+  { id: 'a5', filter: 'product', dark: false,
+    date: '2026-04-03', rt: '3 MIN',
+    title: { en: 'DOT 4 Brake Fluid revised — higher dry boiling point, same SKU.',
+             fr: 'Liquide de frein DOT 4 révisé — point d’ébullition sec plus élevé, même UGS.' },
+    excerpt: { en: 'A reformulation lifts the dry boiling point to 265 °C while keeping ABS / ESP and modern hydraulic-clutch compatibility. New SDS revision attached.',
+               fr: 'Une reformulation porte le point d’ébullition sec à 265 °C tout en conservant la compatibilité ABS / ESP et embrayages hydrauliques modernes. Nouvelle révision FDS jointe.' },
+    imgLabel: { en: 'Image · DOT 4 bottle · 16:9',
+                fr: 'Image · flacon DOT 4 · 16:9' } },
+
+  { id: 'a6', filter: 'press', dark: true,
+    date: '2026-03-19', rt: '2 MIN',
+    title: { en: 'Kolben signs Western Canada distribution agreement with FleetSource AB.',
+             fr: 'Kolben signe un accord de distribution dans l’Ouest canadien avec FleetSource AB.' },
+    excerpt: { en: 'A multi-year partnership covering Alberta, Saskatchewan, and Manitoba. Placeholder partner name — confirm before publication.',
+               fr: 'Un partenariat pluriannuel couvrant l’Alberta, la Saskatchewan et le Manitoba. Nom de partenaire placeholder — à confirmer avant publication.' },
+    imgLabel: { en: 'Image · handshake placeholder · 16:9',
+                fr: 'Image · poignée de main placeholder · 16:9' } },
+
+  { id: 'a7', filter: 'company', dark: true,
+    date: '2026-03-04', rt: '4 MIN',
+    title: { en: 'Inside Kolben: who actually answers your distributor email.',
+             fr: 'Dans les coulisses de Kolben : qui répond réellement à votre courriel distributeur.' },
+    excerpt: { en: 'A short profile of the Canadian customer-service desk — bilingual, based in Mississauga, with workshop experience between them.',
+               fr: 'Un court portrait de l’équipe canadienne de service à la clientèle — bilingue, basée à Mississauga, avec une expérience d’atelier à son actif.' },
+    imgLabel: { en: 'Image · office team placeholder · 16:9',
+                fr: 'Image · équipe bureau placeholder · 16:9' } },
+
+  { id: 'a8', filter: 'product', dark: false,
+    date: '2026-02-20', rt: '3 MIN',
+    title: { en: 'Bilingual EN/FR labels now standard on all Canadian SKUs.',
+             fr: 'Étiquettes bilingues EN/FR désormais standard sur toutes les UGS canadiennes.' },
+    excerpt: { en: 'Front-of-pack labels and back-panel handling switch to a single bilingual layout across the catalogue — no separate FR stickers.',
+               fr: 'Les étiquettes recto et les panneaux manipulation passent à une mise en page bilingue unique sur tout le catalogue — fini les étiquettes FR distinctes.' },
+    imgLabel: { en: 'Image · label front + back · 16:9',
+                fr: 'Image · étiquette recto + verso · 16:9' } },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   I18N
+═══════════════════════════════════════════════════════════ */
+const I18N = {
+  en: {
+    'util.distributor': 'Find a Distributor',
+    'util.compliance':  'Compliance & SDS',
+    'nav.home':         'Home',
+    'nav.products':     'Products',
+    'nav.industries':   'Industries',
+    'nav.about':        'About',
+    'nav.news':         'News',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Where to Buy',
+    'nav.distributor':  'Become a Distributor',
+
+    'hero.eyebrow':     'News',
+    'hero.mono':        '2026 · ISSUE 03',
+    'hero.h1':          'News &amp; <em>press.</em>',
+    'hero.sub':         'Releases, product news, and technical writing from the Kolben Canada team — engineering notes for distributors, fleets, and shops carrying the line.',
+    'hero.rss.eyebrow': 'Subscribe',
+    'hero.rss.a':       'Newsletter — EN · FR',
+    'hero.rss.b':       'RSS feed',
+    'hero.rss.c':       'Press contact',
+
+    'chip.all':         'All',
+    'chip.press':       'Press Releases',
+    'chip.product':     'Product News',
+    'chip.technical':   'Technical',
+    'chip.company':     'Company',
+    'search.ph':        'Search articles…',
+
+    'lead.featured':    'Featured',
+    'lead.tag':         'Press Release',
+    'lead.imgLabel':    'Image · Hannover plant · 16:10',
+    'lead.rt':          '4 MIN READ',
+    'lead.title':       'Kolben Canada opens <em>Mississauga distribution hub</em> to serve Eastern fleets.',
+    'lead.excerpt':     'A 140,000 ft² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy — confirm location and metrics before public release.',
+    'lead.cta':         'Read article',
+
+    'grid.eyebrow':     'Latest articles',
+    'grid.h':           'Latest from <em>Kolben Canada.</em>',
+    'grid.show':        'Showing',
+    'grid.of':          'of',
+    'grid.articles':    'articles',
+
+    'tag.press':        'Press Release',
+    'tag.product':      'Product News',
+    'tag.technical':    'Technical',
+    'tag.company':      'Company',
+    'card.read':        'Read article',
+    'card.rt':          'READ',
+
+    'noresults.h':      'No articles matched.',
+    'noresults.sub':    'Clear the filter or try a different search term — we publish technical notes and product news monthly.',
+
+    'pag.prev':         '← Prev',
+    'pag.next':         'Next →',
+
+    'nl.eyebrow':       'Newsletter',
+    'nl.h':             'One bulletin a month. <em>No marketing fluff.</em>',
+    'nl.sub':           'Releases, product additions, technical notes, and SDS revisions — bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.',
+    'nl.ph':            'work-email@company.ca',
+    'nl.submit':        'Subscribe',
+    'nl.foot1':         '<b>EN · FR.</b> One email per month. Distributor &amp; trade-partner desk only — no consumer spam.',
+    'nl.thanks':        'Subscribed — confirmation sent',
+
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Power · Performance · Kolben',
+  },
+  fr: {
+    'util.distributor': 'Trouver un distributeur',
+    'util.compliance':  'Conformité et FDS',
+    'nav.home':         'Accueil',
+    'nav.products':     'Produits',
+    'nav.industries':   'Industries',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
+    'nav.contact':      'Nous joindre',
+    'nav.whereToBuy':   'Où acheter',
+    'nav.distributor':  'Devenir distributeur',
+
+    'hero.eyebrow':     'Actualités',
+    'hero.mono':        '2026 · NUMÉRO 03',
+    'hero.h1':          'Actualités et <em>presse.</em>',
+    'hero.sub':         'Communiqués, nouveautés produits et notes techniques de l’équipe Kolben Canada — repères d’ingénierie pour les distributeurs, flottes et ateliers qui portent la gamme.',
+    'hero.rss.eyebrow': 'S’abonner',
+    'hero.rss.a':       'Infolettre — EN · FR',
+    'hero.rss.b':       'Flux RSS',
+    'hero.rss.c':       'Contact presse',
+
+    'chip.all':         'Tout',
+    'chip.press':       'Communiqués',
+    'chip.product':     'Nouveautés produits',
+    'chip.technical':   'Technique',
+    'chip.company':     'Entreprise',
+    'search.ph':        'Rechercher des articles…',
+
+    'lead.featured':    'À la une',
+    'lead.tag':         'Communiqué',
+    'lead.imgLabel':    'Image · usine de Hanovre · 16:10',
+    'lead.rt':          'LECTURE 4 MIN',
+    'lead.title':       'Kolben Canada ouvre un <em>centre de distribution à Mississauga</em> pour servir les flottes de l’Est.',
+    'lead.excerpt':     'Un entrepôt régional de 140 000 pi², un bureau de service à la clientèle bilingue et une expédition sous 48 H pour l’Ontario et le Québec. Copie placeholder — emplacement et chiffres à confirmer avant publication.',
+    'lead.cta':         'Lire l’article',
+
+    'grid.eyebrow':     'Derniers articles',
+    'grid.h':           'Les dernières nouvelles de <em>Kolben Canada.</em>',
+    'grid.show':        'Affichage de',
+    'grid.of':          'sur',
+    'grid.articles':    'articles',
+
+    'tag.press':        'Communiqué',
+    'tag.product':      'Nouveauté produit',
+    'tag.technical':    'Technique',
+    'tag.company':      'Entreprise',
+    'card.read':        'Lire la suite',
+    'card.rt':          'LECTURE',
+
+    'noresults.h':      'Aucun article correspondant.',
+    'noresults.sub':    'Retirez le filtre ou essayez un autre terme de recherche — nous publions des notes techniques et des nouveautés produits chaque mois.',
+
+    'pag.prev':         '← Préc.',
+    'pag.next':         'Suiv. →',
+
+    'nl.eyebrow':       'Infolettre',
+    'nl.h':             'Un bulletin par mois. <em>Aucun remplissage marketing.</em>',
+    'nl.sub':           'Communiqués, ajouts produits, notes techniques et révisions de FDS — bilingue EN/FR, mi-mois, livré dans votre boîte courriel. Désabonnement en un clic.',
+    'nl.ph':            'courriel-pro@entreprise.ca',
+    'nl.submit':        'S’abonner',
+    'nl.foot1':         '<b>EN · FR.</b> Un courriel par mois. Bureau distributeur et partenaires commerciaux uniquement — sans pourriel consommateur.',
+    'nl.thanks':        'Abonnement reçu — confirmation envoyée',
+
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Puissance · Performance · Kolben',
+  },
+};
+
+let state = { lang: 'en', filter: 'all', q: '' };
+
+/* ─── Render cards ─── */
+function renderCards(lang) {
+  const t = I18N[lang];
+  const root = document.getElementById('grid');
+  root.querySelectorAll('.acard').forEach(n => n.remove());
+  const noresults = document.getElementById('noresults');
+
+  ARTICLES.forEach(a => {
+    const card = document.createElement('a');
+    card.className = 'acard';
+    card.href = '#';
+    card.dataset.filter = a.filter;
+    card.dataset.title  = (a.title.en + ' ' + a.title.fr).toLowerCase();
+    card.dataset.excerpt = (a.excerpt.en + ' ' + a.excerpt.fr).toLowerCase();
+
+    const tagClass = {
+      press: 'ctag--press',
+      product: 'ctag--product',
+      technical: 'ctag--technical',
+      company: 'ctag--company'
+    }[a.filter];
+
+    card.innerHTML = `
+      <div class="acard__img ${a.dark ? 'is-dark' : ''}">
+        <div class="acard__img-label">${a.imgLabel[lang]}</div>
+      </div>
+      <div class="acard__body">
+        <div class="acard__top">
+          <span class="ctag ${tagClass}">${t['tag.' + a.filter]}</span>
+        </div>
+        <div class="acard__meta">
+          <span>${a.date}</span>
+          <span class="dot"></span>
+          <span>${a.rt} · ${t['card.rt']}</span>
+        </div>
+        <h3 class="acard__title">${a.title[lang]}</h3>
+        <p class="acard__excerpt">${a.excerpt[lang]}</p>
+        <div class="acard__cta">
+          <span>${t['card.read']}</span>
+          <span class="acard__arrow">→</span>
+        </div>
+      </div>
+    `;
+    root.insertBefore(card, noresults);
+  });
+}
+
+function applyI18n(lang) {
+  const t = I18N[lang];
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.getAttribute('data-i18n-ph');
+    if (t[k] !== undefined) el.setAttribute('placeholder', t[k]);
+  });
+  document.querySelectorAll('#lang-switch .util__lang').forEach(s => {
+    s.classList.toggle('active', s.dataset.lang === lang);
+  });
+  renderCards(lang);
+  applyFilter();
+}
+
+function applyFilter() {
+  const grid = document.getElementById('grid');
+  const cards = grid.querySelectorAll('.acard');
+  const lead  = document.querySelector('.lead');
+  const q = state.q.trim().toLowerCase();
+  let n = 0;
+  cards.forEach(c => {
+    const matchCat = state.filter === 'all' || c.dataset.filter === state.filter;
+    const matchQ   = !q || c.dataset.title.includes(q) || c.dataset.excerpt.includes(q);
+    const show = matchCat && matchQ;
+    c.classList.toggle('is-hidden', !show);
+    if (show) n++;
+  });
+  document.getElementById('result-count').textContent = n;
+  grid.classList.toggle('is-empty', n === 0);
+
+  // Hide lead when filtering to a category that doesn't match it
+  if (lead) {
+    const leadMatch = state.filter === 'all' || lead.dataset.filter === state.filter;
+    lead.style.display = (leadMatch && !q) ? '' : 'none';
+  }
+}
+
+document.getElementById('lang-switch').addEventListener('click', e => {
+  const t = e.target.closest('[data-lang]');
+  if (!t) return;
+  state.lang = t.dataset.lang;
+  applyI18n(state.lang);
+});
+
+document.getElementById('chips').addEventListener('click', e => {
+  const c = e.target.closest('.chip');
+  if (!c) return;
+  document.querySelectorAll('#chips .chip').forEach(x => x.classList.remove('is-active'));
+  c.classList.add('is-active');
+  state.filter = c.dataset.filter;
+  applyFilter();
+});
+
+document.getElementById('search').addEventListener('input', e => {
+  state.q = e.target.value;
+  applyFilter();
+});
+
+document.getElementById('nl-form').addEventListener('submit', e => {
+  e.preventDefault();
+  const t = I18N[state.lang];
+  const btn = e.target.querySelector('button[type="submit"]');
+  const orig = btn.innerHTML;
+  btn.innerHTML = `<span>${t['nl.thanks']}</span><span class="arrow">✓</span>`;
+  btn.style.background = 'var(--white)';
+  setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2400);
+});
+
+applyI18n(state.lang);
+</script>
+</body>
+</html>
