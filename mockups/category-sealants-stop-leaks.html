@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Kolben — Sealants & Stop-Leaks (Category)</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ───────── TOKENS — locked brand palette ───────── */
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --on-black-primary: rgba(255,255,255,.85);
+    --on-black-muted:   rgba(255,255,255,.70);
+    --on-black-border:  rgba(255,255,255,.16);
+    --on-black-hover:   rgba(255,255,255,.12);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a, input { font: inherit; }
+  button, a { cursor: pointer; }
+  button { border: 0; background: none; color: inherit; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+  .lc { text-transform: none; }
+
+  /* ───────── UTILITY BAR ───────── */
+  .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid var(--on-black-border); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: var(--on-black-hover); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+
+  /* shared header dropdown */
+  .nav__caret { width: 8px; height: 5px; }
+
+  /* MEGA MENU */
+  .mega {
+    position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 720px; background: var(--white);
+    border: 1px solid var(--rule); border-top: 3px solid var(--red);
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    opacity: 0; pointer-events: none; transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Invisible bridge across the 12px gap between the nav link and the menu
+     so the hover doesn't drop while the cursor is travelling down to the panel. */
+  .mega::before {
+    content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px;
+  }
+  .nav__item:hover .mega,
+  .nav__item.is-open .mega { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .mega__col h5 {
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .mega__list { display: flex; flex-direction: column; gap: 2px; }
+  .mega__row {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px;
+    padding: 8px 10px; border-radius: 2px;
+    align-items: start;
+  }
+  .mega__row:hover { background: var(--offwhite); }
+  .mega__row strong { font: 600 13px/1.2 'Jost'; color: var(--black); }
+  .mega__row span { font: 400 11px/1.4 'Inter'; color: var(--muted); }
+  .mega__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    color: var(--red); margin-top: 1px;
+  }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ───────── BUTTONS ───────── */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
+  .btn--sm { padding: 11px 18px; font-size: 11px; }
+  .btn--lg { padding: 17px 28px; font-size: 13px; }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--ghost-light { background: transparent; color: var(--white); border: 1.5px solid var(--on-black-border); }
+  .btn--ghost-light:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ───────── BREADCRUMB ───────── */
+  .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
+  .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
+  .crumbs__inner a { color: var(--muted); transition: color 150ms; }
+  .crumbs__inner a:hover { color: var(--black); }
+  .crumbs__inner .sep { color: rgba(0,0,0,.25); }
+  .crumbs__inner .current { color: var(--black); }
+
+  /* ═══════════════════════════════════════════════════════════
+     LEAN CATEGORY HEADER (NOT a hero)
+  ═══════════════════════════════════════════════════════════ */
+  .chead {
+    padding: 56px 0 36px; background: var(--white);
+    border-bottom: 1px solid var(--rule);
+  }
+  .chead__inner {
+    display: flex; align-items: end; justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .chead__left { max-width: 760px; }
+  .chead__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-bottom: 18px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+  }
+  .chead__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .chead__h1 {
+    font: 700 clamp(2rem, 4.4vw, 3rem)/1 'Jost';
+    letter-spacing: -0.03em; text-transform: uppercase; color: var(--black);
+    margin: 0 0 14px;
+  }
+  .chead__sub {
+    font: 400 16px/1.55 'Inter'; color: var(--muted); max-width: 640px;
+  }
+  .chead__count {
+    display: flex; align-items: baseline; gap: 10px;
+    padding-left: 40px;
+    border-left: 1px solid var(--rule);
+    flex-shrink: 0;
+  }
+  .chead__count-n { font: 700 56px/1 'Jost'; letter-spacing: -0.04em; color: var(--black); font-variant-numeric: tabular-nums; }
+  .chead__count-l { font: 500 11px/1.3 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); max-width: 80px; }
+
+  /* ═══════════════════════════════════════════════════════════
+     SUB-TYPE CHIP ROW (sticky)
+  ═══════════════════════════════════════════════════════════ */
+  .chips-bar {
+    position: sticky; top: 76px; z-index: 40;
+    background: var(--white); border-bottom: 1px solid var(--rule);
+  }
+  .chips-bar__inner {
+    padding: 16px 0;
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  }
+  .chips-bar__label {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--muted); padding-right: 4px; border-right: 1px solid var(--rule); margin-right: 6px;
+  }
+  .chip {
+    padding: 9px 14px;
+    font: 600 11px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase;
+    background: transparent; color: var(--black);
+    border: 1px solid var(--rule); border-radius: 2px;
+    transition: all 200ms var(--ease); white-space: nowrap;
+  }
+  .chip:hover { border-color: rgba(0,0,0,.4); }
+  .chip.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
+  .chip__count {
+    margin-left: 8px; padding-left: 8px;
+    border-left: 1px solid currentColor;
+    opacity: .55; font: 500 10px/1 'JetBrains Mono';
+  }
+  .chip.is-active .chip__count { opacity: .65; }
+
+  /* ═══════════════════════════════════════════════════════════
+     BODY — filter rail + grid
+  ═══════════════════════════════════════════════════════════ */
+  .body { background: var(--offwhite); padding: 48px 0 80px; }
+  .body__inner {
+    display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start;
+  }
+
+  /* Filter rail */
+  .rail {
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 22px 22px 6px;
+    position: sticky; top: 140px;
+  }
+  .rail__head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 16px; border-bottom: 1px solid var(--rule); margin-bottom: 4px;
+  }
+  .rail__head-h {
+    font: 700 12px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--black);
+  }
+  .rail__reset {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--red); cursor: pointer; transition: opacity 150ms;
+  }
+  .rail__reset:hover { opacity: .65; }
+  .rail__reset[disabled] { color: var(--muted); cursor: default; pointer-events: none; }
+
+  .facet { padding: 18px 0; border-bottom: 1px solid var(--rule-soft); }
+  .facet:last-of-type { border-bottom: 0; }
+  .facet__h {
+    font: 700 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 12px;
+  }
+  .facet__opts { display: flex; flex-direction: column; gap: 8px; }
+  .opt {
+    display: flex; align-items: center; gap: 10px; padding: 4px 0;
+    cursor: pointer;
+    font: 400 13px/1.2 'Inter'; color: var(--ink);
+  }
+  .opt__box {
+    width: 14px; height: 14px; border: 1.5px solid rgba(0,0,0,.35);
+    flex-shrink: 0; position: relative; transition: border-color 150ms, background 150ms;
+  }
+  .opt:hover .opt__box { border-color: var(--black); }
+  .opt.is-on .opt__box { background: var(--black); border-color: var(--black); }
+  .opt.is-on .opt__box::after {
+    content: ''; position: absolute; left: 3px; top: -1px; width: 5px; height: 9px;
+    border: solid var(--white); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg);
+  }
+  .opt__l { flex: 1; }
+  .opt__n { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
+  .opt.is-disabled { opacity: .35; cursor: not-allowed; }
+
+  /* ───────── Grid column ───────── */
+  .grid-col { min-width: 0; }
+  .grid-toolbar {
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    padding: 0 0 20px;
+    flex-wrap: wrap;
+  }
+  .grid-toolbar__count {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; color: var(--muted); text-transform: uppercase;
+  }
+  .grid-toolbar__count b { color: var(--black); font-weight: 500; }
+  .sort {
+    display: inline-flex; align-items: center; gap: 8px;
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted);
+  }
+  .sort select {
+    border: 1px solid var(--rule); background: var(--white); color: var(--black);
+    padding: 8px 30px 8px 12px; border-radius: 2px;
+    font: 600 11px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase;
+    appearance: none; -webkit-appearance: none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, var(--black) 50%),
+      linear-gradient(135deg, var(--black) 50%, transparent 50%);
+    background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%;
+    background-size: 5px 5px, 5px 5px; background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .sort select:focus { outline: 2px solid var(--red); outline-offset: 2px; }
+
+  /* Product cards */
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .pcard {
+    background: var(--white); border: 1px solid var(--rule);
+    display: flex; flex-direction: column;
+    transition: all 220ms var(--ease); position: relative; cursor: pointer;
+  }
+  .pcard:hover { transform: translateY(-2px); border-color: rgba(0,0,0,.25); box-shadow: 0 12px 30px -10px rgba(0,0,0,.15); }
+  .pcard__media {
+    background: var(--white); height: 260px; position: relative;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .pcard__media::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(0,0,0,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black, transparent 75%);
+  }
+  .pcard__media img {
+    position: relative; height: 84%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 22px 22px rgba(0,0,0,.20));
+    transition: transform 320ms var(--ease);
+  }
+  .pcard:hover .pcard__media img { transform: translateY(-3px) scale(1.02); }
+  /* Classification chips — hairline mono pills sitting in the text block,
+     directly below the product name. Wrap to a second line if needed; the
+     card height flexes around them. Cap at 2 chips per card from JS so the
+     row never grows beyond a wrap. */
+  .pcard__chips {
+    display: flex; flex-wrap: wrap; gap: 6px;
+    margin: 4px 0 2px;
+  }
+  .pcard__chip {
+    display: inline-block;
+    font: 500 9px/1 'JetBrains Mono';
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink);
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 5px 8px;
+    border-radius: 2px;
+    white-space: nowrap;
+  }
+  .pcard__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 14px 18px 0; }
+  .pcard__sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--muted); }
+  .pcard__cat { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--red); text-transform: uppercase; }
+  .pcard__body { padding: 8px 18px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .pcard__name { font: 700 17px/1.18 'Jost'; letter-spacing: -0.005em; color: var(--black); min-height: 2.4em; }
+  .pcard__size { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
+  .pcard__diff {
+    font: 400 13px/1.45 'Inter'; color: var(--muted);
+    margin-top: 4px;
+    overflow: hidden; text-overflow: ellipsis;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  }
+  .pcard__foot {
+    margin-top: auto; padding: 12px 18px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font: 600 10px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+  }
+  .pcard__foot svg { width: 13px; height: 13px; transition: transform 220ms var(--ease); }
+  .pcard:hover .pcard__foot svg { transform: translate(3px, -3px); }
+
+  .empty {
+    grid-column: 1 / -1;
+    padding: 80px 0; text-align: center;
+    color: var(--muted);
+    font: 500 12px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+  }
+  .empty b { color: var(--black); display: block; font-family: 'Jost'; font-size: 18px; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 8px; }
+
+  /* Pagination */
+  .pager {
+    margin-top: 36px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+    flex-wrap: wrap;
+  }
+  .pager__nums { display: flex; gap: 6px; }
+  .pager__num {
+    width: 36px; height: 36px;
+    display: inline-flex; align-items: center; justify-content: center;
+    font: 600 12px/1 'JetBrains Mono'; letter-spacing: .06em;
+    border: 1px solid var(--rule); border-radius: 2px;
+    transition: all 200ms var(--ease);
+  }
+  .pager__num:hover { border-color: rgba(0,0,0,.4); }
+  .pager__num.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
+  .pager__num--arrow { color: var(--muted); }
+  .pager__num[disabled] { opacity: .35; cursor: not-allowed; }
+  .pager__more { /* slot for "Load more" — hidden when paginating */ }
+
+  /* ═══════════════════════════════════════════════════════════
+     COMPLIANCE / ROUTE BAND
+  ═══════════════════════════════════════════════════════════ */
+  .route {
+    background: var(--black); color: var(--white);
+    border-top: 3px solid var(--red);
+    padding: 56px 0;
+  }
+  .route__inner {
+    display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: center;
+  }
+  .route__left { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+  .route__sds {
+    display: inline-flex; align-items: center; gap: 14px;
+    padding: 14px 18px;
+    border: 1px solid var(--on-black-border);
+    color: var(--white);
+    transition: all 200ms var(--ease);
+  }
+  .route__sds:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .route__sds svg { color: var(--gold); width: 22px; height: 22px; flex-shrink: 0; }
+  .route__sds-l { display: flex; flex-direction: column; gap: 4px; }
+  .route__sds-h { font: 700 12px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--white); }
+  .route__sds-sub { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--on-black-muted); }
+  .route__msg { font: 400 14px/1.5 'Inter'; color: var(--on-black-muted); max-width: 360px; }
+  .route__actions { display: flex; gap: 10px; flex-shrink: 0; flex-wrap: wrap; }
+
+  .footer { background: #050505; color: var(--white); padding: 36px 0 24px; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
+  .footer__brand img { height: 28px; filter: brightness(0) invert(1); }
+  .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
+  .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
+
+  /* ───────── RESPONSIVE ───────── */
+  @media (max-width: 1100px) {
+    .nav { display: none; }
+    .util__left { gap: 14px; }
+    .body__inner { grid-template-columns: 1fr; }
+    .rail { position: static; }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+    .route__inner { grid-template-columns: 1fr; }
+    .chead__count { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); padding-top: 20px; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 22px; }
+    .util__inner { padding: 9px 22px; }
+    .product-grid { grid-template-columns: 1fr; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+</head>
+<body data-screen-label="Category — Sealants & Stop-Leaks">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item" href="tel:18005652361">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item" href="where-to-buy.html">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="util.distributor">Find a Distributor</span>
+      </a>
+      <a class="util__item" href="compliance-sds.html" data-i18n="util.compliance">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"/></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;" id="lang-switch">
+        <span class="util__lang active" data-lang="en">EN</span>
+        <span class="util__lang" data-lang="fr">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
+      <div class="nav__item">
+        <a class="nav__link active" href="products-hub.html"><span data-i18n="nav.products">Products</span>
+          <svg class="nav__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="mega">
+          <div class="mega__col">
+            <h5>Featured Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg>
+                <div><strong>Brake Cleaners</strong><br/><span>Fast-dry, non-chlorinated &amp; high-pressure formulations</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg>
+                <div><strong>Engine Additives</strong><br/><span>Flushes, system cleaners, top-end conditioners</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg>
+                <div><strong>Fuel Additives</strong><br/><span>Diesel &amp; petrol injector cleaners, performance boosters</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg>
+                <div><strong>Lubricants &amp; Grease</strong><br/><span>Synthetic greases, penetrating oils, dry lubes</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="mega__col">
+            <h5>All Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"></path>
+  <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"></path>
+  <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"></path>
+  <path d="M4.5 16h15"></path>
+  <path d="M19.5 8h-15"></path></svg><div><strong>Oils &amp; Fluids</strong><br/><span>Engine, ATF, brake, coolant</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg><div><strong>Maintenance Sprays</strong><br/><span>Contact cleaner, throttle body, electronic</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18.963 14.938a6.54 6.54 0 0 0 -.899 -4.06l-4.89 -7.26c-.42 -.626 -1.287 -.804 -1.936 -.398a1.376 1.376 0 0 0 -.41 .397l-1.282 1.9m-1.625 2.415l-1.986 2.946c-1.695 2.837 -1.035 6.44 1.567 8.545c2.602 2.105 6.395 2.105 8.996 0a6.83 6.83 0 0 0 1.376 -1.499"></path>
+  <path d="M3 3l18 18"></path></svg><div><strong>Sealants &amp; Stop Leaks</strong><br/><span>Cooling, transmission, power steering</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6"></path></svg><div><strong>Car Care</strong><br/><span>Detailing, interior, exterior</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__item"><a class="nav__link" href="industries.html" data-i18n="nav.industries">Industries</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--dark btn--sm" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary btn--sm" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── BREADCRUMB ───────── -->
+<nav class="crumbs">
+  <div class="container crumbs__inner">
+    <a href="products-hub.html" data-i18n="crumbs.products">Products</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="crumbs.cat">Sealants & Stop-Leaks</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LEAN CATEGORY HEADER
+═══════════════════════════════════════════════════════════ -->
+<section class="chead">
+  <div class="container chead__inner">
+    <div class="chead__left">
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Seal the leak. Keep driving.</div>
+      <h1 class="chead__h1" data-i18n="chead.h1">Sealants & Stop-Leaks</h1>
+      <p class="chead__sub" data-i18n="chead.sub">Targeted sealers that stop hairline leaks in cooling, oil and transmission circuits — no clogging, OEM-fluid compatible.</p>
+    </div>
+    <div class="chead__count">
+      <div class="chead__count-n" id="header-count">5</div>
+      <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SUB-TYPE CHIP ROW
+═══════════════════════════════════════════════════════════ -->
+<div class="chips-bar">
+  <div class="container chips-bar__inner">
+    <span class="chips-bar__label" data-i18n="chips.label">Sub-type</span>
+    <div id="chips" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BODY — filter rail + grid
+═══════════════════════════════════════════════════════════ -->
+<section class="body">
+  <div class="container body__inner">
+
+    <!-- LEFT: filter rail -->
+    <aside class="rail">
+      <div class="rail__head">
+        <div class="rail__head-h" data-i18n="rail.h">Refine by</div>
+        <button class="rail__reset" id="rail-reset" data-i18n="rail.reset">Reset</button>
+      </div>
+      <div id="rail-body"></div>
+    </aside>
+
+    <!-- RIGHT: grid -->
+    <div class="grid-col">
+
+      <div class="grid-toolbar">
+        <div class="grid-toolbar__count">
+          <span data-i18n="grid.showing">Showing</span>
+          &nbsp;<b id="visible-count">12</b>&nbsp;
+          <span data-i18n="grid.of">of</span>
+          &nbsp;<b id="total-count">12</b>&nbsp;
+          <span data-i18n="grid.products">products</span>
+        </div>
+        <label class="sort">
+          <span data-i18n="grid.sortBy">Sort by</span>
+          <select id="sort-sel">
+            <option value="name" data-i18n="grid.sortName">Name (A–Z)</option>
+            <option value="sku"  data-i18n="grid.sortSku">SKU / Part #</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="product-grid" id="product-grid"></div>
+
+      <!-- PAGINATION SLOT — numbered + "Load more" slot for future. -->
+      <div class="pager" id="pager"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     COMPLIANCE / ROUTE BAND (no cart, no public pricing)
+═══════════════════════════════════════════════════════════ -->
+<section class="route">
+  <div class="container route__inner">
+    <div class="route__left">
+      <a class="route__sds" href="compliance-sds.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 3v5h5"/>
+          <path d="M14 3H6a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2V8z"/>
+          <path d="M8 12h8"/>
+          <path d="M8 16h8"/>
+        </svg>
+        <span class="route__sds-l">
+          <span class="route__sds-h" data-i18n="route.sds">Safety Data Sheets · FDS</span>
+          <span class="route__sds-sub" data-i18n="route.sdsSub">EN / FR · WHMIS 2015 · CCCR 2001</span>
+        </span>
+      </a>
+      <p class="route__msg" data-i18n="route.msg">Trade-only pricing. No public cart. Route to a distributor for purchase, or download compliance documentation.</p>
+    </div>
+    <div class="route__actions">
+      <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
+        <span data-i18n="route.cta1">Become a Distributor</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn btn--ghost-light btn--lg" href="where-to-buy.html" data-i18n="route.cta2">Find a Distributor</a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   BRAKE CLEANERS — 12 SKUs across the real facet axes.
+   Each product carries:
+     - tags[]      → sub-type chip(s) it belongs to
+     - voc         → '10' (≤10%), 'low' (low-VOC), 'zero' (zero-VOC)
+     - flam        → 'flam' | 'nonflam'
+     - sizeBucket  → '400g' | '500g' | 'bulk'
+     - pack        → 'single' | 'case' | 'pallet'
+═══════════════════════════════════════════════════════════ */
+const PRODUCTS = [
+  { sku: 'KB-610', name: { en: 'Radiator Stop-Leak', fr: 'Anti-fuite radiateur' }, size: '250 ml', sizeBucket: '250ml',
+    tags: ['cooling'], pack: 'single',
+    diff: { en: 'Permanently seals hairline leaks in the cooling circuit without clogging. Compatible with all OEM coolants.',
+            fr: 'Scelle durablement les microfuites du circuit de refroidissement sans obstruction. Compatible avec tous les liquides OEM.' } },
+  { sku: 'KB-650', name: { en: 'Oil Stop-Leak', fr: 'Anti-fuite d’huile' }, size: '300 ml', sizeBucket: '300ml',
+    tags: ['oil'], pack: 'single',
+    diff: { en: 'Reconditions seals to stop engine oil leaks. (Coming soon)',
+            fr: 'Régénère les joints pour stopper les fuites d’huile moteur. (Bientôt)' } },
+  { sku: 'KB-655', name: { en: 'Transmission Stop-Leak', fr: 'Anti-fuite transmission' }, size: '300 ml', sizeBucket: '300ml',
+    tags: ['trans'], pack: 'single',
+    diff: { en: 'Swells and conditions seals in automatic transmissions. (Coming soon)',
+            fr: 'Gonfle et conditionne les joints des transmissions automatiques. (Bientôt)' } },
+  { sku: 'KB-660', name: { en: 'Power Steering Stop-Leak', fr: 'Anti-fuite direction assistée' }, size: '250 ml', sizeBucket: '250ml',
+    tags: ['oil'], pack: 'single',
+    diff: { en: 'Stops leaks and quiets noisy power-steering pumps. (Coming soon)',
+            fr: 'Stoppe les fuites et apaise les pompes de direction bruyantes. (Bientôt)' } },
+  { sku: 'KB-665', name: { en: 'Head Gasket Sealer', fr: 'Scellant joint de culasse' }, size: '500 ml', sizeBucket: '500ml',
+    tags: ['cooling'], pack: 'case',
+    diff: { en: 'Liquid sealer for hairline head-gasket and block leaks. (Coming soon)',
+            fr: 'Scellant liquide pour microfuites de joint de culasse et de bloc. (Bientôt)' } },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   CHIPS — sub-type quick filters (OR across products' tags)
+═══════════════════════════════════════════════════════════ */
+const CHIPS = [
+  { val: 'all', label: { en: 'All', fr: 'Tous' } },
+  { val: 'cooling', label: { en: 'Cooling', fr: 'Refroidissement' } },
+  { val: 'oil', label: { en: 'Oil', fr: 'Huile' } },
+  { val: 'trans', label: { en: 'Transmission', fr: 'Transmission' } },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   FACETS — checkbox filter rail (AND across axes, OR within)
+═══════════════════════════════════════════════════════════ */
+const FACETS = [
+  { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
+    { val: '250ml', label: { en: '250 ml', fr: '250 ml' } },
+    { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
+    { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
+  ] },
+  { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
+    { val: 'single', label: { en: 'Single', fr: 'Unité' } },
+    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
+  ] },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   I18N — page chrome strings
+═══════════════════════════════════════════════════════════ */
+const I18N = {
+  en: {
+    'util.distributor': 'Find a Distributor',
+    'util.compliance':  'Compliance & SDS',
+    'nav.home':         'Home',
+    'nav.products':     'Products',
+    'nav.industries':   'Industries',
+    'nav.about':        'About',
+    'nav.news':         'News',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Where to Buy',
+    'nav.distributor':  'Become a Distributor',
+
+    'crumbs.products':  'Products',
+    'crumbs.cat':       'Sealants & Stop-Leaks',
+
+    'chead.eyebrow':    'Seal the leak. Keep driving.',
+    'chead.h1':         'Sealants & Stop-Leaks',
+    'chead.sub':        'Targeted sealers that stop hairline leaks in cooling, oil and transmission circuits — no clogging, OEM-fluid compatible.',
+    'chead.countLabel': 'Products in this category',
+
+    'chips.label':      'Sub-type',
+    'rail.h':           'Refine by',
+    'rail.reset':       'Reset',
+
+    'grid.showing':     'Showing',
+    'grid.of':          'of',
+    'grid.products':    'products',
+    'grid.sortBy':      'Sort by',
+    'grid.sortName':    'Name (A–Z)',
+    'grid.sortSku':     'SKU / Part #',
+    'grid.empty.h':     'No products match these filters',
+    'grid.empty.sub':   'Try removing a facet or switching sub-type.',
+    'grid.view':        'View Product',
+
+    'pager.prev':       'Prev',
+    'pager.next':       'Next',
+    'pager.loadMore':   'Load more',
+
+    'route.sds':        'Safety Data Sheets · FDS',
+    'route.sdsSub':     'EN / FR · WHMIS 2015 · CCCR 2001',
+    'route.msg':        'Trade-only pricing. No public cart. Route to a distributor for purchase, or download compliance documentation.',
+    'route.cta1':       'Become a Distributor',
+    'route.cta2':       'Find a Distributor',
+
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
+  },
+  fr: {
+    'util.distributor': 'Trouver un distributeur',
+    'util.compliance':  'Conformité et FDS',
+    'nav.home':         'Accueil',
+    'nav.products':     'Produits',
+    'nav.industries':   'Industries',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Où acheter',
+    'nav.distributor':  'Devenir distributeur',
+
+    'crumbs.products':  'Produits',
+    'crumbs.cat':       'Mastics et anti-fuites',
+
+    'chead.eyebrow':    'Scellez la fuite. Continuez de rouler.',
+    'chead.h1':         'Mastics et anti-fuites',
+    'chead.sub':        'Scellants ciblés qui stoppent les microfuites des circuits de refroidissement, d’huile et de transmission — sans obstruction, compatibles avec les fluides OEM.',
+    'chead.countLabel': 'Produits dans cette catégorie',
+
+    'chips.label':      'Sous-type',
+    'rail.h':           'Affiner par',
+    'rail.reset':       'Réinitialiser',
+
+    'grid.showing':     'Affichage de',
+    'grid.of':          'sur',
+    'grid.products':    'produits',
+    'grid.sortBy':      'Trier par',
+    'grid.sortName':    'Nom (A–Z)',
+    'grid.sortSku':     'Réf. / N° pièce',
+    'grid.empty.h':     'Aucun produit ne correspond à ces filtres',
+    'grid.empty.sub':   'Essayez de retirer un critère ou de changer de sous-type.',
+    'grid.view':        'Voir le produit',
+
+    'pager.prev':       'Préc.',
+    'pager.next':       'Suiv.',
+    'pager.loadMore':   'Charger plus',
+
+    'route.sds':        'Fiches de données de sécurité · FDS',
+    'route.sdsSub':     'EN / FR · SIMDUT 2015 · RPCC 2001',
+    'route.msg':        'Tarif réservé au commerce. Pas de panier public. Acheter via un distributeur, ou télécharger la documentation de conformité.',
+    'route.cta1':       'Devenir distributeur',
+    'route.cta2':       'Trouver un distributeur',
+
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
+  },
+};
+
+/* ═══════════════════════════════════════════════════════════
+   STATE
+═══════════════════════════════════════════════════════════ */
+const state = {
+  lang: 'en',
+  chip: 'all',
+  facets: { sizeBucket: [], pack: [] },
+  sort: 'name',
+  page: 1,
+  perPage: 9,
+};
+
+/* ═══════════════════════════════════════════════════════════
+   FILTERING + COUNTING
+═══════════════════════════════════════════════════════════ */
+function matchesAxes(p, overrides = {}) {
+  // overrides: { axis: arrayOfValues } — used by faceted-count "what if I added this option"
+  for (const ax of FACETS) {
+    const active = (overrides[ax.key] !== undefined) ? overrides[ax.key] : state.facets[ax.key];
+    if (active.length > 0 && !active.includes(p[ax.key])) return false;
+  }
+  return true;
+}
+function matchesChip(p, overrideChip) {
+  const c = overrideChip !== undefined ? overrideChip : state.chip;
+  if (c === 'all') return true;
+  return p.tags.includes(c);
+}
+function filtered() {
+  return PRODUCTS.filter(p => matchesAxes(p) && matchesChip(p));
+}
+function sortList(list) {
+  const copy = list.slice();
+  copy.sort((a, b) => {
+    if (state.sort === 'sku') return a.sku.localeCompare(b.sku);
+    return a.name[state.lang].localeCompare(b.name[state.lang]);
+  });
+  return copy;
+}
+
+/* Live count for a chip — "what would N be if I selected only this chip?" */
+function chipCount(chipVal) {
+  if (chipVal === 'all') {
+    return PRODUCTS.filter(p => matchesAxes(p)).length;
+  }
+  return PRODUCTS.filter(p => matchesAxes(p) && p.tags.includes(chipVal)).length;
+}
+
+/* Live count for a facet option — assume current filters on OTHER axes,
+   replace this axis with [option]. Doesn't depend on whether option is
+   currently active (so toggling off is intuitive). */
+function facetCount(axisKey, optionVal) {
+  const override = { [axisKey]: [optionVal] };
+  return PRODUCTS.filter(p => matchesAxes(p, override) && matchesChip(p)).length;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER — chips, rail, grid, pager
+═══════════════════════════════════════════════════════════ */
+function renderChips() {
+  const wrap = document.getElementById('chips');
+  const t = I18N[state.lang];
+  wrap.innerHTML = CHIPS.map(c => `
+    <button class="chip ${state.chip === c.val ? 'is-active' : ''}" data-chip="${c.val}">
+      ${c.label[state.lang]}
+      <span class="chip__count">${chipCount(c.val)}</span>
+    </button>
+  `).join('');
+}
+
+function renderRail() {
+  const body = document.getElementById('rail-body');
+  const reset = document.getElementById('rail-reset');
+  body.innerHTML = FACETS.map(ax => `
+    <div class="facet">
+      <div class="facet__h">${ax.label[state.lang]}</div>
+      <div class="facet__opts">
+        ${ax.opts.map(op => {
+          const n = facetCount(ax.key, op.val);
+          const on = state.facets[ax.key].includes(op.val);
+          const disabled = !on && n === 0;
+          return `
+            <label class="opt ${on ? 'is-on' : ''} ${disabled ? 'is-disabled' : ''}"
+                   data-axis="${ax.key}" data-val="${op.val}">
+              <span class="opt__box"></span>
+              <span class="opt__l">${op.label[state.lang]}</span>
+              <span class="opt__n">${n}</span>
+            </label>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `).join('');
+  const hasActive = state.chip !== 'all' || FACETS.some(ax => state.facets[ax.key].length > 0);
+  if (hasActive) reset.removeAttribute('disabled'); else reset.setAttribute('disabled','');
+}
+
+function renderGrid() {
+  const grid = document.getElementById('product-grid');
+  const t = I18N[state.lang];
+  const all = sortList(filtered());
+
+  document.getElementById('header-count').textContent = PRODUCTS.length;
+  document.getElementById('total-count').textContent  = PRODUCTS.length;
+  document.getElementById('visible-count').textContent = all.length;
+
+  if (all.length === 0) {
+    grid.innerHTML = `
+      <div class="empty">
+        <b>${t['grid.empty.h']}</b>
+        ${t['grid.empty.sub']}
+      </div>`;
+    document.getElementById('pager').innerHTML = '';
+    return;
+  }
+
+  // Paginate
+  const totalPages = Math.max(1, Math.ceil(all.length / state.perPage));
+  if (state.page > totalPages) state.page = totalPages;
+  const start = (state.page - 1) * state.perPage;
+  const page = all.slice(start, start + state.perPage);
+
+  grid.innerHTML = page.map(p => {
+    // Classification chips for the text block. Cap at 2 per card so the row
+    // wraps at most once even with the longer FR labels.
+    const chips = [];
+    if (p.tags.includes('chlor'))    chips.push(state.lang === 'fr' ? 'Chloré'        : 'Chlor.');
+    if (p.tags.includes('nonchlor')) chips.push(state.lang === 'fr' ? 'Sans chlore'    : 'Non-Chlor.');
+    if (p.flam === 'nonflam')        chips.push(state.lang === 'fr' ? 'Ininflammable'  : 'Non-Flam');
+    const cardChips = chips.slice(0, 2);
+    return `
+      <a class="pcard" href="product-detail.html#${p.sku}">
+        <div class="pcard__media">
+          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+        </div>
+        <div class="pcard__head">
+          <span class="pcard__sku">${p.sku}</span>
+          <span class="pcard__cat" data-i18n="crumbs.cat">${state.lang === 'fr' ? 'Mastics et anti-fuites' : 'Sealants & Stop-Leaks'}</span>
+        </div>
+        <div class="pcard__body">
+          <div class="pcard__name">${p.name[state.lang]}</div>
+          ${cardChips.length ? `<div class="pcard__chips">${cardChips.map(l => `<span class="pcard__chip">${l}</span>`).join('')}</div>` : ''}
+          <div class="pcard__size">${p.size}</div>
+          <div class="pcard__diff">${p.diff[state.lang]}</div>
+        </div>
+        <div class="pcard__foot">
+          <span>${t['grid.view']}</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19L19 5M19 5H8M19 5v11"/></svg>
+        </div>
+      </a>
+    `;
+  }).join('');
+
+  renderPager(totalPages, all.length);
+}
+
+function renderPager(totalPages, totalItems) {
+  const pager = document.getElementById('pager');
+  const t = I18N[state.lang];
+
+  if (totalPages <= 1) {
+    // Slot still rendered — empty — so the page reserves the space for future categories.
+    pager.innerHTML = '';
+    return;
+  }
+
+  const nums = [];
+  for (let i = 1; i <= totalPages; i++) {
+    nums.push(`<button class="pager__num ${state.page === i ? 'is-active' : ''}" data-pg="${i}">${i}</button>`);
+  }
+
+  pager.innerHTML = `
+    <div class="pager__nums">
+      <button class="pager__num pager__num--arrow" data-pg="prev" ${state.page === 1 ? 'disabled' : ''}>‹</button>
+      ${nums.join('')}
+      <button class="pager__num pager__num--arrow" data-pg="next" ${state.page === totalPages ? 'disabled' : ''}>›</button>
+    </div>
+    <button class="btn btn--ghost-dark btn--sm pager__more" data-pg="more">
+      ${t['pager.loadMore']} <span class="arrow">→</span>
+    </button>
+  `;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   I18N — apply chrome strings
+═══════════════════════════════════════════════════════════ */
+function applyI18n(lang) {
+  const t = I18N[lang];
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  document.querySelectorAll('#lang-switch .util__lang').forEach(s => {
+    s.classList.toggle('active', s.dataset.lang === lang);
+  });
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BOOT
+═══════════════════════════════════════════════════════════ */
+function rerender() {
+  applyI18n(state.lang);
+  renderChips();
+  renderRail();
+  renderGrid();
+}
+
+document.getElementById('lang-switch').addEventListener('click', e => {
+  const t = e.target.closest('[data-lang]');
+  if (!t) return;
+  state.lang = t.dataset.lang;
+  rerender();
+});
+
+document.getElementById('chips').addEventListener('click', e => {
+  const b = e.target.closest('[data-chip]');
+  if (!b) return;
+  state.chip = b.getAttribute('data-chip');
+  state.page = 1;
+  rerender();
+});
+
+document.getElementById('rail-body').addEventListener('click', e => {
+  const l = e.target.closest('[data-axis]');
+  if (!l) return;
+  if (l.classList.contains('is-disabled')) return;
+  const ax = l.getAttribute('data-axis');
+  const val = l.getAttribute('data-val');
+  const arr = state.facets[ax];
+  const i = arr.indexOf(val);
+  if (i >= 0) arr.splice(i, 1); else arr.push(val);
+  state.page = 1;
+  rerender();
+});
+
+document.getElementById('rail-reset').addEventListener('click', () => {
+  state.chip = 'all';
+  for (const ax of FACETS) state.facets[ax.key] = [];
+  state.page = 1;
+  rerender();
+});
+
+document.getElementById('sort-sel').addEventListener('change', e => {
+  state.sort = e.target.value;
+  rerender();
+});
+
+document.getElementById('pager').addEventListener('click', e => {
+  const b = e.target.closest('[data-pg]');
+  if (!b || b.hasAttribute('disabled')) return;
+  const v = b.getAttribute('data-pg');
+  const totalPages = Math.max(1, Math.ceil(filtered().length / state.perPage));
+  if (v === 'prev')      state.page = Math.max(1, state.page - 1);
+  else if (v === 'next') state.page = Math.min(totalPages, state.page + 1);
+  else if (v === 'more') state.perPage = Math.min(state.perPage + 9, PRODUCTS.length);
+  else                   state.page = Number(v);
+  rerender();
+  // scroll the grid into view comfortably
+  document.querySelector('.grid-col').getBoundingClientRect().top < 0 &&
+    window.scrollTo({ top: document.querySelector('.body').offsetTop - 100, behavior: 'smooth' });
+});
+
+rerender();
+</script>
+<script>
+  /* Mega-menu hover with grace period.
+     Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
+     bounding box, which makes diagonal/lateral travel toward the panel feel
+     fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
+     mouseleave — the timer is cancelled if the cursor re-enters either the
+     nav__item OR the .mega within ~220ms, so cursor paths in any direction
+     are forgiving. CSS still honours :hover so the menu also works without JS. */
+  (function () {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      const mega = item.querySelector('.mega');
+      if (!mega) return; // only items WITH a mega panel need grace handling
+      let closeTimer = null;
+      const open = function () {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        item.classList.add('is-open');
+      };
+      const close = function () {
+        closeTimer = setTimeout(function () {
+          item.classList.remove('is-open');
+          closeTimer = null;
+        }, 220);
+      };
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', close);
+      mega.addEventListener('mouseenter', open);
+      mega.addEventListener('mouseleave', close);
+    });
+  })();
+</script>
+</body>
+</html>
