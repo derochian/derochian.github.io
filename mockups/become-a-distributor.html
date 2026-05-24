@@ -57,6 +57,45 @@
   .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
   .nav__link:hover { background: rgba(0,0,0,.05); }
   .nav__link.active { background: var(--black); color: var(--white); }
+
+  /* shared header dropdown */
+  .nav__caret { width: 8px; height: 5px; }
+
+  /* MEGA MENU */
+  .mega {
+    position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 720px; background: var(--white);
+    border: 1px solid var(--rule); border-top: 3px solid var(--red);
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    opacity: 0; pointer-events: none; transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Invisible bridge across the 12px gap between the nav link and the menu
+     so the hover doesn't drop while the cursor is travelling down to the panel. */
+  .mega::before {
+    content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px;
+  }
+  .nav__item:hover .mega,
+  .nav__item.is-open .mega { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .mega__col h5 {
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .mega__list { display: flex; flex-direction: column; gap: 2px; }
+  .mega__row {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px;
+    padding: 8px 10px; border-radius: 2px;
+    align-items: start;
+  }
+  .mega__row:hover { background: var(--offwhite); }
+  .mega__row strong { font: 600 13px/1.2 'Jost'; color: var(--black); }
+  .mega__row span { font: 400 11px/1.4 'Inter'; color: var(--muted); }
+  .mega__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    color: var(--red); margin-top: 1px;
+  }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
   /* ───────── BUTTONS ───────── */
@@ -466,7 +505,81 @@
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
-      <div class="nav__item"><a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products</a></div>
+      <div class="nav__item">
+        <a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products
+          <svg class="nav__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="mega">
+          <div class="mega__col">
+            <h5>Featured Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg>
+                <div><strong>Brake Cleaners</strong><br/><span>Fast-dry, non-chlorinated &amp; high-pressure formulations</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg>
+                <div><strong>Engine Additives</strong><br/><span>Flushes, system cleaners, top-end conditioners</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg>
+                <div><strong>Fuel Additives</strong><br/><span>Diesel &amp; petrol injector cleaners, performance boosters</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg>
+                <div><strong>Lubricants &amp; Grease</strong><br/><span>Synthetic greases, penetrating oils, dry lubes</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="mega__col">
+            <h5>All Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"></path>
+  <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"></path>
+  <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"></path>
+  <path d="M4.5 16h15"></path>
+  <path d="M19.5 8h-15"></path></svg><div><strong>Oils &amp; Fluids</strong><br/><span>Engine, ATF, brake, coolant</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg><div><strong>Maintenance Sprays</strong><br/><span>Contact cleaner, throttle body, electronic</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18.963 14.938a6.54 6.54 0 0 0 -.899 -4.06l-4.89 -7.26c-.42 -.626 -1.287 -.804 -1.936 -.398a1.376 1.376 0 0 0 -.41 .397l-1.282 1.9m-1.625 2.415l-1.986 2.946c-1.695 2.837 -1.035 6.44 1.567 8.545c2.602 2.105 6.395 2.105 8.996 0a6.83 6.83 0 0 0 1.376 -1.499"></path>
+  <path d="M3 3l18 18"></path></svg><div><strong>Sealants &amp; Stop Leaks</strong><br/><span>Cooling, transmission, power steering</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6"></path></svg><div><strong>Car Care</strong><br/><span>Detailing, interior, exterior</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="nav__item"><a class="nav__link" href="industries.html" data-i18n="nav.industries">Industries</a></div>
       <div class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></div>
       <div class="nav__item"><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></div>
@@ -1210,6 +1323,36 @@ document.getElementById('apply-form').addEventListener('submit', e => {
 });
 
 rerender();
+</script>
+<script>
+  /* Mega-menu hover with grace period.
+     Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
+     bounding box, which makes diagonal/lateral travel toward the panel feel
+     fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
+     mouseleave — the timer is cancelled if the cursor re-enters either the
+     nav__item OR the .mega within ~220ms, so cursor paths in any direction
+     are forgiving. CSS still honours :hover so the menu also works without JS. */
+  (function () {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      const mega = item.querySelector('.mega');
+      if (!mega) return; // only items WITH a mega panel need grace handling
+      let closeTimer = null;
+      const open = function () {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        item.classList.add('is-open');
+      };
+      const close = function () {
+        closeTimer = setTimeout(function () {
+          item.classList.remove('is-open');
+          closeTimer = null;
+        }, 220);
+      };
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', close);
+      mega.addEventListener('mouseenter', open);
+      mega.addEventListener('mouseleave', close);
+    });
+  })();
 </script>
 </body>
 </html>
