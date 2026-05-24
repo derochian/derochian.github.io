@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben â€” News Article</title>
+<title>Kolben — News Article</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TOKENS ───────── */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -51,7 +51,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── UTILITY BAR ───────── */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -63,7 +63,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HEADER ───────── */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -74,7 +74,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BUTTONS ───────── */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -89,7 +89,7 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BREADCRUMB ───────── */
   .crumbs-sec { background: var(--offwhite); border-bottom: 1px solid var(--rule); }
   .crumbs {
     display: flex; align-items: center; gap: 10px;
@@ -105,9 +105,9 @@
     max-width: 56ch; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      ARTICLE HEADER
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .ahead { background: var(--white); padding: 72px 0 48px; border-bottom: 1px solid var(--rule); }
   .ahead__inner { max-width: 920px; margin: 0 auto; }
   .ahead__tag {
@@ -139,9 +139,9 @@
     text-wrap: pretty;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     HERO IMAGE â€” brushed-metal showcase
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     HERO IMAGE — brushed-metal showcase
+  ═══════════════════════════════════════════════════════════ */
   .ahero { background: var(--white); padding: 0 0 64px; }
   .ahero__inner { max-width: 1120px; margin: 0 auto; padding: 0 40px; }
   .showcase {
@@ -197,9 +197,9 @@
   }
   .ahero__caption .credit { color: rgba(0,0,0,.40); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     BODY â€” readable column
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     BODY — readable column
+  ═══════════════════════════════════════════════════════════ */
   .body-sec { background: var(--white); padding: 24px 0 88px; }
   .article {
     max-width: 700px;
@@ -224,7 +224,7 @@
     font-family: 'Jost', sans-serif;
     font-weight: 700;
     color: var(--red);
-    font-size: 4.55em;        /* sized so cap-height â‰ˆ 3 body lines */
+    font-size: 4.55em;        /* sized so cap-height ≈ 3 body lines */
     line-height: 1;
     padding: 0 8px 0 0;
     margin-top: -0.04em;      /* tiny tuck so K's capline aligns with body capline */
@@ -272,7 +272,7 @@
   }
   .pullquote .pq-att b { color: var(--black); font-weight: 500; }
 
-  /* Inline image â€” centered within the article column. */
+  /* Inline image — centered within the article column. */
   .inline-img {
     margin: 48px 0;
     max-width: 100%;
@@ -323,7 +323,7 @@
     padding-top: 4px;
   }
 
-  /* Key-facts callout â€” neutral hairline box, useful for press copy */
+  /* Key-facts callout — neutral hairline box, useful for press copy */
   .keyfacts {
     margin: 40px 0;
     border: 1px solid var(--rule); border-radius: 2px;
@@ -345,9 +345,9 @@
   .kf-v { font: 500 14px/1.35 'JetBrains Mono'; letter-spacing: .04em; color: var(--black); }
   @media (max-width: 720px) { .keyfacts__list { grid-template-columns: 1fr; } }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      SHARE ROW
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .share {
     max-width: 700px; margin: 56px auto 0; padding: 28px 40px 0;
     border-top: 1px solid var(--rule);
@@ -383,9 +383,9 @@
   }
   .share__copy:hover { background: var(--offwhite); border-color: rgba(0,0,0,.30); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      AUTHOR / CONTACT CARD
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .author {
     max-width: 700px; margin: 36px auto 0; padding: 0 40px;
   }
@@ -423,9 +423,9 @@
     .author__contact { grid-column: 1 / -1; text-align: left; }
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      RELATED ARTICLES
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .related-sec { background: var(--offwhite); padding: 96px 0 96px; border-top: 1px solid var(--rule); }
   .related-head {
     display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 32px; flex-wrap: wrap;
@@ -536,9 +536,9 @@
   }
   .acard__arrow { transition: transform 220ms var(--ease); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      END CTA BAND
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .qcta {
     background: var(--black); color: var(--white);
     padding: 88px 0 56px;
@@ -570,9 +570,9 @@
   }
   .qcta__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      BACK-TO-NEWS LINK + FOOTER
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .back-sec { background: var(--white); padding: 36px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .back-sec .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
   .back-link {
@@ -586,7 +586,7 @@
   }
   .back-sec .meta b { color: var(--black); }
 
-  /* In-article back link â€” sits after the closing paragraph of the body. */
+  /* In-article back link — sits after the closing paragraph of the body. */
   .article__back {
     display: inline-flex; align-items: center; gap: 12px;
     margin-top: 40px;
@@ -600,7 +600,7 @@
   .article__back .arrow { transition: transform 220ms var(--ease); color: var(--red); }
   .article__back:hover .arrow { transform: translateX(-4px); }
 
-  /* Standards strip â€” sits as a sub-row inside the same black band as .qcta. */
+  /* Standards strip — sits as a sub-row inside the same black band as .qcta. */
   .stds-strip {
     background: var(--black); color: var(--white);
     padding: 28px 0 36px;
@@ -629,7 +629,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── RESPONSIVE ───────── */
   @media (max-width: 1180px) {
     .related-grid { grid-template-columns: repeat(2, 1fr); }
     .qcta__inner { grid-template-columns: 1fr; gap: 32px; }
@@ -658,7 +658,7 @@
 </head>
 <body data-screen-label="13 News Article">
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── UTILITY BAR ───────── -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -685,7 +685,7 @@
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HEADER ───────── -->
 <header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
@@ -704,7 +704,7 @@
   </div>
 </header>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── BREADCRUMB ───────── -->
 <section class="crumbs-sec">
   <div class="container">
     <nav class="crumbs" aria-label="Breadcrumb">
@@ -717,51 +717,51 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      ARTICLE HEADER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="ahead" data-comment-anchor="article-head">
   <div class="container">
     <div class="ahead__inner">
       <div class="ahead__tag" data-i18n="ahead.tag">Product Announcement</div>
       <h1 class="ahead__h1" data-i18n="ahead.h1">DOT 4 brake fluid joins the <em>Eastern distribution range.</em></h1>
       <div class="ahead__meta">
-        <span><b data-i18n="ahead.dateK">Published</b> Â· 2026-05-22</span>
-        <span class="sep">Â·</span>
+        <span><b data-i18n="ahead.dateK">Published</b> · 2026-05-22</span>
+        <span class="sep">·</span>
         <span><b data-i18n="ahead.byK">By</b> Kolben Canada</span>
-        <span class="sep">Â·</span>
+        <span class="sep">·</span>
         <span data-i18n="ahead.rt">4 MIN READ</span>
-        <span class="sep">Â·</span>
-        <span><b data-i18n="ahead.langK">Available in</b> EN Â· FR</span>
+        <span class="sep">·</span>
+        <span><b data-i18n="ahead.langK">Available in</b> EN · FR</span>
       </div>
-      <p class="ahead__standfirst" data-i18n="ahead.standfirst">A reformulated DOT 4 brake fluid (SKU KB-420) joins the catalogue across Ontario and Quebec from this week. The new revision lifts the dry boiling point while keeping ABS, ESP, and modern hydraulic-clutch compatibility. <b>Placeholder copy</b> â€” confirm SKU, dates, and distribution scope before publication.</p>
+      <p class="ahead__standfirst" data-i18n="ahead.standfirst">A reformulated DOT 4 brake fluid (SKU KB-420) joins the catalogue across Ontario and Quebec from this week. The new revision lifts the dry boiling point while keeping ABS, ESP, and modern hydraulic-clutch compatibility. <b>Placeholder copy</b> — confirm SKU, dates, and distribution scope before publication.</p>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      HERO IMAGE
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="ahero">
   <div class="ahero__inner">
     <div class="showcase">
       <div class="showcase__chevron"><div></div><div></div></div>
       <img class="showcase__bottle" src="../assets/products/brake-cleaner.png" alt="Kolben DOT 4 Brake Fluid (placeholder image)" />
       <div class="showcase__tag">
-        <div class="showcase__tag-sku">KB-420 Â· BRAKE FLUID</div>
+        <div class="showcase__tag-sku">KB-420 · BRAKE FLUID</div>
         <div class="showcase__tag-name" data-i18n="ahero.name">DOT 4 Brake Fluid</div>
       </div>
     </div>
     <div class="ahero__caption">
-      <span data-i18n="ahero.cap">Image Â· KB-420 DOT 4 Brake Fluid, 1 L bottle â€” placeholder using existing product render.</span>
-      <span class="credit" data-i18n="ahero.credit">Â© Kolben Chemicals</span>
+      <span data-i18n="ahero.cap">Image · KB-420 DOT 4 Brake Fluid, 1 L bottle — placeholder using existing product render.</span>
+      <span class="credit" data-i18n="ahero.credit">© Kolben Chemicals</span>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      ARTICLE BODY
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="body-sec">
   <article class="article" data-comment-anchor="article-body">
 
@@ -778,21 +778,21 @@
         </div>
         <div class="keyfacts__row">
           <div class="kf-k" data-i18n="kf.size">Size</div>
-          <div class="kf-v">1 L Â· 5 L</div>
+          <div class="kf-v">1 L · 5 L</div>
         </div>
         <div class="keyfacts__row">
           <div class="kf-k" data-i18n="kf.avail">Available</div>
-          <div class="kf-v" data-i18n="kf.availV">2026 Â· 05 Â· 22 â€” Ontario, Quebec</div>
+          <div class="kf-v" data-i18n="kf.availV">2026 · 05 · 22 — Ontario, Quebec</div>
         </div>
         <div class="keyfacts__row">
           <div class="kf-k" data-i18n="kf.rev">SDS revision</div>
-          <div class="kf-v">R-2026.05 Â· EN Â· FR</div>
+          <div class="kf-v">R-2026.05 · EN · FR</div>
         </div>
       </div>
     </div>
 
     <h2 data-i18n="body.h1">What is in the catalogue</h2>
-    <p data-i18n="body.p3">The release is part of the 2026 range update. Distributors carrying Kolben already have catalogue access from this week, with first deliveries timed to the regular monthly cycle. The product specification, application notes, and certifications are documented in the technical data sheet â€” link the TDS from the compliance library rather than restating values here.</p>
+    <p data-i18n="body.p3">The release is part of the 2026 range update. Distributors carrying Kolben already have catalogue access from this week, with first deliveries timed to the regular monthly cycle. The product specification, application notes, and certifications are documented in the technical data sheet — link the TDS from the compliance library rather than restating values here.</p>
 
     <ul>
       <li data-i18n="body.li1"><b>Dry boiling point</b> raised in the new revision; see TDS for the confirmed value.</li>
@@ -802,8 +802,8 @@
     </ul>
 
     <div class="pullquote" data-i18n="body.pull">
-      The point of the 2026 update is procurement clarity â€” one SKU, one bilingual label, one current SDS, ordered the same way in Quebec or Alberta.
-      <span class="pq-att"><b data-i18n="body.pullAtt">â€” Placeholder attribution</b> Â· Kolben Canada</span>
+      The point of the 2026 update is procurement clarity — one SKU, one bilingual label, one current SDS, ordered the same way in Quebec or Alberta.
+      <span class="pq-att"><b data-i18n="body.pullAtt">— Placeholder attribution</b> · Kolben Canada</span>
     </div>
 
     <h2 data-i18n="body.h2">How to order</h2>
@@ -811,33 +811,33 @@
 
     <div class="inline-img">
       <div class="inline-img__frame">
-        <img src="../assets/products/brake-cleaner.png" alt="KB-420 DOT 4 Brake Fluid â€” placeholder context image" />
+        <img src="../assets/products/brake-cleaner.png" alt="KB-420 DOT 4 Brake Fluid — placeholder context image" />
       </div>
       <div class="inline-img__cap">
         <span class="lbl" data-i18n="inline.lbl">Figure 1</span>
-        <span data-i18n="inline.cap">KB-420 1 L bottle, bilingual EN/FR label â€” placeholder image using existing product render.</span>
+        <span data-i18n="inline.cap">KB-420 1 L bottle, bilingual EN/FR label — placeholder image using existing product render.</span>
       </div>
     </div>
 
     <h2 data-i18n="body.h3">What to expect next</h2>
-    <p data-i18n="body.p5">A second wave brings the 5 L workshop pack to the Western distribution range later in the year â€” confirmed timing will be published in a follow-up note. The team is also working through a small refresh of the application chart on the product detail page; expect that update inside the quarter.</p>
+    <p data-i18n="body.p5">A second wave brings the 5 L workshop pack to the Western distribution range later in the year — confirmed timing will be published in a follow-up note. The team is also working through a small refresh of the application chart on the product detail page; expect that update inside the quarter.</p>
 
     <ol>
-      <li data-i18n="body.oli1"><b>This week</b> Â· 1 L SKU live across Eastern distribution.</li>
-      <li data-i18n="body.oli2"><b>Next quarter</b> Â· 5 L workshop pack to Western distribution.</li>
-      <li data-i18n="body.oli3"><b>Ongoing</b> Â· application-chart refresh on the product detail page.</li>
+      <li data-i18n="body.oli1"><b>This week</b> · 1 L SKU live across Eastern distribution.</li>
+      <li data-i18n="body.oli2"><b>Next quarter</b> · 5 L workshop pack to Western distribution.</li>
+      <li data-i18n="body.oli3"><b>Ongoing</b> · application-chart refresh on the product detail page.</li>
     </ol>
 
     <p data-i18n="body.p6">For technical questions, contact the Kolben Canada technical desk. For document or SDS questions, see the <a href="compliance-sds.html">Compliance &amp; SDS</a> library. <b>This article is placeholder copy and will be replaced before publication.</b></p>
 
     <a class="article__back" href="news.html">
-      <span class="arrow">â†</span>
+      <span class="arrow">←</span>
       <span data-i18n="back.lbl">Back to News</span>
     </a>
 
   </article>
 
-  <!-- â”€â”€â”€ SHARE â”€â”€â”€ -->
+  <!-- ─── SHARE ─── -->
   <div class="share" data-comment-anchor="article-share">
     <span class="share__lbl" data-i18n="share.lbl">Share</span>
     <div class="share__list">
@@ -860,14 +860,14 @@
     </button>
   </div>
 
-  <!-- â”€â”€â”€ AUTHOR / CONTACT â”€â”€â”€ -->
+  <!-- ─── AUTHOR / CONTACT ─── -->
   <div class="author">
     <div class="author__card">
       <div class="author__avatar" aria-hidden="true"></div>
       <div class="author__body">
         <div class="author__k" data-i18n="author.k">Press contact</div>
         <div class="author__n" data-i18n="author.n">Kolben Canada</div>
-        <div class="author__role" data-i18n="author.role">Canadian customer-service &amp; press desk â€” bilingual EN/FR. Author name to be confirmed before publication.</div>
+        <div class="author__role" data-i18n="author.role">Canadian customer-service &amp; press desk — bilingual EN/FR. Author name to be confirmed before publication.</div>
       </div>
       <div class="author__contact">
         <div class="k" data-i18n="author.ck">Email</div>
@@ -880,9 +880,9 @@
 
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      RELATED ARTICLES
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="related-sec" data-comment-anchor="article-related">
   <div class="container">
     <div class="related-head">
@@ -892,14 +892,14 @@
       </div>
       <a class="related-head__cta" href="news.html">
         <span data-i18n="rel.cta">View all news</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
 
     <div class="related-grid">
       <a class="acard" href="#">
         <div class="acard__img">
-          <div class="acard__img-label" data-i18n="rel.r1.img">Image Â· KB-340 product trio Â· 16:9</div>
+          <div class="acard__img-label" data-i18n="rel.r1.img">Image · KB-340 product trio · 16:9</div>
         </div>
         <div class="acard__body">
           <div class="acard__top">
@@ -908,20 +908,20 @@
           <div class="acard__meta">
             <span>2026-05-08</span>
             <span class="dot"></span>
-            <span data-i18n="rel.r1.rt">3 MIN Â· READ</span>
+            <span data-i18n="rel.r1.rt">3 MIN · READ</span>
           </div>
           <h3 class="acard__title" data-i18n="rel.r1.h">Three new SKUs added to the engine-care line for 2026.</h3>
           <p class="acard__excerpt" data-i18n="rel.r1.x">Kolben extends the additive range with two diesel-specific cleaners and an oil-system stabilizer for high-mileage fleets.</p>
           <div class="acard__cta">
             <span data-i18n="rel.read">Read article</span>
-            <span class="acard__arrow">â†’</span>
+            <span class="acard__arrow">→</span>
           </div>
         </div>
       </a>
 
       <a class="acard" href="#">
         <div class="acard__img">
-          <div class="acard__img-label" data-i18n="rel.r2.img">Image Â· brake-caliper detail Â· 16:9</div>
+          <div class="acard__img-label" data-i18n="rel.r2.img">Image · brake-caliper detail · 16:9</div>
         </div>
         <div class="acard__body">
           <div class="acard__top">
@@ -930,20 +930,20 @@
           <div class="acard__meta">
             <span>2026-05-02</span>
             <span class="dot"></span>
-            <span data-i18n="rel.r2.rt">6 MIN Â· READ</span>
+            <span data-i18n="rel.r2.rt">6 MIN · READ</span>
           </div>
           <h3 class="acard__title" data-i18n="rel.r2.h">How to choose a non-chlorinated brake cleaner for shop and fleet use.</h3>
-          <p class="acard__excerpt" data-i18n="rel.r2.x">Solvent class, flash point, residue, and OEM-approval implications â€” a side-by-side guide for service techs and procurement.</p>
+          <p class="acard__excerpt" data-i18n="rel.r2.x">Solvent class, flash point, residue, and OEM-approval implications — a side-by-side guide for service techs and procurement.</p>
           <div class="acard__cta">
             <span data-i18n="rel.read">Read article</span>
-            <span class="acard__arrow">â†’</span>
+            <span class="acard__arrow">→</span>
           </div>
         </div>
       </a>
 
       <a class="acard" href="#">
         <div class="acard__img is-dark">
-          <div class="acard__img-label" data-i18n="rel.r3.img">Image Â· event hall placeholder Â· 16:9</div>
+          <div class="acard__img-label" data-i18n="rel.r3.img">Image · event hall placeholder · 16:9</div>
         </div>
         <div class="acard__body">
           <div class="acard__top">
@@ -952,13 +952,13 @@
           <div class="acard__meta">
             <span>2026-04-22</span>
             <span class="dot"></span>
-            <span data-i18n="rel.r3.rt">2 MIN Â· READ</span>
+            <span data-i18n="rel.r3.rt">2 MIN · READ</span>
           </div>
-          <h3 class="acard__title" data-i18n="rel.r3.h">Kolben joins MÃ©canex MontrÃ©al 2026 trade event in October.</h3>
-          <p class="acard__excerpt" data-i18n="rel.r3.x">The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder â€” confirm date.</p>
+          <h3 class="acard__title" data-i18n="rel.r3.h">Kolben joins Mécanex Montréal 2026 trade event in October.</h3>
+          <p class="acard__excerpt" data-i18n="rel.r3.x">The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder — confirm date.</p>
           <div class="acard__cta">
             <span data-i18n="rel.read">Read article</span>
-            <span class="acard__arrow">â†’</span>
+            <span class="acard__arrow">→</span>
           </div>
         </div>
       </a>
@@ -966,9 +966,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      END CTA BAND
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="qcta is-light">
   <div class="container qcta__inner">
     <div>
@@ -978,43 +978,43 @@
     <div class="qcta__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="qcta.a">Become a Distributor</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€â”€ STANDARDS STRIP (forthcoming) â”€â”€â”€ -->
+<!-- ─── STANDARDS STRIP (forthcoming) ─── -->
 <section class="stds-strip">
   <div class="container stds">
     <div class="stds__k" data-i18n="stds.k">Manufacturing standards</div>
     <div class="stds__list">
-      <div class="std"><b>ISO 9001</b><span data-i18n="stds.qms">Quality management â€” forthcoming</span></div>
-      <div class="std"><b>IATF 16949</b><span data-i18n="stds.auto">Automotive quality â€” forthcoming</span></div>
-      <div class="std"><b>WHMIS Â· 2015</b><span data-i18n="stds.whmis">Workplace hazard alignment</span></div>
-      <div class="std"><b>TDG Â· SOR/2001-286</b><span data-i18n="stds.tdg">Transport classification</span></div>
+      <div class="std"><b>ISO 9001</b><span data-i18n="stds.qms">Quality management — forthcoming</span></div>
+      <div class="std"><b>IATF 16949</b><span data-i18n="stds.auto">Automotive quality — forthcoming</span></div>
+      <div class="std"><b>WHMIS · 2015</b><span data-i18n="stds.whmis">Workplace hazard alignment</span></div>
+      <div class="std"><b>TDG · SOR/2001-286</b><span data-i18n="stds.tdg">Transport classification</span></div>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
 <footer class="site-footer">
 
-  <!-- TIER 1 â€” value band -->
+  <!-- TIER 1 — value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -1027,7 +1027,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 â€” navigation -->
+  <!-- TIER 2 — navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -1037,7 +1037,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
         </ul>
       </div>
       <div>
@@ -1047,7 +1047,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
         </ul>
       </div>
       <div>
@@ -1080,29 +1080,29 @@
     </div>
   </div>
 
-  <!-- TIER 3 â€” bottom bar -->
+  <!-- TIER 3 — bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── /SITE FOOTER ───────── -->
 
 <script>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ═══════════════════════════════════════════════════════════
    I18N
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -1126,12 +1126,12 @@ const I18N = {
     'ahead.byK':        'By',
     'ahead.rt':         '4 MIN READ',
     'ahead.langK':      'Available in',
-    'ahead.standfirst': 'A reformulated DOT 4 brake fluid (SKU KB-420) joins the catalogue across Ontario and Quebec from this week. The new revision lifts the dry boiling point while keeping ABS, ESP, and modern hydraulic-clutch compatibility. <b>Placeholder copy</b> â€” confirm SKU, dates, and distribution scope before publication.',
+    'ahead.standfirst': 'A reformulated DOT 4 brake fluid (SKU KB-420) joins the catalogue across Ontario and Quebec from this week. The new revision lifts the dry boiling point while keeping ABS, ESP, and modern hydraulic-clutch compatibility. <b>Placeholder copy</b> — confirm SKU, dates, and distribution scope before publication.',
 
-    'ahero.pin':        'Catalogue Â· 2026 range',
+    'ahero.pin':        'Catalogue · 2026 range',
     'ahero.name':       'DOT 4 Brake Fluid',
-    'ahero.cap':        'Image Â· KB-420 DOT 4 Brake Fluid, 1 L bottle â€” placeholder using existing product render.',
-    'ahero.credit':     'Â© Kolben Chemicals',
+    'ahero.cap':        'Image · KB-420 DOT 4 Brake Fluid, 1 L bottle — placeholder using existing product render.',
+    'ahero.credit':     '© Kolben Chemicals',
 
     'body.p1':          '<span class="dropcap">K</span>olben Chemicals Canada is adding a reformulated DOT 4 brake fluid (SKU <a href="product-detail.html">KB-420</a>) to the Eastern distribution range from this week. The new revision targets workshops, fleets, and pro shops carrying the Kolben line in Ontario and Quebec, with bilingual EN/FR labels and updated technical and safety documentation on file. <b>This copy is placeholder pending review.</b>',
     'body.p2':          "The reformulation lifts the fluid's dry boiling point and keeps compatibility with modern ABS, ESP, and hydraulic-clutch systems. SDS and TDS revisions are available in the <a href=\"compliance-sds.html\">Compliance &amp; SDS</a> library; distributors can request a printed pack from the customer-service desk.",
@@ -1140,29 +1140,29 @@ const I18N = {
     'kf.sku':           'SKU',
     'kf.size':          'Size',
     'kf.avail':         'Available',
-    'kf.availV':        '2026 Â· 05 Â· 22 â€” Ontario, Quebec',
+    'kf.availV':        '2026 · 05 · 22 — Ontario, Quebec',
     'kf.rev':           'SDS revision',
 
     'body.h1':          'What is in the catalogue',
-    'body.p3':          'The release is part of the 2026 range update. Distributors carrying Kolben already have catalogue access from this week, with first deliveries timed to the regular monthly cycle. The product specification, application notes, and certifications are documented in the technical data sheet â€” link the TDS from the compliance library rather than restating values here.',
+    'body.p3':          'The release is part of the 2026 range update. Distributors carrying Kolben already have catalogue access from this week, with first deliveries timed to the regular monthly cycle. The product specification, application notes, and certifications are documented in the technical data sheet — link the TDS from the compliance library rather than restating values here.',
     'body.li1':         '<b>Dry boiling point</b> raised in the new revision; see TDS for the confirmed value.',
     'body.li2':         '<b>ABS, ESP</b> and modern hydraulic-clutch compatibility retained.',
     'body.li3':         '<b>Bilingual EN/FR labels</b> standard on every Canadian SKU.',
     'body.li4':         '<b>SDS R-2026.05</b> available in both languages from the Compliance library.',
-    'body.pull':        'The point of the 2026 update is procurement clarity â€” one SKU, one bilingual label, one current SDS, ordered the same way in Quebec or Alberta.',
-    'body.pullAtt':     'â€” Placeholder attribution',
+    'body.pull':        'The point of the 2026 update is procurement clarity — one SKU, one bilingual label, one current SDS, ordered the same way in Quebec or Alberta.',
+    'body.pullAtt':     '— Placeholder attribution',
 
     'body.h2':          'How to order',
     'body.p4':          'Existing distributors place orders through the standard channel. Shops and fleets without a distributor relationship should use the <a href="where-to-buy.html">Where to Buy</a> tool to locate the nearest authorised distributor, or contact the <a href="contact.html?inquiry=sales">Canadian sales desk</a> for a sample pack.',
 
     'inline.lbl':       'Figure 1',
-    'inline.cap':       'KB-420 1 L bottle, bilingual EN/FR label â€” placeholder image using existing product render.',
+    'inline.cap':       'KB-420 1 L bottle, bilingual EN/FR label — placeholder image using existing product render.',
 
     'body.h3':          'What to expect next',
-    'body.p5':          'A second wave brings the 5 L workshop pack to the Western distribution range later in the year â€” confirmed timing will be published in a follow-up note. The team is also working through a small refresh of the application chart on the product detail page; expect that update inside the quarter.',
-    'body.oli1':        '<b>This week</b> Â· 1 L SKU live across Eastern distribution.',
-    'body.oli2':        '<b>Next quarter</b> Â· 5 L workshop pack to Western distribution.',
-    'body.oli3':        '<b>Ongoing</b> Â· application-chart refresh on the product detail page.',
+    'body.p5':          'A second wave brings the 5 L workshop pack to the Western distribution range later in the year — confirmed timing will be published in a follow-up note. The team is also working through a small refresh of the application chart on the product detail page; expect that update inside the quarter.',
+    'body.oli1':        '<b>This week</b> · 1 L SKU live across Eastern distribution.',
+    'body.oli2':        '<b>Next quarter</b> · 5 L workshop pack to Western distribution.',
+    'body.oli3':        '<b>Ongoing</b> · application-chart refresh on the product detail page.',
     'body.p6':          'For technical questions, contact the Kolben Canada technical desk. For document or SDS questions, see the <a href="compliance-sds.html">Compliance &amp; SDS</a> library. <b>This article is placeholder copy and will be replaced before publication.</b>',
 
     'share.lbl':        'Share',
@@ -1171,7 +1171,7 @@ const I18N = {
 
     'author.k':         'Press contact',
     'author.n':         'Kolben Canada',
-    'author.role':      'Canadian customer-service &amp; press desk â€” bilingual EN/FR. Author name to be confirmed before publication.',
+    'author.role':      'Canadian customer-service &amp; press desk — bilingual EN/FR. Author name to be confirmed before publication.',
     'author.ck':        'Email',
     'author.pk':        'Phone',
 
@@ -1180,27 +1180,27 @@ const I18N = {
     'rel.cta':          'View all news',
     'rel.read':         'Read article',
 
-    'rel.r1.img':       'Image Â· KB-340 product trio Â· 16:9',
+    'rel.r1.img':       'Image · KB-340 product trio · 16:9',
     'rel.r1.tag':       'Product News',
-    'rel.r1.rt':        '3 MIN Â· READ',
+    'rel.r1.rt':        '3 MIN · READ',
     'rel.r1.h':         'Three new SKUs added to the engine-care line for 2026.',
     'rel.r1.x':         'Kolben extends the additive range with two diesel-specific cleaners and an oil-system stabilizer for high-mileage fleets.',
 
-    'rel.r2.img':       'Image Â· brake-caliper detail Â· 16:9',
+    'rel.r2.img':       'Image · brake-caliper detail · 16:9',
     'rel.r2.tag':       'Technical',
-    'rel.r2.rt':        '6 MIN Â· READ',
+    'rel.r2.rt':        '6 MIN · READ',
     'rel.r2.h':         'How to choose a non-chlorinated brake cleaner for shop and fleet use.',
-    'rel.r2.x':         'Solvent class, flash point, residue, and OEM-approval implications â€” a side-by-side guide for service techs and procurement.',
+    'rel.r2.x':         'Solvent class, flash point, residue, and OEM-approval implications — a side-by-side guide for service techs and procurement.',
 
-    'rel.r3.img':       'Image Â· event hall placeholder Â· 16:9',
+    'rel.r3.img':       'Image · event hall placeholder · 16:9',
     'rel.r3.tag':       'Press Release',
-    'rel.r3.rt':        '2 MIN Â· READ',
-    'rel.r3.h':         'Kolben joins MÃ©canex MontrÃ©al 2026 trade event in October.',
-    'rel.r3.x':         'The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder â€” confirm date.',
+    'rel.r3.rt':        '2 MIN · READ',
+    'rel.r3.h':         'Kolben joins Mécanex Montréal 2026 trade event in October.',
+    'rel.r3.x':         'The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder — confirm date.',
 
     'qcta.eyebrow':     'For trade partners',
     'qcta.h':           'Carry the <em>Kolben range</em> across Canada.',
-    'qcta.sub':         'Bilingual EN/FR labels, distributor margins, 48-hour ship from Mississauga or Edmonton. Apply to add Kolben to your shelves â€” or find an existing distributor near you.',
+    'qcta.sub':         'Bilingual EN/FR labels, distributor margins, 48-hour ship from Mississauga or Edmonton. Apply to add Kolben to your shelves — or find an existing distributor near you.',
     'qcta.a':           'Become a Distributor',
     'qcta.b':           'Where to Buy',
 
@@ -1209,128 +1209,128 @@ const I18N = {
     'back.share2':      'Share with your team.',
 
     'stds.k':           'Manufacturing standards',
-    'stds.qms':         'Quality management â€” forthcoming',
-    'stds.auto':        'Automotive quality â€” forthcoming',
+    'stds.qms':         'Quality management — forthcoming',
+    'stds.auto':        'Automotive quality — forthcoming',
     'stds.whmis':       'Workplace hazard alignment',
     'stds.tdg':         'Transport classification',
 
-    'footer.tag':       'Power Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Power Â· Performance Â· Kolben',
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Power · Performance · Kolben',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'ConformitÃ© et FDS',
+    'util.compliance':  'Conformité et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'Ã€ propos',
-    'nav.news':         'ActualitÃ©s',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
     'nav.contact':      'Nous joindre',
-    'nav.whereToBuy':   'OÃ¹ acheter',
+    'nav.whereToBuy':   'Où acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'crumb.home':       'Accueil',
-    'crumb.news':       'ActualitÃ©s',
-    'crumb.curr':       'Kolben Canada ajoute le liquide de frein DOT 4 Ã  la gamme de distribution de lâ€™Est',
+    'crumb.news':       'Actualités',
+    'crumb.curr':       'Kolben Canada ajoute le liquide de frein DOT 4 à la gamme de distribution de l’Est',
 
     'ahead.tag':        'Annonce produit',
-    'ahead.h1':         'Le liquide de frein DOT 4 rejoint la <em>gamme de distribution de lâ€™Est.</em>',
-    'ahead.dateK':      'PubliÃ©',
+    'ahead.h1':         'Le liquide de frein DOT 4 rejoint la <em>gamme de distribution de l’Est.</em>',
+    'ahead.dateK':      'Publié',
     'ahead.byK':        'Par',
     'ahead.rt':         'LECTURE DE 4 MIN',
     'ahead.langK':      'Disponible en',
-    'ahead.standfirst': 'Un liquide de frein DOT 4 reformulÃ© (UGS KB-420) rejoint le catalogue en Ontario et au QuÃ©bec Ã  compter de cette semaine. La nouvelle rÃ©vision Ã©lÃ¨ve le point dâ€™Ã©bullition sec tout en conservant la compatibilitÃ© ABS, ESP et embrayages hydrauliques modernes. <b>Copie placeholder</b> â€” UGS, dates et portÃ©e de distribution Ã  confirmer avant publication.',
+    'ahead.standfirst': 'Un liquide de frein DOT 4 reformulé (UGS KB-420) rejoint le catalogue en Ontario et au Québec à compter de cette semaine. La nouvelle révision élève le point d’ébullition sec tout en conservant la compatibilité ABS, ESP et embrayages hydrauliques modernes. <b>Copie placeholder</b> — UGS, dates et portée de distribution à confirmer avant publication.',
 
-    'ahero.pin':        'Catalogue Â· gamme 2026',
+    'ahero.pin':        'Catalogue · gamme 2026',
     'ahero.name':       'Liquide de frein DOT 4',
-    'ahero.cap':        'Image Â· liquide de frein DOT 4 KB-420, flacon 1 L â€” placeholder utilisant le rendu produit existant.',
-    'ahero.credit':     'Â© Kolben Chemicals',
+    'ahero.cap':        'Image · liquide de frein DOT 4 KB-420, flacon 1 L — placeholder utilisant le rendu produit existant.',
+    'ahero.credit':     '© Kolben Chemicals',
 
-    'body.p1':          '<span class="dropcap">K</span>olben Chemicals Canada ajoute un liquide de frein DOT 4 reformulÃ© (UGS <a href="product-detail.html">KB-420</a>) Ã  la gamme de distribution de lâ€™Est Ã  compter de cette semaine. La nouvelle rÃ©vision cible les ateliers, flottes et ateliers professionnels qui portent la gamme Kolben en Ontario et au QuÃ©bec, avec des Ã©tiquettes bilingues EN/FR et une documentation technique et de sÃ©curitÃ© mise Ã  jour. <b>Cette copie est un placeholder en attente de rÃ©vision.</b>',
-    'body.p2':          'La reformulation Ã©lÃ¨ve le point dâ€™Ã©bullition sec du liquide tout en conservant la compatibilitÃ© avec les systÃ¨mes ABS, ESP et embrayages hydrauliques modernes. Les rÃ©visions FDS et FT sont disponibles dans la bibliothÃ¨que <a href="compliance-sds.html">ConformitÃ© et FDS</a> ; les distributeurs peuvent demander un dossier imprimÃ© au bureau de service Ã  la clientÃ¨le.',
+    'body.p1':          '<span class="dropcap">K</span>olben Chemicals Canada ajoute un liquide de frein DOT 4 reformulé (UGS <a href="product-detail.html">KB-420</a>) à la gamme de distribution de l’Est à compter de cette semaine. La nouvelle révision cible les ateliers, flottes et ateliers professionnels qui portent la gamme Kolben en Ontario et au Québec, avec des étiquettes bilingues EN/FR et une documentation technique et de sécurité mise à jour. <b>Cette copie est un placeholder en attente de révision.</b>',
+    'body.p2':          'La reformulation élève le point d’ébullition sec du liquide tout en conservant la compatibilité avec les systèmes ABS, ESP et embrayages hydrauliques modernes. Les révisions FDS et FT sont disponibles dans la bibliothèque <a href="compliance-sds.html">Conformité et FDS</a> ; les distributeurs peuvent demander un dossier imprimé au bureau de service à la clientèle.',
 
-    'kf.h':             'RÃ©sumÃ© de la sortie',
+    'kf.h':             'Résumé de la sortie',
     'kf.sku':           'UGS',
     'kf.size':          'Format',
     'kf.avail':         'Disponible',
-    'kf.availV':        '2026 Â· 05 Â· 22 â€” Ontario, QuÃ©bec',
-    'kf.rev':           'RÃ©vision FDS',
+    'kf.availV':        '2026 · 05 · 22 — Ontario, Québec',
+    'kf.rev':           'Révision FDS',
 
     'body.h1':          'Ce qui entre au catalogue',
-    'body.p3':          'Cette sortie sâ€™inscrit dans la mise Ã  jour de la gamme 2026. Les distributeurs qui portent Kolben ont dÃ©jÃ  accÃ¨s au catalogue Ã  compter de cette semaine, les premiÃ¨res livraisons Ã©tant calÃ©es sur le cycle mensuel habituel. Les spÃ©cifications produit, les notes dâ€™application et les certifications sont documentÃ©es dans la fiche technique â€” rÃ©fÃ©rer Ã  la FT depuis la bibliothÃ¨que de conformitÃ© plutÃ´t que de rÃ©pÃ©ter les valeurs ici.',
-    'body.li1':         '<b>Point dâ€™Ã©bullition sec</b> relevÃ© dans la nouvelle rÃ©vision ; voir la FT pour la valeur confirmÃ©e.',
-    'body.li2':         '<b>ABS, ESP</b> et compatibilitÃ© avec les embrayages hydrauliques modernes conservÃ©es.',
-    'body.li3':         '<b>Ã‰tiquettes bilingues EN/FR</b> en standard sur toutes les UGS canadiennes.',
-    'body.li4':         '<b>FDS R-2026.05</b> disponible dans les deux langues depuis la bibliothÃ¨que ConformitÃ©.',
-    'body.pull':        'Lâ€™objectif de la mise Ã  jour 2026, câ€™est la clartÃ© pour lâ€™approvisionnement â€” une UGS, une Ã©tiquette bilingue, une FDS courante, commandÃ©e de la mÃªme maniÃ¨re au QuÃ©bec quâ€™en Alberta.',
-    'body.pullAtt':     'â€” Attribution placeholder',
+    'body.p3':          'Cette sortie s’inscrit dans la mise à jour de la gamme 2026. Les distributeurs qui portent Kolben ont déjà accès au catalogue à compter de cette semaine, les premières livraisons étant calées sur le cycle mensuel habituel. Les spécifications produit, les notes d’application et les certifications sont documentées dans la fiche technique — référer à la FT depuis la bibliothèque de conformité plutôt que de répéter les valeurs ici.',
+    'body.li1':         '<b>Point d’ébullition sec</b> relevé dans la nouvelle révision ; voir la FT pour la valeur confirmée.',
+    'body.li2':         '<b>ABS, ESP</b> et compatibilité avec les embrayages hydrauliques modernes conservées.',
+    'body.li3':         '<b>Étiquettes bilingues EN/FR</b> en standard sur toutes les UGS canadiennes.',
+    'body.li4':         '<b>FDS R-2026.05</b> disponible dans les deux langues depuis la bibliothèque Conformité.',
+    'body.pull':        'L’objectif de la mise à jour 2026, c’est la clarté pour l’approvisionnement — une UGS, une étiquette bilingue, une FDS courante, commandée de la même manière au Québec qu’en Alberta.',
+    'body.pullAtt':     '— Attribution placeholder',
 
     'body.h2':          'Comment commander',
-    'body.p4':          'Les distributeurs existants passent commande par le canal habituel. Les ateliers et flottes sans relation distributeur doivent utiliser lâ€™outil <a href="where-to-buy.html">OÃ¹ acheter</a> pour localiser le distributeur autorisÃ© le plus proche, ou contacter le <a href="contact.html?inquiry=sales">bureau de ventes canadien</a> pour un Ã©chantillon.',
+    'body.p4':          'Les distributeurs existants passent commande par le canal habituel. Les ateliers et flottes sans relation distributeur doivent utiliser l’outil <a href="where-to-buy.html">Où acheter</a> pour localiser le distributeur autorisé le plus proche, ou contacter le <a href="contact.html?inquiry=sales">bureau de ventes canadien</a> pour un échantillon.',
 
     'inline.lbl':       'Figure 1',
-    'inline.cap':       'Flacon KB-420 1 L, Ã©tiquette bilingue EN/FR â€” image placeholder utilisant le rendu produit existant.',
+    'inline.cap':       'Flacon KB-420 1 L, étiquette bilingue EN/FR — image placeholder utilisant le rendu produit existant.',
 
     'body.h3':          'Ce qui suit',
-    'body.p5':          'Une deuxiÃ¨me vague apportera le format 5 L atelier Ã  la gamme de distribution de lâ€™Ouest plus tard dans lâ€™annÃ©e â€” le calendrier confirmÃ© sera publiÃ© dans une note de suivi. Lâ€™Ã©quipe travaille Ã©galement Ã  une petite mise Ã  jour du tableau dâ€™applications sur la page produit ; cette mise Ã  jour est prÃ©vue dans le trimestre.',
-    'body.oli1':        '<b>Cette semaine</b> Â· UGS 1 L en distribution dans lâ€™Est.',
-    'body.oli2':        '<b>Trimestre suivant</b> Â· format atelier 5 L vers la distribution Ouest.',
-    'body.oli3':        '<b>En continu</b> Â· mise Ã  jour du tableau dâ€™applications sur la page produit.',
-    'body.p6':          'Pour les questions techniques, contactez le bureau technique de Kolben Canada. Pour les questions de documents ou de FDS, voir la bibliothÃ¨que <a href="compliance-sds.html">ConformitÃ© et FDS</a>. <b>Cet article est une copie placeholder et sera remplacÃ© avant publication.</b>',
+    'body.p5':          'Une deuxième vague apportera le format 5 L atelier à la gamme de distribution de l’Ouest plus tard dans l’année — le calendrier confirmé sera publié dans une note de suivi. L’équipe travaille également à une petite mise à jour du tableau d’applications sur la page produit ; cette mise à jour est prévue dans le trimestre.',
+    'body.oli1':        '<b>Cette semaine</b> · UGS 1 L en distribution dans l’Est.',
+    'body.oli2':        '<b>Trimestre suivant</b> · format atelier 5 L vers la distribution Ouest.',
+    'body.oli3':        '<b>En continu</b> · mise à jour du tableau d’applications sur la page produit.',
+    'body.p6':          'Pour les questions techniques, contactez le bureau technique de Kolben Canada. Pour les questions de documents ou de FDS, voir la bibliothèque <a href="compliance-sds.html">Conformité et FDS</a>. <b>Cet article est une copie placeholder et sera remplacé avant publication.</b>',
 
     'share.lbl':        'Partager',
     'share.copy':       'Copier le lien',
-    'share.copied':     'Lien copiÃ©',
+    'share.copied':     'Lien copié',
 
     'author.k':         'Contact presse',
     'author.n':         'Kolben Canada',
-    'author.role':      'Bureau service Ã  la clientÃ¨le et presse â€” bilingue EN/FR. Nom de lâ€™auteur Ã  confirmer avant publication.',
+    'author.role':      'Bureau service à la clientèle et presse — bilingue EN/FR. Nom de l’auteur à confirmer avant publication.',
     'author.ck':        'Courriel',
-    'author.pk':        'TÃ©lÃ©phone',
+    'author.pk':        'Téléphone',
 
-    'rel.eyebrow':      'Plus dâ€™actualitÃ©s Kolben',
+    'rel.eyebrow':      'Plus d’actualités Kolben',
     'rel.h':            'Articles <em>connexes.</em>',
-    'rel.cta':          'Toutes les actualitÃ©s',
+    'rel.cta':          'Toutes les actualités',
     'rel.read':         'Lire la suite',
 
-    'rel.r1.img':       'Image Â· trio produits KB-340 Â· 16:9',
-    'rel.r1.tag':       'NouveautÃ© produit',
-    'rel.r1.rt':        '3 MIN Â· LECTURE',
-    'rel.r1.h':         'Trois nouvelles UGS ajoutÃ©es Ã  la gamme entretien moteur 2026.',
-    'rel.r1.x':         'Kolben Ã©largit la gamme dâ€™additifs avec deux nettoyants diesel spÃ©cifiques et un stabilisateur du circuit dâ€™huile pour flottes Ã  kilomÃ©trage Ã©levÃ©.',
+    'rel.r1.img':       'Image · trio produits KB-340 · 16:9',
+    'rel.r1.tag':       'Nouveauté produit',
+    'rel.r1.rt':        '3 MIN · LECTURE',
+    'rel.r1.h':         'Trois nouvelles UGS ajoutées à la gamme entretien moteur 2026.',
+    'rel.r1.x':         'Kolben élargit la gamme d’additifs avec deux nettoyants diesel spécifiques et un stabilisateur du circuit d’huile pour flottes à kilométrage élevé.',
 
-    'rel.r2.img':       'Image Â· dÃ©tail Ã©trier de frein Â· 16:9',
+    'rel.r2.img':       'Image · détail étrier de frein · 16:9',
     'rel.r2.tag':       'Technique',
-    'rel.r2.rt':        '6 MIN Â· LECTURE',
-    'rel.r2.h':         'Comment choisir un nettoyant freins non chlorÃ© pour atelier et flotte.',
-    'rel.r2.x':         'Classe de solvant, point dâ€™Ã©clair, rÃ©sidus et implications dâ€™homologation OEM â€” un guide comparatif pour techniciens et acheteurs.',
+    'rel.r2.rt':        '6 MIN · LECTURE',
+    'rel.r2.h':         'Comment choisir un nettoyant freins non chloré pour atelier et flotte.',
+    'rel.r2.x':         'Classe de solvant, point d’éclair, résidus et implications d’homologation OEM — un guide comparatif pour techniciens et acheteurs.',
 
-    'rel.r3.img':       'Image Â· salle dâ€™Ã©vÃ©nement placeholder Â· 16:9',
-    'rel.r3.tag':       'CommuniquÃ©',
-    'rel.r3.rt':        '2 MIN Â· LECTURE',
-    'rel.r3.h':         'Kolben sera prÃ©sente au salon MÃ©canex MontrÃ©al 2026 en octobre.',
-    'rel.r3.x':         'La marque confirme sa premiÃ¨re participation Ã  un salon canadien, partageant un stand avec deux partenaires distribution. Placeholder â€” date Ã  confirmer.',
+    'rel.r3.img':       'Image · salle d’événement placeholder · 16:9',
+    'rel.r3.tag':       'Communiqué',
+    'rel.r3.rt':        '2 MIN · LECTURE',
+    'rel.r3.h':         'Kolben sera présente au salon Mécanex Montréal 2026 en octobre.',
+    'rel.r3.x':         'La marque confirme sa première participation à un salon canadien, partageant un stand avec deux partenaires distribution. Placeholder — date à confirmer.',
 
     'qcta.eyebrow':     'Pour les partenaires commerciaux',
     'qcta.h':           'Portez la <em>gamme Kolben</em> partout au Canada.',
-    'qcta.sub':         'Ã‰tiquettes bilingues EN/FR, marges distributeur, expÃ©dition 48 H depuis Mississauga ou Edmonton. Postulez pour ajouter Kolben Ã  vos rayons â€” ou trouvez un distributeur existant prÃ¨s de vous.',
+    'qcta.sub':         'Étiquettes bilingues EN/FR, marges distributeur, expédition 48 H depuis Mississauga ou Edmonton. Postulez pour ajouter Kolben à vos rayons — ou trouvez un distributeur existant près de vous.',
     'qcta.a':           'Devenir distributeur',
-    'qcta.b':           'OÃ¹ acheter',
+    'qcta.b':           'Où acheter',
 
-    'back.lbl':         'Retour aux actualitÃ©s',
+    'back.lbl':         'Retour aux actualités',
     'back.share':       'Article utile ? ',
-    'back.share2':      'Partagez-le avec votre Ã©quipe.',
+    'back.share2':      'Partagez-le avec votre équipe.',
 
     'stds.k':           'Normes de fabrication',
-    'stds.qms':         'Management de la qualitÃ© â€” Ã  venir',
-    'stds.auto':        'QualitÃ© automobile â€” Ã  venir',
+    'stds.qms':         'Management de la qualité — à venir',
+    'stds.auto':        'Qualité automobile — à venir',
     'stds.whmis':       'Alignement risques en milieu de travail',
     'stds.tdg':         'Classification de transport',
 
-    'footer.tag':       'Puissance Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Puissance Â· Performance Â· Kolben',
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Puissance · Performance · Kolben',
   },
 };
 

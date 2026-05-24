@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben â€” Where to Buy</title>
+<title>Kolben — Where to Buy</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TOKENS — locked brand palette ───────── */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -39,7 +39,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── UTILITY BAR ───────── */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -51,7 +51,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HEADER ───────── */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -62,7 +62,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BUTTONS ───────── */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -77,9 +77,9 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     HERO â€” black, 80Ã—80 radial-masked grid
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     HERO — black, 80×80 radial-masked grid
+  ═══════════════════════════════════════════════════════════ */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -154,9 +154,9 @@
     border-radius: 2px;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      SECTION HEAD (reused)
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .sh { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
   .sh__left { max-width: 720px; }
   .sh__eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); }
@@ -168,9 +168,9 @@
   .sh__count { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); align-self: end; padding-bottom: 6px; }
   .sh__count b { color: var(--black); font-weight: 500; padding-right: 6px; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      TWO-PATH ROUTER BAND
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .router-sec { background: var(--offwhite); padding: 64px 0 72px; border-bottom: 1px solid var(--rule); }
   .router { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); background: var(--rule); }
   .route {
@@ -205,9 +205,9 @@
   }
   .route:hover .route__arrow { transform: translateX(4px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     WHERE TO FIND â€” partner / distribution band
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     WHERE TO FIND — partner / distribution band
+  ═══════════════════════════════════════════════════════════ */
   .partners-sec { background: var(--white); padding: 88px 0 96px; }
   .partners-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .pcard {
@@ -252,7 +252,7 @@
   .pcard__link .arrow { transition: transform 220ms var(--ease); }
   .pcard__link:hover .arrow { transform: translateX(3px); }
 
-  /* Empty-state default â€” the honest "we're building" block */
+  /* Empty-state default — the honest "we're building" block */
   .partners-empty {
     border: 1px solid var(--rule);
     background: var(--white);
@@ -278,7 +278,7 @@
     color: var(--black); padding: 7px 10px; border: 1px solid var(--rule); border-radius: 2px;
   }
 
-  /* Toggle UI â€” show populated vs default (graceful) state */
+  /* Toggle UI — show populated vs default (graceful) state */
   .partners-toggle {
     display: inline-flex; align-items: stretch; border: 1px solid var(--rule); border-radius: 2px; overflow: hidden;
     margin-left: auto; align-self: end; padding-bottom: 4px;
@@ -292,9 +292,9 @@
   .partners-toggle button.active { background: var(--black); color: var(--white); }
   .partners-toggle button:not(.active):hover { background: var(--offwhite); color: var(--black); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     REQUEST A SUPPLIER â€” form
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     REQUEST A SUPPLIER — form
+  ═══════════════════════════════════════════════════════════ */
   .form-sec { background: var(--offwhite); padding: 96px 0 104px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .form-wrap {
     display: grid;
@@ -405,9 +405,9 @@
   .form__note { font: 400 12.5px/1.5 'Inter'; color: var(--muted); max-width: 42ch; }
   .form__note b { color: var(--black); font-weight: 600; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     DEFERRED LOCATOR â€” secondary, data-gated
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     DEFERRED LOCATOR — secondary, data-gated
+  ═══════════════════════════════════════════════════════════ */
   .locator-sec { background: var(--white); padding: 88px 0 96px; position: relative; }
   .locator-flag {
     display: inline-flex; align-items: center; gap: 10px;
@@ -504,9 +504,9 @@
   .stockist__link .arrow { transition: transform 220ms var(--ease); }
   .stockist__link:hover .arrow { transform: translateX(3px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      DISTRIBUTOR CROSS-CTA BAND (black)
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .qcta {
     background: var(--black); color: var(--white);
     padding: 72px 0;
@@ -538,7 +538,7 @@
   }
   .qcta__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── FOOTER ───────── */
   .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -546,7 +546,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── RESPONSIVE ───────── */
   @media (max-width: 1180px) {
     .hero__inner { grid-template-columns: 1fr; gap: 40px; }
     .hero__meta { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
@@ -581,7 +581,7 @@
 </head>
 <body data-screen-label="08 Where to Buy">
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── UTILITY BAR ───────── -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -608,10 +608,10 @@
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HEADER ───────── -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
       <div class="nav__item"><a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products</a></div>
@@ -627,24 +627,24 @@
   </div>
 </header>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      HERO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="hero" data-comment-anchor="wtb-hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow" data-i18n="hero.eyebrow">Where to Buy</div>
       <h1 class="hero__h1" data-i18n="hero.h1">Find <em>Kolben</em> near you.</h1>
-      <p class="hero__sub" data-i18n="hero.sub">Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need â€” our team will route you to the nearest stocking partner.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need — our team will route you to the nearest stocking partner.</p>
       <div class="hero__actions">
         <a class="btn btn--primary btn--lg" href="#request">
           <span data-i18n="hero.ctaA">Request a Supplier</span>
-          <span class="arrow">â†’</span>
+          <span class="arrow">→</span>
         </a>
         <a class="btn btn--ghost-light btn--lg" href="#partners">
           <span data-i18n="hero.ctaB">See Stocking Partners</span>
-          <span class="arrow">â†“</span>
+          <span class="arrow">↓</span>
         </a>
       </div>
     </div>
@@ -652,26 +652,26 @@
       <div class="hero__meta-h" data-i18n="hero.metaH">Buyer service</div>
       <div class="hero__meta-list">
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK1">Response</b><span data-i18n="hero.metaV1">1 business day Â· EN or FR</span>
+          <b data-i18n="hero.metaK1">Response</b><span data-i18n="hero.metaV1">1 business day · EN or FR</span>
         </div>
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK2">Coverage</b><span data-i18n="hero.metaV2">Canada-wide Â· 48 H from YYZ / YEG</span>
+          <b data-i18n="hero.metaK2">Coverage</b><span data-i18n="hero.metaV2">Canada-wide · 48 H from YYZ / YEG</span>
         </div>
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK3">Catalogue</b><span data-i18n="hero.metaV3">Full Kolben range Â· 180+ SKUs</span>
+          <b data-i18n="hero.metaK3">Catalogue</b><span data-i18n="hero.metaV3">Full Kolben range · 180+ SKUs</span>
         </div>
       </div>
       <div class="hero__chips">
-        <span class="hero__chip" data-i18n="hero.chipA">EN Â· FR labels</span>
-        <span class="hero__chip" data-i18n="hero.chipB">WHMIS Â· CCCR Â· TDG</span>
+        <span class="hero__chip" data-i18n="hero.chipA">EN · FR labels</span>
+        <span class="hero__chip" data-i18n="hero.chipB">WHMIS · CCCR · TDG</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      TWO-PATH ROUTER BAND
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="router-sec">
   <div class="container">
     <div class="router">
@@ -682,9 +682,9 @@
         <div class="route__body">
           <div class="route__label" data-i18n="router.aLabel">For buyers</div>
           <div class="route__h" data-i18n="router.aH">I want to buy Kolben.</div>
-          <div class="route__line" data-i18n="router.aLine">Find a stocking partner in your region â€” or request a supplier and we&rsquo;ll route you to the nearest match within one business day.</div>
+          <div class="route__line" data-i18n="router.aLine">Find a stocking partner in your region — or request a supplier and we&rsquo;ll route you to the nearest match within one business day.</div>
         </div>
-        <div class="route__arrow">â†’</div>
+        <div class="route__arrow">→</div>
       </a>
       <a class="route" href="become-a-distributor.html">
         <div class="route__icon">
@@ -693,24 +693,24 @@
         <div class="route__body">
           <div class="route__label" data-i18n="router.bLabel">For trade partners</div>
           <div class="route__h" data-i18n="router.bH">I want to carry Kolben.</div>
-          <div class="route__line" data-i18n="router.bLine">Add the line to your shelves â€” bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.</div>
+          <div class="route__line" data-i18n="router.bLine">Add the line to your shelves — bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.</div>
         </div>
-        <div class="route__arrow">â†’</div>
+        <div class="route__arrow">→</div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     WHERE TO FIND â€” distribution band
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════════════════════════════════════════
+     WHERE TO FIND — distribution band
+═══════════════════════════════════════════════════════════ -->
 <section class="partners-sec" id="partners">
   <div class="container">
     <div class="sh">
       <div class="sh__left">
         <div class="sh__eyebrow" data-i18n="partners.eyebrow">Where to find Kolben</div>
         <h2 class="sh__h" data-i18n="partners.h">Distributed by <em>trusted Canadian partners.</em></h2>
-        <p class="sh__sub" data-i18n="partners.sub">Founding distributors stocking the Kolben line across the country. Our network is in active rollout â€” if you don&rsquo;t see your region, request a supplier below.</p>
+        <p class="sh__sub" data-i18n="partners.sub">Founding distributors stocking the Kolben line across the country. Our network is in active rollout — if you don&rsquo;t see your region, request a supplier below.</p>
       </div>
       <div class="partners-toggle" id="partners-toggle">
         <button data-state="founding" class="active" data-i18n="partners.tA">Partners</button>
@@ -724,21 +724,21 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     REQUEST A SUPPLIER â€” primary conversion
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════════════════════════════════════════
+     REQUEST A SUPPLIER — primary conversion
+═══════════════════════════════════════════════════════════ -->
 <section class="form-sec" id="request">
   <div class="container">
     <div class="form-wrap">
       <aside class="form-aside">
         <div class="sh__eyebrow" data-i18n="form.eyebrow">Request a Supplier</div>
-        <h2 class="form-aside__h" data-i18n="form.h">Tell us what you need â€” we&rsquo;ll <em>route you.</em></h2>
-        <p class="form-aside__sub" data-i18n="form.sub">Basic contact only. We pair your request with the nearest stocking partner â€” or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.</p>
+        <h2 class="form-aside__h" data-i18n="form.h">Tell us what you need — we&rsquo;ll <em>route you.</em></h2>
+        <p class="form-aside__sub" data-i18n="form.sub">Basic contact only. We pair your request with the nearest stocking partner — or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.</p>
         <div class="form-aside__list">
-          <div class="form-aside__row"><b data-i18n="form.k1">Response</b><span data-i18n="form.v1">Within one business day Â· EN or FR</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k1">Response</b><span data-i18n="form.v1">Within one business day · EN or FR</span></div>
           <div class="form-aside__row"><b data-i18n="form.k2">Routing</b><span data-i18n="form.v2">Nearest stocking partner or direct ship</span></div>
-          <div class="form-aside__row"><b data-i18n="form.k3">Coverage</b><span data-i18n="form.v3">Canada-wide Â· 48 H from YYZ / YEG</span></div>
-          <div class="form-aside__row"><b data-i18n="form.k4">Contact</b><span>buyers@kolben.ca Â· 1-800-KOLBEN-1</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k3">Coverage</b><span data-i18n="form.v3">Canada-wide · 48 H from YYZ / YEG</span></div>
+          <div class="form-aside__row"><b data-i18n="form.k4">Contact</b><span>buyers@kolben.ca · 1-800-KOLBEN-1</span></div>
         </div>
       </aside>
       <form class="form" id="request-form" novalidate>
@@ -760,7 +760,7 @@
           <div class="field">
             <label class="field__label" for="province"><span data-i18n="form.f.province">Province / Region</span><span class="field__req">*</span></label>
             <select class="field__select" id="province" name="province" required>
-              <option value="" data-i18n="form.f.provinceP">Select a province or regionâ€¦</option>
+              <option value="" data-i18n="form.f.provinceP">Select a province or region…</option>
               <option value="ab" data-i18n="prov.ab">Alberta</option>
               <option value="bc" data-i18n="prov.bc">British Columbia</option>
               <option value="mb" data-i18n="prov.mb">Manitoba</option>
@@ -771,7 +771,7 @@
               <option value="pe" data-i18n="prov.pe">Prince Edward Island</option>
               <option value="qc" data-i18n="prov.qc">Quebec</option>
               <option value="sk" data-i18n="prov.sk">Saskatchewan</option>
-              <option value="ter" data-i18n="prov.ter">Territories (YT Â· NT Â· NU)</option>
+              <option value="ter" data-i18n="prov.ter">Territories (YT · NT · NU)</option>
             </select>
           </div>
           <div class="field field--full">
@@ -797,7 +797,7 @@
           </p>
           <button type="submit" class="btn btn--primary btn--lg">
             <span data-i18n="form.submit">Request a Supplier</span>
-            <span class="arrow">â†’</span>
+            <span class="arrow">→</span>
           </button>
         </div>
       </form>
@@ -805,16 +805,16 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     DEFERRED LOCATOR â€” secondary, data-gated, NO MAP
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+<!-- ═══════════════════════════════════════════════════════════
+     DEFERRED LOCATOR — secondary, data-gated, NO MAP
+═══════════════════════════════════════════════════════════ -->
 <section class="locator-sec" id="locator">
   <div class="container">
     <div class="sh">
       <div class="sh__left">
         <div class="sh__eyebrow" data-i18n="locator.eyebrow">Stockist locator</div>
         <h2 class="sh__h" data-i18n="locator.h">Browse by <em>region.</em></h2>
-        <p class="sh__sub" data-i18n="locator.sub">Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density â€” if your region is empty, request a supplier above and we&rsquo;ll route you directly.</p>
+        <p class="sh__sub" data-i18n="locator.sub">Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density — if your region is empty, request a supplier above and we&rsquo;ll route you directly.</p>
       </div>
       <div class="sh__count"><b id="locator-count">00</b><span data-i18n="locator.count">Listed stockists</span></div>
     </div>
@@ -835,7 +835,7 @@
             <option value="pe" data-i18n="prov.pe">Prince Edward Island</option>
             <option value="qc" data-i18n="prov.qc">Quebec</option>
             <option value="sk" data-i18n="prov.sk">Saskatchewan</option>
-            <option value="ter" data-i18n="prov.ter">Territories (YT Â· NT Â· NU)</option>
+            <option value="ter" data-i18n="prov.ter">Territories (YT · NT · NU)</option>
           </select>
         </div>
         <div class="locator__legend">
@@ -857,43 +857,43 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      DISTRIBUTOR CROSS-CTA BAND
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="qcta is-light">
   <div class="container qcta__inner">
     <div>
       <div class="qcta__eyebrow" data-i18n="qcta.eyebrow">For trade partners</div>
       <h2 class="qcta__h" data-i18n="qcta.h">Want to carry the <em>Kolben line?</em></h2>
-      <p class="qcta__sub" data-i18n="qcta.sub">Apply to add Kolben to your shelves â€” distributor terms across Canada.</p>
+      <p class="qcta__sub" data-i18n="qcta.sub">Apply to add Kolben to your shelves — distributor terms across Canada.</p>
     </div>
     <div class="qcta__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="qcta.a">Become a Distributor</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
 <footer class="site-footer">
 
-  <!-- TIER 1 â€” value band -->
+  <!-- TIER 1 — value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -906,7 +906,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 â€” navigation -->
+  <!-- TIER 2 — navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -916,7 +916,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
         </ul>
       </div>
       <div>
@@ -926,7 +926,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
         </ul>
       </div>
       <div>
@@ -959,29 +959,29 @@
     </div>
   </div>
 
-  <!-- TIER 3 â€” bottom bar -->
+  <!-- TIER 3 — bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── /SITE FOOTER ───────── -->
 
 <script>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   CHANNEL ICONS â€” reused vocabulary from become-a-distributor
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   CHANNEL ICONS — reused vocabulary from become-a-distributor
+═══════════════════════════════════════════════════════════ */
 const ICONS = {
   retailer: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l18 0"/><path d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4"/><path d="M5 21l0 -10.15"/><path d="M19 21l0 -10.15"/><path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4"/></svg>`,
   jobber: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h18v4H3z"/><path d="M5 8v12h14V8"/><path d="M10 12h4"/></svg>`,
@@ -989,42 +989,42 @@ const ICONS = {
   distributor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21v-13l9 -4l9 4v13"/><path d="M13 13h4v8h-10v-6h6"/><path d="M13 21v-9a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v3"/></svg>`,
 };
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   FOUNDING PARTNERS â€” small set, intentional with 2 listed
+/* ═══════════════════════════════════════════════════════════
+   FOUNDING PARTNERS — small set, intentional with 2 listed
    "Realistic placeholder partners that clearly read as examples"
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const PARTNERS = [
   {
     name: { en: 'Nordwerk Auto Supply', fr: 'Nordwerk Auto Supply' },
     type: 'distributor',
-    typeTag: { en: 'Distributor Â· ON Â· QC', fr: 'Distributeur Â· ON Â· QC' },
-    line: { en: 'Founding Canadian distributor for the full Kolben range â€” central Canada coverage with weekly truck routes from Mississauga.',
-            fr: 'Distributeur fondateur de la gamme Kolben â€” couverture du centre du Canada avec lignes camion hebdomadaires depuis Mississauga.' },
-    city: { en: 'Mississauga Â· ON',  fr: 'Mississauga Â· ON' },
-    link: { en: 'Visit partner â†’',   fr: 'Visiter â†’' },
+    typeTag: { en: 'Distributor · ON · QC', fr: 'Distributeur · ON · QC' },
+    line: { en: 'Founding Canadian distributor for the full Kolben range — central Canada coverage with weekly truck routes from Mississauga.',
+            fr: 'Distributeur fondateur de la gamme Kolben — couverture du centre du Canada avec lignes camion hebdomadaires depuis Mississauga.' },
+    city: { en: 'Mississauga · ON',  fr: 'Mississauga · ON' },
+    link: { en: 'Visit partner →',   fr: 'Visiter →' },
   },
   {
     name: { en: 'Pacific Drivetrain Supply', fr: 'Pacific Drivetrain Supply' },
     type: 'jobber',
-    typeTag: { en: 'Jobber Â· BC Â· AB', fr: 'Grossiste Â· BC Â· AB' },
+    typeTag: { en: 'Jobber · BC · AB', fr: 'Grossiste · BC · AB' },
     line: { en: 'Western Canada jobber network carrying Kolben brake, cleaner and additive lines into shops and service centres.',
-            fr: 'RÃ©seau de grossistes de lâ€™Ouest portant les gammes freins, nettoyants et additifs Kolben en ateliers et centres de service.' },
-    city: { en: 'Burnaby Â· BC',     fr: 'Burnaby Â· BC' },
-    link: { en: 'Visit partner â†’',  fr: 'Visiter â†’' },
+            fr: 'Réseau de grossistes de l’Ouest portant les gammes freins, nettoyants et additifs Kolben en ateliers et centres de service.' },
+    city: { en: 'Burnaby · BC',     fr: 'Burnaby · BC' },
+    link: { en: 'Visit partner →',  fr: 'Visiter →' },
   },
 ];
 
-/* Demo stockist set for the locator â€” empty by design, becomes a list
+/* Demo stockist set for the locator — empty by design, becomes a list
    once partners list themselves. Keep [] to show the empty default. */
 const STOCKISTS = [
-  // Example entries (visible if uncommented) â€” left empty by default to
+  // Example entries (visible if uncommented) — left empty by default to
   // demonstrate the graceful empty-state for a brand-new network.
   // { name: 'Nordwerk Auto Supply', type: 'distributor', province: 'on', city: 'Mississauga', contact: 'sales@nordwerk.ca' },
 ];
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ═══════════════════════════════════════════════════════════
    I18N
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -1040,47 +1040,47 @@ const I18N = {
 
     'hero.eyebrow':     'Where to Buy',
     'hero.h1':          'Find <em>Kolben</em> near you.',
-    'hero.sub':         'Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need â€” our team will route you to the nearest stocking partner.',
+    'hero.sub':         'Kolben is rolling out across Canada through a hand-picked network of automotive distributors, jobbers and fleet suppliers. Tell us where you are and what you need — our team will route you to the nearest stocking partner.',
     'hero.ctaA':        'Request a Supplier',
     'hero.ctaB':        'See Stocking Partners',
     'hero.metaH':       'Buyer service',
     'hero.metaK1':      'Response',
-    'hero.metaV1':      '1 business day Â· EN or FR',
+    'hero.metaV1':      '1 business day · EN or FR',
     'hero.metaK2':      'Coverage',
-    'hero.metaV2':      'Canada-wide Â· 48 H from YYZ / YEG',
+    'hero.metaV2':      'Canada-wide · 48 H from YYZ / YEG',
     'hero.metaK3':      'Catalogue',
-    'hero.metaV3':      'Full Kolben range Â· 180+ SKUs',
-    'hero.chipA':       'EN Â· FR labels',
-    'hero.chipB':       'WHMIS Â· CCCR Â· TDG',
+    'hero.metaV3':      'Full Kolben range · 180+ SKUs',
+    'hero.chipA':       'EN · FR labels',
+    'hero.chipB':       'WHMIS · CCCR · TDG',
 
     'router.aLabel':    'For buyers',
     'router.aH':        'I want to buy Kolben.',
-    'router.aLine':     'Find a stocking partner in your region â€” or request a supplier and we&rsquo;ll route you to the nearest match within one business day.',
+    'router.aLine':     'Find a stocking partner in your region — or request a supplier and we&rsquo;ll route you to the nearest match within one business day.',
     'router.bLabel':    'For trade partners',
     'router.bH':        'I want to carry Kolben.',
-    'router.bLine':     'Add the line to your shelves â€” bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.',
+    'router.bLine':     'Add the line to your shelves — bilingual labels, distributor margins, 48-hour ship. Apply to become a Kolben stocking partner.',
 
     'partners.eyebrow': 'Where to find Kolben',
     'partners.h':       'Distributed by <em>trusted Canadian partners.</em>',
-    'partners.sub':     'Founding distributors stocking the Kolben line across the country. Our network is in active rollout â€” if you don&rsquo;t see your region, request a supplier below.',
+    'partners.sub':     'Founding distributors stocking the Kolben line across the country. Our network is in active rollout — if you don&rsquo;t see your region, request a supplier below.',
     'partners.tA':      'Partners',
     'partners.tB':      'Network rollout',
     'partners.emptyH':  'We&rsquo;re building our Canadian distributor network.',
-    'partners.emptySub':'Kolben is a young brand on this side of the Atlantic. We&rsquo;re onboarding founding distributors province by province. Request a supplier below and we&rsquo;ll connect you to a partner in your region â€” or ship direct from YYZ / YEG until one is stood up.',
+    'partners.emptySub':'Kolben is a young brand on this side of the Atlantic. We&rsquo;re onboarding founding distributors province by province. Request a supplier below and we&rsquo;ll connect you to a partner in your region — or ship direct from YYZ / YEG until one is stood up.',
     'partners.emptyCta':'Request a Supplier',
-    'partners.emptyChipA':'Direct ship Â· YYZ / YEG',
-    'partners.emptyChipB':'48 H Â· EN Â· FR',
-    'partners.emptyChipC':'Provincial rollout Â· 2026',
+    'partners.emptyChipA':'Direct ship · YYZ / YEG',
+    'partners.emptyChipB':'48 H · EN · FR',
+    'partners.emptyChipC':'Provincial rollout · 2026',
 
     'form.eyebrow':     'Request a Supplier',
-    'form.h':           'Tell us what you need â€” we&rsquo;ll <em>route you.</em>',
-    'form.sub':         'Basic contact only. We pair your request with the nearest stocking partner â€” or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.',
+    'form.h':           'Tell us what you need — we&rsquo;ll <em>route you.</em>',
+    'form.sub':         'Basic contact only. We pair your request with the nearest stocking partner — or, if there&rsquo;s a gap in your region, ship direct from our YYZ/YEG warehouses while we onboard a local partner.',
     'form.k1':          'Response',
-    'form.v1':          'Within one business day Â· EN or FR',
+    'form.v1':          'Within one business day · EN or FR',
     'form.k2':          'Routing',
     'form.v2':          'Nearest stocking partner or direct ship',
     'form.k3':          'Coverage',
-    'form.v3':          'Canada-wide Â· 48 H from YYZ / YEG',
+    'form.v3':          'Canada-wide · 48 H from YYZ / YEG',
     'form.k4':          'Contact',
     'form.title':       'Request a supplier',
     'form.lead':        'Fields marked <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> are required. We&rsquo;ll never share your details outside our buyer-services team.',
@@ -1089,7 +1089,7 @@ const I18N = {
     'form.f.phone':     'Phone',
     'form.f.phoneOpt':  '(optional)',
     'form.f.province':  'Province / Region',
-    'form.f.provinceP': 'Select a province or regionâ€¦',
+    'form.f.provinceP': 'Select a province or region…',
     'form.f.products':  'Product(s) of interest',
     'form.f.message':   'Message',
     'form.f.messageP':  'Use case (shop / fleet / industrial), volumes, and how soon you need product.',
@@ -1114,12 +1114,12 @@ const I18N = {
     'prov.pe': 'Prince Edward Island',
     'prov.qc': 'Quebec',
     'prov.sk': 'Saskatchewan',
-    'prov.ter':'Territories (YT Â· NT Â· NU)',
+    'prov.ter':'Territories (YT · NT · NU)',
 
-    'locator.flag':     'Beta Â· Hidden until network has coverage',
+    'locator.flag':     'Beta · Hidden until network has coverage',
     'locator.eyebrow':  'Stockist locator',
     'locator.h':        'Browse by <em>region.</em>',
-    'locator.sub':      'Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density â€” if your region is empty, request a supplier above and we&rsquo;ll route you directly.',
+    'locator.sub':      'Pick a province to see listed stockists. We&rsquo;re publishing this module region by region as the partner network reaches usable density — if your region is empty, request a supplier above and we&rsquo;ll route you directly.',
     'locator.count':    'Listed stockists',
     'locator.asideH':   'Filter by region',
     'locator.legendH':  'Partner type',
@@ -1127,8 +1127,8 @@ const I18N = {
     'locator.in':       'in',
     'locator.all':      'All of Canada',
     'locator.emptyH':   'No listed stockists in this region yet.',
-    'locator.emptySub': 'We publish each province once it crosses a useful threshold of listed partners. While we onboard, request a supplier above â€” we&rsquo;ll route you within one business day.',
-    'locator.emptyCta': 'Request a Supplier â†’',
+    'locator.emptySub': 'We publish each province once it crosses a useful threshold of listed partners. While we onboard, request a supplier above — we&rsquo;ll route you within one business day.',
+    'locator.emptyCta': 'Request a Supplier →',
 
     'type.retailer':    'Retailer',
     'type.jobber':      'Jobber',
@@ -1137,140 +1137,140 @@ const I18N = {
 
     'qcta.eyebrow':     'For trade partners',
     'qcta.h':           'Want to carry the <em>Kolben line?</em>',
-    'qcta.sub':         'Apply to add Kolben to your shelves â€” distributor terms across Canada.',
+    'qcta.sub':         'Apply to add Kolben to your shelves — distributor terms across Canada.',
     'qcta.a':           'Become a Distributor',
     'qcta.b':           'Download Line Sheet (PDF)',
 
-    'footer.tag':       'Power Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
-    'footer.tagline':   'German Precision Â· Engine Perfection',
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'ConformitÃ© et FDS',
+    'util.compliance':  'Conformité et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'Ã€ propos',
-    'nav.news':         'ActualitÃ©s',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'OÃ¹ acheter',
+    'nav.whereToBuy':   'Où acheter',
     'nav.distributor':  'Devenir distributeur',
 
-    'hero.eyebrow':     'OÃ¹ acheter',
-    'hero.h1':          'Trouvez <em>Kolben</em> prÃ¨s de chez vous.',
-    'hero.sub':         'Kolben se dÃ©ploie au Canada via un rÃ©seau sÃ©lectionnÃ© de distributeurs automobiles, grossistes et fournisseurs de flottes. Dites-nous oÃ¹ vous Ãªtes et ce quâ€™il vous faut â€” notre Ã©quipe vous oriente vers le partenaire stockiste le plus proche.',
+    'hero.eyebrow':     'Où acheter',
+    'hero.h1':          'Trouvez <em>Kolben</em> près de chez vous.',
+    'hero.sub':         'Kolben se déploie au Canada via un réseau sélectionné de distributeurs automobiles, grossistes et fournisseurs de flottes. Dites-nous où vous êtes et ce qu’il vous faut — notre équipe vous oriente vers le partenaire stockiste le plus proche.',
     'hero.ctaA':        'Trouver un fournisseur',
     'hero.ctaB':        'Voir les partenaires stockistes',
     'hero.metaH':       'Service acheteurs',
-    'hero.metaK1':      'RÃ©ponse',
-    'hero.metaV1':      '1 jour ouvrÃ© Â· EN ou FR',
+    'hero.metaK1':      'Réponse',
+    'hero.metaV1':      '1 jour ouvré · EN ou FR',
     'hero.metaK2':      'Couverture',
-    'hero.metaV2':      'Partout au Canada Â· 48 H depuis YYZ / YEG',
+    'hero.metaV2':      'Partout au Canada · 48 H depuis YYZ / YEG',
     'hero.metaK3':      'Catalogue',
-    'hero.metaV3':      'Toute la gamme Kolben Â· 180+ rÃ©f.',
-    'hero.chipA':       'Ã‰tiquettes EN Â· FR',
-    'hero.chipB':       'SIMDUT Â· RPCC Â· TMD',
+    'hero.metaV3':      'Toute la gamme Kolben · 180+ réf.',
+    'hero.chipA':       'Étiquettes EN · FR',
+    'hero.chipB':       'SIMDUT · RPCC · TMD',
 
     'router.aLabel':    'Pour les acheteurs',
     'router.aH':        'Je veux acheter Kolben.',
-    'router.aLine':     'Trouvez un partenaire stockiste dans votre rÃ©gion â€” ou faites une demande, nous vous orientons vers la meilleure correspondance sous un jour ouvrÃ©.',
+    'router.aLine':     'Trouvez un partenaire stockiste dans votre région — ou faites une demande, nous vous orientons vers la meilleure correspondance sous un jour ouvré.',
     'router.bLabel':    'Pour les partenaires commerciaux',
     'router.bH':        'Je veux distribuer Kolben.',
-    'router.bLine':     'Ajoutez la gamme Ã  vos rayons â€” Ã©tiquettes bilingues, marges distributeur, expÃ©dition 48 H. Postulez pour devenir partenaire stockiste Kolben.',
+    'router.bLine':     'Ajoutez la gamme à vos rayons — étiquettes bilingues, marges distributeur, expédition 48 H. Postulez pour devenir partenaire stockiste Kolben.',
 
-    'partners.eyebrow': 'OÃ¹ trouver Kolben',
-    'partners.h':       'DistribuÃ© par <em>des partenaires canadiens de confiance.</em>',
-    'partners.sub':     'Distributeurs fondateurs portant la gamme Kolben Ã  lâ€™Ã©chelle nationale. Le rÃ©seau est en dÃ©ploiement actif â€” si votre rÃ©gion nâ€™y figure pas, demandez un fournisseur ci-dessous.',
+    'partners.eyebrow': 'Où trouver Kolben',
+    'partners.h':       'Distribué par <em>des partenaires canadiens de confiance.</em>',
+    'partners.sub':     'Distributeurs fondateurs portant la gamme Kolben à l’échelle nationale. Le réseau est en déploiement actif — si votre région n’y figure pas, demandez un fournisseur ci-dessous.',
     'partners.tA':      'Partenaires',
-    'partners.tB':      'DÃ©ploiement rÃ©seau',
-    'partners.emptyH':  'Nous construisons notre rÃ©seau de distributeurs canadiens.',
-    'partners.emptySub':'Kolben est une marque jeune de ce cÃ´tÃ© de lâ€™Atlantique. Nous intÃ©grons des distributeurs fondateurs province par province. Demandez un fournisseur ci-dessous : nous vous connectons Ã  un partenaire de votre rÃ©gion â€” ou expÃ©dions directement depuis YYZ / YEG en attendant quâ€™un partenaire local soit prÃªt.',
+    'partners.tB':      'Déploiement réseau',
+    'partners.emptyH':  'Nous construisons notre réseau de distributeurs canadiens.',
+    'partners.emptySub':'Kolben est une marque jeune de ce côté de l’Atlantique. Nous intégrons des distributeurs fondateurs province par province. Demandez un fournisseur ci-dessous : nous vous connectons à un partenaire de votre région — ou expédions directement depuis YYZ / YEG en attendant qu’un partenaire local soit prêt.',
     'partners.emptyCta':'Trouver un fournisseur',
-    'partners.emptyChipA':'ExpÃ©dition directe Â· YYZ / YEG',
-    'partners.emptyChipB':'48 H Â· EN Â· FR',
-    'partners.emptyChipC':'DÃ©ploiement provincial Â· 2026',
+    'partners.emptyChipA':'Expédition directe · YYZ / YEG',
+    'partners.emptyChipB':'48 H · EN · FR',
+    'partners.emptyChipC':'Déploiement provincial · 2026',
 
     'form.eyebrow':     'Trouver un fournisseur',
-    'form.h':           'Dites-nous ce quâ€™il vous faut â€” nous vous <em>orientons.</em>',
-    'form.sub':         'Contact de base uniquement. Nous associons votre demande au partenaire stockiste le plus proche â€” ou, en cas dâ€™absence de couverture, nous expÃ©dions directement depuis nos entrepÃ´ts YYZ / YEG le temps dâ€™intÃ©grer un partenaire local.',
-    'form.k1':          'RÃ©ponse',
-    'form.v1':          'Sous un jour ouvrÃ© Â· EN ou FR',
+    'form.h':           'Dites-nous ce qu’il vous faut — nous vous <em>orientons.</em>',
+    'form.sub':         'Contact de base uniquement. Nous associons votre demande au partenaire stockiste le plus proche — ou, en cas d’absence de couverture, nous expédions directement depuis nos entrepôts YYZ / YEG le temps d’intégrer un partenaire local.',
+    'form.k1':          'Réponse',
+    'form.v1':          'Sous un jour ouvré · EN ou FR',
     'form.k2':          'Orientation',
-    'form.v2':          'Partenaire stockiste le plus proche ou expÃ©dition directe',
+    'form.v2':          'Partenaire stockiste le plus proche ou expédition directe',
     'form.k3':          'Couverture',
-    'form.v3':          'Partout au Canada Â· 48 H depuis YYZ / YEG',
+    'form.v3':          'Partout au Canada · 48 H depuis YYZ / YEG',
     'form.k4':          'Contact',
     'form.title':       'Demander un fournisseur',
-    'form.lead':        'Les champs marquÃ©s <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> sont obligatoires. Vos coordonnÃ©es restent au sein de notre Ã©quipe service-acheteurs.',
+    'form.lead':        'Les champs marqués <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> sont obligatoires. Vos coordonnées restent au sein de notre équipe service-acheteurs.',
     'form.f.name':      'Nom',
     'form.f.email':     'Adresse courriel professionnelle',
-    'form.f.phone':     'TÃ©lÃ©phone',
+    'form.f.phone':     'Téléphone',
     'form.f.phoneOpt':  '(facultatif)',
-    'form.f.province':  'Province / rÃ©gion',
-    'form.f.provinceP': 'SÃ©lectionnez une province ou rÃ©gionâ€¦',
-    'form.f.products':  'Produit(s) souhaitÃ©(s)',
+    'form.f.province':  'Province / région',
+    'form.f.provinceP': 'Sélectionnez une province ou région…',
+    'form.f.products':  'Produit(s) souhaité(s)',
     'form.f.message':   'Message',
-    'form.f.messageP':  'Cas dâ€™usage (atelier / flotte / industriel), volumes et dÃ©lai souhaitÃ©.',
+    'form.f.messageP':  'Cas d’usage (atelier / flotte / industriel), volumes et délai souhaité.',
     'form.note.b':      'EN / FR.',
-    'form.note.body':   ' Notre Ã©quipe service-acheteurs rÃ©pond sous un jour ouvrÃ©, en anglais ou en franÃ§ais. Aucune information financiÃ¨re ni dâ€™identitÃ© collectÃ©e.',
+    'form.note.body':   ' Notre équipe service-acheteurs répond sous un jour ouvré, en anglais ou en français. Aucune information financière ni d’identité collectée.',
     'form.submit':      'Trouver un fournisseur',
 
-    'prod.cleaners':   'Nettoyants et rinÃ§ages',
+    'prod.cleaners':   'Nettoyants et rinçages',
     'prod.additives':  'Additifs carburant et huile',
     'prod.lubricants': 'Lubrifiants et graisses',
     'prod.brake':      'Chimie freins',
     'prod.ac':         'Climatisation et refroidissement',
-    'prod.full':       'Gamme complÃ¨te / je ne sais pas',
+    'prod.full':       'Gamme complète / je ne sais pas',
 
     'prov.ab': 'Alberta',
     'prov.bc': 'Colombie-Britannique',
     'prov.mb': 'Manitoba',
     'prov.nb': 'Nouveau-Brunswick',
     'prov.nl': 'Terre-Neuve-et-Labrador',
-    'prov.ns': 'Nouvelle-Ã‰cosse',
+    'prov.ns': 'Nouvelle-Écosse',
     'prov.on': 'Ontario',
-    'prov.pe': 'ÃŽle-du-Prince-Ã‰douard',
-    'prov.qc': 'QuÃ©bec',
+    'prov.pe': 'Île-du-Prince-Édouard',
+    'prov.qc': 'Québec',
     'prov.sk': 'Saskatchewan',
-    'prov.ter':'Territoires (YT Â· NT Â· NU)',
+    'prov.ter':'Territoires (YT · NT · NU)',
 
-    'locator.flag':     'BÃªta Â· MasquÃ© tant que le rÃ©seau nâ€™a pas atteint une couverture utile',
+    'locator.flag':     'Bêta · Masqué tant que le réseau n’a pas atteint une couverture utile',
     'locator.eyebrow':  'Localisateur de stockistes',
-    'locator.h':        'Parcourir par <em>rÃ©gion.</em>',
-    'locator.sub':      'Choisissez une province pour voir les stockistes listÃ©s. Nous publions ce module rÃ©gion par rÃ©gion Ã  mesure que le rÃ©seau atteint une densitÃ© utile â€” si votre rÃ©gion est vide, demandez un fournisseur ci-dessus et nous vous orienterons directement.',
-    'locator.count':    'Stockistes listÃ©s',
-    'locator.asideH':   'Filtrer par rÃ©gion',
+    'locator.h':        'Parcourir par <em>région.</em>',
+    'locator.sub':      'Choisissez une province pour voir les stockistes listés. Nous publions ce module région par région à mesure que le réseau atteint une densité utile — si votre région est vide, demandez un fournisseur ci-dessus et nous vous orienterons directement.',
+    'locator.count':    'Stockistes listés',
+    'locator.asideH':   'Filtrer par région',
     'locator.legendH':  'Type de partenaire',
-    'locator.resultsH': 'RÃ©sultats',
+    'locator.resultsH': 'Résultats',
     'locator.in':       'dans',
     'locator.all':      'Tout le Canada',
-    'locator.emptyH':   'Aucun stockiste listÃ© dans cette rÃ©gion pour lâ€™instant.',
-    'locator.emptySub': 'Nous publions chaque province dÃ¨s quâ€™elle dÃ©passe un seuil utile de partenaires listÃ©s. Pendant lâ€™intÃ©gration, demandez un fournisseur ci-dessus â€” nous vous orientons sous un jour ouvrÃ©.',
-    'locator.emptyCta': 'Trouver un fournisseur â†’',
+    'locator.emptyH':   'Aucun stockiste listé dans cette région pour l’instant.',
+    'locator.emptySub': 'Nous publions chaque province dès qu’elle dépasse un seuil utile de partenaires listés. Pendant l’intégration, demandez un fournisseur ci-dessus — nous vous orientons sous un jour ouvré.',
+    'locator.emptyCta': 'Trouver un fournisseur →',
 
-    'type.retailer':    'DÃ©taillant',
+    'type.retailer':    'Détaillant',
     'type.jobber':      'Grossiste',
     'type.distributor': 'Distributeur',
     'type.fleet':       'Fournisseur flottes',
 
     'qcta.eyebrow':     'Pour les partenaires commerciaux',
     'qcta.h':           'Vous voulez distribuer la <em>gamme Kolben&nbsp;?</em>',
-    'qcta.sub':         'Postulez pour ajouter Kolben Ã  vos rayons â€” conditions distributeur partout au Canada.',
+    'qcta.sub':         'Postulez pour ajouter Kolben à vos rayons — conditions distributeur partout au Canada.',
     'qcta.a':           'Devenir distributeur',
-    'qcta.b':           'TÃ©lÃ©charger la fiche-gamme (PDF)',
+    'qcta.b':           'Télécharger la fiche-gamme (PDF)',
 
-    'footer.tag':       'Puissance Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. ConÃ§u Ã  Hanovre.',
-    'footer.tagline':   'PrÃ©cision allemande Â· Perfection du moteur',
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
   },
 };
 
 let state = { lang: 'en', partnersView: 'founding', province: 'all' };
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+/* ═══════════════════════════════════════════════════════════
    RENDERERS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 function renderPartners() {
   const stage = document.getElementById('partners-stage');
   if (state.partnersView === 'empty') {
@@ -1283,7 +1283,7 @@ function renderPartners() {
         </div>
         <div class="partners-empty__right">
           <a class="btn btn--primary" href="#request">
-            <span>${t['partners.emptyCta']}</span><span class="arrow">â†’</span>
+            <span>${t['partners.emptyCta']}</span><span class="arrow">→</span>
           </a>
           <div class="partners-empty__chips">
             <span class="partners-empty__chip">${t['partners.emptyChipA']}</span>
@@ -1295,7 +1295,7 @@ function renderPartners() {
     `;
     return;
   }
-  // Founding partners â€” 2 real cards + 2 "in onboarding" cards to keep the
+  // Founding partners — 2 real cards + 2 "in onboarding" cards to keep the
   // grid feeling intentional with so few listed partners.
   const items = PARTNERS.map(p => `
     <div class="pcard">
@@ -1311,14 +1311,14 @@ function renderPartners() {
       </div>
     </div>
   `);
-  // 2 "in onboarding" placeholders â€” intentional, not empty
-  const onboardingLabel = state.lang === 'fr' ? 'En intÃ©gration' : 'In onboarding';
+  // 2 "in onboarding" placeholders — intentional, not empty
+  const onboardingLabel = state.lang === 'fr' ? 'En intégration' : 'In onboarding';
   const onboardingLine = state.lang === 'fr'
-    ? 'Partenaires rÃ©gionaux en cours dâ€™intÃ©gration. Disponible dÃ¨s la fin du processus.'
+    ? 'Partenaires régionaux en cours d’intégration. Disponible dès la fin du processus.'
     : 'Regional partners currently onboarding. Listed here once go-live is confirmed.';
   const onboardingRegions = state.lang === 'fr'
-    ? ['QuÃ©bec Â· Maritimes', 'Prairies Â· Saskatchewan']
-    : ['Quebec Â· Maritimes', 'Prairies Â· Saskatchewan'];
+    ? ['Québec · Maritimes', 'Prairies · Saskatchewan']
+    : ['Quebec · Maritimes', 'Prairies · Saskatchewan'];
   const onboardingCards = onboardingRegions.map(r => `
     <div class="pcard" style="border-style: dashed; background: var(--offwhite); opacity:.92;">
       <div class="pcard__top">
@@ -1330,8 +1330,8 @@ function renderPartners() {
       <div class="pcard__name" style="color:var(--muted);">${r}</div>
       <div class="pcard__line">${onboardingLine}</div>
       <div class="pcard__foot">
-        <div class="pcard__city">â€” â€” â€”</div>
-        <a class="pcard__link" href="#request"><span>${state.lang === 'fr' ? 'Demander â†’' : 'Request â†’'}</span></a>
+        <div class="pcard__city">— — —</div>
+        <a class="pcard__link" href="#request"><span>${state.lang === 'fr' ? 'Demander →' : 'Request →'}</span></a>
       </div>
     </div>
   `);
@@ -1354,7 +1354,7 @@ function renderLocator() {
         <div class="locator__empty-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <div class="locator__empty-h">${t['locator.emptyH'].replace('this region', regionLabel).replace('cette rÃ©gion', regionLabel)}</div>
+        <div class="locator__empty-h">${t['locator.emptyH'].replace('this region', regionLabel).replace('cette région', regionLabel)}</div>
         <div class="locator__empty-sub">${t['locator.emptySub']}</div>
         <a class="locator__empty-link" href="#request"><span>${t['locator.emptyCta']}</span><span class="arrow"></span></a>
       </div>
@@ -1367,11 +1367,11 @@ function renderLocator() {
           <div class="stockist__name">${s.name}</div>
           <div class="stockist__meta">
             <span><b>${t['type.' + s.type]}</b></span>
-            <span>${s.city} Â· ${t['prov.' + s.province]}</span>
+            <span>${s.city} · ${t['prov.' + s.province]}</span>
             <span>${s.contact}</span>
           </div>
         </div>
-        <a class="stockist__link" href="#"><span>${state.lang === 'fr' ? 'Contacter' : 'Contact'}</span><span class="arrow">â†’</span></a>
+        <a class="stockist__link" href="#"><span>${state.lang === 'fr' ? 'Contacter' : 'Contact'}</span><span class="arrow">→</span></a>
       </div>
     `).join('');
   }
@@ -1425,7 +1425,7 @@ document.getElementById('request-form').addEventListener('submit', e => {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
   const orig = btn.innerHTML;
-  btn.innerHTML = `<span>${state.lang === 'fr' ? 'ReÃ§u â€” merci' : 'Received â€” thank you'}</span><span class="arrow">âœ“</span>`;
+  btn.innerHTML = `<span>${state.lang === 'fr' ? 'Reçu — merci' : 'Received — thank you'}</span><span class="arrow">✓</span>`;
   btn.style.background = 'var(--black)';
   setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2400);
 });

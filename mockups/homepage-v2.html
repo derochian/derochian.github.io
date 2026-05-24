@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben Homepage Â· v2 mockup (above fold + 2 sections)</title>
+<title>Kolben Homepage · v2 mockup (above fold + 2 sections)</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR (CRC pattern) â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── UTILITY BAR (CRC pattern) ───────── */
   .util {
     background: var(--black); color: rgba(255,255,255,.85);
     font: 500 12px/1 'Jost'; letter-spacing: .04em;
@@ -56,7 +56,7 @@
   .util__lang.active:hover { background: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: rgba(255,255,255,.7); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HEADER ───────── */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 50; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -126,7 +126,7 @@
   .btn .arrow { transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HERO ───────── */
   .hero { position: relative; padding: 96px 0 80px; overflow: hidden; }
   .hero__grid {
     position: absolute; inset: 0;
@@ -183,10 +183,10 @@
   .showcase__chevron div:nth-child(1) { flex: 1; background: var(--red); }
   .showcase__chevron div:nth-child(2) { flex: 1; background: var(--gold); }
 
-  /* Carousel mechanics â€” STEPPED SWIPE.
+  /* Carousel mechanics — STEPPED SWIPE.
      Each "swipe" is a CSS transition fired by the JS controller. The JS
      ticks every HOLD_MS, but a `paused` flag (driven by hover) only skips
-     the NEXT tick â€” any in-flight transition completes naturally, so the
+     the NEXT tick — any in-flight transition completes naturally, so the
      bottle always lands on a slide before the carousel rests. */
   .carousel {
     --swipe-duration: 800ms;
@@ -242,10 +242,10 @@
     background: linear-gradient(270deg, rgba(185,188,194,.85), rgba(185,188,194,0));
   }
 
-  /* (keyframes removed â€” carousel is now driven by JS so hover-pause can
+  /* (keyframes removed — carousel is now driven by JS so hover-pause can
      wait for the in-flight transition to complete before resting.) */
 
-  /* Caption viewport mirrors the carousel â€” same width units, same animation */
+  /* Caption viewport mirrors the carousel — same width units, same animation */
   .showcase__caption {
     margin-top: 16px;
     padding-top: 14px; border-top: 1px solid var(--rule);
@@ -291,7 +291,7 @@
   .showcase__tag .name { font: 600 16px/1.1 'Jost'; letter-spacing: -0.01em; }
   .showcase__tag .meta { font: 500 11px/1 'JetBrains Mono'; color: rgba(255,255,255,.6); margin-top: 2px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TICKER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TICKER ───────── */
   .ticker {
     background: var(--black); color: var(--white);
     padding: 16px 0; overflow: hidden;
@@ -304,11 +304,11 @@
     font: 600 12px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
   }
   .ticker__track span::after {
-    content: 'Â·'; color: var(--red); margin-left: 56px; font-size: 18px;
+    content: '·'; color: var(--red); margin-left: 56px; font-size: 18px;
   }
   @keyframes ticker { to { transform: translateX(-50%); } }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TACKLE CATEGORY GRID (GUNK pattern) â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TACKLE CATEGORY GRID (GUNK pattern) ───────── */
   .tackle { padding: 96px 0 80px; background: var(--white); }
   .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 48px; }
   .section-eyebrow {
@@ -351,7 +351,7 @@
     transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BROWSE BY INDUSTRY â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BROWSE BY INDUSTRY ───────── */
   .industry { padding: 80px 0 96px; background: var(--offwhite); border-top: 1px solid var(--rule); }
   .industry-grid {
     display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px;
@@ -378,7 +378,7 @@
 </head>
 <body>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── UTILITY BAR ───────── -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -405,10 +405,10 @@
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HEADER ───────── -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="#"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
+    <a class="header__logo" href="#"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link active">Home</a></div>
       <div class="nav__item">
@@ -480,7 +480,7 @@
   <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
   <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
   <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
-  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products Aâ€“Z</strong><br/><span>Browse the complete catalog</span></div></a>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
             </div>
           </div>
         </div>
@@ -498,23 +498,23 @@
   </div>
 </header>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HERO ───────── -->
 <section class="hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow">German Engineering<span class="yr">Since 2006</span></div>
       <h1 class="hero__title">Toughest chemicals.<br /><span class="stripe">OEM-grade</span> performance.</h1>
-      <p class="hero__sub">Premium automotive chemicals, additives, and lubricants â€” engineered in Hannover, OEM-certified, distributed across Canada by professional shops, fleets, and parts retailers.</p>
+      <p class="hero__sub">Premium automotive chemicals, additives, and lubricants — engineered in Hannover, OEM-certified, distributed across Canada by professional shops, fleets, and parts retailers.</p>
       <div class="hero__actions">
-        <button class="btn btn--primary btn--lg">Explore Products <span class="arrow">â†’</span></button>
+        <button class="btn btn--primary btn--lg">Explore Products <span class="arrow">→</span></button>
         <button class="btn btn--ghost-dark btn--lg">Find a Distributor</button>
       </div>
       <div class="specs">
         <div class="spec"><div class="spec__v">20+</div><div class="spec__l">Years of<br/>Engineering</div></div>
         <div class="spec"><div class="spec__v">50M</div><div class="spec__l">Bottles<br/>Annual Capacity</div></div>
         <div class="spec"><div class="spec__v">10K+</div><div class="spec__l">Global<br/>Customers</div></div>
-        <div class="spec"><div class="spec__v">140K</div><div class="spec__l">ftÂ²<br/>Facility</div></div>
+        <div class="spec"><div class="spec__v">140K</div><div class="spec__l">ft²<br/>Facility</div></div>
       </div>
     </div>
     <div class="carousel" id="hero-carousel">
@@ -522,7 +522,7 @@
         <div class="showcase__chevron"><div></div><div></div></div>
         <div class="showcase__track">
           <!-- Drop in real product PNGs by swapping the `src` on each slide.
-               IMPORTANT: keep the two halves identical â€” second half is a duplicate
+               IMPORTANT: keep the two halves identical — second half is a duplicate
                of the first so the loop is seamless. -->
           <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Brake Cleaner 400g" /></div>
           <div class="showcase__slide"><img src="../assets/products/brake-cleaner.png" alt="Kolben Engine Flush 300mL" /></div>
@@ -539,60 +539,60 @@
         <div class="showcase__caption-track">
           <div class="showcase__caption-cell">
             <div class="showcase__caption-l">
-              <div class="sku">KB-210 Â· MAINTENANCE</div>
+              <div class="sku">KB-210 · MAINTENANCE</div>
               <div class="name">Brake Cleaner</div>
             </div>
-            <div class="showcase__caption-r">400 g Â· AEROSOL Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell">
             <div class="showcase__caption-l">
-              <div class="sku">KB-340 Â· ENGINE</div>
+              <div class="sku">KB-340 · ENGINE</div>
               <div class="name">Engine Flush</div>
             </div>
-            <div class="showcase__caption-r">300 mL Â· LIQUID Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">300 mL · LIQUID · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell">
             <div class="showcase__caption-l">
-              <div class="sku">KB-512 Â· FUEL</div>
+              <div class="sku">KB-512 · FUEL</div>
               <div class="name">Diesel Injector Cleaner</div>
             </div>
-            <div class="showcase__caption-r">250 mL Â· LIQUID Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">250 mL · LIQUID · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell">
             <div class="showcase__caption-l">
-              <div class="sku">KB-088 Â· LUBE</div>
+              <div class="sku">KB-088 · LUBE</div>
               <div class="name">Synthetic Chain Lube</div>
             </div>
-            <div class="showcase__caption-r">400 g Â· AEROSOL Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
           </div>
           <!-- duplicate set, hidden from a11y but keeps the loop seamless -->
           <div class="showcase__caption-cell" aria-hidden="true">
             <div class="showcase__caption-l">
-              <div class="sku">KB-210 Â· MAINTENANCE</div>
+              <div class="sku">KB-210 · MAINTENANCE</div>
               <div class="name">Brake Cleaner</div>
             </div>
-            <div class="showcase__caption-r">400 g Â· AEROSOL Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell" aria-hidden="true">
             <div class="showcase__caption-l">
-              <div class="sku">KB-340 Â· ENGINE</div>
+              <div class="sku">KB-340 · ENGINE</div>
               <div class="name">Engine Flush</div>
             </div>
-            <div class="showcase__caption-r">300 mL Â· LIQUID Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">300 mL · LIQUID · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell" aria-hidden="true">
             <div class="showcase__caption-l">
-              <div class="sku">KB-512 Â· FUEL</div>
+              <div class="sku">KB-512 · FUEL</div>
               <div class="name">Diesel Injector Cleaner</div>
             </div>
-            <div class="showcase__caption-r">250 mL Â· LIQUID Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">250 mL · LIQUID · GERMAN ENGINEERED</div>
           </div>
           <div class="showcase__caption-cell" aria-hidden="true">
             <div class="showcase__caption-l">
-              <div class="sku">KB-088 Â· LUBE</div>
+              <div class="sku">KB-088 · LUBE</div>
               <div class="name">Synthetic Chain Lube</div>
             </div>
-            <div class="showcase__caption-r">400 g Â· AEROSOL Â· GERMAN ENGINEERED</div>
+            <div class="showcase__caption-r">400 g · AEROSOL · GERMAN ENGINEERED</div>
           </div>
         </div>
       </div>
@@ -600,15 +600,15 @@
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ TICKER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── TICKER ───────── -->
 <div class="ticker">
   <div class="ticker__track">
-    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power Â· Performance Â· Kolben</span>
-    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power Â· Performance Â· Kolben</span>
+    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power · Performance · Kolben</span>
+    <span>German Engineered</span><span>OEM Certified</span><span>Canadian Distribution</span><span>ISO 9001</span><span>IATF 16949</span><span>SGS Verified</span><span>Power · Performance · Kolben</span>
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ TACKLE YOUR TOUGHEST JOBS (GUNK pattern) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── TACKLE YOUR TOUGHEST JOBS (GUNK pattern) ───────── -->
 <section class="tackle">
   <div class="container">
     <div class="section-head">
@@ -616,7 +616,7 @@
         <div class="section-eyebrow">Solutions</div>
         <h2 class="section-title">Tackle your <em>toughest</em> jobs.</h2>
       </div>
-      <a class="btn btn--ghost-dark">View Full Catalog <span class="arrow">â†’</span></a>
+      <a class="btn btn--ghost-dark">View Full Catalog <span class="arrow">→</span></a>
     </div>
     <div class="tile-grid">
       <a class="tile">
@@ -713,7 +713,7 @@
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ BROWSE BY INDUSTRY (CRC pattern) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── BROWSE BY INDUSTRY (CRC pattern) ───────── -->
 <section class="industry">
   <div class="container">
     <div class="section-head">
@@ -721,7 +721,7 @@
         <div class="section-eyebrow">For Professionals</div>
         <h2 class="section-title">Browse by <em>industry</em>.</h2>
       </div>
-      <a class="btn btn--ghost-dark">All Industries <span class="arrow">â†’</span></a>
+      <a class="btn btn--ghost-dark">All Industries <span class="arrow">→</span></a>
     </div>
     <div class="industry-grid">
       <a class="ind-card">
@@ -808,7 +808,7 @@
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ TWEAKS PANEL â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── TWEAKS PANEL ───────── -->
 <div id="tweaks-root"></div>
 <script type="text/babel">
   const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -841,17 +841,17 @@
 </script>
 
 <script>
-  /* Hero product carousel â€” JS controller.
+  /* Hero product carousel — JS controller.
      Why not pure CSS animation? Because `animation-play-state: paused`
      freezes the track MID-swipe, which looks broken. Here, each "swipe" is
      a CSS transition fired by JS. A `paused` flag (driven by hover) only
-     gates whether the NEXT tick fires â€” any in-flight transition completes
+     gates whether the NEXT tick fires — any in-flight transition completes
      naturally, so the bottle always lands cleanly on a slide before resting.
 
      Track has 4 unique slides + 4 duplicates (8 total). The visible cycle
      translates between 5 stops; when it reaches the final stop (0cqw, which
      visually equals the duplicate of the first slide) it snaps back to
-     -400cqw on the next tick with NO transition â€” seamless loop. */
+     -400cqw on the next tick with NO transition — seamless loop. */
   (function () {
     const carousel = document.getElementById('hero-carousel');
     if (!carousel) return;
@@ -884,7 +884,7 @@
     function tick() {
       if (paused) return;
       const next = (i + 1) % STOPS.length;
-      const isWrap = next === 0; // wrapped past the last stop â†’ snap reset
+      const isWrap = next === 0; // wrapped past the last stop → snap reset
       i = next;
       applyStop(isWrap);
     }
@@ -897,7 +897,7 @@
   })();
 </script>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ i18n (EN â†” Quebec French) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── i18n (EN ↔ Quebec French) ───────── -->
 <script src="i18n.js"></script>
 
 <script>
@@ -905,7 +905,7 @@
      Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
      bounding box, which makes diagonal/lateral travel toward the panel feel
      fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
-     mouseleave â€” the timer is cancelled if the cursor re-enters either the
+     mouseleave — the timer is cancelled if the cursor re-enters either the
      nav__item OR the .mega within ~220ms, so cursor paths in any direction
      are forgiving. CSS still honours :hover so the menu also works without JS. */
   (function () {
@@ -932,24 +932,24 @@
 </script>
 
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
 <footer class="site-footer">
 
-  <!-- TIER 1 â€” value band -->
+  <!-- TIER 1 — value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -962,7 +962,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 â€” navigation -->
+  <!-- TIER 2 — navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -972,7 +972,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
         </ul>
       </div>
       <div>
@@ -982,7 +982,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
         </ul>
       </div>
       <div>
@@ -1015,24 +1015,24 @@
     </div>
   </div>
 
-  <!-- TIER 3 â€” bottom bar -->
+  <!-- TIER 3 — bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── /SITE FOOTER ───────── -->
 
 </body>
 </html>

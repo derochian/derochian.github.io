@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben â€” Heavy Truck &amp; Fleet</title>
+<title>Kolben — Heavy Truck &amp; Fleet</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TOKENS — locked brand palette ───────── */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -36,7 +36,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── UTILITY BAR ───────── */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -48,7 +48,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HEADER ───────── */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -59,7 +59,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BUTTONS ───────── */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -74,7 +74,7 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BREADCRUMB ───────── */
   .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
   .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
   .crumbs__inner a { color: var(--muted); transition: color 150ms; }
@@ -82,9 +82,9 @@
   .crumbs__inner .sep { color: rgba(0,0,0,.25); }
   .crumbs__inner .current { color: var(--black); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     HERO â€” black, 80Ã—80 radial-masked grid
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     HERO — black, 80×80 radial-masked grid
+  ═══════════════════════════════════════════════════════════ */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -163,9 +163,9 @@
   }
   .hero__pain-chip span.dot { color: var(--gold); padding-right: 6px; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SECTOR CHALLENGES BAND â€” 3 short statements
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     SECTOR CHALLENGES BAND — 3 short statements
+  ═══════════════════════════════════════════════════════════ */
   .chal { background: var(--offwhite); border-bottom: 1px solid var(--rule); }
   .chal__inner {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
@@ -190,9 +190,9 @@
     font: 400 13px/1.45 'Inter'; color: var(--muted);
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     RECOMMENDED â€” use-case â†’ category cards (3 â†’ 2 â†’ 1)
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     RECOMMENDED — use-case → category cards (3 → 2 → 1)
+  ═══════════════════════════════════════════════════════════ */
   .rec { background: var(--white); padding: 96px 0; }
   .sec-head {
     display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 48px; flex-wrap: wrap;
@@ -280,9 +280,9 @@
   }
   .rec-card:hover .rec-card__bridge .arrow { transform: translate(3px, -3px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      FEATURED PRODUCTS RAIL
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .feat { background: var(--offwhite); padding: 96px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .pcard {
@@ -326,9 +326,9 @@
   .pcard__foot .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .pcard:hover .pcard__foot .arrow { transform: translate(3px, -3px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     RESOURCES â€” downloads row
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     RESOURCES — downloads row
+  ═══════════════════════════════════════════════════════════ */
   .res { background: var(--white); padding: 96px 0; }
   .res-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
@@ -376,9 +376,9 @@
   }
   .res-card:hover .res-card__arrow { transform: translate(3px, -3px); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      RELATIONSHIP CTA (black)
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   .dist {
     background: var(--black); color: var(--white);
     padding: 80px 0;
@@ -415,9 +415,9 @@
   }
   .dist__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     EXPLORE OTHER INDUSTRIES â€” condensed strip
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     EXPLORE OTHER INDUSTRIES — condensed strip
+  ═══════════════════════════════════════════════════════════ */
   .other { background: var(--white); padding: 88px 0; }
   .other-head {
     display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 32px; flex-wrap: wrap;
@@ -457,7 +457,7 @@
     font: 500 9.5px/1 'JetBrains Mono'; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
   }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── FOOTER ───────── */
   .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -465,7 +465,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── RESPONSIVE ───────── */
   @media (max-width: 1280px) {
     .other-grid { grid-template-columns: repeat(4, 1fr); }
     .feat-grid { grid-template-columns: repeat(3, 1fr); }
@@ -498,14 +498,14 @@
     *, *::before, *::after { transition: none !important; animation: none !important; }
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAK: SURFACE THEME â€” "Light" (default), "Mixed", "Industrial"
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: SURFACE THEME — "Light" (default), "Mixed", "Industrial"
      Progressively flips sections to dark surfaces so the Industries
      world reads darker than the standard Products area, while keeping
      the same type + palette tokens. Cards stay white.
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
 
-  /* MIXED â€” Sector-challenges band flips to black; Resources band moves
+  /* MIXED — Sector-challenges band flips to black; Resources band moves
      onto offwhite so the rhythm stays alternating. */
   body[data-theme="mixed"] .chal,
   body[data-theme="industrial"] .chal {
@@ -523,7 +523,7 @@
 
   body[data-theme="mixed"] .res { background: var(--offwhite); }
 
-  /* INDUSTRIAL â€” also flips Featured-products + Other-industries to dark.
+  /* INDUSTRIAL — also flips Featured-products + Other-industries to dark.
      The product-card and other-card chrome stays light-on-dark with
      hairline white borders so they keep reading as "white surface" cards
      sitting on a darker section. */
@@ -563,14 +563,14 @@
     background: var(--white); color: var(--black); border-color: var(--white);
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAK: GOLD-LED â€” on dark surfaces only (per brand rule),
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: GOLD-LED — on dark surfaces only (per brand rule),
      swap red eyebrow bars + em-highlights to gold, and tint
      framing details (hero icon, dist accent).
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   body[data-gold-led="on"] .hero__eyebrow::before { background: var(--gold); }
   body[data-gold-led="on"] .hero__h1 em { color: var(--gold); }
-  /* Gold-led: only the icon glyph and the 90Â° corner tick turn gold.
+  /* Gold-led: only the icon glyph and the 90° corner tick turn gold.
      The outer frame stays on the default on-black hairline so the box
      keeps its industrial outlined character. */
   body[data-gold-led="on"] .hero__icon-wrap { color: var(--gold); }
@@ -580,11 +580,11 @@
   body[data-gold-led="on"] .dist__eyebrow::before { background: var(--gold); }
   body[data-gold-led="on"] .dist__h em { color: var(--gold); }
 
-  /* Challenges band â€” gold-led when inverted */
+  /* Challenges band — gold-led when inverted */
   body[data-gold-led="on"][data-theme="mixed"] .chal__icon,
   body[data-gold-led="on"][data-theme="industrial"] .chal__icon { color: var(--gold); }
 
-  /* Featured + Other industries â€” gold-led only when inverted */
+  /* Featured + Other industries — gold-led only when inverted */
   body[data-gold-led="on"][data-theme="industrial"] .feat .sec-head__eyebrow::before { background: var(--gold); }
   body[data-gold-led="on"][data-theme="industrial"] .feat .sec-head__h em { color: var(--gold); }
   body[data-gold-led="on"][data-theme="industrial"] .other .sec-head__eyebrow::before { background: var(--gold); }
@@ -592,10 +592,10 @@
   body[data-gold-led="on"][data-theme="industrial"] .oc__icon { color: var(--gold); }
   body[data-gold-led="on"][data-theme="industrial"] .oc::after { background: var(--gold); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAK: SECTION RULE â€” swap the 3px red section dividers for
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: SECTION RULE — swap the 3px red section dividers for
      gold on dark-bordered sections. Light-side rules stay red.
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   body[data-rule="gold"] .hero { border-bottom-color: var(--gold); }
   body[data-rule="gold"] .dist { border-top-color: var(--gold); }
   body[data-rule="gold"][data-theme="mixed"] .chal,
@@ -603,10 +603,10 @@
   body[data-rule="gold"][data-theme="industrial"] .feat { border-bottom-color: var(--gold); }
   body[data-rule="gold"][data-theme="industrial"] .other { border-top-color: var(--gold); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAK: CHEVRON â€” the red+gold 6px stripe from the homepage
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: CHEVRON — the red+gold 6px stripe from the homepage
      showcase, planted at the top of major dark surfaces.
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  ═══════════════════════════════════════════════════════════ */
   body[data-chevron="on"] .hero,
   body[data-chevron="on"] .dist {
     padding-top: 94px;
@@ -635,9 +635,9 @@
     background-position: top left, 0 0;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAKS PANEL â€” floating bottom-right, brand-matched chrome
-  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+  /* ═══════════════════════════════════════════════════════════
+     TWEAKS PANEL — floating bottom-right, brand-matched chrome
+  ═══════════════════════════════════════════════════════════ */
   .tw-panel {
     position: fixed; right: 20px; bottom: 20px;
     width: 320px; max-height: calc(100vh - 40px);
@@ -738,9 +738,9 @@
   <link rel="stylesheet" href="footer.css">
   <script defer src="footer-i18n.js"></script>
 </head>
-<body data-screen-label="05 Industry â€” Heavy Truck &amp; Fleet">
+<body data-screen-label="05 Industry — Heavy Truck &amp; Fleet">
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── UTILITY BAR ───────── -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -767,10 +767,10 @@
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HEADER ───────── -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
       <div class="nav__item"><a class="nav__link" href="products-hub.html" data-i18n="nav.products">Products</a></div>
@@ -786,7 +786,7 @@
   </div>
 </header>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── BREADCRUMB ───────── -->
 <nav class="crumbs">
   <div class="container crumbs__inner">
     <a href="industries.html" data-i18n="crumbs.industries">Industries</a>
@@ -795,46 +795,46 @@
   </div>
 </nav>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      HERO
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__icon-wrap" aria-hidden="true">
-        <!-- reused verbatim from industries.html â€” heavy truck SVG -->
+        <!-- reused verbatim from industries.html — heavy truck SVG -->
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"/></svg>
       </div>
       <div class="hero__eyebrow" data-i18n="hero.eyebrow">Industrial</div>
       <h1 class="hero__h1" data-i18n="hero.h1">Heavy Truck<br/>&amp; <em>Fleet</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Linehaul, vocational, and last-mile operators don't lose to mechanical failure â€” they lose to downtime, cost-per-mile creep, hard cold-weather starts, and brine-soaked corrosion. Kolben supplies the brake, fuel, engine, cooling and chassis chemistries that keep tractors on the road and out of the bay.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Linehaul, vocational, and last-mile operators don't lose to mechanical failure — they lose to downtime, cost-per-mile creep, hard cold-weather starts, and brine-soaked corrosion. Kolben supplies the brake, fuel, engine, cooling and chassis chemistries that keep tractors on the road and out of the bay.</p>
     </div>
     <div class="hero__meta">
       <div class="hero__pain">
         <div class="hero__pain-h" data-i18n="hero.painH">Operational pressures</div>
         <div class="hero__pain-list">
-          <span class="hero__pain-chip"><span class="dot">â—</span><span data-i18n="hero.pain1">Uptime</span></span>
-          <span class="hero__pain-chip"><span class="dot">â—</span><span data-i18n="hero.pain2">Cost / mile</span></span>
-          <span class="hero__pain-chip"><span class="dot">â—</span><span data-i18n="hero.pain3">Cold starts</span></span>
-          <span class="hero__pain-chip"><span class="dot">â—</span><span data-i18n="hero.pain4">Road-salt corrosion</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain1">Uptime</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain2">Cost / mile</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain3">Cold starts</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain4">Road-salt corrosion</span></span>
         </div>
       </div>
       <div class="hero__pain">
         <div class="hero__pain-h" data-i18n="hero.fleetH">Scope</div>
         <div class="hero__pain-list">
-          <span class="hero__pain-chip" data-i18n="hero.scope1">Class 6 â€“ 8</span>
-          <span class="hero__pain-chip" data-i18n="hero.scope2">Diesel Â· CNG</span>
-          <span class="hero__pain-chip" data-i18n="hero.scope3">Linehaul Â· Vocational</span>
+          <span class="hero__pain-chip" data-i18n="hero.scope1">Class 6 – 8</span>
+          <span class="hero__pain-chip" data-i18n="hero.scope2">Diesel · CNG</span>
+          <span class="hero__pain-chip" data-i18n="hero.scope3">Linehaul · Vocational</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      SECTOR CHALLENGES BAND
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="chal">
   <div class="container">
     <div class="chal__inner">
@@ -844,7 +844,7 @@
         </div>
         <div class="chal__l">
           <div class="chal__l-h" data-i18n="chal.h1">Downtime</div>
-          <div class="chal__l-sub" data-i18n="chal.s1">Every parked tractor burns revenue at $850 â€“ $1,200 a day. Service-bay chemistries that get a truck back on the road in one shift.</div>
+          <div class="chal__l-sub" data-i18n="chal.s1">Every parked tractor burns revenue at $850 – $1,200 a day. Service-bay chemistries that get a truck back on the road in one shift.</div>
         </div>
       </div>
       <div class="chal__cell">
@@ -862,21 +862,21 @@
         </div>
         <div class="chal__l">
           <div class="chal__l-h" data-i18n="chal.h3">Cold starts</div>
-          <div class="chal__l-sub" data-i18n="chal.s3">âˆ’38 Â°C and a frozen DEF line is a $4,000 service call. Diesel additives and starting aids rated to the temperatures you actually see.</div>
+          <div class="chal__l-sub" data-i18n="chal.s3">−38 °C and a frozen DEF line is a $4,000 service call. Diesel additives and starting aids rated to the temperatures you actually see.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      RECOMMENDED FOR HEAVY TRUCK & FLEET
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="rec">
   <div class="container">
     <div class="sec-head">
       <div class="sec-head__left">
-        <div class="sec-head__eyebrow" data-i18n="rec.eyebrow">Use case â†’ product category</div>
+        <div class="sec-head__eyebrow" data-i18n="rec.eyebrow">Use case → product category</div>
         <h2 class="sec-head__h" data-i18n="rec.h">Recommended for <em>Heavy Truck &amp; Fleet.</em></h2>
         <p class="sec-head__sub" data-i18n="rec.sub">Six service-bay tasks mapped to the Kolben category engineered for the job. Each card opens the full catalogue for that line.</p>
       </div>
@@ -886,16 +886,16 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      FEATURED PRODUCTS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="feat">
   <div class="container">
     <div class="sec-head">
       <div class="sec-head__left">
         <div class="sec-head__eyebrow" data-i18n="feat.eyebrow">Stocked for the fleet bay</div>
         <h2 class="sec-head__h" data-i18n="feat.h">Featured products.</h2>
-        <p class="sec-head__sub" data-i18n="feat.sub">Top-moving SKUs across Kolben's heavy-truck range â€” sized for service-bay throughput and bulk stocking.</p>
+        <p class="sec-head__sub" data-i18n="feat.sub">Top-moving SKUs across Kolben's heavy-truck range — sized for service-bay throughput and bulk stocking.</p>
       </div>
       <div class="sec-head__count"><b>04</b><span data-i18n="feat.count">In rotation</span></div>
     </div>
@@ -903,16 +903,16 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      RESOURCES
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="res">
   <div class="container">
     <div class="sec-head">
       <div class="sec-head__left">
         <div class="sec-head__eyebrow" data-i18n="resHead.eyebrow">Documentation</div>
         <h2 class="sec-head__h" data-i18n="resHead.h">Resources for this sector.</h2>
-        <p class="sec-head__sub" data-i18n="resHead.sub">Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence â€” same row, same weight.</p>
+        <p class="sec-head__sub" data-i18n="resHead.sub">Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence — same row, same weight.</p>
       </div>
       <div class="sec-head__count"><b>03</b><span data-i18n="resHead.count">Downloads</span></div>
     </div>
@@ -923,22 +923,22 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2V8z"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
         </div>
         <div class="res-card__l">
-          <div class="res-card__eyebrow" data-i18n="res.r1.eyebrow">Safety Data Sheet Â· EN</div>
-          <div class="res-card__name" data-i18n="res.r1.name">Heavy Truck SDS â€” English</div>
-          <div class="res-card__meta">PDF Â· 1.4 MB Â· WHMIS 2015</div>
+          <div class="res-card__eyebrow" data-i18n="res.r1.eyebrow">Safety Data Sheet · EN</div>
+          <div class="res-card__name" data-i18n="res.r1.name">Heavy Truck SDS — English</div>
+          <div class="res-card__meta">PDF · 1.4 MB · WHMIS 2015</div>
         </div>
-        <span class="res-card__arrow">â†“</span>
+        <span class="res-card__arrow">↓</span>
       </a>
       <a class="res-card">
         <div class="res-card__icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2V8z"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
         </div>
         <div class="res-card__l">
-          <div class="res-card__eyebrow" data-i18n="res.r2.eyebrow">Fiche de donnÃ©es Â· FR</div>
-          <div class="res-card__name" data-i18n="res.r2.name">FDS Camions Lourds â€” FranÃ§ais</div>
-          <div class="res-card__meta" data-i18n="res.r2.meta">PDF Â· 1.4 MO Â· SIMDUT 2015</div>
+          <div class="res-card__eyebrow" data-i18n="res.r2.eyebrow">Fiche de données · FR</div>
+          <div class="res-card__name" data-i18n="res.r2.name">FDS Camions Lourds — Français</div>
+          <div class="res-card__meta" data-i18n="res.r2.meta">PDF · 1.4 MO · SIMDUT 2015</div>
         </div>
-        <span class="res-card__arrow">â†“</span>
+        <span class="res-card__arrow">↓</span>
       </a>
       <a class="res-card">
         <div class="res-card__icon">
@@ -947,17 +947,17 @@
         <div class="res-card__l">
           <div class="res-card__eyebrow" data-i18n="res.r3.eyebrow">Industry one-pager</div>
           <div class="res-card__name" data-i18n="res.r3.name">Fleet Spec Guide 2026</div>
-          <div class="res-card__meta">PDF Â· 820 KB Â· EN / FR</div>
+          <div class="res-card__meta">PDF · 820 KB · EN / FR</div>
         </div>
-        <span class="res-card__arrow">â†“</span>
+        <span class="res-card__arrow">↓</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      RELATIONSHIP CTA
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="dist is-light">
   <div class="container dist__inner">
     <div>
@@ -967,19 +967,19 @@
     <div class="dist__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="dist.a">Become a Distributor</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
       <a class="btn btn--ghost-light btn--lg" href="contact.html">
         <span data-i18n="dist.b">Talk to our fleet team</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      EXPLORE OTHER INDUSTRIES
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="other">
   <div class="container">
     <div class="other-head">
@@ -989,31 +989,31 @@
       </div>
       <a class="btn btn--ghost-dark btn--sm" href="industries.html">
         <span data-i18n="other.viewAll">View all industries</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
     <div class="other-grid" id="other-grid"></div>
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
 <footer class="site-footer">
 
-  <!-- TIER 1 â€” value band -->
+  <!-- TIER 1 — value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -1026,7 +1026,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 â€” navigation -->
+  <!-- TIER 2 — navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -1036,7 +1036,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
         </ul>
       </div>
       <div>
@@ -1046,7 +1046,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
         </ul>
       </div>
       <div>
@@ -1079,39 +1079,39 @@
     </div>
   </div>
 
-  <!-- TIER 3 â€” bottom bar -->
+  <!-- TIER 3 — bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── /SITE FOOTER ───────── -->
 
 <script>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RECOMMENDED CARDS â€” use-case â†’ category mappings.
+/* ═══════════════════════════════════════════════════════════
+   RECOMMENDED CARDS — use-case → category mappings.
    Six bay tasks paired with the right Kolben category.
    Icons reused from the Lucide outline family @ 24-viewbox.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const REC = [
   {
     n:        '01',
     use:      { en: 'Brake service',           fr: 'Entretien des freins' },
     line:     { en: 'Caliper, drum and air-brake bench cleaning between PM intervals. Non-chlorinated and bulk-refill formats for high-volume bays.',
-                fr: 'Nettoyage Ã©triers, tambours et freins Ã  air entre les entretiens. Non chlorÃ©s et recharges vrac pour ateliers Ã  fort volume.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
-    catName:  { en: 'Brake Cleaners',          fr: 'Nettoyants Ã  freins' },
+                fr: 'Nettoyage étriers, tambours et freins à air entre les entretiens. Non chlorés et recharges vrac pour ateliers à fort volume.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
+    catName:  { en: 'Brake Cleaners',          fr: 'Nettoyants à freins' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M5.5 18.5l2.1-2.1M16.4 7.6l2.1-2.1"/></svg>`,
   },
@@ -1119,29 +1119,29 @@ const REC = [
     n:        '02',
     use:      { en: 'Engine maintenance',      fr: 'Entretien moteur' },
     line:     { en: 'High-mileage flushes, top-end conditioners and PM-interval additives engineered for HD diesel and gas platforms.',
-                fr: 'RinÃ§ages haut kilomÃ©trage, conditionneurs de haut moteur et additifs pour diesel et essence usage intensif.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
+                fr: 'Rinçages haut kilométrage, conditionneurs de haut moteur et additifs pour diesel et essence usage intensif.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
     catName:  { en: 'Engine Additives',        fr: 'Additifs pour moteur' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h12v4l2 2v8h-4v-4H8v4H4v-8l2 -2v-4z"/><path d="M10 4v2"/><path d="M14 4v2"/><path d="M12 12v4"/></svg>`,
   },
   {
     n:        '03',
-    use:      { en: 'Cooling system',          fr: 'SystÃ¨me de refroidissement' },
+    use:      { en: 'Cooling system',          fr: 'Système de refroidissement' },
     line:     { en: 'HD coolant, system cleaners, water-pump conditioners. Compatible with ELC, Cat EC-1 and Detroit specs.',
-                fr: 'Liquide de refroidissement HD, nettoyants de systÃ¨me, conditionneurs de pompe. Compatibles ELC, Cat EC-1, Detroit.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
+                fr: 'Liquide de refroidissement HD, nettoyants de système, conditionneurs de pompe. Compatibles ELC, Cat EC-1, Detroit.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
     catName:  { en: 'Oils &amp; Fluids',       fr: 'Huiles et liquides' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l5 6a6 6 0 1 1 -10 0l5 -6z"/></svg>`,
   },
   {
     n:        '04',
-    use:      { en: 'Electrical contacts',     fr: 'Contacts Ã©lectriques' },
+    use:      { en: 'Electrical contacts',     fr: 'Contacts électriques' },
     line:     { en: 'Salt-soaked terminals, ABS sensors and trailer connectors. Plastic-safe contact cleaners and dielectric protectants.',
-                fr: 'Bornes salÃ©es, capteurs ABS et connecteurs de remorque. Nettoyants Ã  contacts sÃ»rs plastiques et protecteurs diÃ©lectriques.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
-    catName:  { en: 'Maintenance Sprays',      fr: 'AÃ©rosols dâ€™entretien' },
+                fr: 'Bornes salées, capteurs ABS et connecteurs de remorque. Nettoyants à contacts sûrs plastiques et protecteurs diélectriques.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
+    catName:  { en: 'Maintenance Sprays',      fr: 'Aérosols d’entretien' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h7l-1 8 9 -12h-7l1 -8z"/></svg>`,
   },
@@ -1149,67 +1149,67 @@ const REC = [
     n:        '05',
     use:      { en: 'Diesel fuel system',      fr: 'Circuit carburant diesel' },
     line:     { en: 'Injector cleaners, anti-gel and DEF-line conditioners. Sized for the linehaul tank, not the passenger car.',
-                fr: 'Nettoyants dâ€™injecteurs, antigel et conditionneurs ligne DEF. DimensionnÃ©s pour rÃ©servoirs ligne, pas voitures.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
+                fr: 'Nettoyants d’injecteurs, antigel et conditionneurs ligne DEF. Dimensionnés pour réservoirs ligne, pas voitures.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
     catName:  { en: 'Fuel Additives',          fr: 'Additifs pour carburant' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V7a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"/><path d="M4 21h10"/><path d="M14 9h2l3 3v7a2 2 0 0 1 -2 2"/><path d="M9 13h4"/></svg>`,
   },
   {
     n:        '06',
-    use:      { en: 'Fifth-wheel &amp; chassis', fr: 'Sellette et chÃ¢ssis' },
+    use:      { en: 'Fifth-wheel &amp; chassis', fr: 'Sellette et châssis' },
     line:     { en: 'Fifth-wheel grease, slack-adjuster lube, undercarriage rust inhibitors. Engineered for road-salt exposure.',
-                fr: 'Graisse sellette, lubrifiant rÃ©gleur de jeu, antirouille soubassement. ConÃ§us pour lâ€™exposition au sel.' },
-    catEy:    { en: 'Category',                fr: 'CatÃ©gorie' },
+                fr: 'Graisse sellette, lubrifiant régleur de jeu, antirouille soubassement. Conçus pour l’exposition au sel.' },
+    catEy:    { en: 'Category',                fr: 'Catégorie' },
     catName:  { en: 'Lubricants &amp; Grease', fr: 'Lubrifiants et graisses' },
     href:     'category.html',
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>`,
   },
 ];
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   FEATURED PRODUCTS â€” 4 SKUs scoped to fleet bays.
+/* ═══════════════════════════════════════════════════════════
+   FEATURED PRODUCTS — 4 SKUs scoped to fleet bays.
    All point at the brake-cleaner placeholder render; swap for real
    PNGs when the catalogue ships.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const FEAT = [
   {
     sku:    'KB-B015',
     cat:    { en: 'Brake', fr: 'Freins' },
     name:   { en: 'Fleet Brake Cleaner',           fr: 'Nettoyant freins flotte' },
-    size:   { en: '400 g Â· Pallet Â· 96 cases',     fr: '400 g Â· Palette Â· 96 caisses' },
+    size:   { en: '400 g · Pallet · 96 cases',     fr: '400 g · Palette · 96 caisses' },
     img:    '../assets/products/brake-cleaner.png',
   },
   {
     sku:    'KB-D412',
-    cat:    { en: 'Diesel Â· Fuel', fr: 'Diesel Â· Carburant' },
-    name:   { en: 'HD Diesel Injector Cleaner',    fr: 'Nettoyant dâ€™injecteurs diesel HD' },
-    size:   { en: '946 mL Â· Case of 12',           fr: '946 mL Â· Caisse de 12' },
+    cat:    { en: 'Diesel · Fuel', fr: 'Diesel · Carburant' },
+    name:   { en: 'HD Diesel Injector Cleaner',    fr: 'Nettoyant d’injecteurs diesel HD' },
+    size:   { en: '946 mL · Case of 12',           fr: '946 mL · Caisse de 12' },
     img:    '../assets/products/brake-cleaner.png',
   },
   {
     sku:    'KB-G220',
     cat:    { en: 'Lubricant', fr: 'Lubrifiant' },
     name:   { en: 'Fifth-Wheel Grease',            fr: 'Graisse pour sellette' },
-    size:   { en: '14 oz Â· NLGI 2 Â· Lithium',      fr: '14 oz Â· NLGI 2 Â· Lithium' },
+    size:   { en: '14 oz · NLGI 2 · Lithium',      fr: '14 oz · NLGI 2 · Lithium' },
     img:    '../assets/products/brake-cleaner.png',
   },
   {
     sku:    'KB-S088',
-    cat:    { en: 'Electrical', fr: 'Ã‰lectrique' },
-    name:   { en: 'Dielectric Contact Spray',      fr: 'Vaporisateur diÃ©lectrique' },
-    size:   { en: '400 g Â· Plastic-safe',          fr: '400 g Â· SÃ»r plastiques' },
+    cat:    { en: 'Electrical', fr: 'Électrique' },
+    name:   { en: 'Dielectric Contact Spray',      fr: 'Vaporisateur diélectrique' },
+    size:   { en: '400 g · Plastic-safe',          fr: '400 g · Sûr plastiques' },
     img:    '../assets/products/brake-cleaner.png',
   },
 ];
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   OTHER INDUSTRIES â€” condensed strip (7 cards).
+/* ═══════════════════════════════════════════════════════════
+   OTHER INDUSTRIES — condensed strip (7 cards).
    Icons + names reused verbatim from industries.html for consistency.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+═══════════════════════════════════════════════════════════ */
 const OTHER = [
   { slug: 'automotive-repair',       skus: '64 SKU',
-    name:  { en: 'Automotive Repair',           fr: 'RÃ©paration auto' },
+    name:  { en: 'Automotive Repair',           fr: 'Réparation auto' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/></svg>` },
   { slug: 'agriculture',              skus: '32 SKU',
     name:  { en: 'Agriculture',                  fr: 'Agriculture' },
@@ -1231,9 +1231,9 @@ const OTHER = [
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a9 9 0 0 1 5.656 16h-11.312a9 9 0 0 1 5.656 -16"/><path d="M20 9h-8.8a1 1 0 0 0 -.968 1.246c.507 2 1.596 3.418 3.268 4.254c2 1 4.333 1.5 7 1.5"/></svg>` },
 ];
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   I18N â€” page chrome strings
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   I18N — page chrome strings
+═══════════════════════════════════════════════════════════ */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -1252,25 +1252,25 @@ const I18N = {
 
     'hero.eyebrow':     'Industrial',
     'hero.h1':          'Heavy Truck<br/>& <em>Fleet</em>',
-    'hero.sub':         "Linehaul, vocational, and last-mile operators don't lose to mechanical failure â€” they lose to downtime, cost-per-mile creep, hard cold-weather starts, and brine-soaked corrosion. Kolben supplies the brake, fuel, engine, cooling and chassis chemistries that keep tractors on the road and out of the bay.",
+    'hero.sub':         "Linehaul, vocational, and last-mile operators don't lose to mechanical failure — they lose to downtime, cost-per-mile creep, hard cold-weather starts, and brine-soaked corrosion. Kolben supplies the brake, fuel, engine, cooling and chassis chemistries that keep tractors on the road and out of the bay.",
     'hero.painH':       'Operational pressures',
     'hero.pain1':       'Uptime',
     'hero.pain2':       'Cost / mile',
     'hero.pain3':       'Cold starts',
     'hero.pain4':       'Road-salt corrosion',
     'hero.fleetH':      'Scope',
-    'hero.scope1':      'Class 6 â€“ 8',
-    'hero.scope2':      'Diesel Â· CNG',
-    'hero.scope3':      'Linehaul Â· Vocational',
+    'hero.scope1':      'Class 6 – 8',
+    'hero.scope2':      'Diesel · CNG',
+    'hero.scope3':      'Linehaul · Vocational',
 
     'chal.h1':          'Downtime',
-    'chal.s1':          'Every parked tractor burns revenue at $850 â€“ $1,200 a day. Service-bay chemistries that get a truck back on the road in one shift.',
+    'chal.s1':          'Every parked tractor burns revenue at $850 – $1,200 a day. Service-bay chemistries that get a truck back on the road in one shift.',
     'chal.h2':          'Corrosion & road salt',
     'chal.s2':          'Canadian winter brine eats fifth-wheels, brake hardware and electrical contacts. Protectants that survive a 7-month salt season.',
     'chal.h3':          'Cold starts',
-    'chal.s3':          'âˆ’38 Â°C and a frozen DEF line is a $4,000 service call. Diesel additives and starting aids rated to the temperatures you actually see.',
+    'chal.s3':          '−38 °C and a frozen DEF line is a $4,000 service call. Diesel additives and starting aids rated to the temperatures you actually see.',
 
-    'rec.eyebrow':      'Use case â†’ product category',
+    'rec.eyebrow':      'Use case → product category',
     'rec.h':            'Recommended for <em>Heavy Truck & Fleet.</em>',
     'rec.sub':          "Six service-bay tasks mapped to the Kolben category engineered for the job. Each card opens the full catalogue for that line.",
     'rec.count':        'Categories',
@@ -1278,19 +1278,19 @@ const I18N = {
 
     'feat.eyebrow':     'Stocked for the fleet bay',
     'feat.h':           'Featured products.',
-    'feat.sub':         "Top-moving SKUs across Kolben's heavy-truck range â€” sized for service-bay throughput and bulk stocking.",
+    'feat.sub':         "Top-moving SKUs across Kolben's heavy-truck range — sized for service-bay throughput and bulk stocking.",
     'feat.count':       'In rotation',
     'feat.view':        'View Product',
 
     'resHead.eyebrow':  'Documentation',
     'resHead.h':        'Resources for this sector.',
-    'resHead.sub':      'Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence â€” same row, same weight.',
+    'resHead.sub':      'Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence — same row, same weight.',
     'resHead.count':    'Downloads',
-    'res.r1.eyebrow':   'Safety Data Sheet Â· EN',
-    'res.r1.name':      'Heavy Truck SDS â€” English',
-    'res.r2.eyebrow':   'Fiche de donnÃ©es Â· FR',
-    'res.r2.name':      'FDS Camions Lourds â€” FranÃ§ais',
-    'res.r2.meta':      'PDF Â· 1.4 MB Â· SIMDUT 2015',
+    'res.r1.eyebrow':   'Safety Data Sheet · EN',
+    'res.r1.name':      'Heavy Truck SDS — English',
+    'res.r2.eyebrow':   'Fiche de données · FR',
+    'res.r2.name':      'FDS Camions Lourds — Français',
+    'res.r2.meta':      'PDF · 1.4 MB · SIMDUT 2015',
     'res.r3.eyebrow':   'Industry one-pager',
     'res.r3.name':      'Fleet Spec Guide 2026',
 
@@ -1304,20 +1304,20 @@ const I18N = {
     'other.h':          'Explore <em>other industries.</em>',
     'other.viewAll':    'View all industries',
 
-    'footer.tag':       'Power Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
-    'footer.tagline':   'German Precision Â· Engine Perfection',
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'ConformitÃ© et FDS',
+    'util.compliance':  'Conformité et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'Ã€ propos',
-    'nav.news':         'ActualitÃ©s',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'OÃ¹ acheter',
+    'nav.whereToBuy':   'Où acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'crumbs.industries':'Industries',
@@ -1325,61 +1325,61 @@ const I18N = {
 
     'hero.eyebrow':     'Industriel',
     'hero.h1':          'Camions lourds<br/>et <em>flottes</em>',
-    'hero.sub':         "Les exploitants en transport linÃ©aire, vocationnel et dernier kilomÃ¨tre ne perdent pas par bris mÃ©canique â€” ils perdent par immobilisation, dÃ©rive du coÃ»t au kilomÃ¨tre, dÃ©marrages Ã  froid difficiles et corrosion par les saumures de route. Kolben fournit les chimies freins, carburant, moteur, refroidissement et chÃ¢ssis qui gardent vos tracteurs sur la route, et hors de lâ€™atelier.",
-    'hero.painH':       'Pressions dâ€™exploitation',
-    'hero.pain1':       'DisponibilitÃ©',
-    'hero.pain2':       'CoÃ»t / km',
-    'hero.pain3':       'DÃ©marrages Ã  froid',
+    'hero.sub':         "Les exploitants en transport linéaire, vocationnel et dernier kilomètre ne perdent pas par bris mécanique — ils perdent par immobilisation, dérive du coût au kilomètre, démarrages à froid difficiles et corrosion par les saumures de route. Kolben fournit les chimies freins, carburant, moteur, refroidissement et châssis qui gardent vos tracteurs sur la route, et hors de l’atelier.",
+    'hero.painH':       'Pressions d’exploitation',
+    'hero.pain1':       'Disponibilité',
+    'hero.pain2':       'Coût / km',
+    'hero.pain3':       'Démarrages à froid',
     'hero.pain4':       'Corrosion par le sel',
-    'hero.fleetH':      'PortÃ©e',
-    'hero.scope1':      'Classes 6 â€“ 8',
-    'hero.scope2':      'Diesel Â· GNC',
-    'hero.scope3':      'LinÃ©aire Â· Vocationnel',
+    'hero.fleetH':      'Portée',
+    'hero.scope1':      'Classes 6 – 8',
+    'hero.scope2':      'Diesel · GNC',
+    'hero.scope3':      'Linéaire · Vocationnel',
 
     'chal.h1':          'Immobilisation',
-    'chal.s1':          'Chaque tracteur immobilisÃ© brÃ»le 850 â€“ 1 200 $ de revenu par jour. Des chimies dâ€™atelier qui remettent le camion en route en un quart de travail.',
+    'chal.s1':          'Chaque tracteur immobilisé brûle 850 – 1 200 $ de revenu par jour. Des chimies d’atelier qui remettent le camion en route en un quart de travail.',
     'chal.h2':          'Corrosion et sel de route',
-    'chal.s2':          'La saumure dâ€™hiver canadien attaque sellettes, quincaillerie de freins et contacts Ã©lectriques. Des protecteurs qui tiennent sept mois de sel.',
-    'chal.h3':          'DÃ©marrages Ã  froid',
-    'chal.s3':          'âˆ’38 Â°C et une ligne DEF gelÃ©e, câ€™est un appel de service Ã  4 000 $. Additifs diesel et aides au dÃ©marrage notÃ©s pour vos tempÃ©ratures rÃ©elles.',
+    'chal.s2':          'La saumure d’hiver canadien attaque sellettes, quincaillerie de freins et contacts électriques. Des protecteurs qui tiennent sept mois de sel.',
+    'chal.h3':          'Démarrages à froid',
+    'chal.s3':          '−38 °C et une ligne DEF gelée, c’est un appel de service à 4 000 $. Additifs diesel et aides au démarrage notés pour vos températures réelles.',
 
-    'rec.eyebrow':      'Cas dâ€™usage â†’ catÃ©gorie',
-    'rec.h':            'RecommandÃ© pour les <em>camions lourds et flottes.</em>',
-    'rec.sub':          "Six tÃ¢ches dâ€™atelier associÃ©es Ã  la catÃ©gorie Kolben conÃ§ue pour le travail. Chaque carte ouvre le catalogue complet de cette gamme.",
-    'rec.count':        'CatÃ©gories',
-    'rec.bridge':       'Parcourir la catÃ©gorie',
+    'rec.eyebrow':      'Cas d’usage → catégorie',
+    'rec.h':            'Recommandé pour les <em>camions lourds et flottes.</em>',
+    'rec.sub':          "Six tâches d’atelier associées à la catégorie Kolben conçue pour le travail. Chaque carte ouvre le catalogue complet de cette gamme.",
+    'rec.count':        'Catégories',
+    'rec.bridge':       'Parcourir la catégorie',
 
-    'feat.eyebrow':     'En stock pour lâ€™atelier flotte',
+    'feat.eyebrow':     'En stock pour l’atelier flotte',
     'feat.h':           'Produits en vedette.',
-    'feat.sub':         "RÃ©f. les plus demandÃ©es de la gamme camions lourds Kolben â€” dimensionnÃ©es pour la cadence dâ€™atelier et lâ€™approvisionnement en vrac.",
+    'feat.sub':         "Réf. les plus demandées de la gamme camions lourds Kolben — dimensionnées pour la cadence d’atelier et l’approvisionnement en vrac.",
     'feat.count':       'En rotation',
     'feat.view':        'Voir le produit',
 
     'resHead.eyebrow':  'Documentation',
     'resHead.h':        'Ressources pour ce secteur.',
-    'resHead.sub':      'Fiches de donnÃ©es de sÃ©curitÃ© bilingues et fiche secteur pour directeurs de maintenance de flotte. PrÃ©sence Ã©gale â€” mÃªme rangÃ©e, mÃªme poids.',
-    'resHead.count':    'TÃ©lÃ©chargements',
-    'res.r1.eyebrow':   'Fiche de donnÃ©es Â· EN',
-    'res.r1.name':      'FDS Camions Lourds â€” Anglais',
-    'res.r2.eyebrow':   'Fiche de donnÃ©es Â· FR',
-    'res.r2.name':      'FDS Camions Lourds â€” FranÃ§ais',
-    'res.r2.meta':      'PDF Â· 1,4 Mo Â· SIMDUT 2015',
+    'resHead.sub':      'Fiches de données de sécurité bilingues et fiche secteur pour directeurs de maintenance de flotte. Présence égale — même rangée, même poids.',
+    'resHead.count':    'Téléchargements',
+    'res.r1.eyebrow':   'Fiche de données · EN',
+    'res.r1.name':      'FDS Camions Lourds — Anglais',
+    'res.r2.eyebrow':   'Fiche de données · FR',
+    'res.r2.name':      'FDS Camions Lourds — Français',
+    'res.r2.meta':      'PDF · 1,4 Mo · SIMDUT 2015',
     'res.r3.eyebrow':   'Fiche secteur',
-    'res.r3.name':      'Guide de spÃ©cification flotte 2026',
+    'res.r3.name':      'Guide de spécification flotte 2026',
 
     'dist.eyebrow':     'Pour acheteurs flotte et distributeurs',
-    'dist.h':           'ExpÃ©diÃ© de <em>Mississauga et Edmonton.</em>',
-    'dist.sub':         "Pas de panier public, pas de prix affichÃ©. Devenez distributeur pour les conditions commerciales, ou contactez notre Ã©quipe flotte pour cadrer les bonnes chimies.",
+    'dist.h':           'Expédié de <em>Mississauga et Edmonton.</em>',
+    'dist.sub':         "Pas de panier public, pas de prix affiché. Devenez distributeur pour les conditions commerciales, ou contactez notre équipe flotte pour cadrer les bonnes chimies.",
     'dist.a':           'Devenir distributeur',
-    'dist.b':           'Parler Ã  notre Ã©quipe flotte',
+    'dist.b':           'Parler à notre équipe flotte',
 
     'other.eyebrow':    'Inter-secteurs',
     'other.h':          'Explorez les <em>autres industries.</em>',
     'other.viewAll':    'Voir toutes les industries',
 
-    'footer.tag':       'Puissance Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. ConÃ§u Ã  Hanovre.',
-    'footer.tagline':   'PrÃ©cision allemande Â· Perfection du moteur',
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
   },
 };
 
@@ -1393,7 +1393,7 @@ function renderRec() {
         <div class="rec-card__icon">${r.icon}</div>
         <div class="rec-card__num">${r.n}</div>
       </div>
-      <div class="rec-card__usecase-l">${t['rec.eyebrow'].split('â†’')[0].trim()}</div>
+      <div class="rec-card__usecase-l">${t['rec.eyebrow'].split('→')[0].trim()}</div>
       <div class="rec-card__usecase">${r.use[state.lang]}</div>
       <div class="rec-card__line">${r.line[state.lang]}</div>
       <div class="rec-card__bridge">
@@ -1401,7 +1401,7 @@ function renderRec() {
           <div class="rec-card__bridge-eyebrow">${r.catEy[state.lang]}</div>
           <div class="rec-card__bridge-name">${r.catName[state.lang]}</div>
         </div>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </div>
     </a>
   `).join('');
@@ -1424,7 +1424,7 @@ function renderFeat() {
       </div>
       <div class="pcard__foot">
         <span>${t['feat.view']}</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </div>
     </a>
   `).join('');
@@ -1469,14 +1469,14 @@ document.getElementById('lang-switch').addEventListener('click', e => {
 rerender();
 </script>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     TWEAKS PANEL â€” Industries-world differentiator controls.
+<!-- ═══════════════════════════════════════════════════════════
+     TWEAKS PANEL — Industries-world differentiator controls.
      Brand rule: gold ONLY on dark surfaces. Tweaks honour this.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <div class="tw-panel" id="tw-panel" role="region" aria-label="Tweaks">
   <div class="tw-panel__head" id="tw-drag">
     <span class="tw-panel__title">Tweaks</span>
-    <button class="tw-panel__close" id="tw-close" aria-label="Close">Ã—</button>
+    <button class="tw-panel__close" id="tw-close" aria-label="Close">×</button>
   </div>
   <div class="tw-panel__body">
 
@@ -1523,9 +1523,9 @@ rerender();
 </div>
 
 <script>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   TWEAK MODE â€” protocol + state.
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   TWEAK MODE — protocol + state.
+═══════════════════════════════════════════════════════════ */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "light",
   "rule": "gold",
@@ -1576,7 +1576,7 @@ document.querySelectorAll('.tw-toggle').forEach(t => {
   t.addEventListener('click', () => setTweak({ [key]: !tw[key] }));
 });
 
-/* â”€â”€ Edit-mode protocol (listener first, then announce) â”€â”€ */
+/* ── Edit-mode protocol (listener first, then announce) ── */
 const panel = document.getElementById('tw-panel');
 window.addEventListener('message', e => {
   const d = e?.data; if (!d || typeof d !== 'object') return;
@@ -1590,7 +1590,7 @@ document.getElementById('tw-close').addEventListener('click', () => {
   try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
 });
 
-/* â”€â”€ Drag the panel by its header â”€â”€ */
+/* ── Drag the panel by its header ── */
 (function () {
   const head = document.getElementById('tw-drag');
   let sx = 0, sy = 0, ox = 0, oy = 0, dragging = false;

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben â€” Brake & Parts Cleaner B002A (Product Detail)</title>
+<title>Kolben — Brake & Parts Cleaner B002A (Product Detail)</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── TOKENS — locked brand palette ───────── */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -46,7 +46,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── UTILITY BAR ───────── */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -58,7 +58,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── HEADER ───────── */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -70,7 +70,7 @@
   .nav__caret { width: 8px; height: 5px; }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BUTTONS ───────── */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -86,7 +86,7 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── BREADCRUMB ───────── */
   .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
   .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
   .crumbs__inner a { color: var(--muted); transition: color 150ms; }
@@ -94,9 +94,9 @@
   .crumbs__inner .sep { color: rgba(0,0,0,.25); }
   .crumbs__inner .current { color: var(--black); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      2. PRODUCT HEADER
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .phead { padding: 56px 0 80px; background: var(--white); position: relative; overflow: hidden; }
   .phead__grid {
     position: absolute; inset: 0; pointer-events: none;
@@ -111,7 +111,7 @@
     position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
   }
 
-  /* Showcase â€” brushed metal */
+  /* Showcase — brushed metal */
   .gallery { display: flex; flex-direction: column; gap: 14px; }
   .showcase {
     position: relative; width: 100%; aspect-ratio: 4 / 5;
@@ -147,7 +147,7 @@
     filter: drop-shadow(0 30px 30px rgba(0,0,0,.35));
     transition: opacity 220ms var(--ease);
   }
-  /* Black gold-SKU tag in the corner â€” matches homepage showcase */
+  /* Black gold-SKU tag in the corner — matches homepage showcase */
   .showcase__tag {
     position: absolute; bottom: 18px; left: 18px; z-index: 4;
     background: var(--black); color: var(--white);
@@ -243,9 +243,9 @@
   }
   .ident__note::before { content: ''; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      3. FEATURE / BENEFIT ICON ROW
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .features {
     background: var(--offwhite);
     border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
@@ -269,9 +269,9 @@
     color: var(--black); text-wrap: balance;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      4. APPLICATIONS + DIRECTIONS (two-column body)
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .body { padding: 96px 0 80px; background: var(--white); }
   .body__inner {
     display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
@@ -338,9 +338,9 @@
   }
   .step__dwell::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      5. SPECIFICATION TABLE
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .specs { background: var(--offwhite); padding: 80px 0; border-top: 1px solid var(--rule); }
   .specs__head { margin-bottom: 40px; max-width: 720px; }
   .specs__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); margin-top: 12px; }
@@ -384,7 +384,7 @@
     white-space: nowrap;
   }
   /* Inline override for unit glyphs (g, kg, ml) inside otherwise-cased mono runs.
-     Used as `500 <span class="lc">g</span>` â€” keeps units in their proper case
+     Used as `500 <span class="lc">g</span>` — keeps units in their proper case
      even if a parent rule wants to UPPERCASE the row. */
   .lc { text-transform: none; }
   .specblk dd.placeholder {
@@ -429,9 +429,9 @@
     align-self: start; justify-self: start;
   }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      6. DOWNLOADS BLOCK
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .downloads { padding: 80px 0; background: var(--white); border-top: 1px solid var(--rule); }
   .dl-grid {
     margin-top: 24px;
@@ -467,9 +467,9 @@
   .dl__sub { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
   .dl__arrow { color: var(--black); width: 22px; height: 22px; transition: transform 220ms var(--ease), color 220ms var(--ease); }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      7. RELATED PRODUCTS
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .related { padding: 80px 0 96px; background: var(--offwhite); border-top: 1px solid var(--rule); }
   .related__head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 32px; flex-wrap: wrap; }
   .related__grid {
@@ -499,9 +499,9 @@
   .pcard__name { font: 700 16px/1.18 'Jost'; letter-spacing: -0.005em; color: var(--black); }
   .pcard__size { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
 
-  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+  /* ═══════════════════════════════════════════════════════════
      8. DISTRIBUTOR CTA BAND + FOOTER
-     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+     ═══════════════════════════════════════════════════════════ */
   .dist {
     background: var(--black); color: var(--white);
     padding: 80px 0; position: relative; overflow: hidden;
@@ -532,7 +532,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+  /* ───────── RESPONSIVE ───────── */
   @media (max-width: 1100px) {
     .nav { display: none; }
     .util__left { gap: 14px; }
@@ -567,7 +567,7 @@
 </head>
 <body data-screen-label="02 Product Detail">
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── UTILITY BAR ───────── -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -594,10 +594,10 @@
   </div>
 </div>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── HEADER ───────── -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
       <div class="nav__item"><a class="nav__link active" href="products-hub.html" data-i18n="nav.products">Products</a></div>
@@ -613,7 +613,7 @@
   </div>
 </header>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── BREADCRUMB ───────── -->
 <nav class="crumbs">
   <div class="container crumbs__inner">
     <a href="products-hub.html" data-i18n="crumbs.products">Products</a>
@@ -624,13 +624,13 @@
   </div>
 </nav>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      2. PRODUCT HEADER
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="phead">
   <div class="phead__grid"></div>
   <div class="container phead__inner">
-    <!-- LEFT â€” Gallery -->
+    <!-- LEFT — Gallery -->
     <div class="gallery">
       <div class="showcase">
         <div class="showcase__chevron"><div></div><div></div></div>
@@ -638,33 +638,33 @@
              src="../assets/products/brake-cleaner.png"
              alt="Kolben Brake & Parts Cleaner 500 g aerosol" />
         <div class="showcase__tag">
-          <div class="showcase__tag-sku" id="showcase-sku">B002A Â· BRAKE</div>
+          <div class="showcase__tag-sku" id="showcase-sku">B002A · BRAKE</div>
           <div class="showcase__tag-name" data-i18n="phead.tagName">Brake &amp; Parts Cleaner</div>
         </div>
       </div>
 
-      <!-- Thumbnail strip â€” 4 frames -->
+      <!-- Thumbnail strip — 4 frames -->
       <div class="thumbs" id="thumbs">
         <button class="thumb is-active" data-frame="0">
           <img src="../assets/products/brake-cleaner.png" alt="Front" />
-          <span class="thumb__label">01 Â· FRONT</span>
+          <span class="thumb__label">01 · FRONT</span>
         </button>
         <button class="thumb" data-frame="1">
           <img src="../assets/products/brake-cleaner-mockup-v7.png" alt="Back / label detail" />
-          <span class="thumb__label">02 Â· LABEL</span>
+          <span class="thumb__label">02 · LABEL</span>
         </button>
         <button class="thumb" data-frame="2">
           <img src="../assets/products/brake-cleaner.png" alt="In use" style="transform: translate(-50%, -50%) rotate(-12deg);" />
-          <span class="thumb__label">03 Â· IN USE</span>
+          <span class="thumb__label">03 · IN USE</span>
         </button>
         <button class="thumb" data-frame="3">
           <img src="../assets/products/brake-cleaner-mockup-v7.png" alt="Case format" style="height: 64%;" />
-          <span class="thumb__label">04 Â· CASE</span>
+          <span class="thumb__label">04 · CASE</span>
         </button>
       </div>
     </div>
 
-    <!-- RIGHT â€” Identity column -->
+    <!-- RIGHT — Identity column -->
     <div class="ident">
       <div class="ident__row">
         <span class="ident__cat" data-i18n="ident.cat">Brake Cleaners</span>
@@ -700,21 +700,21 @@
       <div class="ident__actions">
         <button class="btn btn--primary btn--lg btn--block">
           <span data-i18n="ident.cta1">Request Distributor Pricing</span>
-          <span class="arrow">â†’</span>
+          <span class="arrow">→</span>
         </button>
         <button class="btn btn--ghost-dark btn--lg btn--block">
           <span data-i18n="ident.cta2">Download SDS (PDF)</span>
-          <span class="arrow">â†“</span>
+          <span class="arrow">↓</span>
         </button>
       </div>
-      <div class="ident__note" data-i18n="ident.note">Trade-only pricing Â· 48-hour fulfilment from Mississauga &amp; Edmonton</div>
+      <div class="ident__note" data-i18n="ident.note">Trade-only pricing · 48-hour fulfilment from Mississauga &amp; Edmonton</div>
     </div>
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      3. FEATURE / BENEFIT ICON ROW
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="features">
   <div class="container">
     <div class="features__grid">
@@ -784,9 +784,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      4. APPLICATIONS + DIRECTIONS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="body">
   <div class="container body__inner">
 
@@ -828,7 +828,7 @@
           <div class="step__n">2</div>
           <div class="step__body">
             <div class="step__t" data-i18n="dir.s2t">Spray at Distance</div>
-            <div class="step__d" data-i18n="dir.s2d">Hold the can 20â€“30 cm from the surface. Apply in short bursts to remove brake dust, oil and grease from rotors, calipers and linings.</div>
+            <div class="step__d" data-i18n="dir.s2d">Hold the can 20–30 cm from the surface. Apply in short bursts to remove brake dust, oil and grease from rotors, calipers and linings.</div>
           </div>
         </div>
 
@@ -845,9 +845,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      5. SPECIFICATION TABLE
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="specs">
   <div class="container">
     <div class="specs__head">
@@ -867,10 +867,10 @@
         <dl>
           <div><dt data-i18n="spec.t1">Net contents</dt><dd id="dd-net">500 <span class="lc">g</span></dd></div>
           <div><dt data-i18n="spec.t2">Container</dt><dd data-i18n="spec.t2v">Steel Aerosol</dd></div>
-          <div><dt data-i18n="spec.t3">Propellant</dt><dd>COâ‚‚ / Nâ‚‚</dd></div>
+          <div><dt data-i18n="spec.t3">Propellant</dt><dd>CO₂ / N₂</dd></div>
           <div><dt data-i18n="spec.t4">Appearance</dt><dd data-i18n="spec.t4v">Clear, Colourless</dd></div>
-          <div><dt data-i18n="spec.t5">Flash point</dt><dd>&lt; 0 Â°C</dd></div>
-          <div><dt data-i18n="spec.t6">UN no. / class</dt><dd>UN1950 Â· 2.1</dd></div>
+          <div><dt data-i18n="spec.t5">Flash point</dt><dd>&lt; 0 °C</dd></div>
+          <div><dt data-i18n="spec.t6">UN no. / class</dt><dd>UN1950 · 2.1</dd></div>
           <div><dt data-i18n="spec.t7">Shelf life</dt><dd data-i18n="spec.t7v">36 Months</dd></div>
         </dl>
       </div>
@@ -902,7 +902,7 @@
           <div><dt data-i18n="spec.l1">Units per case</dt><dd>12</dd></div>
           <div><dt data-i18n="spec.l2">Cases per pallet</dt><dd>96</dd></div>
           <div><dt data-i18n="spec.l3">Pallet count</dt><dd>1,152 ea</dd></div>
-          <div><dt data-i18n="spec.l4">Case dim. (LÃ—WÃ—H)</dt><dd id="dd-case-dim">305 Ã— 230 Ã— 230 mm</dd></div>
+          <div><dt data-i18n="spec.l4">Case dim. (L×W×H)</dt><dd id="dd-case-dim">305 × 230 × 230 mm</dd></div>
           <div><dt data-i18n="spec.l5">Case weight</dt><dd id="dd-case-w">7.4 <span class="lc">kg</span></dd></div>
           <div><dt data-i18n="spec.l6">UPC (unit)</dt><dd id="dd-upc">0 60123 45678 9</dd></div>
           <div><dt data-i18n="spec.l7">Case part no.</dt><dd id="dd-case-pn">KB-B002A-12</dd></div>
@@ -910,12 +910,12 @@
       </div>
     </div>
 
-    <!-- HAZARD â€” placeholders only, NOT fabricated.
+    <!-- HAZARD — placeholders only, NOT fabricated.
          Final wording comes verbatim from the current Safety Data Sheet. -->
     <div class="hazard">
       <div class="hazard__label">
         <b data-i18n="haz.lbl">Hazard &amp; First Aid</b>
-        <span data-i18n="haz.note">Wording sourced verbatim from current SDS â€” do not fabricate.</span>
+        <span data-i18n="haz.note">Wording sourced verbatim from current SDS — do not fabricate.</span>
       </div>
       <div class="hazard__rows">
         <div class="hazard__row"><dt data-i18n="haz.r1">Signal word</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
@@ -928,9 +928,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      6. DOWNLOADS BLOCK
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="downloads">
   <div class="container">
     <div class="module__eyebrow" data-i18n="dl.eyebrow">Documentation</div>
@@ -941,8 +941,8 @@
       <a class="dl">
         <div class="dl__icon">PDF<span></span></div>
         <div class="dl__meta">
-          <div class="dl__title" data-i18n="dl.sds.en">Safety Data Sheet â€” English</div>
-          <div class="dl__sub" id="dl-sds-en-sub">KB-B002A Â· SDS Â· EN Â· 320 KB</div>
+          <div class="dl__title" data-i18n="dl.sds.en">Safety Data Sheet — English</div>
+          <div class="dl__sub" id="dl-sds-en-sub">KB-B002A · SDS · EN · 320 KB</div>
         </div>
         <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/>
@@ -953,8 +953,8 @@
       <a class="dl">
         <div class="dl__icon">PDF<span></span></div>
         <div class="dl__meta">
-          <div class="dl__title" data-i18n="dl.sds.fr">Fiche de donnÃ©es de sÃ©curitÃ© â€” FranÃ§ais</div>
-          <div class="dl__sub" id="dl-sds-fr-sub">KB-B002A Â· FDS Â· FR Â· 332 KB</div>
+          <div class="dl__title" data-i18n="dl.sds.fr">Fiche de données de sécurité — Français</div>
+          <div class="dl__sub" id="dl-sds-fr-sub">KB-B002A · FDS · FR · 332 KB</div>
         </div>
         <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/>
@@ -966,7 +966,7 @@
         <div class="dl__icon">PDF<span></span></div>
         <div class="dl__meta">
           <div class="dl__title" data-i18n="dl.tds">Technical Data Sheet</div>
-          <div class="dl__sub" id="dl-tds-sub">KB-B002A Â· TDS Â· EN / FR Â· 280 KB</div>
+          <div class="dl__sub" id="dl-tds-sub">KB-B002A · TDS · EN / FR · 280 KB</div>
         </div>
         <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/>
@@ -978,9 +978,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      7. RELATED PRODUCTS
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="related">
   <div class="container">
     <div class="related__head">
@@ -990,7 +990,7 @@
       </div>
       <a class="btn btn--ghost-dark" href="products-hub.html">
         <span data-i18n="rel.viewAll">View Full Catalogue</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
     </div>
 
@@ -998,9 +998,9 @@
   </div>
 </section>
 
-<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+<!-- ═══════════════════════════════════════════════════════════
      8. DISTRIBUTOR CTA BAND
-â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+═══════════════════════════════════════════════════════════ -->
 <section class="dist is-light">
   <div class="container dist__inner">
     <div>
@@ -1010,34 +1010,34 @@
     <div class="dist__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="dist.a">Become a Distributor</span>
-        <span class="arrow">â†’</span>
+        <span class="arrow">→</span>
       </a>
       <a class="btn btn--ghost-light btn--lg" href="#dl-sds-en">
         <span data-i18n="dist.b">Download SDS</span>
-        <span class="arrow">â†“</span>
+        <span class="arrow">↓</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
 <footer class="site-footer">
 
-  <!-- TIER 1 â€” value band -->
+  <!-- TIER 1 — value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -1050,7 +1050,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 â€” navigation -->
+  <!-- TIER 2 — navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -1060,7 +1060,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
         </ul>
       </div>
       <div>
@@ -1070,7 +1070,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
         </ul>
       </div>
       <div>
@@ -1103,43 +1103,43 @@
     </div>
   </div>
 
-  <!-- TIER 3 â€” bottom bar -->
+  <!-- TIER 3 — bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
+<!-- ───────── /SITE FOOTER ───────── -->
 
 <script>
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RELATED PRODUCTS â€” small dataset (mirrors hub card style)
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   RELATED PRODUCTS — small dataset (mirrors hub card style)
+   ═══════════════════════════════════════════════════════════ */
 const RELATED = [
-  { sku: 'KB-225', cat: { en: 'Maintenance Sprays', fr: 'AÃ©rosols dâ€™entretien' },
-    name: { en: 'Throttle Body Cleaner',  fr: 'Nettoyant boÃ®tier papillon' }, size: '400 ml' },
-  { sku: 'KB-241', cat: { en: 'Electrical & Contact', fr: 'Ã‰lectrique et contacts' },
-    name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts Ã©lectroniques' }, size: '300 ml' },
+  { sku: 'KB-225', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
+    name: { en: 'Throttle Body Cleaner',  fr: 'Nettoyant boîtier papillon' }, size: '400 ml' },
+  { sku: 'KB-241', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
+    name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml' },
   { sku: 'KB-088', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
-    name: { en: 'Synthetic Chain Lube',  fr: 'Lubrifiant chaÃ®ne synthÃ©tique' }, size: '400 g' },
+    name: { en: 'Synthetic Chain Lube',  fr: 'Lubrifiant chaîne synthétique' }, size: '400 g' },
   { sku: 'KB-340', cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
-    name: { en: 'Engine Flush â€” Pro',    fr: 'Nettoyant moteur â€” Pro' }, size: '300 ml' },
+    name: { en: 'Engine Flush — Pro',    fr: 'Nettoyant moteur — Pro' }, size: '300 ml' },
 ];
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   I18N â€” page chrome strings
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   I18N — page chrome strings
+   ═══════════════════════════════════════════════════════════ */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -1172,7 +1172,7 @@ const I18N = {
 
     'ident.cta1':       'Request Distributor Pricing',
     'ident.cta2':       'Download SDS (PDF)',
-    'ident.note':       'Trade-only pricing Â· 48-hour fulfilment from Mississauga & Edmonton',
+    'ident.note':       'Trade-only pricing · 48-hour fulfilment from Mississauga & Edmonton',
 
     'feat.1':           'Non-Chlorinated',
     'feat.2':           'Fast-Evaporating',
@@ -1199,7 +1199,7 @@ const I18N = {
     'dir.s1t':          'Shake & Prepare',
     'dir.s1d':          'Shake the can vigorously for 30 seconds before use. Ensure the work area is well-ventilated and the brake assembly is cool to the touch.',
     'dir.s2t':          'Spray at Distance',
-    'dir.s2d':          'Hold the can 20â€“30 cm from the surface. Apply in short bursts to remove brake dust, oil and grease from rotors, calipers and linings.',
+    'dir.s2d':          'Hold the can 20–30 cm from the surface. Apply in short bursts to remove brake dust, oil and grease from rotors, calipers and linings.',
     'dir.s3t':          'Air-Dry, No Wipe',
     'dir.s3d':          'Allow the surface to air-dry. No wipe-down required. Reapply on heavily contaminated assemblies.',
     'dir.s3dwell':      'Typical dwell: < 60 s',
@@ -1219,10 +1219,10 @@ const I18N = {
     'spec.r7':'CCCR, 2001','spec.r7v':'Conforms',
     'spec.log.h':       'Logistics',
     'spec.l1':'Units per case','spec.l2':'Cases per pallet','spec.l3':'Pallet count',
-    'spec.l4':'Case dim. (LÃ—WÃ—H)','spec.l5':'Case weight','spec.l6':'UPC (unit)','spec.l7':'Case part no.',
+    'spec.l4':'Case dim. (L×W×H)','spec.l5':'Case weight','spec.l6':'UPC (unit)','spec.l7':'Case part no.',
 
     'haz.lbl':          'Hazard & First Aid',
-    'haz.note':         'Wording sourced verbatim from current SDS â€” do not fabricate.',
+    'haz.note':         'Wording sourced verbatim from current SDS — do not fabricate.',
     'haz.r1':           'Signal word',
     'haz.r2':           'GHS pictograms',
     'haz.r3':           'Hazard (H) statements',
@@ -1232,8 +1232,8 @@ const I18N = {
 
     'dl.eyebrow':       'Documentation',
     'dl.title':         'Downloads',
-    'dl.sds.en':        'Safety Data Sheet â€” English',
-    'dl.sds.fr':        'Fiche de donnÃ©es de sÃ©curitÃ© â€” FranÃ§ais',
+    'dl.sds.en':        'Safety Data Sheet — English',
+    'dl.sds.fr':        'Fiche de données de sécurité — Français',
     'dl.tds':           'Technical Data Sheet',
 
     'rel.eyebrow':      'Pair It With',
@@ -1245,124 +1245,124 @@ const I18N = {
     'dist.a':           'Become a Distributor',
     'dist.b':           'Download SDS',
 
-    'footer.tag':       'Power Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
-    'footer.tagline':   'German Precision Â· Engine Perfection',
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
   },
 
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'ConformitÃ© et FDS',
+    'util.compliance':  'Conformité et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'Ã€ propos',
-    'nav.news':         'ActualitÃ©s',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'OÃ¹ acheter',
+    'nav.whereToBuy':   'Où acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Nettoyants freins',
-    'crumbs.name':      'Nettoyant freins et piÃ¨ces',
+    'crumbs.name':      'Nettoyant freins et pièces',
 
     'phead.inStock':    'En distribution',
-    'phead.tagName':    'Nettoyant freins et piÃ¨ces',
+    'phead.tagName':    'Nettoyant freins et pièces',
 
     'ident.cat':        'Nettoyants freins',
-    'ident.sku':        'RÃ‰F B002A',
-    'ident.name':       'Nettoyant freins et piÃ¨ces',
-    'ident.lede':       'AÃ©rosol haute pression non chlorÃ©. Ã‰limine la poussiÃ¨re de freins, lâ€™huile et la graisse des Ã©triers et disques, puis sâ€™Ã©vapore proprement sans laisser de rÃ©sidu.',
+    'ident.sku':        'RÉF B002A',
+    'ident.name':       'Nettoyant freins et pièces',
+    'ident.lede':       'Aérosol haute pression non chloré. Élimine la poussière de freins, l’huile et la graisse des étriers et disques, puis s’évapore proprement sans laisser de résidu.',
     'cert.csa':         'Conforme CSA',
-    'cert.nonchlor':    'Non chlorÃ©',
+    'cert.nonchlor':    'Non chloré',
 
     'packs.label':      'Choisir le format',
-    'packs.aerosol':    'AÃ©rosol',
+    'packs.aerosol':    'Aérosol',
 
     'ident.cta1':       'Demander un tarif distributeur',
-    'ident.cta2':       'TÃ©lÃ©charger la FDS (PDF)',
-    'ident.note':       'Tarif rÃ©servÃ© au commerce Â· Livraison en 48 h depuis Mississauga et Edmonton',
+    'ident.cta2':       'Télécharger la FDS (PDF)',
+    'ident.note':       'Tarif réservé au commerce · Livraison en 48 h depuis Mississauga et Edmonton',
 
-    'feat.1':           'Non chlorÃ©',
-    'feat.2':           'Ã‰vaporation rapide',
-    'feat.3':           'Sans rÃ©sidu',
-    'feat.4':           'SÃ»r plastiques et joints',
+    'feat.1':           'Non chloré',
+    'feat.2':           'Évaporation rapide',
+    'feat.3':           'Sans résidu',
+    'feat.4':           'Sûr plastiques et joints',
     'feat.5':           'Jet haute pression',
-    'feat.6':           'Ã‰tiquette CSA bilingue',
+    'feat.6':           'Étiquette CSA bilingue',
 
     'apps.eyebrow':     'Surfaces compatibles',
     'apps.title':       'Applications',
     'apps.1':           'Disques et rotors de frein',
     'apps.2':           'Tambours de frein',
-    'apps.3':           'Ã‰triers et axes dâ€™Ã©trier',
+    'apps.3':           'Étriers et axes d’étrier',
     'apps.4':           'Plaques support de plaquette',
-    'apps.5':           'Composants dâ€™embrayage',
+    'apps.5':           'Composants d’embrayage',
     'apps.6':           'Plateaux de pression',
     'apps.7':           'Moyeux et roulements',
     'apps.8':           'Supports de capteur ABS',
-    'apps.cautionLbl':  'CompatibilitÃ© :',
-    'apps.caution':     'dÃ©conseillÃ© sur surfaces peintes, en caoutchouc ou en polycarbonate. Tester une zone discrÃ¨te avant application complÃ¨te.',
+    'apps.cautionLbl':  'Compatibilité :',
+    'apps.caution':     'déconseillé sur surfaces peintes, en caoutchouc ou en polycarbonate. Tester une zone discrète avant application complète.',
 
-    'dir.eyebrow':      'Mode dâ€™emploi',
+    'dir.eyebrow':      'Mode d’emploi',
     'dir.title':        'Comment appliquer',
-    'dir.s1t':          'Agiter et prÃ©parer',
-    'dir.s1d':          'Agiter vigoureusement la bombe pendant 30 secondes avant utilisation. Veiller Ã  ce que la zone soit bien ventilÃ©e et que le systÃ¨me de frein soit froid au toucher.',
-    'dir.s2t':          'PulvÃ©riser Ã  distance',
-    'dir.s2d':          'Tenir la bombe Ã  20â€“30 cm de la surface. Appliquer en brÃ¨ves projections pour dÃ©coller la poussiÃ¨re de freins, lâ€™huile et la graisse des rotors, Ã©triers et garnitures.',
-    'dir.s3t':          'Laisser sÃ©cher Ã  lâ€™air',
-    'dir.s3d':          'Laisser sÃ©cher Ã  lâ€™air libre. Aucun essuyage requis. RÃ©appliquer sur les piÃ¨ces trÃ¨s encrassÃ©es.',
-    'dir.s3dwell':      'Temps de sÃ©chage typique : < 60 s',
+    'dir.s1t':          'Agiter et préparer',
+    'dir.s1d':          'Agiter vigoureusement la bombe pendant 30 secondes avant utilisation. Veiller à ce que la zone soit bien ventilée et que le système de frein soit froid au toucher.',
+    'dir.s2t':          'Pulvériser à distance',
+    'dir.s2d':          'Tenir la bombe à 20–30 cm de la surface. Appliquer en brèves projections pour décoller la poussière de freins, l’huile et la graisse des rotors, étriers et garnitures.',
+    'dir.s3t':          'Laisser sécher à l’air',
+    'dir.s3d':          'Laisser sécher à l’air libre. Aucun essuyage requis. Réappliquer sur les pièces très encrassées.',
+    'dir.s3dwell':      'Temps de séchage typique : < 60 s',
 
-    'spec.eyebrow':     'SpÃ©cification commerciale',
-    'spec.title':       'SpÃ©cifications',
-    'spec.sub':         'Valeurs reprÃ©sentatives pour la rÃ©f. B002A (aÃ©rosol 500 g). DonnÃ©es finales reprises verbatim de la fiche de donnÃ©es de sÃ©curitÃ© en vigueur.',
+    'spec.eyebrow':     'Spécification commerciale',
+    'spec.title':       'Spécifications',
+    'spec.sub':         'Valeurs représentatives pour la réf. B002A (aérosol 500 g). Données finales reprises verbatim de la fiche de données de sécurité en vigueur.',
     'spec.tech.h':      'Technique',
-    'spec.t1':'Contenu net','spec.t2':'Contenant','spec.t2v':'AÃ©rosol acier',
+    'spec.t1':'Contenu net','spec.t2':'Contenant','spec.t2v':'Aérosol acier',
     'spec.t3':'Gaz propulseur','spec.t4':'Aspect','spec.t4v':'Limpide, incolore',
-    'spec.t5':'Point dâ€™Ã©clair','spec.t6':'NÂ° ONU / classe','spec.t7':'DurÃ©e de conservation','spec.t7v':'36 mois',
-    'spec.reg.h':       'RÃ©glementaire (Canada)',
+    'spec.t5':'Point d’éclair','spec.t6':'N° ONU / classe','spec.t7':'Durée de conservation','spec.t7v':'36 mois',
+    'spec.reg.h':       'Réglementaire (Canada)',
     'spec.r1':'COV, % en poids','spec.r2':'COV, g/L',
     'spec.r3':'Emplacement du code-date','spec.r3v':'Fond de la bombe',
-    'spec.r4':'Pays dâ€™origine','spec.r4v':'Voir contenant',
-    'spec.r5':'Ã‰tiquetage','spec.r6':'SIMDUT 2015','spec.r6v':'Conforme',
+    'spec.r4':'Pays d’origine','spec.r4v':'Voir contenant',
+    'spec.r5':'Étiquetage','spec.r6':'SIMDUT 2015','spec.r6v':'Conforme',
     'spec.r7':'RPCC, 2001','spec.r7v':'Conforme',
     'spec.log.h':       'Logistique',
-    'spec.l1':'UnitÃ©s par caisse','spec.l2':'Caisses par palette','spec.l3':'Total par palette',
-    'spec.l4':'Dim. caisse (LÃ—lÃ—H)','spec.l5':'Poids caisse','spec.l6':'CUP (unitÃ©)','spec.l7':'RÃ©f. caisse',
+    'spec.l1':'Unités par caisse','spec.l2':'Caisses par palette','spec.l3':'Total par palette',
+    'spec.l4':'Dim. caisse (L×l×H)','spec.l5':'Poids caisse','spec.l6':'CUP (unité)','spec.l7':'Réf. caisse',
 
     'haz.lbl':          'Dangers et premiers soins',
-    'haz.note':         'Texte repris verbatim de la FDS en vigueur â€” ne pas inventer.',
-    'haz.r1':           'Mention dâ€™avertissement',
+    'haz.note':         'Texte repris verbatim de la FDS en vigueur — ne pas inventer.',
+    'haz.r1':           'Mention d’avertissement',
     'haz.r2':           'Pictogrammes SGH',
     'haz.r3':           'Mentions de danger (H)',
     'haz.r4':           'Conseils de prudence (P)',
     'haz.r5':           'Premiers soins',
-    'haz.placeholder':  'RepÃ¨re FDS',
+    'haz.placeholder':  'Repère FDS',
 
     'dl.eyebrow':       'Documentation',
-    'dl.title':         'TÃ©lÃ©chargements',
-    'dl.sds.en':        'Safety Data Sheet â€” English',
-    'dl.sds.fr':        'Fiche de donnÃ©es de sÃ©curitÃ© â€” FranÃ§ais',
+    'dl.title':         'Téléchargements',
+    'dl.sds.en':        'Safety Data Sheet — English',
+    'dl.sds.fr':        'Fiche de données de sécurité — Français',
     'dl.tds':           'Fiche technique produit',
 
-    'rel.eyebrow':      'Ã€ associer avec',
-    'rel.title':        'Produits associÃ©s',
+    'rel.eyebrow':      'À associer avec',
+    'rel.title':        'Produits associés',
     'rel.viewAll':      'Voir tout le catalogue',
 
     'dist.eyebrow':     'Stocker ce produit',
-    'dist.title':       'Ajoutez-le Ã  vos <em>tablettes.</em>',
+    'dist.title':       'Ajoutez-le à vos <em>tablettes.</em>',
     'dist.a':           'Devenir distributeur',
-    'dist.b':           'TÃ©lÃ©charger la FDS',
+    'dist.b':           'Télécharger la FDS',
 
-    'footer.tag':       'Puissance Â· Performance Â· Kolben',
-    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. ConÃ§u Ã  Hanovre.',
-    'footer.tagline':   'PrÃ©cision allemande Â· Perfection du moteur',
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
   },
 };
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   RENDER â€” related products
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   RENDER — related products
+   ═══════════════════════════════════════════════════════════ */
 function renderRelated(lang) {
   const grid = document.getElementById('related-grid');
   grid.innerHTML = RELATED.map(p => `
@@ -1382,9 +1382,9 @@ function renderRelated(lang) {
   `).join('');
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   I18N â€” apply chrome strings
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   I18N — apply chrome strings
+   ═══════════════════════════════════════════════════════════ */
 function applyI18n(lang) {
   const t = I18N[lang];
   document.documentElement.setAttribute('lang', lang);
@@ -1397,45 +1397,45 @@ function applyI18n(lang) {
   });
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   PACKS â€” per-SKU values that swap when the user picks a pack size.
+/* ═══════════════════════════════════════════════════════════
+   PACKS — per-SKU values that swap when the user picks a pack size.
    Fields that DON'T change between packs (UN class, propellant, flash
    point, VOC %, label "EN / FR", etc.) stay statically in the HTML.
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+   ═══════════════════════════════════════════════════════════ */
 const PACKS = {
   B002A: {
     img:        '../assets/products/brake-cleaner.png',
-    tagSku:     'B002A Â· BRAKE',
-    identSku:   { en: 'SKU B002A',  fr: 'RÃ‰F B002A' },
+    tagSku:     'B002A · BRAKE',
+    identSku:   { en: 'SKU B002A',  fr: 'RÉF B002A' },
     netContents:'500 <span class="lc">g</span>',
     specSub: {
       en: 'Representative values for SKU B002A (500 g aerosol). Final figures verbatim from the current Safety Data Sheet.',
-      fr: 'Valeurs reprÃ©sentatives pour la rÃ©f. B002A (aÃ©rosol 500 g). DonnÃ©es finales reprises verbatim de la fiche de donnÃ©es de sÃ©curitÃ© en vigueur.',
+      fr: 'Valeurs représentatives pour la réf. B002A (aérosol 500 g). Données finales reprises verbatim de la fiche de données de sécurité en vigueur.',
     },
-    caseDim:    '305 Ã— 230 Ã— 230 mm',
+    caseDim:    '305 × 230 × 230 mm',
     caseWeight: '7.4 <span class="lc">kg</span>',
     upc:        '0 60123 45678 9',
     casePartNo: 'KB-B002A-12',
-    dlSdsEn:    'KB-B002A Â· SDS Â· EN Â· 320 KB',
-    dlSdsFr:    'KB-B002A Â· FDS Â· FR Â· 332 KB',
-    dlTds:      'KB-B002A Â· TDS Â· EN / FR Â· 280 KB',
+    dlSdsEn:    'KB-B002A · SDS · EN · 320 KB',
+    dlSdsFr:    'KB-B002A · FDS · FR · 332 KB',
+    dlTds:      'KB-B002A · TDS · EN / FR · 280 KB',
   },
   B002B: {
     img:        '../assets/products/brake-cleaner-mockup-v7.png',
-    tagSku:     'B002B Â· BRAKE',
-    identSku:   { en: 'SKU B002B',  fr: 'RÃ‰F B002B' },
+    tagSku:     'B002B · BRAKE',
+    identSku:   { en: 'SKU B002B',  fr: 'RÉF B002B' },
     netContents:'400 <span class="lc">g</span>',
     specSub: {
       en: 'Representative values for SKU B002B (400 g aerosol). Final figures verbatim from the current Safety Data Sheet.',
-      fr: 'Valeurs reprÃ©sentatives pour la rÃ©f. B002B (aÃ©rosol 400 g). DonnÃ©es finales reprises verbatim de la fiche de donnÃ©es de sÃ©curitÃ© en vigueur.',
+      fr: 'Valeurs représentatives pour la réf. B002B (aérosol 400 g). Données finales reprises verbatim de la fiche de données de sécurité en vigueur.',
     },
-    caseDim:    '290 Ã— 220 Ã— 220 mm',
+    caseDim:    '290 × 220 × 220 mm',
     caseWeight: '6.2 <span class="lc">kg</span>',
     upc:        '0 60123 45679 6',
     casePartNo: 'KB-B002B-12',
-    dlSdsEn:    'KB-B002B Â· SDS Â· EN Â· 318 KB',
-    dlSdsFr:    'KB-B002B Â· FDS Â· FR Â· 329 KB',
-    dlTds:      'KB-B002B Â· TDS Â· EN / FR Â· 276 KB',
+    dlSdsEn:    'KB-B002B · SDS · EN · 318 KB',
+    dlSdsFr:    'KB-B002B · FDS · FR · 329 KB',
+    dlTds:      'KB-B002B · TDS · EN / FR · 276 KB',
   },
 };
 
@@ -1455,9 +1455,9 @@ function applyPack(packKey, lang) {
   document.getElementById('dl-tds-sub').textContent    = p.dlTds;
 }
 
-/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-   BOOT â€” language toggle, pack selector, thumbnail strip
-   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
+/* ═══════════════════════════════════════════════════════════
+   BOOT — language toggle, pack selector, thumbnail strip
+   ═══════════════════════════════════════════════════════════ */
 let state = { lang: 'en', pack: 'B002A' };
 
 function rerender() {
