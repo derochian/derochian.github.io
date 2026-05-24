@@ -678,7 +678,7 @@
 ═══════════════════════════════════════════════════════════ -->
 <section class="lead-sec">
   <div class="container">
-    <a class="lead" href="#" data-comment-anchor="news-lead" data-filter="press">
+    <a class="lead" href="news-article.html" data-comment-anchor="news-lead" data-filter="press">
       <div class="lead__img">
         <div class="lead__img-label" data-i18n="lead.imgLabel">Image · Hannover plant · 16:10</div>
       </div>
@@ -1103,7 +1103,7 @@ function renderCards(lang) {
   ARTICLES.forEach(a => {
     const card = document.createElement('a');
     card.className = 'acard';
-    card.href = '#';
+    card.href = 'news-article.html#' + a.id;
     card.dataset.filter = a.filter;
     card.dataset.title  = (a.title.en + ' ' + a.title.fr).toLowerCase();
     card.dataset.excerpt = (a.excerpt.en + ' ' + a.excerpt.fr).toLowerCase();
