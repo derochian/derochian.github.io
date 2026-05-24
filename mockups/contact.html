@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Contact</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben â€” Contact</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -39,7 +39,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -51,7 +51,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -62,7 +62,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -77,9 +77,9 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ═══════════════════════════════════════════════════════════
-     HERO — black, 80×80 radial-masked grid
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO â€” black, 80Ã—80 radial-masked grid
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -122,7 +122,7 @@
     max-width: 56ch;
   }
 
-  /* Response-time promise card — pulled to the right column */
+  /* Response-time promise card â€” pulled to the right column */
   .promise {
     border-left: 1px solid var(--on-black-border);
     padding: 6px 0 6px 28px;
@@ -151,9 +151,9 @@
     margin-top: 12px;
   }
 
-  /* ═══════════════════════════════════════════════════════════
-     BODY — two-col form + sidebar
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BODY â€” two-col form + sidebar
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .body-sec { background: var(--offwhite); padding: 88px 0 96px; border-bottom: 1px solid var(--rule); }
   .body-wrap {
     display: grid;
@@ -244,9 +244,9 @@
   .form__note { font: 400 12.5px/1.5 'Inter'; color: var(--muted); max-width: 42ch; }
   .form__note b { color: var(--black); font-weight: 600; }
 
-  /* ═══════════════════════════════════════════════════════════
-     SIDEBAR — direct contact + quick routes
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SIDEBAR â€” direct contact + quick routes
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .side { display: flex; flex-direction: column; gap: 24px; }
   .side__card {
     background: var(--white);
@@ -335,9 +335,9 @@
   }
   .quick:hover .quick__arrow { transform: translateX(4px); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      CTA BAND (black)
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .qcta {
     background: var(--black); color: var(--white);
     padding: 72px 0;
@@ -369,7 +369,7 @@
   }
   .qcta__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* ───────── FOOTER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -377,7 +377,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1180px) {
     .hero__inner { grid-template-columns: 1fr; gap: 40px; }
     .promise { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
@@ -403,7 +403,7 @@
 </head>
 <body data-screen-label="10 Contact">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -430,7 +430,7 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
@@ -449,16 +449,16 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      HERO
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="hero" data-comment-anchor="contact-hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow" data-i18n="hero.eyebrow">Contact</div>
       <h1 class="hero__h1" data-i18n="hero.h1">Talk to our <em>Canadian team.</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Distribution, technical, compliance or general — send us a note and you&rsquo;ll reach a person, in English or French, who actually works on the Kolben line in Canada.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Distribution, technical, compliance or general â€” send us a note and you&rsquo;ll reach a person, in English or French, who actually works on the Kolben line in Canada.</p>
     </div>
     <div class="promise">
       <div class="promise__eyebrow" data-i18n="promise.eyebrow">Response time</div>
@@ -470,37 +470,37 @@
         </div>
       </div>
       <div class="promise__chips">
-        <span class="promise__chip" data-i18n="promise.chipA">EN · FR</span>
-        <span class="promise__chip" data-i18n="promise.chipB">Mon–Fri · 08–17 ET</span>
+        <span class="promise__chip" data-i18n="promise.chipA">EN Â· FR</span>
+        <span class="promise__chip" data-i18n="promise.chipB">Monâ€“Fri Â· 08â€“17 ET</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     BODY — form + sidebar
-═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BODY â€” form + sidebar
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="body-sec">
   <div class="container">
     <div class="body-wrap">
 
-      <!-- ────── FORM ────── -->
+      <!-- â”€â”€â”€â”€â”€â”€ FORM â”€â”€â”€â”€â”€â”€ -->
       <form class="form" id="contact-form" novalidate>
         <div class="sh__eyebrow" data-i18n="form.eyebrow">Send a message</div>
         <div class="form__h" data-i18n="form.h">Tell us how we can help.</div>
-        <p class="form__sub" data-i18n="form.sub">Fields marked <span style="color:var(--red); font-family:'JetBrains Mono'; font-weight:500;">*</span> are required. Business contact only — we&rsquo;ll never ask for financial or identity information by form.</p>
+        <p class="form__sub" data-i18n="form.sub">Fields marked <span style="color:var(--red); font-family:'JetBrains Mono'; font-weight:500;">*</span> are required. Business contact only â€” we&rsquo;ll never ask for financial or identity information by form.</p>
         <div class="form__grid">
           <div class="field field--full">
             <label class="field__label" for="inquiry"><span data-i18n="form.f.inquiry">Inquiry type</span><span class="field__req">*</span></label>
             <select class="field__select" id="inquiry" name="inquiry" required>
-              <option value="" data-i18n="form.f.inquiryP">Select an inquiry type…</option>
+              <option value="" data-i18n="form.f.inquiryP">Select an inquiry typeâ€¦</option>
               <option value="general"    data-i18n="inq.general">General inquiry</option>
               <option value="technical"  data-i18n="inq.technical">Technical &amp; product</option>
               <option value="sds"        data-i18n="inq.sds">SDS &amp; compliance</option>
               <option value="sales"      data-i18n="inq.sales">Distributor &amp; sales</option>
               <option value="media"      data-i18n="inq.media">Media &amp; press</option>
             </select>
-            <span class="field__hint" data-i18n="form.f.inquiryH">Routes your message to the right desk — distributor and SDS go straight to specialists.</span>
+            <span class="field__hint" data-i18n="form.f.inquiryH">Routes your message to the right desk â€” distributor and SDS go straight to specialists.</span>
           </div>
 
           <div class="field">
@@ -522,7 +522,7 @@
           <div class="field field--full">
             <label class="field__label" for="province"><span data-i18n="form.f.province">Province / Region</span><span class="field__req">*</span></label>
             <select class="field__select" id="province" name="province" required>
-              <option value="" data-i18n="form.f.provinceP">Select a province or region…</option>
+              <option value="" data-i18n="form.f.provinceP">Select a province or regionâ€¦</option>
               <option value="ab" data-i18n="prov.ab">Alberta</option>
               <option value="bc" data-i18n="prov.bc">British Columbia</option>
               <option value="mb" data-i18n="prov.mb">Manitoba</option>
@@ -533,13 +533,13 @@
               <option value="pe" data-i18n="prov.pe">Prince Edward Island</option>
               <option value="qc" data-i18n="prov.qc">Quebec</option>
               <option value="sk" data-i18n="prov.sk">Saskatchewan</option>
-              <option value="ter" data-i18n="prov.ter">Territories (YT · NT · NU)</option>
+              <option value="ter" data-i18n="prov.ter">Territories (YT Â· NT Â· NU)</option>
               <option value="outside" data-i18n="prov.outside">Outside Canada</option>
             </select>
           </div>
           <div class="field field--full">
             <label class="field__label" for="message"><span data-i18n="form.f.message">Message</span><span class="field__req">*</span></label>
-            <textarea class="field__textarea" id="message" name="message" rows="6" required data-i18n-ph="form.f.messageP" placeholder="Tell us a bit about your business and what you&rsquo;re looking for — product, technical question, distribution, or something else."></textarea>
+            <textarea class="field__textarea" id="message" name="message" rows="6" required data-i18n-ph="form.f.messageP" placeholder="Tell us a bit about your business and what you&rsquo;re looking for â€” product, technical question, distribution, or something else."></textarea>
           </div>
 
           <label class="consent" for="consent">
@@ -557,12 +557,12 @@
           </p>
           <button type="submit" class="btn btn--primary btn--lg">
             <span data-i18n="form.submit">Send Message</span>
-            <span class="arrow">→</span>
+            <span class="arrow">â†’</span>
           </button>
         </div>
       </form>
 
-      <!-- ────── SIDEBAR ────── -->
+      <!-- â”€â”€â”€â”€â”€â”€ SIDEBAR â”€â”€â”€â”€â”€â”€ -->
       <aside class="side">
         <div class="side__card is-dark">
           <div class="side__eyebrow" data-i18n="side.eyebrow">Direct contact</div>
@@ -573,9 +573,9 @@
               <div>
                 <div class="contact-row__k" data-i18n="side.k.address">Address</div>
                 <div class="contact-row__v is-prose">
-                  <span data-i18n="side.v.address">2400 Matheson Blvd E, Suite 200<br/>Mississauga, ON · L4W 5K4</span>
+                  <span data-i18n="side.v.address">2400 Matheson Blvd E, Suite 200<br/>Mississauga, ON Â· L4W 5K4</span>
                 </div>
-                <div class="contact-row__sub" data-i18n="side.v.addressSub">Placeholder address — confirm before public launch.</div>
+                <div class="contact-row__sub" data-i18n="side.v.addressSub">Placeholder address â€” confirm before public launch.</div>
               </div>
             </div>
             <div class="contact-row">
@@ -583,7 +583,7 @@
               <div>
                 <div class="contact-row__k" data-i18n="side.k.phone">Phone</div>
                 <div class="contact-row__v">1-800-KOLBEN-1</div>
-                <div class="contact-row__sub" data-i18n="side.v.phoneSub">Toll-free · Canada-wide</div>
+                <div class="contact-row__sub" data-i18n="side.v.phoneSub">Toll-free Â· Canada-wide</div>
               </div>
             </div>
             <div class="contact-row">
@@ -591,14 +591,14 @@
               <div>
                 <div class="contact-row__k" data-i18n="side.k.email">Email</div>
                 <div class="contact-row__v">hello@kolben.ca</div>
-                <div class="contact-row__sub" data-i18n="side.v.emailSub">Distribution · partners@kolben.ca · SDS · sds@kolben.ca</div>
+                <div class="contact-row__sub" data-i18n="side.v.emailSub">Distribution Â· partners@kolben.ca Â· SDS Â· sds@kolben.ca</div>
               </div>
             </div>
             <div class="contact-row" style="border-bottom: 0;">
               <div class="contact-row__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
               <div>
                 <div class="contact-row__k" data-i18n="side.k.hours">Hours</div>
-                <div class="contact-row__v">MON–FRI · 08:00–17:00 ET</div>
+                <div class="contact-row__v">MONâ€“FRI Â· 08:00â€“17:00 ET</div>
                 <div class="contact-row__sub" data-i18n="side.v.hoursSub">Closed weekends &amp; statutory holidays. Distributor on-call coverage by arrangement.</div>
               </div>
             </div>
@@ -617,7 +617,7 @@
                 <div class="quick__k" data-i18n="quick.aK">Trade partners</div>
                 <div class="quick__h"><span data-i18n="quick.aH">Looking to carry Kolben?</span> <b data-i18n="quick.aB">Become a Distributor</b></div>
               </div>
-              <div class="quick__arrow">→</div>
+              <div class="quick__arrow">â†’</div>
             </a>
             <a class="quick" href="where-to-buy.html">
               <div class="quick__icon">
@@ -627,7 +627,7 @@
                 <div class="quick__k" data-i18n="quick.bK">Buyers</div>
                 <div class="quick__h"><span data-i18n="quick.bH">Need to buy Kolben?</span> <b data-i18n="quick.bB">Where to Buy</b></div>
               </div>
-              <div class="quick__arrow">→</div>
+              <div class="quick__arrow">â†’</div>
             </a>
             <a class="quick" href="#">
               <div class="quick__icon">
@@ -637,7 +637,7 @@
                 <div class="quick__k" data-i18n="quick.cK">Safety &amp; compliance</div>
                 <div class="quick__h"><span data-i18n="quick.cH">Need a Safety Data Sheet?</span> <b data-i18n="quick.cB">Compliance &amp; SDS</b></div>
               </div>
-              <div class="quick__arrow">→</div>
+              <div class="quick__arrow">â†’</div>
             </a>
           </div>
         </div>
@@ -647,24 +647,24 @@
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -677,7 +677,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -687,7 +687,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -697,7 +697,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -730,29 +730,29 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    I18N
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -768,29 +768,29 @@ const I18N = {
 
     'hero.eyebrow':     'Contact',
     'hero.h1':          'Talk to our <em>Canadian team.</em>',
-    'hero.sub':         'Distribution, technical, compliance or general — send us a note and you&rsquo;ll reach a person, in English or French, who actually works on the Kolben line in Canada.',
+    'hero.sub':         'Distribution, technical, compliance or general â€” send us a note and you&rsquo;ll reach a person, in English or French, who actually works on the Kolben line in Canada.',
 
     'promise.eyebrow':  'Response time',
     'promise.unit':     'Business day',
     'promise.sub':      'We respond within one business day. Inquiries received after 17:00 ET roll to the next.',
-    'promise.chipA':    'EN · FR',
-    'promise.chipB':    'Mon–Fri · 08–17 ET',
+    'promise.chipA':    'EN Â· FR',
+    'promise.chipB':    'Monâ€“Fri Â· 08â€“17 ET',
 
     'form.eyebrow':     'Send a message',
     'form.h':           'Tell us how we can help.',
-    'form.sub':         'Fields marked <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> are required. Business contact only — we&rsquo;ll never ask for financial or identity information by form.',
+    'form.sub':         'Fields marked <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> are required. Business contact only â€” we&rsquo;ll never ask for financial or identity information by form.',
     'form.f.inquiry':   'Inquiry type',
-    'form.f.inquiryP':  'Select an inquiry type…',
-    'form.f.inquiryH':  'Routes your message to the right desk — distributor and SDS go straight to specialists.',
+    'form.f.inquiryP':  'Select an inquiry typeâ€¦',
+    'form.f.inquiryH':  'Routes your message to the right desk â€” distributor and SDS go straight to specialists.',
     'form.f.name':      'Name',
     'form.f.company':   'Company',
     'form.f.email':     'Work email',
     'form.f.phone':     'Phone',
     'form.f.phoneOpt':  '(optional)',
     'form.f.province':  'Province / Region',
-    'form.f.provinceP': 'Select a province or region…',
+    'form.f.provinceP': 'Select a province or regionâ€¦',
     'form.f.message':   'Message',
-    'form.f.messageP':  'Tell us a bit about your business and what you’re looking for — product, technical question, distribution, or something else.',
+    'form.f.messageP':  'Tell us a bit about your business and what youâ€™re looking for â€” product, technical question, distribution, or something else.',
     'form.consent.b':   'Consent to contact.',
     'form.consent.body':' I agree the Kolben team may contact me by email or phone about this inquiry. We don&rsquo;t share details outside our Canadian team.',
     'form.note.b':      'EN / FR.',
@@ -813,18 +813,18 @@ const I18N = {
     'prov.pe': 'Prince Edward Island',
     'prov.qc': 'Quebec',
     'prov.sk': 'Saskatchewan',
-    'prov.ter':'Territories (YT · NT · NU)',
+    'prov.ter':'Territories (YT Â· NT Â· NU)',
     'prov.outside': 'Outside Canada',
 
     'side.eyebrow':     'Direct contact',
     'side.h':           'Canadian office',
     'side.k.address':   'Address',
-    'side.v.address':   '2400 Matheson Blvd E, Suite 200<br/>Mississauga, ON · L4W 5K4',
-    'side.v.addressSub':'Placeholder address — confirm before public launch.',
+    'side.v.address':   '2400 Matheson Blvd E, Suite 200<br/>Mississauga, ON Â· L4W 5K4',
+    'side.v.addressSub':'Placeholder address â€” confirm before public launch.',
     'side.k.phone':     'Phone',
-    'side.v.phoneSub':  'Toll-free · Canada-wide',
+    'side.v.phoneSub':  'Toll-free Â· Canada-wide',
     'side.k.email':     'Email',
-    'side.v.emailSub':  'Distribution · partners@kolben.ca · SDS · sds@kolben.ca',
+    'side.v.emailSub':  'Distribution Â· partners@kolben.ca Â· SDS Â· sds@kolben.ca',
     'side.k.hours':     'Hours',
     'side.v.hoursSub':  'Closed weekends & statutory holidays. Distributor on-call coverage by arrangement.',
 
@@ -846,83 +846,83 @@ const I18N = {
     'qcta.a':           'Become a Distributor',
     'qcta.b':           'Find a Distributor',
 
-    'footer.tag':       'Power · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Power · Performance · Kolben',
+    'footer.tag':       'Power Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Power Â· Performance Â· Kolben',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Nous joindre',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'hero.eyebrow':     'Contact / Nous joindre',
-    'hero.h1':          'Parlez à notre <em>équipe canadienne.</em>',
-    'hero.sub':         'Distribution, technique, conformité ou général — écrivez-nous et vous joindrez une personne, en anglais ou en français, qui travaille réellement sur la gamme Kolben au Canada.',
+    'hero.h1':          'Parlez Ã  notre <em>Ã©quipe canadienne.</em>',
+    'hero.sub':         'Distribution, technique, conformitÃ© ou gÃ©nÃ©ral â€” Ã©crivez-nous et vous joindrez une personne, en anglais ou en franÃ§ais, qui travaille rÃ©ellement sur la gamme Kolben au Canada.',
 
-    'promise.eyebrow':  'Délai de réponse',
-    'promise.unit':     'Jour ouvré',
-    'promise.sub':      'Nous répondons sous un jour ouvré. Les demandes reçues après 17 h HE basculent au lendemain.',
-    'promise.chipA':    'EN · FR',
-    'promise.chipB':    'Lun–Ven · 08–17 HE',
+    'promise.eyebrow':  'DÃ©lai de rÃ©ponse',
+    'promise.unit':     'Jour ouvrÃ©',
+    'promise.sub':      'Nous rÃ©pondons sous un jour ouvrÃ©. Les demandes reÃ§ues aprÃ¨s 17 h HE basculent au lendemain.',
+    'promise.chipA':    'EN Â· FR',
+    'promise.chipB':    'Lunâ€“Ven Â· 08â€“17 HE',
 
     'form.eyebrow':     'Envoyer un message',
     'form.h':           'Dites-nous comment nous pouvons aider.',
-    'form.sub':         'Les champs marqués <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> sont obligatoires. Contact commercial uniquement — nous ne demandons jamais d’information financière ou d’identité par formulaire.',
+    'form.sub':         'Les champs marquÃ©s <span style="color:var(--red); font-family:\'JetBrains Mono\'; font-weight:500;">*</span> sont obligatoires. Contact commercial uniquement â€” nous ne demandons jamais dâ€™information financiÃ¨re ou dâ€™identitÃ© par formulaire.',
     'form.f.inquiry':   'Type de demande',
-    'form.f.inquiryP':  'Sélectionnez un type de demande…',
-    'form.f.inquiryH':  'Oriente votre message vers le bon bureau — distributeur et FDS vont directement aux spécialistes.',
+    'form.f.inquiryP':  'SÃ©lectionnez un type de demandeâ€¦',
+    'form.f.inquiryH':  'Oriente votre message vers le bon bureau â€” distributeur et FDS vont directement aux spÃ©cialistes.',
     'form.f.name':      'Nom',
     'form.f.company':   'Entreprise',
     'form.f.email':     'Adresse courriel professionnelle',
-    'form.f.phone':     'Téléphone',
+    'form.f.phone':     'TÃ©lÃ©phone',
     'form.f.phoneOpt':  '(facultatif)',
-    'form.f.province':  'Province / région',
-    'form.f.provinceP': 'Sélectionnez une province ou région…',
+    'form.f.province':  'Province / rÃ©gion',
+    'form.f.provinceP': 'SÃ©lectionnez une province ou rÃ©gionâ€¦',
     'form.f.message':   'Message',
-    'form.f.messageP':  'Décrivez brièvement votre entreprise et ce que vous recherchez — produit, question technique, distribution ou autre.',
+    'form.f.messageP':  'DÃ©crivez briÃ¨vement votre entreprise et ce que vous recherchez â€” produit, question technique, distribution ou autre.',
     'form.consent.b':   'Consentement au contact.',
-    'form.consent.body':' J’autorise l’équipe Kolben à me contacter par courriel ou téléphone à propos de cette demande. Nous ne partageons pas les coordonnées en dehors de notre équipe canadienne.',
+    'form.consent.body':' Jâ€™autorise lâ€™Ã©quipe Kolben Ã  me contacter par courriel ou tÃ©lÃ©phone Ã  propos de cette demande. Nous ne partageons pas les coordonnÃ©es en dehors de notre Ã©quipe canadienne.',
     'form.note.b':      'EN / FR.',
-    'form.note.body':   ' Notre équipe répond sous un jour ouvré, en anglais ou en français. Aucune information financière ni d’identité collectée.',
+    'form.note.body':   ' Notre Ã©quipe rÃ©pond sous un jour ouvrÃ©, en anglais ou en franÃ§ais. Aucune information financiÃ¨re ni dâ€™identitÃ© collectÃ©e.',
     'form.submit':      'Envoyer le message',
 
-    'inq.general':      'Demande générale',
+    'inq.general':      'Demande gÃ©nÃ©rale',
     'inq.technical':    'Technique et produit',
-    'inq.sds':          'FDS et conformité',
+    'inq.sds':          'FDS et conformitÃ©',
     'inq.sales':        'Distributeur et ventes',
-    'inq.media':        'Médias et presse',
+    'inq.media':        'MÃ©dias et presse',
 
     'prov.ab': 'Alberta',
     'prov.bc': 'Colombie-Britannique',
     'prov.mb': 'Manitoba',
     'prov.nb': 'Nouveau-Brunswick',
     'prov.nl': 'Terre-Neuve-et-Labrador',
-    'prov.ns': 'Nouvelle-Écosse',
+    'prov.ns': 'Nouvelle-Ã‰cosse',
     'prov.on': 'Ontario',
-    'prov.pe': 'Île-du-Prince-Édouard',
-    'prov.qc': 'Québec',
+    'prov.pe': 'ÃŽle-du-Prince-Ã‰douard',
+    'prov.qc': 'QuÃ©bec',
     'prov.sk': 'Saskatchewan',
-    'prov.ter':'Territoires (YT · NT · NU)',
+    'prov.ter':'Territoires (YT Â· NT Â· NU)',
     'prov.outside': 'Hors du Canada',
 
-    'side.eyebrow':     'Coordonnées directes',
+    'side.eyebrow':     'CoordonnÃ©es directes',
     'side.h':           'Bureau canadien',
     'side.k.address':   'Adresse',
-    'side.v.address':   '2400, boul. Matheson Est, bureau 200<br/>Mississauga (ON) · L4W 5K4',
-    'side.v.addressSub':'Adresse de placeholder — à confirmer avant la mise en ligne.',
-    'side.k.phone':     'Téléphone',
-    'side.v.phoneSub':  'Sans frais · partout au Canada',
+    'side.v.address':   '2400, boul. Matheson Est, bureau 200<br/>Mississauga (ON) Â· L4W 5K4',
+    'side.v.addressSub':'Adresse de placeholder â€” Ã  confirmer avant la mise en ligne.',
+    'side.k.phone':     'TÃ©lÃ©phone',
+    'side.v.phoneSub':  'Sans frais Â· partout au Canada',
     'side.k.email':     'Courriel',
-    'side.v.emailSub':  'Distribution · partners@kolben.ca · FDS · sds@kolben.ca',
+    'side.v.emailSub':  'Distribution Â· partners@kolben.ca Â· FDS Â· sds@kolben.ca',
     'side.k.hours':     'Heures',
-    'side.v.hoursSub':  'Fermé les week-ends et jours fériés. Couverture distributeur sur appel par entente.',
+    'side.v.hoursSub':  'FermÃ© les week-ends et jours fÃ©riÃ©s. Couverture distributeur sur appel par entente.',
 
     'quick.eyebrow':    'Raccourcis',
     'quick.h':          'Passez le formulaire.',
@@ -931,20 +931,20 @@ const I18N = {
     'quick.aB':         'Devenir distributeur',
     'quick.bK':         'Acheteurs',
     'quick.bH':         'Vous voulez acheter Kolben ?',
-    'quick.bB':         'Où acheter',
-    'quick.cK':         'Sécurité et conformité',
-    'quick.cH':         'Besoin d’une fiche de données de sécurité ?',
-    'quick.cB':         'Conformité et FDS',
+    'quick.bB':         'OÃ¹ acheter',
+    'quick.cK':         'SÃ©curitÃ© et conformitÃ©',
+    'quick.cH':         'Besoin dâ€™une fiche de donnÃ©es de sÃ©curitÃ© ?',
+    'quick.cB':         'ConformitÃ© et FDS',
 
     'qcta.eyebrow':     'Pour les partenaires commerciaux',
-    'qcta.h':           'Prêt à <em>devenir partenaire de Kolben ?</em>',
-    'qcta.sub':         'Distribution strictement commerciale partout au Canada. Étiquettes bilingues EN/FR, marges distributeur, expédition 48 H depuis YYZ ou YEG. Postulez pour ajouter Kolben à vos rayons.',
+    'qcta.h':           'PrÃªt Ã  <em>devenir partenaire de Kolben ?</em>',
+    'qcta.sub':         'Distribution strictement commerciale partout au Canada. Ã‰tiquettes bilingues EN/FR, marges distributeur, expÃ©dition 48 H depuis YYZ ou YEG. Postulez pour ajouter Kolben Ã  vos rayons.',
     'qcta.a':           'Devenir distributeur',
     'qcta.b':           'Trouver un distributeur',
 
-    'footer.tag':       'Puissance · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Puissance · Performance · Kolben',
+    'footer.tag':       'Puissance Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Puissance Â· Performance Â· Kolben',
   },
 };
 
@@ -977,7 +977,7 @@ document.getElementById('contact-form').addEventListener('submit', e => {
   e.preventDefault();
   const btn = e.target.querySelector('button[type="submit"]');
   const orig = btn.innerHTML;
-  btn.innerHTML = `<span>${state.lang === 'fr' ? 'Reçu — merci' : 'Received — thank you'}</span><span class="arrow">✓</span>`;
+  btn.innerHTML = `<span>${state.lang === 'fr' ? 'ReÃ§u â€” merci' : 'Received â€” thank you'}</span><span class="arrow">âœ“</span>`;
   btn.style.background = 'var(--black)';
   setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2400);
 });

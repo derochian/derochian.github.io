@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — News &amp; Press</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben â€” News &amp; Press</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -30,7 +30,7 @@
     --on-black-hover:   rgba(255,255,255,.12);
     --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
-    /* Brushed metal — placeholder image surface */
+    /* Brushed metal â€” placeholder image surface */
     --brushed:
       linear-gradient(180deg,
         rgba(255,255,255,.55) 0%,
@@ -54,7 +54,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -66,7 +66,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -77,7 +77,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -92,9 +92,9 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      HERO
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -160,9 +160,9 @@
   .hero__rss-links a span.arrow { color: var(--gold); transition: transform 220ms var(--ease); }
   .hero__rss-links a:hover span.arrow { transform: translate(3px, -3px); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FILTERS + SEARCH
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .filters-sec {
     background: var(--white);
     padding: 28px 0 32px;
@@ -217,13 +217,13 @@
   }
   .search-wrap input::placeholder { color: rgba(0,0,0,.42); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      CATEGORY TAG TREATMENTS
      - Press Releases:  red text (signature)
      - Product News:    black filled tag (white text)
      - Technical:       hairline outlined, black mono text
      - Company:         muted text, simple
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .ctag {
     display: inline-flex; align-items: center;
     font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
@@ -243,9 +243,9 @@
     margin-right: 10px;
   }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FEATURED / LEAD
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .lead-sec { background: var(--white); padding: 56px 0 0; }
   .lead {
     display: grid; grid-template-columns: 1.1fr 1fr; gap: 0;
@@ -322,9 +322,9 @@
     transition: transform 220ms var(--ease);
   }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      ARTICLE GRID
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .grid-sec { background: var(--white); padding: 56px 0 88px; }
   .grid-head {
     display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 28px; flex-wrap: wrap;
@@ -436,9 +436,9 @@
   .noresults__h { font: 700 22px/1.1 'Jost'; letter-spacing: -0.01em; text-transform: uppercase; color: var(--black); margin-bottom: 8px; }
   .noresults__sub { font: 400 14px/1.55 'Inter'; color: var(--muted); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PAGINATION
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .pag {
     margin-top: 48px;
     display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap;
@@ -458,9 +458,9 @@
   .pag__btn.is-disabled { opacity: .35; pointer-events: none; }
   .pag__spacer { font: 500 12px/1 'JetBrains Mono'; color: var(--muted); padding: 0 6px; }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      NEWSLETTER
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .news-band {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -532,9 +532,9 @@
   }
   .nl-foot b { color: var(--gold); font-weight: 600; font-family: 'JetBrains Mono'; letter-spacing: .12em; }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FOOTER
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -542,7 +542,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1180px) {
     .hero__inner { grid-template-columns: 1fr; gap: 40px; }
     .hero__rss { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
@@ -572,7 +572,7 @@
 </head>
 <body data-screen-label="12 News &amp; Press">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -599,7 +599,7 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
@@ -618,43 +618,43 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      HERO
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="hero" data-comment-anchor="news-hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow">
         <span data-i18n="hero.eyebrow">News</span>
-        <span class="mono" data-i18n="hero.mono">2026 · ISSUE 03</span>
+        <span class="mono" data-i18n="hero.mono">2026 Â· ISSUE 03</span>
       </div>
       <h1 class="hero__h1" data-i18n="hero.h1">News &amp; <em>press.</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Releases, product news, and technical writing from the Kolben Canada team — engineering notes for distributors, fleets, and shops carrying the line.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Releases, product news, and technical writing from the Kolben Canada team â€” engineering notes for distributors, fleets, and shops carrying the line.</p>
     </div>
     <div class="hero__rss">
       <div class="hero__rss-eyebrow" data-i18n="hero.rss.eyebrow">Subscribe</div>
       <div class="hero__rss-links">
         <a href="#newsletter">
-          <span data-i18n="hero.rss.a">Newsletter — EN · FR</span>
-          <span class="arrow">↗</span>
+          <span data-i18n="hero.rss.a">Newsletter â€” EN Â· FR</span>
+          <span class="arrow">â†—</span>
         </a>
         <a href="#">
           <span data-i18n="hero.rss.b">RSS feed</span>
-          <span class="arrow">↗</span>
+          <span class="arrow">â†—</span>
         </a>
         <a href="contact.html?inquiry=media">
           <span data-i18n="hero.rss.c">Press contact</span>
-          <span class="arrow">↗</span>
+          <span class="arrow">â†—</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FILTERS + SEARCH
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="filters-sec">
   <div class="container filters">
     <div class="chips" id="chips">
@@ -668,19 +668,19 @@
       <div class="search-wrap__icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </div>
-      <input id="search" type="search" autocomplete="off" data-i18n-ph="search.ph" placeholder="Search articles…" />
+      <input id="search" type="search" autocomplete="off" data-i18n-ph="search.ph" placeholder="Search articlesâ€¦" />
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FEATURED / LEAD
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="lead-sec">
   <div class="container">
     <a class="lead" href="#" data-comment-anchor="news-lead" data-filter="press">
       <div class="lead__img">
-        <div class="lead__img-label" data-i18n="lead.imgLabel">Image · Hannover plant · 16:10</div>
+        <div class="lead__img-label" data-i18n="lead.imgLabel">Image Â· Hannover plant Â· 16:10</div>
       </div>
       <div class="lead__body">
         <div>
@@ -691,19 +691,19 @@
           </div>
         </div>
         <h2 class="lead__title" data-i18n="lead.title">Kolben Canada opens <em>Mississauga distribution hub</em> to serve Eastern fleets.</h2>
-        <p class="lead__excerpt" data-i18n="lead.excerpt">A 140,000 ft² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy — confirm location and metrics before public release.</p>
+        <p class="lead__excerpt" data-i18n="lead.excerpt">A 140,000 ftÂ² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy â€” confirm location and metrics before public release.</p>
         <div class="lead__cta">
           <span data-i18n="lead.cta">Read article</span>
-          <span class="lead__arrow">→</span>
+          <span class="lead__arrow">â†’</span>
         </div>
       </div>
     </a>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      GRID
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="grid-sec">
   <div class="container">
     <div class="grid-head">
@@ -724,70 +724,70 @@
       <!-- Cards rendered via JS for tidiness -->
       <div class="noresults" id="noresults">
         <div class="noresults__h" data-i18n="noresults.h">No articles matched.</div>
-        <div class="noresults__sub" data-i18n="noresults.sub">Clear the filter or try a different search term — we publish technical notes and product news monthly.</div>
+        <div class="noresults__sub" data-i18n="noresults.sub">Clear the filter or try a different search term â€” we publish technical notes and product news monthly.</div>
       </div>
     </div>
 
     <!-- Pagination -->
     <nav class="pag" aria-label="Pagination">
       <button class="pag__btn is-prev is-disabled">
-        <span data-i18n="pag.prev">← Prev</span>
+        <span data-i18n="pag.prev">â† Prev</span>
       </button>
       <button class="pag__btn is-active">01</button>
       <button class="pag__btn">02</button>
       <button class="pag__btn">03</button>
-      <span class="pag__spacer">·</span>
+      <span class="pag__spacer">Â·</span>
       <button class="pag__btn">07</button>
       <button class="pag__btn is-next">
-        <span data-i18n="pag.next">Next →</span>
+        <span data-i18n="pag.next">Next â†’</span>
       </button>
     </nav>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      NEWSLETTER BAND
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="news-band is-light" id="newsletter" data-comment-anchor="news-newsletter">
   <div class="container news-band__inner">
     <div>
       <div class="news-band__eyebrow" data-i18n="nl.eyebrow">Newsletter</div>
       <h2 class="news-band__h" data-i18n="nl.h">One bulletin a month. <em>No marketing fluff.</em></h2>
-      <p class="news-band__sub" data-i18n="nl.sub">Releases, product additions, technical notes, and SDS revisions — bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.</p>
+      <p class="news-band__sub" data-i18n="nl.sub">Releases, product additions, technical notes, and SDS revisions â€” bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.</p>
     </div>
     <form class="news-band__form" id="nl-form" novalidate>
       <label class="nl-field" for="nl-email">
         <input id="nl-email" type="email" required data-i18n-ph="nl.ph" placeholder="work-email@company.ca" />
         <button type="submit">
           <span data-i18n="nl.submit">Subscribe</span>
-          <span class="arrow">→</span>
+          <span class="arrow">â†’</span>
         </button>
       </label>
       <div class="nl-foot">
-        <span data-i18n="nl.foot1"><b>EN · FR.</b> One email per month. Distributor &amp; trade-partner desk only — no consumer spam.</span>
+        <span data-i18n="nl.foot1"><b>EN Â· FR.</b> One email per month. Distributor &amp; trade-partner desk only â€” no consumer spam.</span>
       </div>
     </form>
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -800,7 +800,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -810,7 +810,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -820,7 +820,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -853,107 +853,107 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   ARTICLES — EN / FR registry.
-   Categories: press · product · technical · company
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   ARTICLES â€” EN / FR registry.
+   Categories: press Â· product Â· technical Â· company
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const ARTICLES = [
   { id: 'a1', filter: 'product', dark: false,
     date: '2026-05-08', rt: '3 MIN',
     title: { en: 'Three new SKUs added to the engine-care line for 2026.',
-             fr: 'Trois nouvelles UGS ajoutées à la gamme entretien moteur 2026.' },
+             fr: 'Trois nouvelles UGS ajoutÃ©es Ã  la gamme entretien moteur 2026.' },
     excerpt: { en: 'Kolben extends the additive range with two diesel-specific cleaners and an oil-system stabilizer for high-mileage fleets.',
-               fr: 'Kolben élargit la gamme d’additifs avec deux nettoyants diesel spécifiques et un stabilisateur du circuit d’huile pour flottes à kilométrage élevé.' },
-    imgLabel: { en: 'Image · KB-340 product trio · 16:9',
-                fr: 'Image · trio produits KB-340 · 16:9' } },
+               fr: 'Kolben Ã©largit la gamme dâ€™additifs avec deux nettoyants diesel spÃ©cifiques et un stabilisateur du circuit dâ€™huile pour flottes Ã  kilomÃ©trage Ã©levÃ©.' },
+    imgLabel: { en: 'Image Â· KB-340 product trio Â· 16:9',
+                fr: 'Image Â· trio produits KB-340 Â· 16:9' } },
 
   { id: 'a2', filter: 'technical', dark: false,
     date: '2026-05-02', rt: '6 MIN',
     title: { en: 'How to choose a non-chlorinated brake cleaner for shop and fleet use.',
-             fr: 'Comment choisir un nettoyant freins non chloré pour atelier et flotte.' },
-    excerpt: { en: 'Solvent class, flash point, residue, and OEM-approval implications — a side-by-side guide for service techs and procurement.',
-               fr: 'Classe de solvant, point d’éclair, résidus et implications d’homologation OEM — un guide comparatif pour techniciens et acheteurs.' },
-    imgLabel: { en: 'Image · brake-caliper detail · 16:9',
-                fr: 'Image · détail étrier de frein · 16:9' } },
+             fr: 'Comment choisir un nettoyant freins non chlorÃ© pour atelier et flotte.' },
+    excerpt: { en: 'Solvent class, flash point, residue, and OEM-approval implications â€” a side-by-side guide for service techs and procurement.',
+               fr: 'Classe de solvant, point dâ€™Ã©clair, rÃ©sidus et implications dâ€™homologation OEM â€” un guide comparatif pour techniciens et acheteurs.' },
+    imgLabel: { en: 'Image Â· brake-caliper detail Â· 16:9',
+                fr: 'Image Â· dÃ©tail Ã©trier de frein Â· 16:9' } },
 
   { id: 'a3', filter: 'press', dark: true,
     date: '2026-04-22', rt: '2 MIN',
-    title: { en: 'Kolben joins Mécanex Montréal 2026 trade event in October.',
-             fr: 'Kolben sera présente au salon Mécanex Montréal 2026 en octobre.' },
-    excerpt: { en: 'The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder — confirm date.',
-               fr: 'La marque confirme sa première participation à un salon canadien, partageant un stand avec deux partenaires distribution. Placeholder — date à confirmer.' },
-    imgLabel: { en: 'Image · event hall placeholder · 16:9',
-                fr: 'Image · salle d’événement placeholder · 16:9' } },
+    title: { en: 'Kolben joins MÃ©canex MontrÃ©al 2026 trade event in October.',
+             fr: 'Kolben sera prÃ©sente au salon MÃ©canex MontrÃ©al 2026 en octobre.' },
+    excerpt: { en: 'The brand confirms its first Canadian trade-show appearance, sharing booth space with two distribution partners. Placeholder â€” confirm date.',
+               fr: 'La marque confirme sa premiÃ¨re participation Ã  un salon canadien, partageant un stand avec deux partenaires distribution. Placeholder â€” date Ã  confirmer.' },
+    imgLabel: { en: 'Image Â· event hall placeholder Â· 16:9',
+                fr: 'Image Â· salle dâ€™Ã©vÃ©nement placeholder Â· 16:9' } },
 
   { id: 'a4', filter: 'technical', dark: false,
     date: '2026-04-15', rt: '5 MIN',
     title: { en: 'Why coolant matters: long-life OAT versus conventional formulations.',
-             fr: 'Pourquoi le liquide de refroidissement compte : OAT longue durée contre formules conventionnelles.' },
+             fr: 'Pourquoi le liquide de refroidissement compte : OAT longue durÃ©e contre formules conventionnelles.' },
     excerpt: { en: 'A field note on coolant chemistry, OEM-approval coverage, and the cost-per-kilometre case for switching to a long-life OAT.',
-               fr: 'Une note terrain sur la chimie des liquides, la couverture d’homologations OEM et le coût-au-kilomètre du passage à un OAT longue durée.' },
-    imgLabel: { en: 'Image · radiator cap macro · 16:9',
-                fr: 'Image · macro bouchon radiateur · 16:9' } },
+               fr: 'Une note terrain sur la chimie des liquides, la couverture dâ€™homologations OEM et le coÃ»t-au-kilomÃ¨tre du passage Ã  un OAT longue durÃ©e.' },
+    imgLabel: { en: 'Image Â· radiator cap macro Â· 16:9',
+                fr: 'Image Â· macro bouchon radiateur Â· 16:9' } },
 
   { id: 'a5', filter: 'product', dark: false,
     date: '2026-04-03', rt: '3 MIN',
-    title: { en: 'DOT 4 Brake Fluid revised — higher dry boiling point, same SKU.',
-             fr: 'Liquide de frein DOT 4 révisé — point d’ébullition sec plus élevé, même UGS.' },
-    excerpt: { en: 'A reformulation lifts the dry boiling point to 265 °C while keeping ABS / ESP and modern hydraulic-clutch compatibility. New SDS revision attached.',
-               fr: 'Une reformulation porte le point d’ébullition sec à 265 °C tout en conservant la compatibilité ABS / ESP et embrayages hydrauliques modernes. Nouvelle révision FDS jointe.' },
-    imgLabel: { en: 'Image · DOT 4 bottle · 16:9',
-                fr: 'Image · flacon DOT 4 · 16:9' } },
+    title: { en: 'DOT 4 Brake Fluid revised â€” higher dry boiling point, same SKU.',
+             fr: 'Liquide de frein DOT 4 rÃ©visÃ© â€” point dâ€™Ã©bullition sec plus Ã©levÃ©, mÃªme UGS.' },
+    excerpt: { en: 'A reformulation lifts the dry boiling point to 265 Â°C while keeping ABS / ESP and modern hydraulic-clutch compatibility. New SDS revision attached.',
+               fr: 'Une reformulation porte le point dâ€™Ã©bullition sec Ã  265 Â°C tout en conservant la compatibilitÃ© ABS / ESP et embrayages hydrauliques modernes. Nouvelle rÃ©vision FDS jointe.' },
+    imgLabel: { en: 'Image Â· DOT 4 bottle Â· 16:9',
+                fr: 'Image Â· flacon DOT 4 Â· 16:9' } },
 
   { id: 'a6', filter: 'press', dark: true,
     date: '2026-03-19', rt: '2 MIN',
     title: { en: 'Kolben signs Western Canada distribution agreement with FleetSource AB.',
-             fr: 'Kolben signe un accord de distribution dans l’Ouest canadien avec FleetSource AB.' },
-    excerpt: { en: 'A multi-year partnership covering Alberta, Saskatchewan, and Manitoba. Placeholder partner name — confirm before publication.',
-               fr: 'Un partenariat pluriannuel couvrant l’Alberta, la Saskatchewan et le Manitoba. Nom de partenaire placeholder — à confirmer avant publication.' },
-    imgLabel: { en: 'Image · handshake placeholder · 16:9',
-                fr: 'Image · poignée de main placeholder · 16:9' } },
+             fr: 'Kolben signe un accord de distribution dans lâ€™Ouest canadien avec FleetSource AB.' },
+    excerpt: { en: 'A multi-year partnership covering Alberta, Saskatchewan, and Manitoba. Placeholder partner name â€” confirm before publication.',
+               fr: 'Un partenariat pluriannuel couvrant lâ€™Alberta, la Saskatchewan et le Manitoba. Nom de partenaire placeholder â€” Ã  confirmer avant publication.' },
+    imgLabel: { en: 'Image Â· handshake placeholder Â· 16:9',
+                fr: 'Image Â· poignÃ©e de main placeholder Â· 16:9' } },
 
   { id: 'a7', filter: 'company', dark: true,
     date: '2026-03-04', rt: '4 MIN',
     title: { en: 'Inside Kolben: who actually answers your distributor email.',
-             fr: 'Dans les coulisses de Kolben : qui répond réellement à votre courriel distributeur.' },
-    excerpt: { en: 'A short profile of the Canadian customer-service desk — bilingual, based in Mississauga, with workshop experience between them.',
-               fr: 'Un court portrait de l’équipe canadienne de service à la clientèle — bilingue, basée à Mississauga, avec une expérience d’atelier à son actif.' },
-    imgLabel: { en: 'Image · office team placeholder · 16:9',
-                fr: 'Image · équipe bureau placeholder · 16:9' } },
+             fr: 'Dans les coulisses de Kolben : qui rÃ©pond rÃ©ellement Ã  votre courriel distributeur.' },
+    excerpt: { en: 'A short profile of the Canadian customer-service desk â€” bilingual, based in Mississauga, with workshop experience between them.',
+               fr: 'Un court portrait de lâ€™Ã©quipe canadienne de service Ã  la clientÃ¨le â€” bilingue, basÃ©e Ã  Mississauga, avec une expÃ©rience dâ€™atelier Ã  son actif.' },
+    imgLabel: { en: 'Image Â· office team placeholder Â· 16:9',
+                fr: 'Image Â· Ã©quipe bureau placeholder Â· 16:9' } },
 
   { id: 'a8', filter: 'product', dark: false,
     date: '2026-02-20', rt: '3 MIN',
     title: { en: 'Bilingual EN/FR labels now standard on all Canadian SKUs.',
-             fr: 'Étiquettes bilingues EN/FR désormais standard sur toutes les UGS canadiennes.' },
-    excerpt: { en: 'Front-of-pack labels and back-panel handling switch to a single bilingual layout across the catalogue — no separate FR stickers.',
-               fr: 'Les étiquettes recto et les panneaux manipulation passent à une mise en page bilingue unique sur tout le catalogue — fini les étiquettes FR distinctes.' },
-    imgLabel: { en: 'Image · label front + back · 16:9',
-                fr: 'Image · étiquette recto + verso · 16:9' } },
+             fr: 'Ã‰tiquettes bilingues EN/FR dÃ©sormais standard sur toutes les UGS canadiennes.' },
+    excerpt: { en: 'Front-of-pack labels and back-panel handling switch to a single bilingual layout across the catalogue â€” no separate FR stickers.',
+               fr: 'Les Ã©tiquettes recto et les panneaux manipulation passent Ã  une mise en page bilingue unique sur tout le catalogue â€” fini les Ã©tiquettes FR distinctes.' },
+    imgLabel: { en: 'Image Â· label front + back Â· 16:9',
+                fr: 'Image Â· Ã©tiquette recto + verso Â· 16:9' } },
 ];
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    I18N
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -968,11 +968,11 @@ const I18N = {
     'nav.distributor':  'Become a Distributor',
 
     'hero.eyebrow':     'News',
-    'hero.mono':        '2026 · ISSUE 03',
+    'hero.mono':        '2026 Â· ISSUE 03',
     'hero.h1':          'News &amp; <em>press.</em>',
-    'hero.sub':         'Releases, product news, and technical writing from the Kolben Canada team — engineering notes for distributors, fleets, and shops carrying the line.',
+    'hero.sub':         'Releases, product news, and technical writing from the Kolben Canada team â€” engineering notes for distributors, fleets, and shops carrying the line.',
     'hero.rss.eyebrow': 'Subscribe',
-    'hero.rss.a':       'Newsletter — EN · FR',
+    'hero.rss.a':       'Newsletter â€” EN Â· FR',
     'hero.rss.b':       'RSS feed',
     'hero.rss.c':       'Press contact',
 
@@ -981,14 +981,14 @@ const I18N = {
     'chip.product':     'Product News',
     'chip.technical':   'Technical',
     'chip.company':     'Company',
-    'search.ph':        'Search articles…',
+    'search.ph':        'Search articlesâ€¦',
 
     'lead.featured':    'Featured',
     'lead.tag':         'Press Release',
-    'lead.imgLabel':    'Image · Hannover plant · 16:10',
+    'lead.imgLabel':    'Image Â· Hannover plant Â· 16:10',
     'lead.rt':          '4 MIN READ',
     'lead.title':       'Kolben Canada opens <em>Mississauga distribution hub</em> to serve Eastern fleets.',
-    'lead.excerpt':     'A 140,000 ft² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy — confirm location and metrics before public release.',
+    'lead.excerpt':     'A 140,000 ftÂ² regional warehouse, bilingual customer-service desk, and 48-hour dispatch across Ontario and Quebec. Placeholder copy â€” confirm location and metrics before public release.',
     'lead.cta':         'Read article',
 
     'grid.eyebrow':     'Latest articles',
@@ -1005,95 +1005,95 @@ const I18N = {
     'card.rt':          'READ',
 
     'noresults.h':      'No articles matched.',
-    'noresults.sub':    'Clear the filter or try a different search term — we publish technical notes and product news monthly.',
+    'noresults.sub':    'Clear the filter or try a different search term â€” we publish technical notes and product news monthly.',
 
-    'pag.prev':         '← Prev',
-    'pag.next':         'Next →',
+    'pag.prev':         'â† Prev',
+    'pag.next':         'Next â†’',
 
     'nl.eyebrow':       'Newsletter',
     'nl.h':             'One bulletin a month. <em>No marketing fluff.</em>',
-    'nl.sub':           'Releases, product additions, technical notes, and SDS revisions — bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.',
+    'nl.sub':           'Releases, product additions, technical notes, and SDS revisions â€” bilingual EN/FR, mid-month, sent to your inbox. Unsubscribe in one click.',
     'nl.ph':            'work-email@company.ca',
     'nl.submit':        'Subscribe',
-    'nl.foot1':         '<b>EN · FR.</b> One email per month. Distributor &amp; trade-partner desk only — no consumer spam.',
-    'nl.thanks':        'Subscribed — confirmation sent',
+    'nl.foot1':         '<b>EN Â· FR.</b> One email per month. Distributor &amp; trade-partner desk only â€” no consumer spam.',
+    'nl.thanks':        'Subscribed â€” confirmation sent',
 
-    'footer.tag':       'Power · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Power · Performance · Kolben',
+    'footer.tag':       'Power Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Power Â· Performance Â· Kolben',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Nous joindre',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
-    'hero.eyebrow':     'Actualités',
-    'hero.mono':        '2026 · NUMÉRO 03',
-    'hero.h1':          'Actualités et <em>presse.</em>',
-    'hero.sub':         'Communiqués, nouveautés produits et notes techniques de l’équipe Kolben Canada — repères d’ingénierie pour les distributeurs, flottes et ateliers qui portent la gamme.',
-    'hero.rss.eyebrow': 'S’abonner',
-    'hero.rss.a':       'Infolettre — EN · FR',
+    'hero.eyebrow':     'ActualitÃ©s',
+    'hero.mono':        '2026 Â· NUMÃ‰RO 03',
+    'hero.h1':          'ActualitÃ©s et <em>presse.</em>',
+    'hero.sub':         'CommuniquÃ©s, nouveautÃ©s produits et notes techniques de lâ€™Ã©quipe Kolben Canada â€” repÃ¨res dâ€™ingÃ©nierie pour les distributeurs, flottes et ateliers qui portent la gamme.',
+    'hero.rss.eyebrow': 'Sâ€™abonner',
+    'hero.rss.a':       'Infolettre â€” EN Â· FR',
     'hero.rss.b':       'Flux RSS',
     'hero.rss.c':       'Contact presse',
 
     'chip.all':         'Tout',
-    'chip.press':       'Communiqués',
-    'chip.product':     'Nouveautés produits',
+    'chip.press':       'CommuniquÃ©s',
+    'chip.product':     'NouveautÃ©s produits',
     'chip.technical':   'Technique',
     'chip.company':     'Entreprise',
-    'search.ph':        'Rechercher des articles…',
+    'search.ph':        'Rechercher des articlesâ€¦',
 
-    'lead.featured':    'À la une',
-    'lead.tag':         'Communiqué',
-    'lead.imgLabel':    'Image · usine de Hanovre · 16:10',
+    'lead.featured':    'Ã€ la une',
+    'lead.tag':         'CommuniquÃ©',
+    'lead.imgLabel':    'Image Â· usine de Hanovre Â· 16:10',
     'lead.rt':          'LECTURE 4 MIN',
-    'lead.title':       'Kolben Canada ouvre un <em>centre de distribution à Mississauga</em> pour servir les flottes de l’Est.',
-    'lead.excerpt':     'Un entrepôt régional de 140 000 pi², un bureau de service à la clientèle bilingue et une expédition sous 48 H pour l’Ontario et le Québec. Copie placeholder — emplacement et chiffres à confirmer avant publication.',
-    'lead.cta':         'Lire l’article',
+    'lead.title':       'Kolben Canada ouvre un <em>centre de distribution Ã  Mississauga</em> pour servir les flottes de lâ€™Est.',
+    'lead.excerpt':     'Un entrepÃ´t rÃ©gional de 140 000 piÂ², un bureau de service Ã  la clientÃ¨le bilingue et une expÃ©dition sous 48 H pour lâ€™Ontario et le QuÃ©bec. Copie placeholder â€” emplacement et chiffres Ã  confirmer avant publication.',
+    'lead.cta':         'Lire lâ€™article',
 
     'grid.eyebrow':     'Derniers articles',
-    'grid.h':           'Les dernières nouvelles de <em>Kolben Canada.</em>',
+    'grid.h':           'Les derniÃ¨res nouvelles de <em>Kolben Canada.</em>',
     'grid.show':        'Affichage de',
     'grid.of':          'sur',
     'grid.articles':    'articles',
 
-    'tag.press':        'Communiqué',
-    'tag.product':      'Nouveauté produit',
+    'tag.press':        'CommuniquÃ©',
+    'tag.product':      'NouveautÃ© produit',
     'tag.technical':    'Technique',
     'tag.company':      'Entreprise',
     'card.read':        'Lire la suite',
     'card.rt':          'LECTURE',
 
     'noresults.h':      'Aucun article correspondant.',
-    'noresults.sub':    'Retirez le filtre ou essayez un autre terme de recherche — nous publions des notes techniques et des nouveautés produits chaque mois.',
+    'noresults.sub':    'Retirez le filtre ou essayez un autre terme de recherche â€” nous publions des notes techniques et des nouveautÃ©s produits chaque mois.',
 
-    'pag.prev':         '← Préc.',
-    'pag.next':         'Suiv. →',
+    'pag.prev':         'â† PrÃ©c.',
+    'pag.next':         'Suiv. â†’',
 
     'nl.eyebrow':       'Infolettre',
     'nl.h':             'Un bulletin par mois. <em>Aucun remplissage marketing.</em>',
-    'nl.sub':           'Communiqués, ajouts produits, notes techniques et révisions de FDS — bilingue EN/FR, mi-mois, livré dans votre boîte courriel. Désabonnement en un clic.',
+    'nl.sub':           'CommuniquÃ©s, ajouts produits, notes techniques et rÃ©visions de FDS â€” bilingue EN/FR, mi-mois, livrÃ© dans votre boÃ®te courriel. DÃ©sabonnement en un clic.',
     'nl.ph':            'courriel-pro@entreprise.ca',
-    'nl.submit':        'S’abonner',
-    'nl.foot1':         '<b>EN · FR.</b> Un courriel par mois. Bureau distributeur et partenaires commerciaux uniquement — sans pourriel consommateur.',
-    'nl.thanks':        'Abonnement reçu — confirmation envoyée',
+    'nl.submit':        'Sâ€™abonner',
+    'nl.foot1':         '<b>EN Â· FR.</b> Un courriel par mois. Bureau distributeur et partenaires commerciaux uniquement â€” sans pourriel consommateur.',
+    'nl.thanks':        'Abonnement reÃ§u â€” confirmation envoyÃ©e',
 
-    'footer.tag':       'Puissance · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Puissance · Performance · Kolben',
+    'footer.tag':       'Puissance Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Puissance Â· Performance Â· Kolben',
   },
 };
 
 let state = { lang: 'en', filter: 'all', q: '' };
 
-/* ─── Render cards ─── */
+/* â”€â”€â”€ Render cards â”€â”€â”€ */
 function renderCards(lang) {
   const t = I18N[lang];
   const root = document.getElementById('grid');
@@ -1126,13 +1126,13 @@ function renderCards(lang) {
         <div class="acard__meta">
           <span>${a.date}</span>
           <span class="dot"></span>
-          <span>${a.rt} · ${t['card.rt']}</span>
+          <span>${a.rt} Â· ${t['card.rt']}</span>
         </div>
         <h3 class="acard__title">${a.title[lang]}</h3>
         <p class="acard__excerpt">${a.excerpt[lang]}</p>
         <div class="acard__cta">
           <span>${t['card.read']}</span>
-          <span class="acard__arrow">→</span>
+          <span class="acard__arrow">â†’</span>
         </div>
       </div>
     `;
@@ -1207,7 +1207,7 @@ document.getElementById('nl-form').addEventListener('submit', e => {
   const t = I18N[state.lang];
   const btn = e.target.querySelector('button[type="submit"]');
   const orig = btn.innerHTML;
-  btn.innerHTML = `<span>${t['nl.thanks']}</span><span class="arrow">✓</span>`;
+  btn.innerHTML = `<span>${t['nl.thanks']}</span><span class="arrow">âœ“</span>`;
   btn.style.background = 'var(--white)';
   setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; }, 2400);
 });

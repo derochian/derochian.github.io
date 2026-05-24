@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Compliance &amp; SDS</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben â€” Compliance &amp; SDS</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -39,7 +39,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -51,7 +51,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -62,7 +62,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -77,9 +77,9 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ═══════════════════════════════════════════════════════════
-     HERO — black, 80×80 radial-masked grid
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO â€” black, 80Ã—80 radial-masked grid
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -122,7 +122,7 @@
     max-width: 60ch;
   }
 
-  /* Document-stats card — right side */
+  /* Document-stats card â€” right side */
   .hstats {
     border-left: 1px solid var(--on-black-border);
     padding: 6px 0 6px 28px;
@@ -147,9 +147,9 @@
   }
   .hstats__foot b { color: var(--gold); font-weight: 600; font-family: 'JetBrains Mono'; letter-spacing: .12em; }
 
-  /* ═══════════════════════════════════════════════════════════
-     SDS LIBRARY — search, filters, results
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SDS LIBRARY â€” search, filters, results
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .lib { background: var(--white); padding: 88px 0 96px; border-bottom: 1px solid var(--rule); }
   .lib__head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 36px; flex-wrap: wrap; }
   .sh__eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); }
@@ -349,9 +349,9 @@
   .noresults__h { font: 700 22px/1.1 'Jost'; letter-spacing: -0.01em; text-transform: uppercase; color: var(--black); margin-bottom: 10px; }
   .noresults__sub { font: 400 14px/1.55 'Inter'; color: var(--muted); max-width: 48ch; margin: 0 auto 22px; }
 
-  /* ═══════════════════════════════════════════════════════════
-     REGULATORY OVERVIEW — off-white
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     REGULATORY OVERVIEW â€” off-white
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .reg { background: var(--offwhite); padding: 96px 0 96px; }
   .reg__head { margin-bottom: 40px; max-width: 60ch; }
   .reg__h {
@@ -419,9 +419,9 @@
   }
   .disclaimer b { color: var(--black); font-weight: 600; }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      DOCUMENT REQUEST BAND
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .req-sec { background: var(--white); padding: 88px 0; }
   .req {
     border: 1px solid var(--rule);
@@ -492,9 +492,9 @@
     padding-top: 12px;
   }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      FOOTER
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .stds-strip {
     background: var(--black); color: var(--white);
     padding: 32px 0; border-top: 3px solid var(--red);
@@ -528,7 +528,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1180px) {
     .hero__inner { grid-template-columns: 1fr; gap: 40px; }
     .hstats { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
@@ -560,7 +560,7 @@
 </head>
 <body data-screen-label="11 Compliance &amp; SDS">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -587,7 +587,7 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
@@ -606,16 +606,16 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      HERO
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="hero" data-comment-anchor="compliance-hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow" data-i18n="hero.eyebrow">Compliance &amp; SDS</div>
       <h1 class="hero__h1" data-i18n="hero.h1">Safety Data Sheets &amp; <em>regulatory documents.</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Find and download the current Safety Data Sheet for any Kolben product, in English or French. Plain-language context on the Canadian frameworks these products are handled under — for WHMIS files, procurement, and transport.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Find and download the current Safety Data Sheet for any Kolben product, in English or French. Plain-language context on the Canadian frameworks these products are handled under â€” for WHMIS files, procurement, and transport.</p>
     </div>
     <div class="hstats">
       <div class="hstats__eyebrow" data-i18n="hstats.eyebrow">Library snapshot</div>
@@ -636,9 +636,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SDS LIBRARY
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="lib" data-comment-anchor="compliance-library">
   <div class="container">
     <div class="lib__head">
@@ -649,9 +649,9 @@
       </div>
       <div class="lib__legend">
         <div class="lib__legend-eyebrow" data-i18n="lib.legend.eyebrow">Document types</div>
-        <div class="legend-row"><span class="dock is-sds">SDS</span><span data-i18n="lib.legend.sds">Safety Data Sheet — workplace hazard, first-aid, transport, regulatory.</span></div>
-        <div class="legend-row"><span class="dock is-tds">TDS</span><span data-i18n="lib.legend.tds">Technical Data Sheet — properties, application, performance.</span></div>
-        <div class="legend-row"><span class="dock">INFO</span><span data-i18n="lib.legend.info">Product Information — neutral product brief, where available.</span></div>
+        <div class="legend-row"><span class="dock is-sds">SDS</span><span data-i18n="lib.legend.sds">Safety Data Sheet â€” workplace hazard, first-aid, transport, regulatory.</span></div>
+        <div class="legend-row"><span class="dock is-tds">TDS</span><span data-i18n="lib.legend.tds">Technical Data Sheet â€” properties, application, performance.</span></div>
+        <div class="legend-row"><span class="dock">INFO</span><span data-i18n="lib.legend.info">Product Information â€” neutral product brief, where available.</span></div>
       </div>
     </div>
 
@@ -660,7 +660,7 @@
       <div class="search-wrap__icon">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </div>
-      <input id="lib-search" type="search" autocomplete="off" data-i18n-ph="lib.search.ph" placeholder="Search by product name or SKU…" />
+      <input id="lib-search" type="search" autocomplete="off" data-i18n-ph="lib.search.ph" placeholder="Search by product name or SKUâ€¦" />
       <div class="search-wrap__lang">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14.5 14.5 0 0 1 0 18 14.5 14.5 0 0 1 0-18"/></svg>
         <span data-i18n="lib.search.lang">EN <b>+</b> FR available</span>
@@ -691,7 +691,7 @@
         <span data-i18n="toolbar.docs">documents</span>
       </div>
       <div class="toolbar__rev">
-        <span data-i18n="toolbar.rev">Revision date noted per document · current to </span><b style="color:var(--black);">2026 · 03 · 12</b>
+        <span data-i18n="toolbar.rev">Revision date noted per document Â· current to </span><b style="color:var(--black);">2026 Â· 03 Â· 12</b>
       </div>
     </div>
 
@@ -700,55 +700,55 @@
       <!-- Cards rendered via JS below for tidiness -->
       <div class="noresults" id="noresults">
         <div class="noresults__h" data-i18n="noresults.h">No documents matched.</div>
-        <div class="noresults__sub" data-i18n="noresults.sub">Check the spelling, clear the filter, or request the document directly — our compliance desk will return the current revision in EN and FR.</div>
+        <div class="noresults__sub" data-i18n="noresults.sub">Check the spelling, clear the filter, or request the document directly â€” our compliance desk will return the current revision in EN and FR.</div>
         <a class="btn btn--primary" href="#req">
           <span data-i18n="noresults.cta">Request a Document</span>
-          <span class="arrow">→</span>
+          <span class="arrow">â†’</span>
         </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      REGULATORY OVERVIEW
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="reg" data-comment-anchor="compliance-reg">
   <div class="container">
     <div class="reg__head">
       <div class="sh__eyebrow" data-i18n="reg.eyebrow">Regulatory context</div>
       <h2 class="reg__h" data-i18n="reg.h">The Canadian frameworks <em>these documents serve.</em></h2>
-      <p class="reg__sub" data-i18n="reg.sub">A neutral, plain-language overview of the three regulations Kolben products are most often referenced against in Canada. This is context only — the linked Safety Data Sheet is the authoritative source for any hazard, first-aid, classification, or transport detail.</p>
+      <p class="reg__sub" data-i18n="reg.sub">A neutral, plain-language overview of the three regulations Kolben products are most often referenced against in Canada. This is context only â€” the linked Safety Data Sheet is the authoritative source for any hazard, first-aid, classification, or transport detail.</p>
     </div>
 
     <div class="frameworks">
       <div class="fw">
-        <div class="fw__code">CCCR · 2001</div>
+        <div class="fw__code">CCCR Â· 2001</div>
         <div class="fw__h" data-i18n="fw.cccr.h">Consumer chemical labelling</div>
-        <div class="fw__body" data-i18n="fw.cccr.b">The Consumer Chemicals and Containers Regulations, 2001 set the labelling and packaging requirements for chemical products sold to consumers in Canada — pictograms, signal words, first-aid statements, and child-resistant closures where required.</div>
+        <div class="fw__body" data-i18n="fw.cccr.b">The Consumer Chemicals and Containers Regulations, 2001 set the labelling and packaging requirements for chemical products sold to consumers in Canada â€” pictograms, signal words, first-aid statements, and child-resistant closures where required.</div>
         <div class="fw__foot">
           <div class="fw__foot-k" data-i18n="fw.cccr.k">Administered by</div>
-          <div class="fw__foot-v" data-i18n="fw.cccr.v">Health Canada — Consumer Product Safety</div>
+          <div class="fw__foot-v" data-i18n="fw.cccr.v">Health Canada â€” Consumer Product Safety</div>
         </div>
       </div>
 
       <div class="fw">
-        <div class="fw__code">HPR · WHMIS · 2015</div>
+        <div class="fw__code">HPR Â· WHMIS Â· 2015</div>
         <div class="fw__h" data-i18n="fw.hpr.h">Workplace SDS &amp; classification</div>
         <div class="fw__body" data-i18n="fw.hpr.b">The Hazardous Products Regulations align with WHMIS 2015 (GHS-aligned) and require a current Safety Data Sheet for hazardous products supplied to a Canadian workplace. Distributors and end-use workplaces keep SDS on file and accessible to workers.</div>
         <div class="fw__foot">
           <div class="fw__foot-k" data-i18n="fw.hpr.k">Administered by</div>
-          <div class="fw__foot-v" data-i18n="fw.hpr.v">Health Canada — WHMIS / Provincial OHS authorities</div>
+          <div class="fw__foot-v" data-i18n="fw.hpr.v">Health Canada â€” WHMIS / Provincial OHS authorities</div>
         </div>
       </div>
 
       <div class="fw">
-        <div class="fw__code">TDG · SOR/2001-286</div>
+        <div class="fw__code">TDG Â· SOR/2001-286</div>
         <div class="fw__h" data-i18n="fw.tdg.h">Transport of dangerous goods</div>
         <div class="fw__body" data-i18n="fw.tdg.b">The Transportation of Dangerous Goods Regulations govern classification, packaging, marking, and shipping documentation for regulated products moved by road, rail, air, or marine across Canada. The SDS section 14 carries the transport classification used for shipping.</div>
         <div class="fw__foot">
           <div class="fw__foot-k" data-i18n="fw.tdg.k">Administered by</div>
-          <div class="fw__foot-v" data-i18n="fw.tdg.v">Transport Canada — TDG Directorate</div>
+          <div class="fw__foot-v" data-i18n="fw.tdg.v">Transport Canada â€” TDG Directorate</div>
         </div>
       </div>
     </div>
@@ -763,27 +763,27 @@
       </div>
       <a class="btn btn--ghost-light" href="#lib-search">
         <span data-i18n="auth.cta">Back to library</span>
-        <span class="arrow">↑</span>
+        <span class="arrow">â†‘</span>
       </a>
     </div>
 
     <div class="disclaimer">
       <b data-i18n="disc.b">Disclaimer.</b>
-      <span data-i18n="disc.body"> Copy on this page is plain-language summary and placeholder pending compliance-expert review. It is not regulatory advice. Distributors and workplaces are responsible for maintaining current SDS on file under their applicable provincial occupational health and safety regime. For regulated transport, refer to TDG and the carrier's shipping requirements. © Kolben Chemicals Canada — content subject to change as regulations and product formulations are updated.</span>
+      <span data-i18n="disc.body"> Copy on this page is plain-language summary and placeholder pending compliance-expert review. It is not regulatory advice. Distributors and workplaces are responsible for maintaining current SDS on file under their applicable provincial occupational health and safety regime. For regulated transport, refer to TDG and the carrier's shipping requirements. Â© Kolben Chemicals Canada â€” content subject to change as regulations and product formulations are updated.</span>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      DOCUMENT REQUEST
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="req-sec" id="req" data-comment-anchor="compliance-request">
   <div class="container">
     <div class="req">
       <div class="req__left">
         <div class="req__eyebrow" data-i18n="req.eyebrow">Document request</div>
         <h3 class="req__h" data-i18n="req.h">Can't find a document? <span style="color:var(--red);">Request it.</span></h3>
-        <p class="req__sub" data-i18n="req.sub">If a product, language, or revision isn't yet wired into the library, request it from the compliance desk. We respond in one business day with the current PDF — or a status note if the document is in preparation.</p>
+        <p class="req__sub" data-i18n="req.sub">If a product, language, or revision isn't yet wired into the library, request it from the compliance desk. We respond in one business day with the current PDF â€” or a status note if the document is in preparation.</p>
 
         <div class="req__steps">
           <div class="step">
@@ -794,7 +794,7 @@
           <div class="step">
             <div class="step__n">02</div>
             <div class="step__h" data-i18n="step2.h">Request</div>
-            <div class="step__b" data-i18n="step2.b">Send the request via the Contact form — choose "SDS &amp; compliance."</div>
+            <div class="step__b" data-i18n="step2.b">Send the request via the Contact form â€” choose "SDS &amp; compliance."</div>
           </div>
           <div class="step">
             <div class="step__n">03</div>
@@ -806,11 +806,11 @@
         <div class="req__actions">
           <a class="btn btn--primary" href="contact.html?inquiry=sds">
             <span data-i18n="req.cta1">Request a Document</span>
-            <span class="arrow">→</span>
+            <span class="arrow">â†’</span>
           </a>
           <a class="btn btn--ghost-dark" href="contact.html">
             <span data-i18n="req.cta2">Contact the team</span>
-            <span class="arrow">→</span>
+            <span class="arrow">â†’</span>
           </a>
         </div>
       </div>
@@ -845,7 +845,7 @@
             </div>
             <div>
               <div class="req__k" data-i18n="reqr.k3">Response window</div>
-              <div class="req__v">MON–FRI · 08:00–17:00 ET</div>
+              <div class="req__v">MONâ€“FRI Â· 08:00â€“17:00 ET</div>
               <div class="req__note" data-i18n="reqr.n3">One business day. This page does not provide emergency response. In a workplace incident, follow your site's emergency procedure.</div>
             </div>
           </div>
@@ -855,39 +855,39 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      STANDARDS STRIP (FORTHCOMING)
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="stds-strip">
   <div class="container stds">
     <div class="stds__k" data-i18n="stds.k">Manufacturing standards</div>
     <div class="stds__list">
       <div class="std"><b>ISO 9001</b><span data-i18n="stds.qms">Quality management</span><span class="state" data-i18n="stds.state">Forthcoming</span></div>
       <div class="std"><b>IATF 16949</b><span data-i18n="stds.auto">Automotive quality</span><span class="state" data-i18n="stds.state2">Forthcoming</span></div>
-      <div class="std"><b>WHMIS · 2015</b><span data-i18n="stds.whmis">Workplace hazard alignment</span><span class="state" data-i18n="stds.state3">In effect</span></div>
-      <div class="std"><b>TDG · SOR/2001-286</b><span data-i18n="stds.tdg">Transport classification</span><span class="state" data-i18n="stds.state4">In effect</span></div>
+      <div class="std"><b>WHMIS Â· 2015</b><span data-i18n="stds.whmis">Workplace hazard alignment</span><span class="state" data-i18n="stds.state3">In effect</span></div>
+      <div class="std"><b>TDG Â· SOR/2001-286</b><span data-i18n="stds.tdg">Transport classification</span><span class="state" data-i18n="stds.state4">In effect</span></div>
     </div>
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -900,7 +900,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -910,7 +910,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -920,7 +920,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -953,91 +953,91 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   PRODUCTS — EN / FR registry. Each product offers SDS (EN+FR);
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PRODUCTS â€” EN / FR registry. Each product offers SDS (EN+FR);
    selected products include a TDS and/or INFO. Hrefs are placeholders.
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const PRODUCTS = [
   { sku: 'KB-340', filter: 'engadd', cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
-    name: { en: 'Engine Flush — Pro', fr: 'Nettoyant moteur — Pro' },
-    size: '300 ml', rev: '2026 · 02 · 14', tds: true, info: true },
+    name: { en: 'Engine Flush â€” Pro', fr: 'Nettoyant moteur â€” Pro' },
+    size: '300 ml', rev: '2026 Â· 02 Â· 14', tds: true, info: true },
 
   { sku: 'KB-512', filter: 'fueladd', cat: { en: 'Fuel Additives', fr: 'Additifs carburant' },
     name: { en: 'Diesel Injector Cleaner', fr: 'Nettoyant injecteurs diesel' },
-    size: '250 ml', rev: '2026 · 01 · 28', tds: true, info: false },
+    size: '250 ml', rev: '2026 Â· 01 Â· 28', tds: true, info: false },
 
   { sku: 'KB-520', filter: 'fueladd', cat: { en: 'Fuel Additives', fr: 'Additifs carburant' },
     name: { en: 'Petrol System Cleaner', fr: 'Nettoyant circuit essence' },
-    size: '300 ml', rev: '2026 · 02 · 03', tds: false, info: true },
+    size: '300 ml', rev: '2026 Â· 02 Â· 03', tds: false, info: true },
 
   { sku: 'KB-525', filter: 'fueladd', cat: { en: 'Fuel Additives', fr: 'Additifs carburant' },
-    name: { en: 'Cetane Booster +6', fr: 'Activateur de cétane +6' },
-    size: '300 ml', rev: '2025 · 12 · 09', tds: false, info: false },
+    name: { en: 'Cetane Booster +6', fr: 'Activateur de cÃ©tane +6' },
+    size: '300 ml', rev: '2025 Â· 12 Â· 09', tds: false, info: false },
 
   { sku: 'KB-635', filter: 'engadd', cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
     name: { en: 'Oil System Stabilizer', fr: 'Stabilisateur du circuit d\u2019huile' },
-    size: '500 ml', rev: '2026 · 01 · 12', tds: true, info: false },
+    size: '500 ml', rev: '2026 Â· 01 Â· 12', tds: true, info: false },
 
   { sku: 'KB-401', filter: 'oils', cat: { en: 'Oils & Fluids', fr: 'Huiles et fluides' },
-    name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' },
-    size: '5 L', rev: '2026 · 03 · 04', tds: true, info: true },
+    name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entiÃ¨rement synthÃ©tique' },
+    size: '5 L', rev: '2026 Â· 03 Â· 04', tds: true, info: true },
 
   { sku: 'KB-420', filter: 'oils', cat: { en: 'Oils & Fluids', fr: 'Huiles et fluides' },
     name: { en: 'DOT 4 Brake Fluid', fr: 'Liquide de frein DOT 4' },
-    size: '1 L', rev: '2026 · 02 · 22', tds: true, info: false },
+    size: '1 L', rev: '2026 Â· 02 Â· 22', tds: true, info: false },
 
   { sku: 'KB-430', filter: 'cool', cat: { en: 'Cooling & Radiator', fr: 'Refroidissement et radiateur' },
-    name: { en: 'Long-Life Coolant \u221238 °C', fr: 'Liquide de refroidissement longue durée \u221238 °C' },
-    size: '4 L', rev: '2026 · 01 · 30', tds: true, info: true },
+    name: { en: 'Long-Life Coolant \u221238 Â°C', fr: 'Liquide de refroidissement longue durÃ©e \u221238 Â°C' },
+    size: '4 L', rev: '2026 Â· 01 Â· 30', tds: true, info: true },
 
   { sku: 'KB-445', filter: 'trans', cat: { en: 'Transmission', fr: 'Transmission' },
-    name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' },
-    size: '4 L', rev: '2026 · 02 · 18', tds: true, info: false },
+    name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-vÃ©hicules' },
+    size: '4 L', rev: '2026 Â· 02 Â· 18', tds: true, info: false },
 
-  { sku: 'KB-210', filter: 'cleaners', cat: { en: 'Brake & Parts Cleaners', fr: 'Nettoyants freins et pièces' },
-    name: { en: 'Brake & Parts Cleaner', fr: 'Nettoyant freins et pièces' },
-    size: '500 ml', rev: '2026 · 03 · 08', tds: true, info: true },
+  { sku: 'KB-210', filter: 'cleaners', cat: { en: 'Brake & Parts Cleaners', fr: 'Nettoyants freins et piÃ¨ces' },
+    name: { en: 'Brake & Parts Cleaner', fr: 'Nettoyant freins et piÃ¨ces' },
+    size: '500 ml', rev: '2026 Â· 03 Â· 08', tds: true, info: true },
 
-  { sku: 'KB-211', filter: 'cleaners', cat: { en: 'Brake & Parts Cleaners', fr: 'Nettoyants freins et pièces' },
-    name: { en: 'Brake & Parts Cleaner — Chlorinated', fr: 'Nettoyant freins et pièces — chloré' },
-    size: '500 ml', rev: '2026 · 03 · 08', tds: false, info: false },
+  { sku: 'KB-211', filter: 'cleaners', cat: { en: 'Brake & Parts Cleaners', fr: 'Nettoyants freins et piÃ¨ces' },
+    name: { en: 'Brake & Parts Cleaner â€” Chlorinated', fr: 'Nettoyant freins et piÃ¨ces â€” chlorÃ©' },
+    size: '500 ml', rev: '2026 Â· 03 Â· 08', tds: false, info: false },
 
-  { sku: 'KB-225', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d\u2019entretien' },
-    name: { en: 'Throttle Body Cleaner', fr: 'Nettoyant boîtier papillon' },
-    size: '400 ml', rev: '2026 · 02 · 01', tds: false, info: true },
+  { sku: 'KB-225', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'AÃ©rosols d\u2019entretien' },
+    name: { en: 'Throttle Body Cleaner', fr: 'Nettoyant boÃ®tier papillon' },
+    size: '400 ml', rev: '2026 Â· 02 Â· 01', tds: false, info: true },
 
-  { sku: 'KB-241', filter: 'elec', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
-    name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' },
-    size: '300 ml', rev: '2025 · 11 · 17', tds: true, info: false },
+  { sku: 'KB-241', filter: 'elec', cat: { en: 'Electrical & Contact', fr: 'Ã‰lectrique et contacts' },
+    name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts Ã©lectroniques' },
+    size: '300 ml', rev: '2025 Â· 11 Â· 17', tds: true, info: false },
 
   { sku: 'KB-088', filter: 'lube', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
-    name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaîne synthétique' },
-    size: '400 g', rev: '2026 · 01 · 22', tds: false, info: false },
+    name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaÃ®ne synthÃ©tique' },
+    size: '400 g', rev: '2026 Â· 01 Â· 22', tds: false, info: false },
 ];
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    I18N
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -1053,7 +1053,7 @@ const I18N = {
 
     'hero.eyebrow':     'Compliance & SDS',
     'hero.h1':          'Safety Data Sheets &amp; <em>regulatory documents.</em>',
-    'hero.sub':         'Find and download the current Safety Data Sheet for any Kolben product, in English or French. Plain-language context on the Canadian frameworks these products are handled under — for WHMIS files, procurement, and transport.',
+    'hero.sub':         'Find and download the current Safety Data Sheet for any Kolben product, in English or French. Plain-language context on the Canadian frameworks these products are handled under â€” for WHMIS files, procurement, and transport.',
 
     'hstats.eyebrow':   'Library snapshot',
     'hstats.l1':        'SDS on file',
@@ -1065,10 +1065,10 @@ const I18N = {
     'lib.h':            'Find a document <em>by product or SKU.</em>',
     'lib.sub':          'Search the catalogue or filter by category. Every product offers SDS in English and French; selected products include a Technical Data Sheet and product info brief.',
     'lib.legend.eyebrow':'Document types',
-    'lib.legend.sds':   'Safety Data Sheet — workplace hazard, first-aid, transport, regulatory.',
-    'lib.legend.tds':   'Technical Data Sheet — properties, application, performance.',
-    'lib.legend.info':  'Product Information — neutral product brief, where available.',
-    'lib.search.ph':    'Search by product name or SKU…',
+    'lib.legend.sds':   'Safety Data Sheet â€” workplace hazard, first-aid, transport, regulatory.',
+    'lib.legend.tds':   'Technical Data Sheet â€” properties, application, performance.',
+    'lib.legend.info':  'Product Information â€” neutral product brief, where available.',
+    'lib.search.ph':    'Search by product name or SKUâ€¦',
     'lib.search.lang':  'EN <b>+</b> FR available',
 
     'chip.all':         'All categories',
@@ -1085,11 +1085,11 @@ const I18N = {
     'toolbar.show':     'Showing',
     'toolbar.of':       'of',
     'toolbar.docs':     'documents',
-    'toolbar.rev':      'Revision date noted per document · current to ',
+    'toolbar.rev':      'Revision date noted per document Â· current to ',
 
-    'doc.sds.lbl':      'SDS · EN',
-    'doc.sdsfr.lbl':    'SDS · FR',
-    'doc.tds.lbl':      'TDS · EN/FR',
+    'doc.sds.lbl':      'SDS Â· EN',
+    'doc.sdsfr.lbl':    'SDS Â· FR',
+    'doc.tds.lbl':      'TDS Â· EN/FR',
     'doc.info.lbl':     'Product Info',
     'doc.tds.pending':  'TDS pending',
     'doc.info.pending': 'Info pending',
@@ -1100,25 +1100,25 @@ const I18N = {
     'doc.size':         'Size',
 
     'noresults.h':      'No documents matched.',
-    'noresults.sub':    'Check the spelling, clear the filter, or request the document directly — our compliance desk will return the current revision in EN and FR.',
+    'noresults.sub':    'Check the spelling, clear the filter, or request the document directly â€” our compliance desk will return the current revision in EN and FR.',
     'noresults.cta':    'Request a Document',
 
     'reg.eyebrow':      'Regulatory context',
     'reg.h':            'The Canadian frameworks <em>these documents serve.</em>',
-    'reg.sub':          'A neutral, plain-language overview of the three regulations Kolben products are most often referenced against in Canada. This is context only — the linked Safety Data Sheet is the authoritative source for any hazard, first-aid, classification, or transport detail.',
+    'reg.sub':          'A neutral, plain-language overview of the three regulations Kolben products are most often referenced against in Canada. This is context only â€” the linked Safety Data Sheet is the authoritative source for any hazard, first-aid, classification, or transport detail.',
 
     'fw.cccr.h':        'Consumer chemical labelling',
-    'fw.cccr.b':        'The Consumer Chemicals and Containers Regulations, 2001 set the labelling and packaging requirements for chemical products sold to consumers in Canada — pictograms, signal words, first-aid statements, and child-resistant closures where required.',
+    'fw.cccr.b':        'The Consumer Chemicals and Containers Regulations, 2001 set the labelling and packaging requirements for chemical products sold to consumers in Canada â€” pictograms, signal words, first-aid statements, and child-resistant closures where required.',
     'fw.cccr.k':        'Administered by',
-    'fw.cccr.v':        'Health Canada — Consumer Product Safety',
+    'fw.cccr.v':        'Health Canada â€” Consumer Product Safety',
     'fw.hpr.h':         'Workplace SDS & classification',
     'fw.hpr.b':         'The Hazardous Products Regulations align with WHMIS 2015 (GHS-aligned) and require a current Safety Data Sheet for hazardous products supplied to a Canadian workplace. Distributors and end-use workplaces keep SDS on file and accessible to workers.',
     'fw.hpr.k':         'Administered by',
-    'fw.hpr.v':         'Health Canada — WHMIS / Provincial OHS authorities',
+    'fw.hpr.v':         'Health Canada â€” WHMIS / Provincial OHS authorities',
     'fw.tdg.h':         'Transport of dangerous goods',
     'fw.tdg.b':         'The Transportation of Dangerous Goods Regulations govern classification, packaging, marking, and shipping documentation for regulated products moved by road, rail, air, or marine across Canada. The SDS section 14 carries the transport classification used for shipping.',
     'fw.tdg.k':         'Administered by',
-    'fw.tdg.v':         'Transport Canada — TDG Directorate',
+    'fw.tdg.v':         'Transport Canada â€” TDG Directorate',
 
     'auth.k':           'Authoritative source',
     'auth.v':           'The linked Safety Data Sheet is the authoritative source for any hazard, first-aid, classification, exposure, or transport detail. If a value on this page differs from the linked SDS, the ',
@@ -1126,15 +1126,15 @@ const I18N = {
     'auth.cta':         'Back to library',
 
     'disc.b':           'Disclaimer.',
-    'disc.body':        ' Copy on this page is plain-language summary and placeholder pending compliance-expert review. It is not regulatory advice. Distributors and workplaces are responsible for maintaining current SDS on file under their applicable provincial occupational health and safety regime. For regulated transport, refer to TDG and the carrier’s shipping requirements. © Kolben Chemicals Canada — content subject to change as regulations and product formulations are updated.',
+    'disc.body':        ' Copy on this page is plain-language summary and placeholder pending compliance-expert review. It is not regulatory advice. Distributors and workplaces are responsible for maintaining current SDS on file under their applicable provincial occupational health and safety regime. For regulated transport, refer to TDG and the carrierâ€™s shipping requirements. Â© Kolben Chemicals Canada â€” content subject to change as regulations and product formulations are updated.',
 
     'req.eyebrow':      'Document request',
     'req.h':            'Can\u2019t find a document? <span style="color:var(--red);">Request it.</span>',
-    'req.sub':          'If a product, language, or revision isn\u2019t yet wired into the library, request it from the compliance desk. We respond in one business day with the current PDF — or a status note if the document is in preparation.',
+    'req.sub':          'If a product, language, or revision isn\u2019t yet wired into the library, request it from the compliance desk. We respond in one business day with the current PDF â€” or a status note if the document is in preparation.',
     'step1.h':          'Identify',
     'step1.b':          'Note the product name and SKU. If unsure, paste the label text.',
     'step2.h':          'Request',
-    'step2.b':          'Send the request via the Contact form — choose “SDS & compliance.”',
+    'step2.b':          'Send the request via the Contact form â€” choose â€œSDS & compliance.â€',
     'step3.h':          'Receive',
     'step3.b':          'The current EN/FR PDF returns by reply. Revision date noted.',
     'req.cta1':         'Request a Document',
@@ -1147,7 +1147,7 @@ const I18N = {
     'reqr.k2':          'Compliance enquiries',
     'reqr.n2':          'For classification, labelling, transport, or regulatory questions.',
     'reqr.k3':          'Response window',
-    'reqr.n3':          'One business day. This page does not provide emergency response. In a workplace incident, follow your site’s emergency procedure.',
+    'reqr.n3':          'One business day. This page does not provide emergency response. In a workplace incident, follow your siteâ€™s emergency procedure.',
 
     'stds.k':           'Manufacturing standards',
     'stds.qms':         'Quality management',
@@ -1159,144 +1159,144 @@ const I18N = {
     'stds.state3':      'In effect',
     'stds.state4':      'In effect',
 
-    'footer.tag':       'Power · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada. Compliance content is plain-language summary; the linked SDS prevails.',
-    'footer.tagline':   'Power · Performance · Kolben',
+    'footer.tag':       'Power Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Compliance content is plain-language summary; the linked SDS prevails.',
+    'footer.tagline':   'Power Â· Performance Â· Kolben',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Nous joindre',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
-    'hero.eyebrow':     'Conformité et FDS',
-    'hero.h1':          'Fiches de données de sécurité et <em>documents réglementaires.</em>',
-    'hero.sub':         'Trouvez et téléchargez la fiche de données de sécurité actuelle de tout produit Kolben, en anglais ou en français. Contexte en langage clair sur les cadres canadiens applicables à ces produits — pour les dossiers SIMDUT, l’approvisionnement et le transport.',
+    'hero.eyebrow':     'ConformitÃ© et FDS',
+    'hero.h1':          'Fiches de donnÃ©es de sÃ©curitÃ© et <em>documents rÃ©glementaires.</em>',
+    'hero.sub':         'Trouvez et tÃ©lÃ©chargez la fiche de donnÃ©es de sÃ©curitÃ© actuelle de tout produit Kolben, en anglais ou en franÃ§ais. Contexte en langage clair sur les cadres canadiens applicables Ã  ces produits â€” pour les dossiers SIMDUT, lâ€™approvisionnement et le transport.',
 
-    'hstats.eyebrow':   'Bibliothèque — aperçu',
+    'hstats.eyebrow':   'BibliothÃ¨que â€” aperÃ§u',
     'hstats.l1':        'FDS disponibles',
     'hstats.l2':        'Couverture bilingue',
-    'hstats.foot':      'Bibliothèque à jour — révision ',
-    'hstats.foot2':     'PDF source hébergés par Kolben GmbH (Hanovre).',
+    'hstats.foot':      'BibliothÃ¨que Ã  jour â€” rÃ©vision ',
+    'hstats.foot2':     'PDF source hÃ©bergÃ©s par Kolben GmbH (Hanovre).',
 
-    'lib.eyebrow':      'Bibliothèque FDS et FT',
+    'lib.eyebrow':      'BibliothÃ¨que FDS et FT',
     'lib.h':            'Trouvez un document <em>par produit ou UGS.</em>',
-    'lib.sub':          'Effectuez une recherche dans le catalogue ou filtrez par catégorie. Chaque produit dispose d’une FDS en anglais et en français ; certains produits incluent une fiche technique et un descriptif produit.',
+    'lib.sub':          'Effectuez une recherche dans le catalogue ou filtrez par catÃ©gorie. Chaque produit dispose dâ€™une FDS en anglais et en franÃ§ais ; certains produits incluent une fiche technique et un descriptif produit.',
     'lib.legend.eyebrow':'Types de documents',
-    'lib.legend.sds':   'Fiche de données de sécurité — risques en milieu de travail, premiers soins, transport, réglementation.',
-    'lib.legend.tds':   'Fiche technique — propriétés, application, performance.',
-    'lib.legend.info':  'Information produit — descriptif neutre du produit, lorsque disponible.',
-    'lib.search.ph':    'Rechercher par nom de produit ou UGS…',
+    'lib.legend.sds':   'Fiche de donnÃ©es de sÃ©curitÃ© â€” risques en milieu de travail, premiers soins, transport, rÃ©glementation.',
+    'lib.legend.tds':   'Fiche technique â€” propriÃ©tÃ©s, application, performance.',
+    'lib.legend.info':  'Information produit â€” descriptif neutre du produit, lorsque disponible.',
+    'lib.search.ph':    'Rechercher par nom de produit ou UGSâ€¦',
     'lib.search.lang':  'EN <b>+</b> FR disponibles',
 
-    'chip.all':         'Toutes les catégories',
-    'chip.cleaners':    'Nettoyants freins et pièces',
+    'chip.all':         'Toutes les catÃ©gories',
+    'chip.cleaners':    'Nettoyants freins et piÃ¨ces',
     'chip.engadd':      'Additifs moteur',
     'chip.fueladd':     'Additifs carburant',
     'chip.oils':        'Huiles et fluides',
     'chip.cool':        'Refroidissement',
     'chip.trans':       'Transmission',
-    'chip.maint':       'Aérosols d’entretien',
-    'chip.elec':        'Électrique et contacts',
+    'chip.maint':       'AÃ©rosols dâ€™entretien',
+    'chip.elec':        'Ã‰lectrique et contacts',
     'chip.lube':        'Lubrifiants',
 
     'toolbar.show':     'Affichage de',
     'toolbar.of':       'sur',
     'toolbar.docs':     'documents',
-    'toolbar.rev':      'Date de révision indiquée par document · à jour au ',
+    'toolbar.rev':      'Date de rÃ©vision indiquÃ©e par document Â· Ã  jour au ',
 
-    'doc.sds.lbl':      'FDS · EN',
-    'doc.sdsfr.lbl':    'FDS · FR',
-    'doc.tds.lbl':      'FT · EN/FR',
+    'doc.sds.lbl':      'FDS Â· EN',
+    'doc.sdsfr.lbl':    'FDS Â· FR',
+    'doc.tds.lbl':      'FT Â· EN/FR',
     'doc.info.lbl':     'Info produit',
-    'doc.tds.pending':  'FT en préparation',
-    'doc.info.pending': 'Info en préparation',
-    'doc.sds.type':     'Fiche de données de sécurité',
+    'doc.tds.pending':  'FT en prÃ©paration',
+    'doc.info.pending': 'Info en prÃ©paration',
+    'doc.sds.type':     'Fiche de donnÃ©es de sÃ©curitÃ©',
     'doc.tds.type':     'Fiche technique',
     'doc.info.type':    'Information produit',
-    'doc.rev':          'Rév',
+    'doc.rev':          'RÃ©v',
     'doc.size':         'Format',
 
     'noresults.h':      'Aucun document correspondant.',
-    'noresults.sub':    'Vérifiez l’orthographe, retirez le filtre ou demandez le document directement — notre bureau de conformité retourne la révision actuelle en EN et FR.',
+    'noresults.sub':    'VÃ©rifiez lâ€™orthographe, retirez le filtre ou demandez le document directement â€” notre bureau de conformitÃ© retourne la rÃ©vision actuelle en EN et FR.',
     'noresults.cta':    'Demander un document',
 
-    'reg.eyebrow':      'Contexte réglementaire',
-    'reg.h':            'Les cadres canadiens <em>auxquels ces documents répondent.</em>',
-    'reg.sub':          'Aperçu neutre, en langage clair, des trois règlements auxquels les produits Kolben sont le plus souvent référés au Canada. Ceci est un contexte uniquement — la fiche de données de sécurité reliée fait foi pour toute information sur les dangers, premiers soins, classification ou transport.',
+    'reg.eyebrow':      'Contexte rÃ©glementaire',
+    'reg.h':            'Les cadres canadiens <em>auxquels ces documents rÃ©pondent.</em>',
+    'reg.sub':          'AperÃ§u neutre, en langage clair, des trois rÃ¨glements auxquels les produits Kolben sont le plus souvent rÃ©fÃ©rÃ©s au Canada. Ceci est un contexte uniquement â€” la fiche de donnÃ©es de sÃ©curitÃ© reliÃ©e fait foi pour toute information sur les dangers, premiers soins, classification ou transport.',
 
-    'fw.cccr.h':        'Étiquetage des produits chimiques de consommation',
-    'fw.cccr.b':        'Le Règlement sur les produits chimiques et contenants de consommation (2001) fixe les exigences d’étiquetage et d’emballage pour les produits chimiques vendus aux consommateurs au Canada — pictogrammes, mots-indicateurs, mentions de premiers soins et fermetures à l’épreuve des enfants lorsque requis.',
-    'fw.cccr.k':        'Administré par',
-    'fw.cccr.v':        'Santé Canada — Sécurité des produits de consommation',
+    'fw.cccr.h':        'Ã‰tiquetage des produits chimiques de consommation',
+    'fw.cccr.b':        'Le RÃ¨glement sur les produits chimiques et contenants de consommation (2001) fixe les exigences dâ€™Ã©tiquetage et dâ€™emballage pour les produits chimiques vendus aux consommateurs au Canada â€” pictogrammes, mots-indicateurs, mentions de premiers soins et fermetures Ã  lâ€™Ã©preuve des enfants lorsque requis.',
+    'fw.cccr.k':        'AdministrÃ© par',
+    'fw.cccr.v':        'SantÃ© Canada â€” SÃ©curitÃ© des produits de consommation',
     'fw.hpr.h':         'FDS et classification en milieu de travail',
-    'fw.hpr.b':         'Le Règlement sur les produits dangereux est aligné avec le SIMDUT 2015 (harmonisé SGH) et exige une fiche de données de sécurité à jour pour les produits dangereux fournis à un milieu de travail canadien. Distributeurs et utilisateurs finaux conservent les FDS en dossier et accessibles aux travailleurs.',
-    'fw.hpr.k':         'Administré par',
-    'fw.hpr.v':         'Santé Canada — SIMDUT / Autorités provinciales en SST',
+    'fw.hpr.b':         'Le RÃ¨glement sur les produits dangereux est alignÃ© avec le SIMDUT 2015 (harmonisÃ© SGH) et exige une fiche de donnÃ©es de sÃ©curitÃ© Ã  jour pour les produits dangereux fournis Ã  un milieu de travail canadien. Distributeurs et utilisateurs finaux conservent les FDS en dossier et accessibles aux travailleurs.',
+    'fw.hpr.k':         'AdministrÃ© par',
+    'fw.hpr.v':         'SantÃ© Canada â€” SIMDUT / AutoritÃ©s provinciales en SST',
     'fw.tdg.h':         'Transport des marchandises dangereuses',
-    'fw.tdg.b':         'Le Règlement sur le transport des marchandises dangereuses régit la classification, l’emballage, le marquage et les documents d’expédition pour les produits réglementés transportés par route, rail, air ou voie maritime au Canada. La section 14 de la FDS porte la classification de transport applicable.',
-    'fw.tdg.k':         'Administré par',
-    'fw.tdg.v':         'Transports Canada — Direction générale du TMD',
+    'fw.tdg.b':         'Le RÃ¨glement sur le transport des marchandises dangereuses rÃ©git la classification, lâ€™emballage, le marquage et les documents dâ€™expÃ©dition pour les produits rÃ©glementÃ©s transportÃ©s par route, rail, air ou voie maritime au Canada. La section 14 de la FDS porte la classification de transport applicable.',
+    'fw.tdg.k':         'AdministrÃ© par',
+    'fw.tdg.v':         'Transports Canada â€” Direction gÃ©nÃ©rale du TMD',
 
-    'auth.k':           'Source faisant autorité',
-    'auth.v':           'La fiche de données de sécurité reliée fait autorité pour toute information sur les dangers, les premiers soins, la classification, l’exposition ou le transport. Si une valeur de cette page diffère de la FDS reliée, la ',
-    'auth.vb':          'FDS prévaut',
-    'auth.cta':         'Retour à la bibliothèque',
+    'auth.k':           'Source faisant autoritÃ©',
+    'auth.v':           'La fiche de donnÃ©es de sÃ©curitÃ© reliÃ©e fait autoritÃ© pour toute information sur les dangers, les premiers soins, la classification, lâ€™exposition ou le transport. Si une valeur de cette page diffÃ¨re de la FDS reliÃ©e, la ',
+    'auth.vb':          'FDS prÃ©vaut',
+    'auth.cta':         'Retour Ã  la bibliothÃ¨que',
 
     'disc.b':           'Avertissement.',
-    'disc.body':        ' Le contenu de cette page est un résumé en langage clair et un placeholder en attente de révision par un expert en conformité. Il ne constitue pas un avis réglementaire. Les distributeurs et les milieux de travail sont responsables de maintenir des FDS à jour conformément au régime provincial de santé et sécurité au travail applicable. Pour le transport réglementé, se référer au TMD et aux exigences d’expédition du transporteur. © Kolben Chemicals Canada — contenu sujet à changement au fil de la mise à jour des règlements et des formulations.',
+    'disc.body':        ' Le contenu de cette page est un rÃ©sumÃ© en langage clair et un placeholder en attente de rÃ©vision par un expert en conformitÃ©. Il ne constitue pas un avis rÃ©glementaire. Les distributeurs et les milieux de travail sont responsables de maintenir des FDS Ã  jour conformÃ©ment au rÃ©gime provincial de santÃ© et sÃ©curitÃ© au travail applicable. Pour le transport rÃ©glementÃ©, se rÃ©fÃ©rer au TMD et aux exigences dâ€™expÃ©dition du transporteur. Â© Kolben Chemicals Canada â€” contenu sujet Ã  changement au fil de la mise Ã  jour des rÃ¨glements et des formulations.',
 
     'req.eyebrow':      'Demande de document',
     'req.h':            'Document introuvable ? <span style="color:var(--red);">Demandez-le.</span>',
-    'req.sub':          'Si un produit, une langue ou une révision n’est pas encore intégré à la bibliothèque, demandez-le au bureau de conformité. Nous répondons dans un jour ouvré avec le PDF actuel — ou une note de statut si le document est en préparation.',
+    'req.sub':          'Si un produit, une langue ou une rÃ©vision nâ€™est pas encore intÃ©grÃ© Ã  la bibliothÃ¨que, demandez-le au bureau de conformitÃ©. Nous rÃ©pondons dans un jour ouvrÃ© avec le PDF actuel â€” ou une note de statut si le document est en prÃ©paration.',
     'step1.h':          'Identifier',
-    'step1.b':          'Notez le nom du produit et l’UGS. En cas de doute, copiez le texte de l’étiquette.',
+    'step1.b':          'Notez le nom du produit et lâ€™UGS. En cas de doute, copiez le texte de lâ€™Ã©tiquette.',
     'step2.h':          'Demander',
-    'step2.b':          'Envoyez la demande via le formulaire de contact — choisissez « FDS et conformité ».',
+    'step2.b':          'Envoyez la demande via le formulaire de contact â€” choisissez Â« FDS et conformitÃ© Â».',
     'step3.h':          'Recevoir',
-    'step3.b':          'Le PDF EN/FR actuel est retourné par réponse. Date de révision indiquée.',
+    'step3.b':          'Le PDF EN/FR actuel est retournÃ© par rÃ©ponse. Date de rÃ©vision indiquÃ©e.',
     'req.cta1':         'Demander un document',
-    'req.cta2':         'Joindre l’équipe',
+    'req.cta2':         'Joindre lâ€™Ã©quipe',
 
-    'reqr.eyebrow':     'Bureau sécurité et documents',
-    'reqr.h':           'Lignes directes pour FDS et conformité.',
+    'reqr.eyebrow':     'Bureau sÃ©curitÃ© et documents',
+    'reqr.h':           'Lignes directes pour FDS et conformitÃ©.',
     'reqr.k1':          'Bureau des documents',
-    'reqr.n1':          'Pour FDS, FT, historique des révisions, variantes linguistiques.',
-    'reqr.k2':          'Demandes de conformité',
-    'reqr.n2':          'Pour la classification, l’étiquetage, le transport ou les questions réglementaires.',
-    'reqr.k3':          'Fenêtre de réponse',
-    'reqr.n3':          'Un jour ouvré. Cette page n’offre pas de réponse d’urgence. En cas d’incident en milieu de travail, suivez la procédure d’urgence de votre site.',
+    'reqr.n1':          'Pour FDS, FT, historique des rÃ©visions, variantes linguistiques.',
+    'reqr.k2':          'Demandes de conformitÃ©',
+    'reqr.n2':          'Pour la classification, lâ€™Ã©tiquetage, le transport ou les questions rÃ©glementaires.',
+    'reqr.k3':          'FenÃªtre de rÃ©ponse',
+    'reqr.n3':          'Un jour ouvrÃ©. Cette page nâ€™offre pas de rÃ©ponse dâ€™urgence. En cas dâ€™incident en milieu de travail, suivez la procÃ©dure dâ€™urgence de votre site.',
 
     'stds.k':           'Normes de fabrication',
-    'stds.qms':         'Management de la qualité',
-    'stds.auto':        'Qualité automobile',
+    'stds.qms':         'Management de la qualitÃ©',
+    'stds.auto':        'QualitÃ© automobile',
     'stds.whmis':       'Alignement risques en milieu de travail',
     'stds.tdg':         'Classification de transport',
-    'stds.state':       'À venir',
-    'stds.state2':      'À venir',
+    'stds.state':       'Ã€ venir',
+    'stds.state2':      'Ã€ venir',
     'stds.state3':      'En vigueur',
     'stds.state4':      'En vigueur',
 
-    'footer.tag':       'Puissance · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada. Le contenu de conformité est un résumé en langage clair ; la FDS reliée prévaut.',
-    'footer.tagline':   'Puissance · Performance · Kolben',
+    'footer.tag':       'Puissance Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Le contenu de conformitÃ© est un rÃ©sumÃ© en langage clair ; la FDS reliÃ©e prÃ©vaut.',
+    'footer.tagline':   'Puissance Â· Performance Â· Kolben',
   },
 };
 
 let state = { lang: 'en', filter: 'all', q: '' };
 
-/* ─── Card SVGs ─── */
+/* â”€â”€â”€ Card SVGs â”€â”€â”€ */
 const ICON_DOWNLOAD = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 14l3 3 3-3"/><path d="M12 11v6"/></svg>';
 const ICON_FILE     = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 14h6"/><path d="M9 17h4"/></svg>';
 const ICON_INFO     = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01"/><path d="M11 12h1v5h1"/></svg>';
 
-/* ─── Render cards ─── */
+/* â”€â”€â”€ Render cards â”€â”€â”€ */
 function renderCards(lang) {
   const t = I18N[lang];
   const root = document.getElementById('lib-results');
@@ -1313,7 +1313,7 @@ function renderCards(lang) {
 
     const docs = [];
 
-    // SDS EN — always present
+    // SDS EN â€” always present
     docs.push(`
       <a class="doc-link" href="docs/${p.sku.toLowerCase()}-sds-en.pdf" download>
         <div class="doc-link__icon">${ICON_DOWNLOAD}</div>
@@ -1321,10 +1321,10 @@ function renderCards(lang) {
           <div class="doc-link__type">${t['doc.sds.type']}</div>
           <div class="doc-link__lbl">${t['doc.sds.lbl']}</div>
         </div>
-        <div class="doc-link__arrow">↓</div>
+        <div class="doc-link__arrow">â†“</div>
       </a>`);
 
-    // SDS FR — always present
+    // SDS FR â€” always present
     docs.push(`
       <a class="doc-link" href="docs/${p.sku.toLowerCase()}-sds-fr.pdf" download>
         <div class="doc-link__icon">${ICON_DOWNLOAD}</div>
@@ -1332,7 +1332,7 @@ function renderCards(lang) {
           <div class="doc-link__type">${t['doc.sds.type']}</div>
           <div class="doc-link__lbl">${t['doc.sdsfr.lbl']}</div>
         </div>
-        <div class="doc-link__arrow">↓</div>
+        <div class="doc-link__arrow">â†“</div>
       </a>`);
 
     // TDS
@@ -1344,7 +1344,7 @@ function renderCards(lang) {
             <div class="doc-link__type" style="color: var(--black);">${t['doc.tds.type']}</div>
             <div class="doc-link__lbl">${t['doc.tds.lbl']}</div>
           </div>
-          <div class="doc-link__arrow">↓</div>
+          <div class="doc-link__arrow">â†“</div>
         </a>`);
     } else {
       docs.push(`
@@ -1354,7 +1354,7 @@ function renderCards(lang) {
             <div class="doc-link__type">${t['doc.tds.type']}</div>
             <div class="doc-link__lbl">${t['doc.tds.pending']}</div>
           </div>
-          <div class="doc-link__arrow">·</div>
+          <div class="doc-link__arrow">Â·</div>
         </span>`);
     }
 
@@ -1367,7 +1367,7 @@ function renderCards(lang) {
             <div class="doc-link__type" style="color: var(--black);">${t['doc.info.type']}</div>
             <div class="doc-link__lbl">${t['doc.info.lbl']}</div>
           </div>
-          <div class="doc-link__arrow">↓</div>
+          <div class="doc-link__arrow">â†“</div>
         </a>`);
     } else {
       docs.push(`
@@ -1377,7 +1377,7 @@ function renderCards(lang) {
             <div class="doc-link__type">${t['doc.info.type']}</div>
             <div class="doc-link__lbl">${t['doc.info.pending']}</div>
           </div>
-          <div class="doc-link__arrow">·</div>
+          <div class="doc-link__arrow">Â·</div>
         </span>`);
     }
 
@@ -1388,8 +1388,8 @@ function renderCards(lang) {
       </div>
       <div class="dcard__name">${p.name[lang]}</div>
       <div class="dcard__meta">
-        <span>${t['doc.size']} · <b>${p.size}</b></span>
-        <span>${t['doc.rev']} · <b>${p.rev}</b></span>
+        <span>${t['doc.size']} Â· <b>${p.size}</b></span>
+        <span>${t['doc.rev']} Â· <b>${p.rev}</b></span>
       </div>
       <div class="docs">
         ${docs.join('')}

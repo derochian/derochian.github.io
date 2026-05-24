@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben Products · Catalogue (Products Hub)</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben Products Â· Catalogue (Products Hub)</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette (mirror of colors_and_type.css) ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette (mirror of colors_and_type.css) â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -38,7 +38,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -50,7 +50,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -62,7 +62,7 @@
   .nav__caret { width: 8px; height: 5px; }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 32px; font-size: 13px; }
@@ -77,7 +77,7 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ───────── HERO ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .hero { position: relative; padding: 96px 0 80px; overflow: hidden; background: var(--black); color: var(--white); }
   .hero__grid {
     position: absolute; inset: 0; pointer-events: none;
@@ -109,7 +109,7 @@
   .hero__meta b { color: var(--white); font-weight: 500; }
   .hero__meta i { width: 6px; height: 6px; background: var(--red); border-radius: 50%; display: inline-block; vertical-align: middle; margin-right: 8px; font-style: normal; }
 
-  /* ───────── SECTION HEAD (shared) ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ SECTION HEAD (shared) â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .section-eyebrow { display: inline-flex; align-items: center; gap: 12px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); margin-bottom: 14px; }
   .section-eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
   .section-title { font: 700 clamp(1.8rem, 3.6vw, 2.6rem)/1.02 'Jost'; letter-spacing: -0.03em; text-transform: uppercase; color: var(--black); }
@@ -117,7 +117,7 @@
   .section-head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
   .section-head__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); max-width: 520px; margin-top: 8px; }
 
-  /* ───────── CATEGORY BROWSE GRID (12 cats) ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ CATEGORY BROWSE GRID (12 cats) â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .browse { padding: 96px 0 80px; background: var(--white); }
   .cat-grid {
     display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
@@ -149,7 +149,7 @@
   .cat__count { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
   .cat__arrow { position: absolute; top: 22px; right: 22px; width: 16px; height: 16px; color: rgba(0,0,0,.35); transition: transform 220ms var(--ease), color 220ms var(--ease); }
 
-  /* ───────── FILTER BAR (sticky) + PRODUCT GRID ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FILTER BAR (sticky) + PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .listing { background: var(--offwhite); border-top: 1px solid var(--rule); }
   .filterbar {
     position: sticky; top: 76px; z-index: 40;
@@ -226,7 +226,7 @@
 
   .empty { padding: 64px 0; text-align: center; color: var(--muted); font: 500 12px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; grid-column: 1 / -1; }
 
-  /* ───────── DISTRIBUTOR CTA BAND ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ DISTRIBUTOR CTA BAND â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .dist {
     background: var(--black); color: var(--white);
     padding: 80px 0; position: relative; overflow: hidden;
@@ -250,7 +250,7 @@
   .dist__actions { display: flex; flex-direction: column; gap: 12px; align-items: stretch; justify-self: end; min-width: 280px; }
   .dist__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* ───────── FOOTER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .footer { background: #050505; color: var(--white); padding: 48px 0 24px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -258,7 +258,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1100px) {
     .nav { display: none; }
     .util__left { gap: 14px; }
@@ -276,7 +276,7 @@
     .filterbar__count { margin-left: 0; width: 100%; padding-top: 4px; border-top: 1px solid var(--rule-soft); }
   }
 
-  /* ───────── REDUCED MOTION ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ REDUCED MOTION â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; animation: none !important; }
   }
@@ -286,7 +286,7 @@
 </head>
 <body data-screen-label="01 Products Hub">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -313,10 +313,10 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
       <div class="nav__item"><a class="nav__link active" data-i18n="nav.products">Products</a></div>
@@ -332,7 +332,7 @@
   </div>
 </header>
 
-<!-- ───────── HERO ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <section class="hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
@@ -348,14 +348,14 @@
   </div>
 </section>
 
-<!-- ───────── CATEGORY BROWSE GRID ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ CATEGORY BROWSE GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <section class="browse">
   <div class="container">
     <div class="section-head">
       <div>
         <div class="section-eyebrow" data-i18n="browse.eyebrow">Browse by Category</div>
         <h2 class="section-title" data-i18n="browse.title">Twelve <em>systems</em>. One catalogue.</h2>
-        <p class="section-head__sub" data-i18n="browse.sub">Every Kolben SKU is grouped by the system it serves — brake, fuel, cooling, transmission and beyond.</p>
+        <p class="section-head__sub" data-i18n="browse.sub">Every Kolben SKU is grouped by the system it serves â€” brake, fuel, cooling, transmission and beyond.</p>
       </div>
     </div>
 
@@ -584,7 +584,7 @@
   </div>
 </section>
 
-<!-- ───────── FILTER BAR + PRODUCT GRID ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ FILTER BAR + PRODUCT GRID â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <section class="listing">
   <div class="filterbar">
     <div class="container filterbar__inner">
@@ -610,7 +610,7 @@
   </div>
 </section>
 
-<!-- ───────── DISTRIBUTOR CTA BAND ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ DISTRIBUTOR CTA BAND â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <section class="dist is-light">
   <div class="container dist__inner">
     <div>
@@ -620,30 +620,30 @@
     <div class="dist__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="dist.a">Become a Distributor</span>
-        <span class="arrow">→</span>
+        <span class="arrow">â†’</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -656,7 +656,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -666,7 +666,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -676,7 +676,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -709,54 +709,54 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   PRODUCT CATALOGUE — bilingual EN/FR data
-   ═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   PRODUCT CATALOGUE â€” bilingual EN/FR data
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const PRODUCTS = [
-  // — Additives — engine + fuel + cooling chemistry that goes IN a system —
+  // â€” Additives â€” engine + fuel + cooling chemistry that goes IN a system â€”
   { sku: 'KB-340', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
-    name: { en: 'Engine Flush — Pro',          fr: 'Nettoyant moteur — Pro' },
+    name: { en: 'Engine Flush â€” Pro',          fr: 'Nettoyant moteur â€” Pro' },
     size: '300 ml',
     desc: { en: 'Removes carbon, sludge and varnish from the lubrication circuit in 15 minutes. For gasoline, diesel and DPF-equipped engines.',
-            fr: 'Élimine le carbone, les boues et le vernis du circuit de lubrification en 15 minutes. Essence, diesel et moteurs avec FAP.' } },
+            fr: 'Ã‰limine le carbone, les boues et le vernis du circuit de lubrification en 15 minutes. Essence, diesel et moteurs avec FAP.' } },
 
   { sku: 'KB-512', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
     name: { en: 'Diesel Injector Cleaner',     fr: 'Nettoyant injecteurs diesel' },
     size: '250 ml',
     desc: { en: 'Restores injector spray pattern. Cuts smoke, recovers lost power, lowers fuel consumption on common-rail diesels.',
-            fr: 'Restaure la pulvérisation des injecteurs. Réduit la fumée, restaure la puissance et abaisse la consommation des diesels common-rail.' } },
+            fr: 'Restaure la pulvÃ©risation des injecteurs. RÃ©duit la fumÃ©e, restaure la puissance et abaisse la consommation des diesels common-rail.' } },
 
   { sku: 'KB-520', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
     name: { en: 'Petrol System Cleaner',       fr: 'Nettoyant circuit essence' },
     size: '300 ml',
     desc: { en: 'Cleans intake valves, ports and combustion chamber deposits on direct-injection petrol engines. One tank treatment.',
-            fr: 'Nettoie soupapes d’admission, conduits et dépôts de combustion sur moteurs essence à injection directe. Un plein.' } },
+            fr: 'Nettoie soupapes dâ€™admission, conduits et dÃ©pÃ´ts de combustion sur moteurs essence Ã  injection directe. Un plein.' } },
 
   { sku: 'KB-525', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
-    name: { en: 'Cetane Booster +6',           fr: 'Activateur de cétane +6' },
+    name: { en: 'Cetane Booster +6',           fr: 'Activateur de cÃ©tane +6' },
     size: '300 ml',
     desc: { en: 'Raises cetane by up to six points. Sharper throttle response, quieter combustion, easier cold-start.',
-            fr: 'Augmente l’indice de cétane jusqu’à six points. Réponse plus vive, combustion plus silencieuse, démarrage à froid facilité.' } },
+            fr: 'Augmente lâ€™indice de cÃ©tane jusquâ€™Ã  six points. RÃ©ponse plus vive, combustion plus silencieuse, dÃ©marrage Ã  froid facilitÃ©.' } },
 
   { sku: 'KB-610', filter: 'add',  cat: { en: 'Sealants & Stop-Leaks', fr: 'Mastics et anti-fuites' },
     name: { en: 'Radiator Stop-Leak',          fr: 'Anti-fuite radiateur' },
@@ -765,71 +765,71 @@ const PRODUCTS = [
             fr: 'Scelle durablement les microfuites du circuit de refroidissement sans colmater. Compatible avec tous les liquides OEM.' } },
 
   { sku: 'KB-635', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
-    name: { en: 'Oil System Stabilizer',       fr: 'Stabilisateur du circuit d’huile' },
+    name: { en: 'Oil System Stabilizer',       fr: 'Stabilisateur du circuit dâ€™huile' },
     size: '500 ml',
     desc: { en: 'Reduces oil consumption and quiets hydraulic lifters on high-mileage engines. ACEA A3/B4 compatible.',
-            fr: 'Réduit la consommation d’huile et silencifie les poussoirs hydrauliques des moteurs à fort kilométrage. ACEA A3/B4 compatible.' } },
+            fr: 'RÃ©duit la consommation dâ€™huile et silencifie les poussoirs hydrauliques des moteurs Ã  fort kilomÃ©trage. ACEA A3/B4 compatible.' } },
 
-  // — Oils & Fluids — bulk wet chemistry that goes IN as the working fluid —
+  // â€” Oils & Fluids â€” bulk wet chemistry that goes IN as the working fluid â€”
   { sku: 'KB-401', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
-    name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' },
+    name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entiÃ¨rement synthÃ©tique' },
     size: '5 L',
     desc: { en: 'Low-SAPS, fuel-economy formulation. Meets BMW LL-04, MB 229.51 and VW 504 00 / 507 00.',
-            fr: 'Faible teneur en SAPS, formule économe. Conforme BMW LL-04, MB 229.51 et VW 504 00 / 507 00.' } },
+            fr: 'Faible teneur en SAPS, formule Ã©conome. Conforme BMW LL-04, MB 229.51 et VW 504 00 / 507 00.' } },
 
   { sku: 'KB-420', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
     name: { en: 'DOT 4 Brake Fluid',           fr: 'Liquide de frein DOT 4' },
     size: '1 L',
-    desc: { en: 'Dry boiling point 265 °C, wet 175 °C. For ABS, ESP and modern hydraulic clutch systems.',
-            fr: 'Point d’ébullition sec 265 °C, humide 175 °C. ABS, ESP et systèmes d’embrayage hydraulique modernes.' } },
+    desc: { en: 'Dry boiling point 265 Â°C, wet 175 Â°C. For ABS, ESP and modern hydraulic clutch systems.',
+            fr: 'Point dâ€™Ã©bullition sec 265 Â°C, humide 175 Â°C. ABS, ESP et systÃ¨mes dâ€™embrayage hydraulique modernes.' } },
 
   { sku: 'KB-430', filter: 'oils', cat: { en: 'Cooling & Radiator', fr: 'Refroidissement et radiateur' },
-    name: { en: 'Long-Life Coolant −38 °C',    fr: 'Liquide de refroidissement longue durée −38 °C' },
+    name: { en: 'Long-Life Coolant âˆ’38 Â°C',    fr: 'Liquide de refroidissement longue durÃ©e âˆ’38 Â°C' },
     size: '4 L',
     desc: { en: 'Ready-to-use OAT formulation. 5-year / 250,000 km drain interval. G12++ compatible.',
-            fr: 'Formule OAT prête à l’emploi. Vidange tous les 5 ans / 250 000 km. Compatible G12++.' } },
+            fr: 'Formule OAT prÃªte Ã  lâ€™emploi. Vidange tous les 5 ans / 250 000 km. Compatible G12++.' } },
 
   { sku: 'KB-445', filter: 'oils', cat: { en: 'Transmission',     fr: 'Transmission' },
-    name: { en: 'ATF Multi-Vehicle',           fr: 'ATF multi-véhicules' },
+    name: { en: 'ATF Multi-Vehicle',           fr: 'ATF multi-vÃ©hicules' },
     size: '4 L',
     desc: { en: 'Synthetic automatic transmission fluid covering 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1 and MB 236.14.',
-            fr: 'Fluide ATF synthétique couvrant plus de 30 spécifications OEM dont ZF Lifeguard 6/8, Aisin AW-1 et MB 236.14.' } },
+            fr: 'Fluide ATF synthÃ©tique couvrant plus de 30 spÃ©cifications OEM dont ZF Lifeguard 6/8, Aisin AW-1 et MB 236.14.' } },
 
   { sku: 'KB-450', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
-    name: { en: 'Power Steering Fluid',        fr: 'Liquide de direction assistée' },
+    name: { en: 'Power Steering Fluid',        fr: 'Liquide de direction assistÃ©e' },
     size: '1 L',
-    desc: { en: 'Universal mineral-based fluid for hydraulic steering systems. Operating range −40 °C to 130 °C.',
-            fr: 'Fluide minéral universel pour directions hydrauliques. Plage de service −40 °C à 130 °C.' } },
+    desc: { en: 'Universal mineral-based fluid for hydraulic steering systems. Operating range âˆ’40 Â°C to 130 Â°C.',
+            fr: 'Fluide minÃ©ral universel pour directions hydrauliques. Plage de service âˆ’40 Â°C Ã  130 Â°C.' } },
 
-  // — Maintenance — workshop aerosols and consumables —
+  // â€” Maintenance â€” workshop aerosols and consumables â€”
   { sku: 'KB-210', filter: 'maint', cat: { en: 'Brake Cleaners',  fr: 'Nettoyants freins' },
-    name: { en: 'Brake & Parts Cleaner',       fr: 'Nettoyant freins et pièces' },
+    name: { en: 'Brake & Parts Cleaner',       fr: 'Nettoyant freins et piÃ¨ces' },
     size: '500 ml',
     desc: { en: 'Fast-evaporating, non-chlorinated solvent. High-pressure jet, leaves no residue on caliper or rotor.',
-            fr: 'Solvant à évaporation rapide, non chloré. Jet haute pression, ne laisse aucun résidu sur étrier ou disque.' } },
+            fr: 'Solvant Ã  Ã©vaporation rapide, non chlorÃ©. Jet haute pression, ne laisse aucun rÃ©sidu sur Ã©trier ou disque.' } },
 
-  { sku: 'KB-225', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
-    name: { en: 'Throttle Body Cleaner',       fr: 'Nettoyant boîtier papillon' },
+  { sku: 'KB-225', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'AÃ©rosols dâ€™entretien' },
+    name: { en: 'Throttle Body Cleaner',       fr: 'Nettoyant boÃ®tier papillon' },
     size: '400 ml',
     desc: { en: 'Dissolves carbon and gum from throttle plates and MAF sensors. Safe on coatings and rubber seals.',
-            fr: 'Dissout le carbone et la gomme des papillons et capteurs MAF. Sans danger pour revêtements et joints.' } },
+            fr: 'Dissout le carbone et la gomme des papillons et capteurs MAF. Sans danger pour revÃªtements et joints.' } },
 
-  { sku: 'KB-241', filter: 'maint', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
-    name: { en: 'Electronic Contact Cleaner',  fr: 'Nettoyant contacts électroniques' },
+  { sku: 'KB-241', filter: 'maint', cat: { en: 'Electrical & Contact', fr: 'Ã‰lectrique et contacts' },
+    name: { en: 'Electronic Contact Cleaner',  fr: 'Nettoyant contacts Ã©lectroniques' },
     size: '300 ml',
     desc: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV / 2.5 mm.',
-            fr: 'Nettoyant de précision sans danger pour plastiques. Connecteurs, relais et calculateurs. Rigidité 35 kV / 2,5 mm.' } },
+            fr: 'Nettoyant de prÃ©cision sans danger pour plastiques. Connecteurs, relais et calculateurs. RigiditÃ© 35 kV / 2,5 mm.' } },
 
   { sku: 'KB-088', filter: 'maint', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
-    name: { en: 'Synthetic Chain Lube',        fr: 'Lubrifiant chaîne synthétique' },
+    name: { en: 'Synthetic Chain Lube',        fr: 'Lubrifiant chaÃ®ne synthÃ©tique' },
     size: '400 g',
     desc: { en: 'PTFE-fortified aerosol grease for drive chains and exposed linkages. Slings off less, lasts longer.',
-            fr: 'Graisse aérosol enrichie au PTFE pour chaînes et tringleries exposées. Tient mieux, dure plus longtemps.' } },
+            fr: 'Graisse aÃ©rosol enrichie au PTFE pour chaÃ®nes et tringleries exposÃ©es. Tient mieux, dure plus longtemps.' } },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   I18N — page chrome strings
-   ═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   I18N â€” page chrome strings
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -854,7 +854,7 @@ const I18N = {
 
     'browse.eyebrow':   'Browse by Category',
     'browse.title':     'Twelve <em>systems</em>. One catalogue.',
-    'browse.sub':       'Every Kolben SKU is grouped by the system it serves — brake, fuel, cooling, transmission and beyond.',
+    'browse.sub':       'Every Kolben SKU is grouped by the system it serves â€” brake, fuel, cooling, transmission and beyond.',
 
     'cat.brake.n':    'Brake Cleaners',                'cat.brake.c':    '12 SKUs',
     'cat.engadd.n':   'Engine Additives',              'cat.engadd.c':   '9 SKUs',
@@ -883,48 +883,48 @@ const I18N = {
     'dist.a':         'Become a Distributor',
     'dist.b':         'Download Catalogue (PDF)',
 
-    'footer.tag':     'Power · Performance · Kolben',
-    'footer.copy':    '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
-    'footer.tagline': 'German Precision · Engine Perfection',
+    'footer.tag':     'Power Â· Performance Â· Kolben',
+    'footer.copy':    'Â© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline': 'German Precision Â· Engine Perfection',
   },
 
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'hero.eyebrow':     'Catalogue Produits',
     'hero.year':        'Gamme 2026',
-    'hero.title':       'La gamme Kolben <em>complète</em>.',
-    'hero.sub':         'Douze catégories. Plus de cent références certifiées OEM. Conçues à Hanovre, fabriquées selon ISO 9001 et IATF 16949, distribuées partout au Canada.',
-    'hero.m1n': '12',     'hero.m1l': 'Catégories',
-    'hero.m2n': '100+',   'hero.m2l': 'Références actives',
+    'hero.title':       'La gamme Kolben <em>complÃ¨te</em>.',
+    'hero.sub':         'Douze catÃ©gories. Plus de cent rÃ©fÃ©rences certifiÃ©es OEM. ConÃ§ues Ã  Hanovre, fabriquÃ©es selon ISO 9001 et IATF 16949, distribuÃ©es partout au Canada.',
+    'hero.m1n': '12',     'hero.m1l': 'CatÃ©gories',
+    'hero.m2n': '100+',   'hero.m2l': 'RÃ©fÃ©rences actives',
     'hero.m3n': '15',     'hero.m3l': 'Homologations OEM',
-    'hero.m4n': 'EN&nbsp;/&nbsp;FR', 'hero.m4l': 'Étiquetage bilingue',
+    'hero.m4n': 'EN&nbsp;/&nbsp;FR', 'hero.m4l': 'Ã‰tiquetage bilingue',
 
-    'browse.eyebrow':   'Parcourir par catégorie',
-    'browse.title':     'Douze <em>systèmes</em>. Un catalogue.',
-    'browse.sub':       'Chaque référence Kolben est groupée par le système qu’elle sert — frein, carburant, refroidissement, transmission et au-delà.',
+    'browse.eyebrow':   'Parcourir par catÃ©gorie',
+    'browse.title':     'Douze <em>systÃ¨mes</em>. Un catalogue.',
+    'browse.sub':       'Chaque rÃ©fÃ©rence Kolben est groupÃ©e par le systÃ¨me quâ€™elle sert â€” frein, carburant, refroidissement, transmission et au-delÃ .',
 
-    'cat.brake.n':    'Nettoyants freins',                  'cat.brake.c':    '12 réf.',
-    'cat.engadd.n':   'Additifs moteur',                    'cat.engadd.c':   '9 réf.',
-    'cat.fueladd.n':  'Additifs carburant',                 'cat.fueladd.c':  '14 réf.',
-    'cat.lube.n':     'Lubrifiants et graisses',            'cat.lube.c':     '22 réf.',
-    'cat.oils.n':     'Huiles et fluides',                  'cat.oils.c':     '18 réf.',
-    'cat.trans.n':    'Transmission',                       'cat.trans.c':    '9 réf.',
-    'cat.cool.n':     'Refroidissement et radiateur',       'cat.cool.c':     '7 réf.',
-    'cat.maint.n':    'Aérosols d’entretien',               'cat.maint.c':    '15 réf.',
-    'cat.elec.n':     'Nettoyants électriques et contacts', 'cat.elec.c':     '6 réf.',
-    'cat.seal.n':     'Mastics et anti-fuites',             'cat.seal.c':     '8 réf.',
-    'cat.det.n':      'Détaillage et entretien auto',       'cat.det.c':      '11 réf.',
-    'cat.engclean.n': 'Nettoyage moteur',                   'cat.engclean.c': '8 réf.',
+    'cat.brake.n':    'Nettoyants freins',                  'cat.brake.c':    '12 rÃ©f.',
+    'cat.engadd.n':   'Additifs moteur',                    'cat.engadd.c':   '9 rÃ©f.',
+    'cat.fueladd.n':  'Additifs carburant',                 'cat.fueladd.c':  '14 rÃ©f.',
+    'cat.lube.n':     'Lubrifiants et graisses',            'cat.lube.c':     '22 rÃ©f.',
+    'cat.oils.n':     'Huiles et fluides',                  'cat.oils.c':     '18 rÃ©f.',
+    'cat.trans.n':    'Transmission',                       'cat.trans.c':    '9 rÃ©f.',
+    'cat.cool.n':     'Refroidissement et radiateur',       'cat.cool.c':     '7 rÃ©f.',
+    'cat.maint.n':    'AÃ©rosols dâ€™entretien',               'cat.maint.c':    '15 rÃ©f.',
+    'cat.elec.n':     'Nettoyants Ã©lectriques et contacts', 'cat.elec.c':     '6 rÃ©f.',
+    'cat.seal.n':     'Mastics et anti-fuites',             'cat.seal.c':     '8 rÃ©f.',
+    'cat.det.n':      'DÃ©taillage et entretien auto',       'cat.det.c':      '11 rÃ©f.',
+    'cat.engclean.n': 'Nettoyage moteur',                   'cat.engclean.c': '8 rÃ©f.',
 
     'filter.label':   'Filtrer',
     'filter.all':     'Tous les produits',
@@ -935,20 +935,20 @@ const I18N = {
     'card.view':      'Voir le produit',
 
     'dist.eyebrow':   'Pour distributeurs et flottes',
-    'dist.title':     'Garnissez le catalogue. <em>Prenez l’atelier.</em>',
-    'dist.sub':       'Étiquetage bilingue EN/FR, FDS conformes CSA, expédition sous 48 heures depuis Mississauga et Edmonton. Un seul bon de commande, toute la gamme Kolben.',
+    'dist.title':     'Garnissez le catalogue. <em>Prenez lâ€™atelier.</em>',
+    'dist.sub':       'Ã‰tiquetage bilingue EN/FR, FDS conformes CSA, expÃ©dition sous 48 heures depuis Mississauga et Edmonton. Un seul bon de commande, toute la gamme Kolben.',
     'dist.a':         'Devenir distributeur',
-    'dist.b':         'Télécharger le catalogue (PDF)',
+    'dist.b':         'TÃ©lÃ©charger le catalogue (PDF)',
 
-    'footer.tag':     'Puissance · Performance · Kolben',
-    'footer.copy':    '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
-    'footer.tagline': 'Précision allemande · Perfection du moteur',
+    'footer.tag':     'Puissance Â· Performance Â· Kolben',
+    'footer.copy':    'Â© 2026 Kolben Chemicals Canada. ConÃ§u Ã  Hanovre.',
+    'footer.tagline': 'PrÃ©cision allemande Â· Perfection du moteur',
   },
 };
 
-/* ═══════════════════════════════════════════════════════════
-   RENDER — product cards
-   ═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RENDER â€” product cards
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function renderProducts(lang, filter) {
   const grid = document.getElementById('product-grid');
   const t = I18N[lang];
@@ -957,7 +957,7 @@ function renderProducts(lang, filter) {
   document.getElementById('count').textContent = list.length;
 
   if (list.length === 0) {
-    grid.innerHTML = '<div class="empty">— ' + (lang === 'fr' ? 'Aucun produit' : 'No products') + ' —</div>';
+    grid.innerHTML = '<div class="empty">â€” ' + (lang === 'fr' ? 'Aucun produit' : 'No products') + ' â€”</div>';
     return;
   }
 
@@ -983,9 +983,9 @@ function renderProducts(lang, filter) {
   `).join('');
 }
 
-/* ═══════════════════════════════════════════════════════════
-   I18N — apply chrome strings
-   ═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   I18N â€” apply chrome strings
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function applyI18n(lang) {
   const t = I18N[lang];
   document.documentElement.setAttribute('lang', lang);
@@ -998,9 +998,9 @@ function applyI18n(lang) {
   });
 }
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BOOT
-   ═══════════════════════════════════════════════════════════ */
+   â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 let state = { lang: 'en', filter: 'all' };
 
 function rerender() {

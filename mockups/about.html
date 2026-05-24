@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — About</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben â€” About</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -39,7 +39,7 @@
   a { text-decoration: none; color: inherit; }
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -51,7 +51,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -62,7 +62,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -77,9 +77,9 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ═══════════════════════════════════════════════════════════
-     HERO — black, 80×80 radial-masked grid
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     HERO â€” black, 80Ã—80 radial-masked grid
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .hero {
     position: relative; overflow: hidden;
     background: var(--black); color: var(--white);
@@ -145,9 +145,9 @@
     font: 400 13px/1.4 'Inter'; color: var(--on-black-muted); text-align: right;
   }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SECTION HEAD
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .sh { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 40px; flex-wrap: wrap; }
   .sh__left { max-width: 720px; }
   .sh__eyebrow { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black); }
@@ -163,9 +163,9 @@
   .sh__count { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); align-self: end; padding-bottom: 6px; }
   .sh__count b { color: var(--black); font-weight: 500; padding-right: 6px; }
 
-  /* ═══════════════════════════════════════════════════════════
-     WHO WE ARE — brand-story block, two-col on offwhite
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     WHO WE ARE â€” brand-story block, two-col on offwhite
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .who-sec { background: var(--offwhite); padding: 96px 0 104px; border-bottom: 1px solid var(--rule); }
   .who { display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 56px; align-items: start; }
   .who__h {
@@ -193,9 +193,9 @@
     background: var(--white);
   }
 
-  /* ═══════════════════════════════════════════════════════════
-     VALUES — 4-card grid, hairlines + red underline hover
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     VALUES â€” 4-card grid, hairlines + red underline hover
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .values-sec { background: var(--white); padding: 96px 0 104px; }
   .values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--rule); background: var(--rule); }
   .val {
@@ -226,9 +226,9 @@
   .val__h { font: 700 19px/1.18 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black); text-wrap: balance; }
   .val__line { font: 400 14px/1.55 'Inter'; color: var(--muted); }
 
-  /* ═══════════════════════════════════════════════════════════
-     BUILT FOR CANADA — black differentiator band
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BUILT FOR CANADA â€” black differentiator band
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .canada-sec {
     background: var(--black); color: var(--white);
     padding: 96px 0 104px;
@@ -280,9 +280,9 @@
     color: var(--gold); text-align: right;
   }
 
-  /* ═══════════════════════════════════════════════════════════
-     KOLBEN RANGE — condensed category strip
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     KOLBEN RANGE â€” condensed category strip
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .range-sec { background: var(--white); padding: 96px 0 104px; }
   .range { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--rule); background: var(--rule); }
   .rg {
@@ -318,9 +318,9 @@
   .range-foot__note { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
   .range-foot__note b { color: var(--black); font-weight: 500; }
 
-  /* ═══════════════════════════════════════════════════════════
-     QUALITY & STANDARDS — policy + named-standards slots
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     QUALITY & STANDARDS â€” policy + named-standards slots
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .qual-sec { background: var(--offwhite); padding: 96px 0 104px; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
   .qual {
     display: grid; grid-template-columns: 0.9fr 1.4fr; gap: 56px; align-items: stretch;
@@ -392,9 +392,9 @@
   .std__status.is-pending { color: var(--muted); }
   .std__status.is-pending .dot { background: rgba(0,0,0,.30); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PARTNER CTA BAND (black)
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .qcta {
     background: var(--black); color: var(--white);
     padding: 72px 0;
@@ -426,7 +426,7 @@
   }
   .qcta__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
 
-  /* ───────── FOOTER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
   .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
   .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
@@ -434,7 +434,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1180px) {
     .hero__inner { grid-template-columns: 1fr; gap: 40px; }
     .hero__meta { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
@@ -468,7 +468,7 @@
 </head>
 <body data-screen-label="09 About">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -495,7 +495,7 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
     <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben" /></a>
@@ -514,37 +514,37 @@
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      HERO
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="hero" data-comment-anchor="about-hero">
   <div class="hero__grid"></div>
   <div class="container hero__inner">
     <div>
       <div class="hero__eyebrow" data-i18n="hero.eyebrow">About Kolben</div>
       <h1 class="hero__h1" data-i18n="hero.h1">Precision chemistry for <em>every vehicle.</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Kolben is a Canadian company bringing a complete, precision-focused range of automotive chemicals to the trade — backed by bilingual EN/FR service, full regulatory compliance, and a single accountable supplier across the line.</p>
+      <p class="hero__sub" data-i18n="hero.sub">Kolben is a Canadian company bringing a complete, precision-focused range of automotive chemicals to the trade â€” backed by bilingual EN/FR service, full regulatory compliance, and a single accountable supplier across the line.</p>
     </div>
     <div class="hero__meta">
       <div class="hero__meta-h" data-i18n="hero.metaH">At a glance</div>
       <div class="hero__meta-list">
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK1">Range</b><span data-i18n="hero.metaV1">12 categories · 180+ SKUs</span>
+          <b data-i18n="hero.metaK1">Range</b><span data-i18n="hero.metaV1">12 categories Â· 180+ SKUs</span>
         </div>
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK2">Service</b><span data-i18n="hero.metaV2">EN · FR · Canada-wide</span>
+          <b data-i18n="hero.metaK2">Service</b><span data-i18n="hero.metaV2">EN Â· FR Â· Canada-wide</span>
         </div>
         <div class="hero__meta-row">
-          <b data-i18n="hero.metaK3">Compliance</b><span data-i18n="hero.metaV3">CCCR · HPR · WHMIS 2015</span>
+          <b data-i18n="hero.metaK3">Compliance</b><span data-i18n="hero.metaV3">CCCR Â· HPR Â· WHMIS 2015</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      WHO WE ARE
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="who-sec">
   <div class="container">
     <div class="sh">
@@ -557,30 +557,30 @@
       <div>
         <div class="who__pills">
           <span class="who__pill" data-i18n="who.pillA">Canadian importer</span>
-          <span class="who__pill" data-i18n="who.pillB">Bilingual EN · FR</span>
+          <span class="who__pill" data-i18n="who.pillB">Bilingual EN Â· FR</span>
           <span class="who__pill" data-i18n="who.pillC">Trade-only</span>
           <span class="who__pill" data-i18n="who.pillD">Full-line catalogue</span>
         </div>
       </div>
       <div class="who__body">
-        <p class="lead" data-i18n="who.lead">Kolben sources, supplies and brings to market a full line of professional automotive chemicals — cleaners, additives, lubricants, brake and cooling chemistries — formulated to recognized industry specifications and distributed across Canada through trade partners.</p>
-        <p data-i18n="who.p2">Our role is to make a precision-grade range available to Canadian distributors, jobbers, fleet operators and pro shops as a single, accountable supplier — with bilingual labelling, current safety data sheets, and reliable supply from our YYZ and YEG warehouses.</p>
-        <p class="muted" data-i18n="who.p3">The Kolben name and design language draw on a German design philosophy — geometric type, sharp corners, restraint over ornament. That philosophy shapes how the brand looks and reads. It does not describe where products are formulated, manufactured or sourced; those facts are documented on each product&rsquo;s technical and safety data sheet.</p>
+        <p class="lead" data-i18n="who.lead">Kolben sources, supplies and brings to market a full line of professional automotive chemicals â€” cleaners, additives, lubricants, brake and cooling chemistries â€” formulated to recognized industry specifications and distributed across Canada through trade partners.</p>
+        <p data-i18n="who.p2">Our role is to make a precision-grade range available to Canadian distributors, jobbers, fleet operators and pro shops as a single, accountable supplier â€” with bilingual labelling, current safety data sheets, and reliable supply from our YYZ and YEG warehouses.</p>
+        <p class="muted" data-i18n="who.p3">The Kolben name and design language draw on a German design philosophy â€” geometric type, sharp corners, restraint over ornament. That philosophy shapes how the brand looks and reads. It does not describe where products are formulated, manufactured or sourced; those facts are documented on each product&rsquo;s technical and safety data sheet.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     WHAT WE STAND FOR — values grid
-═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     WHAT WE STAND FOR â€” values grid
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="values-sec">
   <div class="container">
     <div class="sh">
       <div class="sh__left">
         <div class="sh__eyebrow" data-i18n="val.eyebrow">What we stand for</div>
         <h2 class="sh__h" data-i18n="val.h">Four operating <em>principles.</em></h2>
-        <p class="sh__sub" data-i18n="val.sub">The standards we hold ourselves to — and the standards trade buyers can hold us to. Stated plainly. No hedging.</p>
+        <p class="sh__sub" data-i18n="val.sub">The standards we hold ourselves to â€” and the standards trade buyers can hold us to. Stated plainly. No hedging.</p>
       </div>
       <div class="sh__count"><b>04</b><span data-i18n="val.count">Principles</span></div>
     </div>
@@ -588,16 +588,16 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     BUILT FOR CANADA — differentiator band
-═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BUILT FOR CANADA â€” differentiator band
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="canada-sec">
   <div class="container canada-inner">
     <div class="sh">
       <div class="sh__left">
         <div class="sh__eyebrow is-light" data-i18n="canada.eyebrow">Built for Canada</div>
         <h2 class="sh__h is-light" data-i18n="canada.h">The trust stack a <em>foreign-only brand can&rsquo;t carry.</em></h2>
-        <p class="sh__sub is-light" data-i18n="canada.sub">Every Kolben SKU is supplied to the Canadian market with the regulatory paperwork and bilingual labelling trade buyers north of the border require. This is the floor — not the ceiling.</p>
+        <p class="sh__sub is-light" data-i18n="canada.sub">Every Kolben SKU is supplied to the Canadian market with the regulatory paperwork and bilingual labelling trade buyers north of the border require. This is the floor â€” not the ceiling.</p>
       </div>
       <div class="sh__count" style="color: var(--on-black-muted);"><b style="color: var(--white);">03</b><span data-i18n="canada.count">Commitments</span></div>
     </div>
@@ -605,16 +605,16 @@
     <div class="canada-grid">
       <div class="canada__leftnote">
         <div class="canada__leftnote-h" data-i18n="canada.noteH">Why this matters</div>
-        <p data-i18n="canada.note">Bilingual labels and current SDS are non-negotiable for a Canadian distributor — a missing data sheet or English-only label can pull a SKU from a shelf. We carry this paperwork as a baseline so partners don&rsquo;t inherit the risk.</p>
+        <p data-i18n="canada.note">Bilingual labels and current SDS are non-negotiable for a Canadian distributor â€” a missing data sheet or English-only label can pull a SKU from a shelf. We carry this paperwork as a baseline so partners don&rsquo;t inherit the risk.</p>
       </div>
       <div class="canada__list" id="canada-list"></div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
-     THE KOLBEN RANGE — condensed category strip
-═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     THE KOLBEN RANGE â€” condensed category strip
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="range-sec">
   <div class="container">
     <div class="sh">
@@ -628,26 +628,26 @@
     <div class="range" id="range-grid"></div>
     <div class="range-foot">
       <div class="range-foot__note">
-        <span data-i18n="range.footNote">Full catalogue</span> <b id="range-sku-count">180+</b> <span data-i18n="range.skus">SKUs</span> · <span data-i18n="range.ship">48 H · YYZ · YEG</span>
+        <span data-i18n="range.footNote">Full catalogue</span> <b id="range-sku-count">180+</b> <span data-i18n="range.skus">SKUs</span> Â· <span data-i18n="range.ship">48 H Â· YYZ Â· YEG</span>
       </div>
       <a class="btn btn--ghost-dark" href="products-hub.html">
         <span data-i18n="range.cta">Browse the full catalogue</span>
-        <span class="arrow">→</span>
+        <span class="arrow">â†’</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      QUALITY & STANDARDS
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="qual-sec">
   <div class="container">
     <div class="sh">
       <div class="sh__left">
         <div class="sh__eyebrow" data-i18n="qual.eyebrow">Quality &amp; standards</div>
         <h2 class="sh__h" data-i18n="qual.h">Named standards, <em>backed by paperwork.</em></h2>
-        <p class="sh__sub" data-i18n="qual.sub">We commit to recognized quality standards and publish each certificate as it is issued. Until a certificate is held, it is shown as in progress — never displayed as held.</p>
+        <p class="sh__sub" data-i18n="qual.sub">We commit to recognized quality standards and publish each certificate as it is issued. Until a certificate is held, it is shown as in progress â€” never displayed as held.</p>
       </div>
     </div>
     <div class="qual">
@@ -657,8 +657,8 @@
         <p data-i18n="qual.policyP1">Every product in the Kolben line is supplied to documented industry specifications and shipped with the safety and regulatory paperwork required for the Canadian market.</p>
         <p data-i18n="qual.policyP2">We work toward third-party certification of our quality and environmental management systems, and publish each certificate here as it is awarded. No certification is presented as held before the certificate is issued.</p>
         <div class="qual__policy-sign">
-          <span data-i18n="qual.policySign">Quality policy · v 1.0</span>
-          <b data-i18n="qual.policyDate">2026 · KOLBEN CANADA</b>
+          <span data-i18n="qual.policySign">Quality policy Â· v 1.0</span>
+          <b data-i18n="qual.policyDate">2026 Â· KOLBEN CANADA</b>
         </div>
       </aside>
       <div class="qual__list" id="qual-list"></div>
@@ -666,9 +666,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      PARTNER CTA BAND
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="qcta is-light">
   <div class="container qcta__inner">
     <div>
@@ -678,30 +678,30 @@
     <div class="qcta__actions">
       <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
         <span data-i18n="qcta.a">Become a Distributor</span>
-        <span class="arrow">→</span>
+        <span class="arrow">â†’</span>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -714,7 +714,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -724,7 +724,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -734,7 +734,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -767,90 +767,90 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   VALUES — 4 operating principles. Honest, ownable, plain.
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   VALUES â€” 4 operating principles. Honest, ownable, plain.
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const VALUES = [
   {
     label: { en: 'Principle 01', fr: 'Principe 01' },
-    h:     { en: 'Precision & performance',     fr: 'Précision et performance' },
-    line:  { en: 'Products are formulated and supplied to documented industry specifications. We measure the line by how it performs in the bay — not by adjective.',
-             fr: 'Les produits sont formulés et fournis selon des spécifications industrielles documentées. La gamme se mesure à sa performance en atelier — pas à des adjectifs.' },
+    h:     { en: 'Precision & performance',     fr: 'PrÃ©cision et performance' },
+    line:  { en: 'Products are formulated and supplied to documented industry specifications. We measure the line by how it performs in the bay â€” not by adjective.',
+             fr: 'Les produits sont formulÃ©s et fournis selon des spÃ©cifications industrielles documentÃ©es. La gamme se mesure Ã  sa performance en atelier â€” pas Ã  des adjectifs.' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>`,
   },
   {
     label: { en: 'Principle 02', fr: 'Principe 02' },
-    h:     { en: 'Regulatory integrity',        fr: 'Intégrité réglementaire' },
+    h:     { en: 'Regulatory integrity',        fr: 'IntÃ©gritÃ© rÃ©glementaire' },
     line:  { en: 'Every SKU ships with current Canadian-compliant labels and SDS. WHMIS 2015, CCCR, HPR and TDG are baseline, not features.',
-             fr: 'Chaque réf. expédiée avec étiquettes et FDS conformes au Canada. SIMDUT 2015, RPCC, RPD et TMD sont le minimum, pas des arguments.' },
+             fr: 'Chaque rÃ©f. expÃ©diÃ©e avec Ã©tiquettes et FDS conformes au Canada. SIMDUT 2015, RPCC, RPD et TMD sont le minimum, pas des arguments.' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>`,
   },
   {
     label: { en: 'Principle 03', fr: 'Principe 03' },
     h:     { en: 'Bilingual Canadian service',  fr: 'Service canadien bilingue' },
-    line:  { en: 'Buyers, partners and technical questions reach a person — in English or French — within one business day. The toggle on this page is the same one on every page.',
-             fr: 'Acheteurs, partenaires et questions techniques joignent une personne — en anglais ou en français — sous un jour ouvré. Le sélecteur de cette page est le même sur toutes les pages.' },
+    line:  { en: 'Buyers, partners and technical questions reach a person â€” in English or French â€” within one business day. The toggle on this page is the same one on every page.',
+             fr: 'Acheteurs, partenaires et questions techniques joignent une personne â€” en anglais ou en franÃ§ais â€” sous un jour ouvrÃ©. Le sÃ©lecteur de cette page est le mÃªme sur toutes les pages.' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 10h.01M12 10h.01M16 10h.01"/></svg>`,
   },
   {
     label: { en: 'Principle 04', fr: 'Principe 04' },
     h:     { en: 'Reliable supply',             fr: 'Approvisionnement fiable' },
-    line:  { en: 'Two stocking warehouses, 48-hour shipping on stocking SKUs, and a named account rep on every active partner — so a partner never wonders where the truck is.',
-             fr: 'Deux entrepôts, expédition 48 H sur réf. stock et un représentant nommé par partenaire actif — pour que personne ne se demande où passe le camion.' },
+    line:  { en: 'Two stocking warehouses, 48-hour shipping on stocking SKUs, and a named account rep on every active partner â€” so a partner never wonders where the truck is.',
+             fr: 'Deux entrepÃ´ts, expÃ©dition 48 H sur rÃ©f. stock et un reprÃ©sentant nommÃ© par partenaire actif â€” pour que personne ne se demande oÃ¹ passe le camion.' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>`,
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   BUILT FOR CANADA — 3 commitments
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   BUILT FOR CANADA â€” 3 commitments
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const CANADA = [
   {
-    h:    { en: 'Canadian regulatory compliance',  fr: 'Conformité réglementaire canadienne' },
-    line: { en: 'Every Kolben SKU is supplied to meet Canadian regulatory requirements — CCCR 2001 for consumer chemical packaging, the federal Hazardous Products Regulations (HPR / WHMIS 2015) for workplace, and TDG where applicable for transport.',
-            fr: 'Chaque réf. Kolben est fournie en conformité aux exigences réglementaires canadiennes — RPCC 2001 pour le conditionnement des produits chimiques de consommation, le Règlement fédéral sur les produits dangereux (RPD / SIMDUT 2015) pour le milieu de travail et le TMD lorsque applicable.' },
-    tag:  { en: 'CCCR · HPR · TDG',                fr: 'RPCC · RPD · TMD' },
+    h:    { en: 'Canadian regulatory compliance',  fr: 'ConformitÃ© rÃ©glementaire canadienne' },
+    line: { en: 'Every Kolben SKU is supplied to meet Canadian regulatory requirements â€” CCCR 2001 for consumer chemical packaging, the federal Hazardous Products Regulations (HPR / WHMIS 2015) for workplace, and TDG where applicable for transport.',
+            fr: 'Chaque rÃ©f. Kolben est fournie en conformitÃ© aux exigences rÃ©glementaires canadiennes â€” RPCC 2001 pour le conditionnement des produits chimiques de consommation, le RÃ¨glement fÃ©dÃ©ral sur les produits dangereux (RPD / SIMDUT 2015) pour le milieu de travail et le TMD lorsque applicable.' },
+    tag:  { en: 'CCCR Â· HPR Â· TDG',                fr: 'RPCC Â· RPD Â· TMD' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v11H3z"/><path d="M3 7l4-4h10l4 4"/><path d="M9 12h6"/></svg>`,
   },
   {
-    h:    { en: 'Bilingual EN / FR labelling',     fr: 'Étiquetage bilingue EN / FR' },
-    line: { en: 'Front-of-pack copy, hazard pictograms, precautionary statements and directions are issued in both English and French — sized and laid out to meet Canadian labelling rules without exception.',
-            fr: 'Le devant d’emballage, les pictogrammes de danger, les mentions de prudence et les directives sont publiés en anglais et en français — dimensionnés et disposés selon les règles canadiennes d’étiquetage, sans exception.' },
-    tag:  { en: 'EN · FR · in box',                fr: 'EN · FR · dans la boîte' },
+    h:    { en: 'Bilingual EN / FR labelling',     fr: 'Ã‰tiquetage bilingue EN / FR' },
+    line: { en: 'Front-of-pack copy, hazard pictograms, precautionary statements and directions are issued in both English and French â€” sized and laid out to meet Canadian labelling rules without exception.',
+            fr: 'Le devant dâ€™emballage, les pictogrammes de danger, les mentions de prudence et les directives sont publiÃ©s en anglais et en franÃ§ais â€” dimensionnÃ©s et disposÃ©s selon les rÃ¨gles canadiennes dâ€™Ã©tiquetage, sans exception.' },
+    tag:  { en: 'EN Â· FR Â· in box',                fr: 'EN Â· FR Â· dans la boÃ®te' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h18v14H3z"/><path d="M3 12h18"/><path d="M7 8v8M17 8v8"/></svg>`,
   },
   {
-    h:    { en: 'SDS availability',                fr: 'Disponibilité des FDS' },
+    h:    { en: 'SDS availability',                fr: 'DisponibilitÃ© des FDS' },
     line: { en: 'A current GHS-format Safety Data Sheet exists for every SKU in the catalogue, in both EN and FR, and is downloadable from each product page. Partners receive update notifications when an SDS revision is published.',
-            fr: 'Une FDS actuelle au format SGH existe pour chaque réf. du catalogue, en EN et en FR, téléchargeable depuis chaque fiche produit. Les partenaires reçoivent une notification lors de chaque révision de FDS.' },
-    tag:  { en: 'GHS · EN · FR · downloadable',    fr: 'SGH · EN · FR · téléchargeable' },
+            fr: 'Une FDS actuelle au format SGH existe pour chaque rÃ©f. du catalogue, en EN et en FR, tÃ©lÃ©chargeable depuis chaque fiche produit. Les partenaires reÃ§oivent une notification lors de chaque rÃ©vision de FDS.' },
+    tag:  { en: 'GHS Â· EN Â· FR Â· downloadable',    fr: 'SGH Â· EN Â· FR Â· tÃ©lÃ©chargeable' },
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 14l3 3 3-3"/><path d="M12 11v6"/></svg>`,
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   THE KOLBEN RANGE — 8 condensed categories
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   THE KOLBEN RANGE â€” 8 condensed categories
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const RANGE = [
   { name: { en: 'Engine Additives',     fr: 'Additifs moteur' },           count: '24', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h14l-2 4h2v12H5V8h2L5 4z"/><path d="M9 12h6"/></svg>` },
   { name: { en: 'Fuel Additives',       fr: 'Additifs carburant' },        count: '22', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v16"/><path d="M4 21h11"/><path d="M15 9h2a2 2 0 0 1 2 2v6a2 2 0 0 0 2 2"/></svg>` },
@@ -859,39 +859,39 @@ const RANGE = [
   { name: { en: 'Oils & Fluids',        fr: 'Huiles et fluides' },         count: '30', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l5 6a5 5 0 1 1-10 0z"/></svg>` },
   { name: { en: 'Transmission',         fr: 'Transmission' },              count: '12', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="3"/><circle cx="17" cy="15" r="3"/><path d="M9 12v3M15 9h-3"/></svg>` },
   { name: { en: 'Lubricants & Grease',  fr: 'Lubrifiants et graisses' },   count: '22', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v6l-2 2v10H9V11l-2-2z"/></svg>` },
-  { name: { en: 'Maintenance Sprays',   fr: 'Aérosols d’entretien' },      count: '24', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9V5h6v4"/><path d="M6 9h12v12H6z"/><path d="M10 14h4"/></svg>` },
+  { name: { en: 'Maintenance Sprays',   fr: 'AÃ©rosols dâ€™entretien' },      count: '24', icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 9V5h6v4"/><path d="M6 9h12v12H6z"/><path d="M10 14h4"/></svg>` },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   QUALITY & STANDARDS — named standards, status-driven
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   QUALITY & STANDARDS â€” named standards, status-driven
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const STANDARDS = [
   {
     code: 'ISO 9001',
-    name: { en: 'Quality management system',         fr: 'Système de management de la qualité' },
+    name: { en: 'Quality management system',         fr: 'SystÃ¨me de management de la qualitÃ©' },
     line: { en: 'The international baseline for quality management. We are working toward third-party certification of our supplier-quality and traceability processes.',
-            fr: 'La référence internationale en management de la qualité. Nous travaillons à la certification tierce de nos processus qualité-fournisseur et de traçabilité.' },
+            fr: 'La rÃ©fÃ©rence internationale en management de la qualitÃ©. Nous travaillons Ã  la certification tierce de nos processus qualitÃ©-fournisseur et de traÃ§abilitÃ©.' },
     status: 'pending', // pending | held
   },
   {
     code: 'IATF 16949',
-    name: { en: 'Automotive quality management',     fr: 'Management qualité automobile' },
+    name: { en: 'Automotive quality management',     fr: 'Management qualitÃ© automobile' },
     line: { en: 'The automotive supply-chain extension of ISO 9001. Our quality programme is being aligned to IATF 16949 requirements as a forward objective.',
-            fr: 'Prolongement automobile d’ISO 9001 pour la chaîne d’approvisionnement. Notre programme qualité est aligné aux exigences IATF 16949 comme objectif.' },
+            fr: 'Prolongement automobile dâ€™ISO 9001 pour la chaÃ®ne dâ€™approvisionnement. Notre programme qualitÃ© est alignÃ© aux exigences IATF 16949 comme objectif.' },
     status: 'pending',
   },
   {
     code: 'SGS',
-    name: { en: 'Independent product testing',       fr: 'Essais produits indépendants' },
+    name: { en: 'Independent product testing',       fr: 'Essais produits indÃ©pendants' },
     line: { en: 'Independent third-party verification of declared product specifications. As lots are tested, the corresponding report is linked from the product&rsquo;s technical page.',
-            fr: 'Vérification indépendante tierce des spécifications produit déclarées. Les rapports correspondants sont liés depuis la fiche technique de chaque produit à mesure des essais.' },
+            fr: 'VÃ©rification indÃ©pendante tierce des spÃ©cifications produit dÃ©clarÃ©es. Les rapports correspondants sont liÃ©s depuis la fiche technique de chaque produit Ã  mesure des essais.' },
     status: 'pending',
   },
 ];
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    I18N
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -907,36 +907,36 @@ const I18N = {
 
     'hero.eyebrow':     'About Kolben',
     'hero.h1':          'Precision chemistry for <em>every vehicle.</em>',
-    'hero.sub':         'Kolben is a Canadian company bringing a complete, precision-focused range of automotive chemicals to the trade — backed by bilingual EN/FR service, full regulatory compliance, and a single accountable supplier across the line.',
+    'hero.sub':         'Kolben is a Canadian company bringing a complete, precision-focused range of automotive chemicals to the trade â€” backed by bilingual EN/FR service, full regulatory compliance, and a single accountable supplier across the line.',
     'hero.metaH':       'At a glance',
     'hero.metaK1':      'Range',
-    'hero.metaV1':      '12 categories · 180+ SKUs',
+    'hero.metaV1':      '12 categories Â· 180+ SKUs',
     'hero.metaK2':      'Service',
-    'hero.metaV2':      'EN · FR · Canada-wide',
+    'hero.metaV2':      'EN Â· FR Â· Canada-wide',
     'hero.metaK3':      'Compliance',
-    'hero.metaV3':      'CCCR · HPR · WHMIS 2015',
+    'hero.metaV3':      'CCCR Â· HPR Â· WHMIS 2015',
 
     'who.eyebrow':      'Who we are',
     'who.h':            'One supplier. <em>The full range.</em>',
-    'who.lead':         'Kolben sources, supplies and brings to market a full line of professional automotive chemicals — cleaners, additives, lubricants, brake and cooling chemistries — formulated to recognized industry specifications and distributed across Canada through trade partners.',
-    'who.p2':           'Our role is to make a precision-grade range available to Canadian distributors, jobbers, fleet operators and pro shops as a single, accountable supplier — with bilingual labelling, current safety data sheets, and reliable supply from our YYZ and YEG warehouses.',
-    'who.p3':           'The Kolben name and design language draw on a German design philosophy — geometric type, sharp corners, restraint over ornament. That philosophy shapes how the brand looks and reads. It does not describe where products are formulated, manufactured or sourced; those facts are documented on each product&rsquo;s technical and safety data sheet.',
+    'who.lead':         'Kolben sources, supplies and brings to market a full line of professional automotive chemicals â€” cleaners, additives, lubricants, brake and cooling chemistries â€” formulated to recognized industry specifications and distributed across Canada through trade partners.',
+    'who.p2':           'Our role is to make a precision-grade range available to Canadian distributors, jobbers, fleet operators and pro shops as a single, accountable supplier â€” with bilingual labelling, current safety data sheets, and reliable supply from our YYZ and YEG warehouses.',
+    'who.p3':           'The Kolben name and design language draw on a German design philosophy â€” geometric type, sharp corners, restraint over ornament. That philosophy shapes how the brand looks and reads. It does not describe where products are formulated, manufactured or sourced; those facts are documented on each product&rsquo;s technical and safety data sheet.',
     'who.pillA':        'Canadian importer',
-    'who.pillB':        'Bilingual EN · FR',
+    'who.pillB':        'Bilingual EN Â· FR',
     'who.pillC':        'Trade-only',
     'who.pillD':        'Full-line catalogue',
 
     'val.eyebrow':      'What we stand for',
     'val.h':            'Four operating <em>principles.</em>',
-    'val.sub':          'The standards we hold ourselves to — and the standards trade buyers can hold us to. Stated plainly. No hedging.',
+    'val.sub':          'The standards we hold ourselves to â€” and the standards trade buyers can hold us to. Stated plainly. No hedging.',
     'val.count':        'Principles',
 
     'canada.eyebrow':   'Built for Canada',
     'canada.h':         'The trust stack a <em>foreign-only brand can&rsquo;t carry.</em>',
-    'canada.sub':       'Every Kolben SKU is supplied to the Canadian market with the regulatory paperwork and bilingual labelling trade buyers north of the border require. This is the floor — not the ceiling.',
+    'canada.sub':       'Every Kolben SKU is supplied to the Canadian market with the regulatory paperwork and bilingual labelling trade buyers north of the border require. This is the floor â€” not the ceiling.',
     'canada.count':     'Commitments',
     'canada.noteH':     'Why this matters',
-    'canada.note':      'Bilingual labels and current SDS are non-negotiable for a Canadian distributor — a missing data sheet or English-only label can pull a SKU from a shelf. We carry this paperwork as a baseline so partners don&rsquo;t inherit the risk.',
+    'canada.note':      'Bilingual labels and current SDS are non-negotiable for a Canadian distributor â€” a missing data sheet or English-only label can pull a SKU from a shelf. We carry this paperwork as a baseline so partners don&rsquo;t inherit the risk.',
 
     'range.eyebrow':    'The Kolben range',
     'range.h':          'Eight systems. <em>One catalogue.</em>',
@@ -944,118 +944,118 @@ const I18N = {
     'range.count':      'Categories',
     'range.footNote':   'Full catalogue',
     'range.skus':       'SKUs',
-    'range.ship':       '48 H · YYZ · YEG',
+    'range.ship':       '48 H Â· YYZ Â· YEG',
     'range.cta':        'Browse the full catalogue',
     'range.skuLabel':   'SKUs',
 
     'qual.eyebrow':         'Quality & standards',
     'qual.h':               'Named standards, <em>backed by paperwork.</em>',
-    'qual.sub':             'We commit to recognized quality standards and publish each certificate as it is issued. Until a certificate is held, it is shown as in progress — never displayed as held.',
+    'qual.sub':             'We commit to recognized quality standards and publish each certificate as it is issued. Until a certificate is held, it is shown as in progress â€” never displayed as held.',
     'qual.policyEyebrow':   'Quality policy',
     'qual.policyH':         'Our commitment.',
     'qual.policyP1':        'Every product in the Kolben line is supplied to documented industry specifications and shipped with the safety and regulatory paperwork required for the Canadian market.',
     'qual.policyP2':        'We work toward third-party certification of our quality and environmental management systems, and publish each certificate here as it is awarded. No certification is presented as held before the certificate is issued.',
-    'qual.policySign':      'Quality policy · v 1.0',
-    'qual.policyDate':      '2026 · KOLBEN CANADA',
+    'qual.policySign':      'Quality policy Â· v 1.0',
+    'qual.policyDate':      '2026 Â· KOLBEN CANADA',
     'qual.statusPending':   'In progress',
     'qual.statusHeld':      'Certificate held',
     'qual.viewCert':        'View certificate',
 
     'qcta.eyebrow':     'Partner with Kolben',
     'qcta.h':           'Carry the line, or <em>get the line.</em>',
-    'qcta.sub':         'Trade-only distribution across Canada. Apply to add Kolben to your shelves, or contact our team for product, technical or service questions — in EN or FR, within one business day.',
+    'qcta.sub':         'Trade-only distribution across Canada. Apply to add Kolben to your shelves, or contact our team for product, technical or service questions â€” in EN or FR, within one business day.',
     'qcta.a':           'Become a Distributor',
     'qcta.b':           'Contact Our Team',
 
-    'footer.tag':       'Power · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Power · Performance · Kolben',
+    'footer.tag':       'Power Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Power Â· Performance Â· Kolben',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
-    'hero.eyebrow':     'À propos de Kolben',
-    'hero.h1':          'Chimie de précision pour <em>chaque véhicule.</em>',
-    'hero.sub':         'Kolben est une entreprise canadienne qui met sur le marché une gamme complète de produits chimiques automobiles axée sur la précision — avec un service bilingue EN/FR, une conformité réglementaire complète et un seul fournisseur responsable pour toute la gamme.',
-    'hero.metaH':       'En un coup d’œil',
+    'hero.eyebrow':     'Ã€ propos de Kolben',
+    'hero.h1':          'Chimie de prÃ©cision pour <em>chaque vÃ©hicule.</em>',
+    'hero.sub':         'Kolben est une entreprise canadienne qui met sur le marchÃ© une gamme complÃ¨te de produits chimiques automobiles axÃ©e sur la prÃ©cision â€” avec un service bilingue EN/FR, une conformitÃ© rÃ©glementaire complÃ¨te et un seul fournisseur responsable pour toute la gamme.',
+    'hero.metaH':       'En un coup dâ€™Å“il',
     'hero.metaK1':      'Gamme',
-    'hero.metaV1':      '12 catégories · 180+ réf.',
+    'hero.metaV1':      '12 catÃ©gories Â· 180+ rÃ©f.',
     'hero.metaK2':      'Service',
-    'hero.metaV2':      'EN · FR · partout au Canada',
-    'hero.metaK3':      'Conformité',
-    'hero.metaV3':      'RPCC · RPD · SIMDUT 2015',
+    'hero.metaV2':      'EN Â· FR Â· partout au Canada',
+    'hero.metaK3':      'ConformitÃ©',
+    'hero.metaV3':      'RPCC Â· RPD Â· SIMDUT 2015',
 
     'who.eyebrow':      'Qui nous sommes',
-    'who.h':            'Un seul fournisseur. <em>La gamme complète.</em>',
-    'who.lead':         'Kolben se procure, fournit et met sur le marché une gamme complète de produits chimiques automobiles professionnels — nettoyants, additifs, lubrifiants, chimies freins et refroidissement — formulés selon des spécifications industrielles reconnues et distribués au Canada par des partenaires commerciaux.',
-    'who.p2':           'Notre rôle est de rendre une gamme de niveau précision accessible aux distributeurs, grossistes, opérateurs de flottes et ateliers professionnels canadiens en tant que fournisseur unique et responsable — avec étiquetage bilingue, fiches de données de sécurité à jour et un approvisionnement fiable depuis nos entrepôts YYZ et YEG.',
-    'who.p3':           'Le nom et le langage visuel Kolben s’inspirent d’une philosophie de design allemande — typographie géométrique, angles vifs, retenue plutôt qu’ornement. Cette philosophie façonne l’apparence et la lecture de la marque. Elle ne décrit pas l’endroit où les produits sont formulés, fabriqués ou approvisionnés ; ces faits sont documentés sur la fiche technique et la FDS de chaque produit.',
+    'who.h':            'Un seul fournisseur. <em>La gamme complÃ¨te.</em>',
+    'who.lead':         'Kolben se procure, fournit et met sur le marchÃ© une gamme complÃ¨te de produits chimiques automobiles professionnels â€” nettoyants, additifs, lubrifiants, chimies freins et refroidissement â€” formulÃ©s selon des spÃ©cifications industrielles reconnues et distribuÃ©s au Canada par des partenaires commerciaux.',
+    'who.p2':           'Notre rÃ´le est de rendre une gamme de niveau prÃ©cision accessible aux distributeurs, grossistes, opÃ©rateurs de flottes et ateliers professionnels canadiens en tant que fournisseur unique et responsable â€” avec Ã©tiquetage bilingue, fiches de donnÃ©es de sÃ©curitÃ© Ã  jour et un approvisionnement fiable depuis nos entrepÃ´ts YYZ et YEG.',
+    'who.p3':           'Le nom et le langage visuel Kolben sâ€™inspirent dâ€™une philosophie de design allemande â€” typographie gÃ©omÃ©trique, angles vifs, retenue plutÃ´t quâ€™ornement. Cette philosophie faÃ§onne lâ€™apparence et la lecture de la marque. Elle ne dÃ©crit pas lâ€™endroit oÃ¹ les produits sont formulÃ©s, fabriquÃ©s ou approvisionnÃ©s ; ces faits sont documentÃ©s sur la fiche technique et la FDS de chaque produit.',
     'who.pillA':        'Importateur canadien',
-    'who.pillB':        'Bilingue EN · FR',
+    'who.pillB':        'Bilingue EN Â· FR',
     'who.pillC':        'Strictement commercial',
-    'who.pillD':        'Catalogue gamme complète',
+    'who.pillD':        'Catalogue gamme complÃ¨te',
 
-    'val.eyebrow':      'Ce que nous défendons',
-    'val.h':            'Quatre <em>principes</em> opérationnels.',
-    'val.sub':          'Les standards auxquels nous nous tenons — et auxquels les acheteurs commerciaux peuvent nous tenir. Énoncés clairement. Sans nuances.',
+    'val.eyebrow':      'Ce que nous dÃ©fendons',
+    'val.h':            'Quatre <em>principes</em> opÃ©rationnels.',
+    'val.sub':          'Les standards auxquels nous nous tenons â€” et auxquels les acheteurs commerciaux peuvent nous tenir. Ã‰noncÃ©s clairement. Sans nuances.',
     'val.count':        'Principes',
 
-    'canada.eyebrow':   'Conçu pour le Canada',
-    'canada.h':         'La pile de confiance qu’une <em>marque purement étrangère ne peut offrir.</em>',
-    'canada.sub':       'Chaque réf. Kolben est fournie sur le marché canadien avec la documentation réglementaire et l’étiquetage bilingue exigés par les acheteurs commerciaux au Canada. C’est le plancher — pas le plafond.',
+    'canada.eyebrow':   'ConÃ§u pour le Canada',
+    'canada.h':         'La pile de confiance quâ€™une <em>marque purement Ã©trangÃ¨re ne peut offrir.</em>',
+    'canada.sub':       'Chaque rÃ©f. Kolben est fournie sur le marchÃ© canadien avec la documentation rÃ©glementaire et lâ€™Ã©tiquetage bilingue exigÃ©s par les acheteurs commerciaux au Canada. Câ€™est le plancher â€” pas le plafond.',
     'canada.count':     'Engagements',
-    'canada.noteH':     'Pourquoi c’est important',
-    'canada.note':      'Étiquettes bilingues et FDS à jour sont non négociables pour un distributeur canadien — une FDS manquante ou une étiquette unilingue peut retirer une réf. d’un rayon. Nous portons cette documentation comme base, pour que les partenaires n’en héritent pas du risque.',
+    'canada.noteH':     'Pourquoi câ€™est important',
+    'canada.note':      'Ã‰tiquettes bilingues et FDS Ã  jour sont non nÃ©gociables pour un distributeur canadien â€” une FDS manquante ou une Ã©tiquette unilingue peut retirer une rÃ©f. dâ€™un rayon. Nous portons cette documentation comme base, pour que les partenaires nâ€™en hÃ©ritent pas du risque.',
 
     'range.eyebrow':    'La gamme Kolben',
-    'range.h':          'Huit systèmes. <em>Un seul catalogue.</em>',
-    'range.sub':        'Une vue condensée de la gamme. Chaque catégorie est expédiée avec étiquettes bilingues, FDS à jour et expédition 48 H depuis nos entrepôts YYZ / YEG.',
-    'range.count':      'Catégories',
+    'range.h':          'Huit systÃ¨mes. <em>Un seul catalogue.</em>',
+    'range.sub':        'Une vue condensÃ©e de la gamme. Chaque catÃ©gorie est expÃ©diÃ©e avec Ã©tiquettes bilingues, FDS Ã  jour et expÃ©dition 48 H depuis nos entrepÃ´ts YYZ / YEG.',
+    'range.count':      'CatÃ©gories',
     'range.footNote':   'Catalogue complet',
-    'range.skus':       'réf.',
-    'range.ship':       '48 H · YYZ · YEG',
+    'range.skus':       'rÃ©f.',
+    'range.ship':       '48 H Â· YYZ Â· YEG',
     'range.cta':        'Parcourir le catalogue complet',
-    'range.skuLabel':   'réf.',
+    'range.skuLabel':   'rÃ©f.',
 
-    'qual.eyebrow':         'Qualité et standards',
-    'qual.h':               'Standards nommés, <em>attestés par documents.</em>',
-    'qual.sub':             'Nous nous engageons sur des standards qualité reconnus et publions chaque certificat dès qu’il est délivré. Tant qu’un certificat n’est pas détenu, il est affiché comme en cours — jamais présenté comme détenu.',
-    'qual.policyEyebrow':   'Politique qualité',
+    'qual.eyebrow':         'QualitÃ© et standards',
+    'qual.h':               'Standards nommÃ©s, <em>attestÃ©s par documents.</em>',
+    'qual.sub':             'Nous nous engageons sur des standards qualitÃ© reconnus et publions chaque certificat dÃ¨s quâ€™il est dÃ©livrÃ©. Tant quâ€™un certificat nâ€™est pas dÃ©tenu, il est affichÃ© comme en cours â€” jamais prÃ©sentÃ© comme dÃ©tenu.',
+    'qual.policyEyebrow':   'Politique qualitÃ©',
     'qual.policyH':         'Notre engagement.',
-    'qual.policyP1':        'Chaque produit de la gamme Kolben est fourni selon des spécifications industrielles documentées et expédié avec la documentation sécurité et réglementaire exigée pour le marché canadien.',
-    'qual.policyP2':        'Nous travaillons à la certification tierce de nos systèmes de management qualité et environnement, et publions chaque certificat ici dès qu’il est délivré. Aucune certification n’est présentée comme détenue avant la délivrance effective du certificat.',
-    'qual.policySign':      'Politique qualité · v 1.0',
-    'qual.policyDate':      '2026 · KOLBEN CANADA',
+    'qual.policyP1':        'Chaque produit de la gamme Kolben est fourni selon des spÃ©cifications industrielles documentÃ©es et expÃ©diÃ© avec la documentation sÃ©curitÃ© et rÃ©glementaire exigÃ©e pour le marchÃ© canadien.',
+    'qual.policyP2':        'Nous travaillons Ã  la certification tierce de nos systÃ¨mes de management qualitÃ© et environnement, et publions chaque certificat ici dÃ¨s quâ€™il est dÃ©livrÃ©. Aucune certification nâ€™est prÃ©sentÃ©e comme dÃ©tenue avant la dÃ©livrance effective du certificat.',
+    'qual.policySign':      'Politique qualitÃ© Â· v 1.0',
+    'qual.policyDate':      '2026 Â· KOLBEN CANADA',
     'qual.statusPending':   'En cours',
-    'qual.statusHeld':      'Certificat détenu',
+    'qual.statusHeld':      'Certificat dÃ©tenu',
     'qual.viewCert':        'Voir le certificat',
 
     'qcta.eyebrow':     'Devenez partenaire de Kolben',
     'qcta.h':           'Distribuez la gamme, ou <em>obtenez la gamme.</em>',
-    'qcta.sub':         'Distribution strictement commerciale partout au Canada. Postulez pour ajouter Kolben à vos rayons, ou contactez notre équipe pour toute question produit, technique ou service — en EN ou FR, sous un jour ouvré.',
+    'qcta.sub':         'Distribution strictement commerciale partout au Canada. Postulez pour ajouter Kolben Ã  vos rayons, ou contactez notre Ã©quipe pour toute question produit, technique ou service â€” en EN ou FR, sous un jour ouvrÃ©.',
     'qcta.a':           'Devenir distributeur',
-    'qcta.b':           'Contacter notre équipe',
+    'qcta.b':           'Contacter notre Ã©quipe',
 
-    'footer.tag':       'Puissance · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada.',
-    'footer.tagline':   'Puissance · Performance · Kolben',
+    'footer.tag':       'Puissance Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada.',
+    'footer.tagline':   'Puissance Â· Performance Â· Kolben',
   },
 };
 
 let state = { lang: 'en' };
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    RENDERERS
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function renderValues() {
   document.getElementById('values-grid').innerHTML = VALUES.map((v, i) => `
     <div class="val">

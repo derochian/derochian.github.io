@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Brake Cleaners (Category)</title>
-<link rel="icon" type="image/png" href="../assets/kolben-k.png" />
-<link rel="apple-touch-icon" href="../assets/kolben-k.png" />
+<title>Kolben â€” Brake Cleaners (Category)</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
-  /* ───────── TOKENS — locked brand palette ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ TOKENS â€” locked brand palette â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   :root {
     --black: #000000;
     --ink: #0a0a0a;
@@ -37,7 +37,7 @@
   .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
   .lc { text-transform: none; }
 
-  /* ───────── UTILITY BAR ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
   .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
   .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
@@ -49,7 +49,7 @@
   .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
   .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
 
-  /* ───────── HEADER ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
   .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
   .header__logo img { height: 48px; }
@@ -60,7 +60,7 @@
   .nav__link.active { background: var(--black); color: var(--white); }
   .header__actions { display: flex; align-items: center; gap: 10px; }
 
-  /* ───────── BUTTONS ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
   .btn--sm { padding: 11px 18px; font-size: 11px; }
   .btn--lg { padding: 17px 28px; font-size: 13px; }
@@ -75,7 +75,7 @@
   .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
   .btn:hover .arrow { transform: translateX(3px); }
 
-  /* ───────── BREADCRUMB ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
   .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
   .crumbs__inner a { color: var(--muted); transition: color 150ms; }
@@ -83,9 +83,9 @@
   .crumbs__inner .sep { color: rgba(0,0,0,.25); }
   .crumbs__inner .current { color: var(--black); }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      LEAN CATEGORY HEADER (NOT a hero)
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .chead {
     padding: 56px 0 36px; background: var(--white);
     border-bottom: 1px solid var(--rule);
@@ -116,9 +116,9 @@
   .chead__count-n { font: 700 56px/1 'Jost'; letter-spacing: -0.04em; color: var(--black); font-variant-numeric: tabular-nums; }
   .chead__count-l { font: 500 11px/1.3 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); max-width: 80px; }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SUB-TYPE CHIP ROW (sticky)
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .chips-bar {
     position: sticky; top: 76px; z-index: 40;
     background: var(--white); border-bottom: 1px solid var(--rule);
@@ -147,9 +147,9 @@
   }
   .chip.is-active .chip__count { opacity: .65; }
 
-  /* ═══════════════════════════════════════════════════════════
-     BODY — filter rail + grid
-  ═══════════════════════════════════════════════════════════ */
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BODY â€” filter rail + grid
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .body { background: var(--offwhite); padding: 48px 0 80px; }
   .body__inner {
     display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start;
@@ -201,7 +201,7 @@
   .opt__n { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
   .opt.is-disabled { opacity: .35; cursor: not-allowed; }
 
-  /* ───────── Grid column ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ Grid column â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   .grid-col { min-width: 0; }
   .grid-toolbar {
     display: flex; align-items: center; justify-content: space-between; gap: 16px;
@@ -258,7 +258,7 @@
     transition: transform 320ms var(--ease);
   }
   .pcard:hover .pcard__media img { transform: translateY(-3px) scale(1.02); }
-  /* Classification chips — hairline mono pills sitting in the text block,
+  /* Classification chips â€” hairline mono pills sitting in the text block,
      directly below the product name. Wrap to a second line if needed; the
      card height flexes around them. Cap at 2 chips per card from JS so the
      row never grows beyond a wrap. */
@@ -324,11 +324,11 @@
   .pager__num.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
   .pager__num--arrow { color: var(--muted); }
   .pager__num[disabled] { opacity: .35; cursor: not-allowed; }
-  .pager__more { /* slot for "Load more" — hidden when paginating */ }
+  .pager__more { /* slot for "Load more" â€” hidden when paginating */ }
 
-  /* ═══════════════════════════════════════════════════════════
+  /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      COMPLIANCE / ROUTE BAND
-  ═══════════════════════════════════════════════════════════ */
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
   .route {
     background: var(--black); color: var(--white);
     border-top: 3px solid var(--red);
@@ -360,7 +360,7 @@
   .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
   .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
 
-  /* ───────── RESPONSIVE ───────── */
+  /* â”€â”€â”€â”€â”€â”€â”€â”€â”€ RESPONSIVE â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
   @media (max-width: 1100px) {
     .nav { display: none; }
     .util__left { gap: 14px; }
@@ -382,9 +382,9 @@
   <link rel="stylesheet" href="footer.css">
   <script defer src="footer-i18n.js"></script>
 </head>
-<body data-screen-label="03 Category — Brake Cleaners">
+<body data-screen-label="03 Category â€” Brake Cleaners">
 
-<!-- ───────── UTILITY BAR ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ UTILITY BAR â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <div class="util">
   <div class="util__inner">
     <div class="util__left">
@@ -411,10 +411,10 @@
   </div>
 </div>
 
-<!-- ───────── HEADER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ HEADER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <header class="header">
   <div class="container header__inner">
-    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben â€” German Engineered" /></a>
     <nav class="nav">
       <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
       <div class="nav__item"><a class="nav__link active" href="products-hub.html" data-i18n="nav.products">Products</a></div>
@@ -430,7 +430,7 @@
   </div>
 </header>
 
-<!-- ───────── BREADCRUMB ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ BREADCRUMB â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <nav class="crumbs">
   <div class="container crumbs__inner">
     <a href="products-hub.html" data-i18n="crumbs.products">Products</a>
@@ -439,13 +439,13 @@
   </div>
 </nav>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      LEAN CATEGORY HEADER
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Category · Maintenance</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Category Â· Maintenance</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Brake Cleaners</h1>
       <p class="chead__sub" data-i18n="chead.sub">High-pressure aerosol and bulk-refill cleaners for caliper, rotor, drum and clutch service. Non-chlorinated, chlorinated and water-based formulations.</p>
     </div>
@@ -456,9 +456,9 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SUB-TYPE CHIP ROW
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <div class="chips-bar">
   <div class="container chips-bar__inner">
     <span class="chips-bar__label" data-i18n="chips.label">Sub-type</span>
@@ -466,9 +466,9 @@
   </div>
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════
-     BODY — filter rail + grid
-═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     BODY â€” filter rail + grid
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="body">
   <div class="container body__inner">
 
@@ -495,7 +495,7 @@
         <label class="sort">
           <span data-i18n="grid.sortBy">Sort by</span>
           <select id="sort-sel">
-            <option value="name" data-i18n="grid.sortName">Name (A–Z)</option>
+            <option value="name" data-i18n="grid.sortName">Name (Aâ€“Z)</option>
             <option value="sku"  data-i18n="grid.sortSku">SKU / Part #</option>
           </select>
         </label>
@@ -503,16 +503,16 @@
 
       <div class="product-grid" id="product-grid"></div>
 
-      <!-- PAGINATION SLOT — numbered + "Load more" slot for future. -->
+      <!-- PAGINATION SLOT â€” numbered + "Load more" slot for future. -->
       <div class="pager" id="pager"></div>
     </div>
 
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      COMPLIANCE / ROUTE BAND (no cart, no public pricing)
-═══════════════════════════════════════════════════════════ -->
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <section class="route">
   <div class="container route__inner">
     <div class="route__left">
@@ -524,8 +524,8 @@
           <path d="M8 16h8"/>
         </svg>
         <span class="route__sds-l">
-          <span class="route__sds-h" data-i18n="route.sds">Safety Data Sheets · FDS</span>
-          <span class="route__sds-sub" data-i18n="route.sdsSub">EN / FR · WHMIS 2015 · CCCR 2001</span>
+          <span class="route__sds-h" data-i18n="route.sds">Safety Data Sheets Â· FDS</span>
+          <span class="route__sds-sub" data-i18n="route.sdsSub">EN / FR Â· WHMIS 2015 Â· CCCR 2001</span>
         </span>
       </a>
       <p class="route__msg" data-i18n="route.msg">Trade-only pricing. No public cart. Route to a distributor for purchase, or download compliance documentation.</p>
@@ -533,31 +533,31 @@
     <div class="route__actions">
       <button class="btn btn--primary btn--lg">
         <span data-i18n="route.cta1">Become a Distributor</span>
-        <span class="arrow">→</span>
+        <span class="arrow">â†’</span>
       </button>
       <button class="btn btn--ghost-light btn--lg" data-i18n="route.cta2">Find a Distributor</button>
     </div>
   </div>
 </section>
 
-<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ SITE FOOTER (shared 3-tier) â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 <footer class="site-footer">
 
-  <!-- TIER 1 — value band -->
+  <!-- TIER 1 â€” value band -->
   <div class="ft-band">
     <div class="container ft-band__grid">
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
-          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS â€” CCCR, HPR &amp; TDG baseline.</p>
         </div>
       </div>
       <div class="ft-band__item">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         <div>
           <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
-          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person â€” EN or FR â€” within one business day.</p>
         </div>
       </div>
       <div class="ft-band__item">
@@ -570,7 +570,7 @@
     </div>
   </div>
 
-  <!-- TIER 2 — navigation -->
+  <!-- TIER 2 â€” navigation -->
   <div class="ft-nav">
     <div class="container ft-nav__grid">
       <div>
@@ -580,7 +580,7 @@
           <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
           <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
-          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products â†’</a></li>
         </ul>
       </div>
       <div>
@@ -590,7 +590,7 @@
           <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
           <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
           <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
-          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries â†’</a></li>
         </ul>
       </div>
       <div>
@@ -623,75 +623,75 @@
     </div>
   </div>
 
-  <!-- TIER 3 — bottom bar -->
+  <!-- TIER 3 â€” bottom bar -->
   <div class="ft-base">
     <div class="container ft-base__inner">
       <div class="ft-base__left">
         <img src="../assets/kolben-logo.svg" alt="Kolben">
-        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
-        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+        <span class="ft-base__copy" data-ft-i18n="base.copy">Â© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 Â· IATF 16949 Â· SGS</span>
       </div>
       <div class="ft-base__right">
         <a href="#" data-ft-i18n="base.privacy">Privacy</a>
         <a href="#" data-ft-i18n="base.terms">Terms</a>
-        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power Â· Performance Â· Kolben</span>
       </div>
     </div>
   </div>
 
 </footer>
-<!-- ───────── /SITE FOOTER ───────── -->
+<!-- â”€â”€â”€â”€â”€â”€â”€â”€â”€ /SITE FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€ -->
 
 <script>
-/* ═══════════════════════════════════════════════════════════
-   BRAKE CLEANERS — 12 SKUs across the real facet axes.
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   BRAKE CLEANERS â€” 12 SKUs across the real facet axes.
    Each product carries:
-     - tags[]      → sub-type chip(s) it belongs to
-     - voc         → '10' (≤10%), 'low' (low-VOC), 'zero' (zero-VOC)
-     - flam        → 'flam' | 'nonflam'
-     - sizeBucket  → '400g' | '500g' | 'bulk'
-     - pack        → 'single' | 'case' | 'pallet'
-═══════════════════════════════════════════════════════════ */
+     - tags[]      â†’ sub-type chip(s) it belongs to
+     - voc         â†’ '10' (â‰¤10%), 'low' (low-VOC), 'zero' (zero-VOC)
+     - flam        â†’ 'flam' | 'nonflam'
+     - sizeBucket  â†’ '400g' | '500g' | 'bulk'
+     - pack        â†’ 'single' | 'case' | 'pallet'
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const PRODUCTS = [
-  { sku: 'KB-B002A', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et pièces' },        size: '500 g', sizeBucket: '500g',
+  { sku: 'KB-B002A', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et piÃ¨ces' },        size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: 'Non-chlorinated, high-pressure aerosol. Leaves no residue.',
-            fr: 'Aérosol non chloré haute pression. Sans résidu.' } },
+            fr: 'AÃ©rosol non chlorÃ© haute pression. Sans rÃ©sidu.' } },
 
-  { sku: 'KB-B002B', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et pièces' },        size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-B002B', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et piÃ¨ces' },        size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'case',
     diff: { en: '12-can case format for high-volume workshops.',
-            fr: 'Caisse de 12 bombes pour ateliers à fort volume.' } },
+            fr: 'Caisse de 12 bombes pour ateliers Ã  fort volume.' } },
 
   { sku: 'KB-B003',  name: { en: 'Heavy-Duty Brake Cleaner',  fr: 'Nettoyant freins haute performance' }, size: '500 g', sizeBucket: '500g',
     tags: ['chlor','aerosol','nonflam'],   voc: 'low',  flam: 'nonflam', pack: 'single',
     diff: { en: 'Chlorinated formulation. Cuts hot grease on caliper rebuilds.',
-            fr: 'Formule chlorée. Décolle la graisse chaude sur étriers démontés.' } },
+            fr: 'Formule chlorÃ©e. DÃ©colle la graisse chaude sur Ã©triers dÃ©montÃ©s.' } },
 
   { sku: 'KB-B004',  name: { en: 'Low-VOC Brake Cleaner',     fr: 'Nettoyant freins faible COV' },       size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol'],          voc: '10',   flam: 'flam',    pack: 'single',
-    diff: { en: '≤10% VOC. Compliant with CARB and low-VOC counties.',
-            fr: '≤10% COV. Conforme CARB et zones à faibles COV.' } },
+    diff: { en: 'â‰¤10% VOC. Compliant with CARB and low-VOC counties.',
+            fr: 'â‰¤10% COV. Conforme CARB et zones Ã  faibles COV.' } },
 
-  { sku: 'KB-B005',  name: { en: 'Water-Based Brake Cleaner', fr: 'Nettoyant freins à base d’eau' },     size: '500 g', sizeBucket: '500g',
+  { sku: 'KB-B005',  name: { en: 'Water-Based Brake Cleaner', fr: 'Nettoyant freins Ã  base dâ€™eau' },     size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol','nonflam'], voc: 'zero', flam: 'nonflam', pack: 'single',
     diff: { en: 'Zero-VOC, water-based. Indoor use without respirator.',
-            fr: 'Sans COV, à base d’eau. Usage intérieur sans masque.' } },
+            fr: 'Sans COV, Ã  base dâ€™eau. Usage intÃ©rieur sans masque.' } },
 
   { sku: 'KB-B006',  name: { en: 'Non-Flammable Brake Cleaner', fr: 'Nettoyant freins non inflammable' },size: '400 g', sizeBucket: '400g',
     tags: ['chlor','aerosol','nonflam'],   voc: 'low',  flam: 'nonflam', pack: 'single',
     diff: { en: 'Indoor-rated. Safe near hot brakes and welding bays.',
-            fr: 'Classé intérieur. Sûr près des freins chauds et postes de soudure.' } },
+            fr: 'ClassÃ© intÃ©rieur. SÃ»r prÃ¨s des freins chauds et postes de soudure.' } },
 
   { sku: 'KB-B010',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '5 L',   sizeBucket: 'bulk',
     tags: ['nonchlor','bulk'],             voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: 'Bulk refill drum for parts-washer reservoirs.',
-            fr: 'Bidon de recharge pour bacs de lavage de pièces.' } },
+            fr: 'Bidon de recharge pour bacs de lavage de piÃ¨ces.' } },
 
   { sku: 'KB-B012',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '20 L',  sizeBucket: 'bulk',
     tags: ['nonchlor','bulk'],             voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: '20-litre drum for fleet workshops and high-throughput bays.',
-            fr: 'Fût de 20 litres pour ateliers de flotte à haute cadence.' } },
+            fr: 'FÃ»t de 20 litres pour ateliers de flotte Ã  haute cadence.' } },
 
   { sku: 'KB-B015',  name: { en: 'Fleet Brake Cleaner',       fr: 'Nettoyant freins flotte' },            size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'pallet',
@@ -701,41 +701,41 @@ const PRODUCTS = [
   { sku: 'KB-B020',  name: { en: 'CSA Brake Cleaner',         fr: 'Nettoyant freins CSA' },              size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'case',
     diff: { en: 'Bilingual CSA label. Canadian retail-channel SKU.',
-            fr: 'Étiquette CSA bilingue. Réf. canal de détail canadien.' } },
+            fr: 'Ã‰tiquette CSA bilingue. RÃ©f. canal de dÃ©tail canadien.' } },
 
   { sku: 'KB-B025',  name: { en: 'ABS-Safe Brake Cleaner',    fr: 'Nettoyant freins compatible ABS' },   size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol','nonflam'], voc: 'zero', flam: 'nonflam', pack: 'single',
     diff: { en: 'Plastic-safe formulation. ABS sensors and modern coatings.',
-            fr: 'Formule sûre plastiques. Capteurs ABS et revêtements modernes.' } },
+            fr: 'Formule sÃ»re plastiques. Capteurs ABS et revÃªtements modernes.' } },
 
-  { sku: 'KB-B030',  name: { en: 'Caliper Detail Cleaner',    fr: 'Nettoyant détail étrier' },           size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-B030',  name: { en: 'Caliper Detail Cleaner',    fr: 'Nettoyant dÃ©tail Ã©trier' },           size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: 'Surgical applicator nozzle for caliper rebuild kits.',
-            fr: 'Buse applicatrice de précision pour kits d’étriers.' } },
+            fr: 'Buse applicatrice de prÃ©cision pour kits dâ€™Ã©triers.' } },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   CHIPS — sub-type quick filters (OR across products' tags)
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   CHIPS â€” sub-type quick filters (OR across products' tags)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const CHIPS = [
   { val: 'all',     label: { en: 'All',             fr: 'Tous' } },
-  { val: 'nonchlor',label: { en: 'Non-Chlorinated', fr: 'Non chloré' } },
-  { val: 'chlor',   label: { en: 'Chlorinated',     fr: 'Chloré' } },
+  { val: 'nonchlor',label: { en: 'Non-Chlorinated', fr: 'Non chlorÃ©' } },
+  { val: 'chlor',   label: { en: 'Chlorinated',     fr: 'ChlorÃ©' } },
   { val: 'nonflam', label: { en: 'Non-Flammable',   fr: 'Non inflammable' } },
-  { val: 'aerosol', label: { en: 'Aerosol',         fr: 'Aérosol' } },
+  { val: 'aerosol', label: { en: 'Aerosol',         fr: 'AÃ©rosol' } },
   { val: 'bulk',    label: { en: 'Bulk',            fr: 'Vrac' } },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   FACETS — checkbox filter rail (AND across axes, OR within)
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   FACETS â€” checkbox filter rail (AND across axes, OR within)
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const FACETS = [
   { key: 'voc',  label: { en: 'VOC class',      fr: 'Classe COV' }, opts: [
-    { val: '10',   label: { en: '≤10% VOC',      fr: '≤10% COV' } },
+    { val: '10',   label: { en: 'â‰¤10% VOC',      fr: 'â‰¤10% COV' } },
     { val: 'low',  label: { en: 'Low-VOC',       fr: 'Faible COV' } },
     { val: 'zero', label: { en: 'Zero-VOC',      fr: 'Sans COV' } },
   ] },
-  { key: 'flam', label: { en: 'Flammability',   fr: 'Inflammabilité' }, opts: [
+  { key: 'flam', label: { en: 'Flammability',   fr: 'InflammabilitÃ©' }, opts: [
     { val: 'flam',    label: { en: 'Flammable',     fr: 'Inflammable' } },
     { val: 'nonflam', label: { en: 'Non-Flammable', fr: 'Non inflammable' } },
   ] },
@@ -751,9 +751,9 @@ const FACETS = [
   ] },
 ];
 
-/* ═══════════════════════════════════════════════════════════
-   I18N — page chrome strings
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   I18N â€” page chrome strings
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const I18N = {
   en: {
     'util.distributor': 'Find a Distributor',
@@ -770,7 +770,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Brake Cleaners',
 
-    'chead.eyebrow':    'Category · Maintenance',
+    'chead.eyebrow':    'Category Â· Maintenance',
     'chead.h1':         'Brake Cleaners',
     'chead.sub':        'High-pressure aerosol and bulk-refill cleaners for caliper, rotor, drum and clutch service. Non-chlorinated, chlorinated and water-based formulations.',
     'chead.countLabel': 'Products in this category',
@@ -783,7 +783,7 @@ const I18N = {
     'grid.of':          'of',
     'grid.products':    'products',
     'grid.sortBy':      'Sort by',
-    'grid.sortName':    'Name (A–Z)',
+    'grid.sortName':    'Name (Aâ€“Z)',
     'grid.sortSku':     'SKU / Part #',
     'grid.empty.h':     'No products match these filters',
     'grid.empty.sub':   'Try removing a facet or switching sub-type.',
@@ -793,69 +793,69 @@ const I18N = {
     'pager.next':       'Next',
     'pager.loadMore':   'Load more',
 
-    'route.sds':        'Safety Data Sheets · FDS',
-    'route.sdsSub':     'EN / FR · WHMIS 2015 · CCCR 2001',
+    'route.sds':        'Safety Data Sheets Â· FDS',
+    'route.sdsSub':     'EN / FR Â· WHMIS 2015 Â· CCCR 2001',
     'route.msg':        'Trade-only pricing. No public cart. Route to a distributor for purchase, or download compliance documentation.',
     'route.cta1':       'Become a Distributor',
     'route.cta2':       'Find a Distributor',
 
-    'footer.tag':       'Power · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
-    'footer.tagline':   'German Precision · Engine Perfection',
+    'footer.tag':       'Power Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision Â· Engine Perfection',
   },
   fr: {
     'util.distributor': 'Trouver un distributeur',
-    'util.compliance':  'Conformité et FDS',
+    'util.compliance':  'ConformitÃ© et FDS',
     'nav.home':         'Accueil',
     'nav.products':     'Produits',
     'nav.industries':   'Industries',
-    'nav.about':        'À propos',
-    'nav.news':         'Actualités',
+    'nav.about':        'Ã€ propos',
+    'nav.news':         'ActualitÃ©s',
     'nav.contact':      'Contact',
-    'nav.whereToBuy':   'Où acheter',
+    'nav.whereToBuy':   'OÃ¹ acheter',
     'nav.distributor':  'Devenir distributeur',
 
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Nettoyants freins',
 
-    'chead.eyebrow':    'Catégorie · Entretien',
+    'chead.eyebrow':    'CatÃ©gorie Â· Entretien',
     'chead.h1':         'Nettoyants freins',
-    'chead.sub':        'Aérosols haute pression et recharges en vrac pour étriers, rotors, tambours et embrayages. Formules non chlorées, chlorées et à base d’eau.',
-    'chead.countLabel': 'Produits dans cette catégorie',
+    'chead.sub':        'AÃ©rosols haute pression et recharges en vrac pour Ã©triers, rotors, tambours et embrayages. Formules non chlorÃ©es, chlorÃ©es et Ã  base dâ€™eau.',
+    'chead.countLabel': 'Produits dans cette catÃ©gorie',
 
     'chips.label':      'Sous-type',
     'rail.h':           'Affiner par',
-    'rail.reset':       'Réinitialiser',
+    'rail.reset':       'RÃ©initialiser',
 
     'grid.showing':     'Affichage de',
     'grid.of':          'sur',
     'grid.products':    'produits',
     'grid.sortBy':      'Trier par',
-    'grid.sortName':    'Nom (A–Z)',
-    'grid.sortSku':     'Réf. / N° pièce',
-    'grid.empty.h':     'Aucun produit ne correspond à ces filtres',
-    'grid.empty.sub':   'Essayez de retirer un critère ou de changer de sous-type.',
+    'grid.sortName':    'Nom (Aâ€“Z)',
+    'grid.sortSku':     'RÃ©f. / NÂ° piÃ¨ce',
+    'grid.empty.h':     'Aucun produit ne correspond Ã  ces filtres',
+    'grid.empty.sub':   'Essayez de retirer un critÃ¨re ou de changer de sous-type.',
     'grid.view':        'Voir le produit',
 
-    'pager.prev':       'Préc.',
+    'pager.prev':       'PrÃ©c.',
     'pager.next':       'Suiv.',
     'pager.loadMore':   'Charger plus',
 
-    'route.sds':        'Fiches de données de sécurité · FDS',
-    'route.sdsSub':     'EN / FR · SIMDUT 2015 · RPCC 2001',
-    'route.msg':        'Tarif réservé au commerce. Pas de panier public. Acheter via un distributeur, ou télécharger la documentation de conformité.',
+    'route.sds':        'Fiches de donnÃ©es de sÃ©curitÃ© Â· FDS',
+    'route.sdsSub':     'EN / FR Â· SIMDUT 2015 Â· RPCC 2001',
+    'route.msg':        'Tarif rÃ©servÃ© au commerce. Pas de panier public. Acheter via un distributeur, ou tÃ©lÃ©charger la documentation de conformitÃ©.',
     'route.cta1':       'Devenir distributeur',
     'route.cta2':       'Trouver un distributeur',
 
-    'footer.tag':       'Puissance · Performance · Kolben',
-    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
-    'footer.tagline':   'Précision allemande · Perfection du moteur',
+    'footer.tag':       'Puissance Â· Performance Â· Kolben',
+    'footer.copy':      'Â© 2026 Kolben Chemicals Canada. ConÃ§u Ã  Hanovre.',
+    'footer.tagline':   'PrÃ©cision allemande Â· Perfection du moteur',
   },
 };
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    STATE
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 const state = {
   lang: 'en',
   chip: 'all',
@@ -865,11 +865,11 @@ const state = {
   perPage: 9,
 };
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    FILTERING + COUNTING
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function matchesAxes(p, overrides = {}) {
-  // overrides: { axis: arrayOfValues } — used by faceted-count "what if I added this option"
+  // overrides: { axis: arrayOfValues } â€” used by faceted-count "what if I added this option"
   for (const ax of FACETS) {
     const active = (overrides[ax.key] !== undefined) ? overrides[ax.key] : state.facets[ax.key];
     if (active.length > 0 && !active.includes(p[ax.key])) return false;
@@ -893,7 +893,7 @@ function sortList(list) {
   return copy;
 }
 
-/* Live count for a chip — "what would N be if I selected only this chip?" */
+/* Live count for a chip â€” "what would N be if I selected only this chip?" */
 function chipCount(chipVal) {
   if (chipVal === 'all') {
     return PRODUCTS.filter(p => matchesAxes(p)).length;
@@ -901,7 +901,7 @@ function chipCount(chipVal) {
   return PRODUCTS.filter(p => matchesAxes(p) && p.tags.includes(chipVal)).length;
 }
 
-/* Live count for a facet option — assume current filters on OTHER axes,
+/* Live count for a facet option â€” assume current filters on OTHER axes,
    replace this axis with [option]. Doesn't depend on whether option is
    currently active (so toggling off is intuitive). */
 function facetCount(axisKey, optionVal) {
@@ -909,9 +909,9 @@ function facetCount(axisKey, optionVal) {
   return PRODUCTS.filter(p => matchesAxes(p, override) && matchesChip(p)).length;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   RENDER — chips, rail, grid, pager
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   RENDER â€” chips, rail, grid, pager
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function renderChips() {
   const wrap = document.getElementById('chips');
   const t = I18N[state.lang];
@@ -979,7 +979,7 @@ function renderGrid() {
     // Classification chips for the text block. Cap at 2 per card so the row
     // wraps at most once even with the longer FR labels.
     const chips = [];
-    if (p.tags.includes('chlor'))    chips.push(state.lang === 'fr' ? 'Chloré'        : 'Chlor.');
+    if (p.tags.includes('chlor'))    chips.push(state.lang === 'fr' ? 'ChlorÃ©'        : 'Chlor.');
     if (p.tags.includes('nonchlor')) chips.push(state.lang === 'fr' ? 'Sans chlore'    : 'Non-Chlor.');
     if (p.flam === 'nonflam')        chips.push(state.lang === 'fr' ? 'Ininflammable'  : 'Non-Flam');
     const cardChips = chips.slice(0, 2);
@@ -1014,7 +1014,7 @@ function renderPager(totalPages, totalItems) {
   const t = I18N[state.lang];
 
   if (totalPages <= 1) {
-    // Slot still rendered — empty — so the page reserves the space for future categories.
+    // Slot still rendered â€” empty â€” so the page reserves the space for future categories.
     pager.innerHTML = '';
     return;
   }
@@ -1026,19 +1026,19 @@ function renderPager(totalPages, totalItems) {
 
   pager.innerHTML = `
     <div class="pager__nums">
-      <button class="pager__num pager__num--arrow" data-pg="prev" ${state.page === 1 ? 'disabled' : ''}>‹</button>
+      <button class="pager__num pager__num--arrow" data-pg="prev" ${state.page === 1 ? 'disabled' : ''}>â€¹</button>
       ${nums.join('')}
-      <button class="pager__num pager__num--arrow" data-pg="next" ${state.page === totalPages ? 'disabled' : ''}>›</button>
+      <button class="pager__num pager__num--arrow" data-pg="next" ${state.page === totalPages ? 'disabled' : ''}>â€º</button>
     </div>
     <button class="btn btn--ghost-dark btn--sm pager__more" data-pg="more">
-      ${t['pager.loadMore']} <span class="arrow">→</span>
+      ${t['pager.loadMore']} <span class="arrow">â†’</span>
     </button>
   `;
 }
 
-/* ═══════════════════════════════════════════════════════════
-   I18N — apply chrome strings
-═══════════════════════════════════════════════════════════ */
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+   I18N â€” apply chrome strings
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function applyI18n(lang) {
   const t = I18N[lang];
   document.documentElement.setAttribute('lang', lang);
@@ -1051,9 +1051,9 @@ function applyI18n(lang) {
   });
 }
 
-/* ═══════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    BOOT
-═══════════════════════════════════════════════════════════ */
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 function rerender() {
   applyI18n(state.lang);
   renderChips();
