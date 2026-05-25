@@ -656,10 +656,15 @@ body.kbn-locked{ overflow:hidden; }
   .section-head{ flex-direction:column; align-items:flex-start; gap:18px; }
   /* comfortable, consistent edge gutters */
   .container{ padding-left:24px !important; padding-right:24px !important; }
+  /* restore header vertical padding (inner pages' .container{padding:0 22px} zeroed it) so the top bar matches the homepage */
+  .header__inner{ padding-top:16px !important; padding-bottom:16px !important; }
   /* finger-friendly touch targets */
   .btn{ min-height:48px; padding:15px 24px; font-size:13px; }
   .btn--lg{ min-height:54px; padding:17px 28px; font-size:14px; }
   .chip{ min-height:44px; padding:12px 16px; font-size:12px; display:inline-flex; align-items:center; }
+  /* category/listing pages: stack the filter rail + grid, kill sticky overlap */
+  .body__inner{ grid-template-columns:1fr !important; gap:28px !important; }
+  .chips-bar,.rail{ position:static !important; top:auto !important; }
   .nav__link,.cat,.tile,.ind-card,.pcard,.acard,.dl,.res-card{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
   a,button{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
 }

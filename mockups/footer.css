@@ -187,4 +187,6 @@ body[data-no-footer-news] .site-footer .ft-nav__social { margin-top: 4px; }
   .ft-nav__grid { grid-template-columns: 1fr; }
   .ft-base__inner { flex-direction: column; align-items: flex-start; gap: 14px; }
   .ft-base__certs { padding-left: 0; border-left: 0; }
+  .ft-base__right { flex-wrap: wrap; gap: 8px 18px; }
+  .ft-base__tag { flex-basis: 100%; line-height: 1.5; margin-top: 4px; }
 }
