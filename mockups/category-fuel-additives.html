@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Fuel Additives (Category)</title>
+<title>Fuel Additives — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Clean fuel. Sharp response.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">CLEAN FUEL. SHARP RESPONSE.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Fuel Additives</h1>
       <p class="chead__sub" data-i18n="chead.sub">Injector cleaners, system cleaners and performance boosters for petrol and diesel — restore spray pattern, recover power, lower consumption.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">7</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,33 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-512', name: { en: 'Diesel Injector Cleaner', fr: 'Nettoyant injecteurs diesel' }, size: '250 ml', sizeBucket: '250ml',
-    tags: ['diesel'], pack: 'single',
-    diff: { en: 'Restores injector spray pattern. Cuts smoke and recovers power on common-rail diesels.',
-            fr: 'Restaure la pulvérisation des injecteurs. Réduit la fumée et récupère la puissance sur diesels common-rail.' } },
+    tags: ['diesel'], form: 'liquid', pack: 'single',
+    diff: { en: 'Restores injector spray pattern. Cuts smoke, recovers power on common-rail diesels.',
+            fr: 'Restaure la pulvérisation des injecteurs. Réduit la fumée, récupère la puissance sur diesels common-rail.' } },
   { sku: 'KB-520', name: { en: 'Petrol System Cleaner', fr: 'Nettoyant circuit essence' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['petrol'], pack: 'single',
-    diff: { en: 'Cleans intake valves, ports and combustion deposits on direct-injection petrol engines.',
-            fr: 'Nettoie soupapes, conduits et dépôts de combustion sur moteurs essence à injection directe.' } },
+    tags: ['petrol'], form: 'liquid', pack: 'single',
+    diff: { en: 'Cleans intake valves, ports and combustion deposits on direct-injection petrol engines. One-tank treatment.',
+            fr: 'Nettoie soupapes, conduits et dépôts de combustion sur moteurs essence à injection directe. Traitement d’un plein.' } },
   { sku: 'KB-525', name: { en: 'Cetane Booster +6', fr: 'Activateur de cétane +6' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['diesel', 'perf'], pack: 'single',
-    diff: { en: 'Raises cetane by up to six points. Sharper response, quieter combustion, easier cold-start.',
+    tags: ['diesel', 'perf'], form: 'liquid', pack: 'single',
+    diff: { en: 'Raises cetane up to six points. Sharper response, quieter combustion, easier cold-start.',
             fr: 'Augmente le cétane jusqu’à six points. Réponse plus vive, combustion plus douce, démarrage à froid facilité.' } },
-  { sku: 'KB-518', name: { en: 'Diesel Anti-Gel', fr: 'Antigel diesel' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['diesel'], pack: 'single',
-    diff: { en: 'Prevents fuel waxing and filter plugging in winter diesel. (Coming soon)',
-            fr: 'Empêche la cristallisation et le colmatage du filtre en hiver. (Bientôt)' } },
-  { sku: 'KB-530', name: { en: 'Octane Booster', fr: 'Activateur d’octane' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['petrol', 'perf'], pack: 'single',
-    diff: { en: 'Raises octane for high-compression and performance petrol engines. (Coming soon)',
-            fr: 'Augmente l’octane pour moteurs essence haute compression et de performance. (Bientôt)' } },
-  { sku: 'KB-540', name: { en: 'Fuel System Dryer', fr: 'Asséchant circuit carburant' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['petrol', 'diesel'], pack: 'single',
-    diff: { en: 'Disperses condensation water from the fuel system. (Coming soon)',
-            fr: 'Disperse l’eau de condensation du circuit de carburant. (Bientôt)' } },
-  { sku: 'KB-545', name: { en: 'Complete Fuel Treatment', fr: 'Traitement carburant complet' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['perf'], pack: 'case',
-    diff: { en: 'All-in-one clean-and-protect dose for routine fill-ups. (Coming soon)',
-            fr: 'Dose tout-en-un nettoie-et-protège pour le plein régulier. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -810,13 +794,15 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '250ml', label: { en: '250 ml', fr: '250 ml' } },
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -839,7 +825,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Fuel Additives',
 
-    'chead.eyebrow':    'Clean fuel. Sharp response.',
+    'chead.eyebrow':    'CLEAN FUEL. SHARP RESPONSE.',
     'chead.h1':         'Fuel Additives',
     'chead.sub':        'Injector cleaners, system cleaners and performance boosters for petrol and diesel — restore spray pattern, recover power, lower consumption.',
     'chead.countLabel': 'Products in this category',
@@ -887,7 +873,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Additifs carburant',
 
-    'chead.eyebrow':    'Carburant propre. Réponse vive.',
+    'chead.eyebrow':    'CARBURANT PROPRE. RÉPONSE VIVE.',
     'chead.h1':         'Additifs carburant',
     'chead.sub':        'Nettoyants d’injecteurs, nettoyants de circuit et activateurs de performance pour essence et diesel — restaurez la pulvérisation, récupérez la puissance, réduisez la consommation.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -928,7 +914,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

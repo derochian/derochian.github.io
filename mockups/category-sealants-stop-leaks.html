@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Sealants & Stop-Leaks (Category)</title>
+<title>Sealants & Stop-Leaks — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Seal the leak. Keep driving.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">SEAL THE LEAK. KEEP DRIVING.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Sealants & Stop-Leaks</h1>
       <p class="chead__sub" data-i18n="chead.sub">Targeted sealers that stop hairline leaks in cooling, oil and transmission circuits — no clogging, OEM-fluid compatible.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">5</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,25 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-610', name: { en: 'Radiator Stop-Leak', fr: 'Anti-fuite radiateur' }, size: '250 ml', sizeBucket: '250ml',
-    tags: ['cooling'], pack: 'single',
-    diff: { en: 'Permanently seals hairline leaks in the cooling circuit without clogging. Compatible with all OEM coolants.',
-            fr: 'Scelle durablement les microfuites du circuit de refroidissement sans obstruction. Compatible avec tous les liquides OEM.' } },
+    tags: ['cooling'], form: 'liquid', pack: 'single',
+    diff: { en: 'Permanently seals hairline leaks without clogging. Compatible with all OEM coolants.',
+            fr: 'Scelle durablement les microfuites sans obstruction. Compatible avec tous les liquides OEM.' } },
   { sku: 'KB-650', name: { en: 'Oil Stop-Leak', fr: 'Anti-fuite d’huile' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['oil'], pack: 'single',
+    tags: ['oil'], form: 'liquid', pack: 'single',
     diff: { en: 'Reconditions seals to stop engine oil leaks. (Coming soon)',
             fr: 'Régénère les joints pour stopper les fuites d’huile moteur. (Bientôt)' } },
   { sku: 'KB-655', name: { en: 'Transmission Stop-Leak', fr: 'Anti-fuite transmission' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['trans'], pack: 'single',
+    tags: ['trans'], form: 'liquid', pack: 'single',
     diff: { en: 'Swells and conditions seals in automatic transmissions. (Coming soon)',
             fr: 'Gonfle et conditionne les joints des transmissions automatiques. (Bientôt)' } },
-  { sku: 'KB-660', name: { en: 'Power Steering Stop-Leak', fr: 'Anti-fuite direction assistée' }, size: '250 ml', sizeBucket: '250ml',
-    tags: ['oil'], pack: 'single',
-    diff: { en: 'Stops leaks and quiets noisy power-steering pumps. (Coming soon)',
-            fr: 'Stoppe les fuites et apaise les pompes de direction bruyantes. (Bientôt)' } },
-  { sku: 'KB-665', name: { en: 'Head Gasket Sealer', fr: 'Scellant joint de culasse' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['cooling'], pack: 'case',
-    diff: { en: 'Liquid sealer for hairline head-gasket and block leaks. (Coming soon)',
-            fr: 'Scellant liquide pour microfuites de joint de culasse et de bloc. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -802,14 +794,15 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '250ml', label: { en: '250 ml', fr: '250 ml' } },
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
-    { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -832,7 +825,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Sealants & Stop-Leaks',
 
-    'chead.eyebrow':    'Seal the leak. Keep driving.',
+    'chead.eyebrow':    'SEAL THE LEAK. KEEP DRIVING.',
     'chead.h1':         'Sealants & Stop-Leaks',
     'chead.sub':        'Targeted sealers that stop hairline leaks in cooling, oil and transmission circuits — no clogging, OEM-fluid compatible.',
     'chead.countLabel': 'Products in this category',
@@ -880,7 +873,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Mastics et anti-fuites',
 
-    'chead.eyebrow':    'Scellez la fuite. Continuez de rouler.',
+    'chead.eyebrow':    'SCELLEZ LA FUITE. CONTINUEZ DE ROULER.',
     'chead.h1':         'Mastics et anti-fuites',
     'chead.sub':        'Scellants ciblés qui stoppent les microfuites des circuits de refroidissement, d’huile et de transmission — sans obstruction, compatibles avec les fluides OEM.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -921,7 +914,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

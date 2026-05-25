@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Oils & Fluids (Category)</title>
+<title>Oils & Fluids — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">OEM-spec fluids. No compromise.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">OEM-SPEC FLUIDS. NO COMPROMISE.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Oils & Fluids</h1>
       <p class="chead__sub" data-i18n="chead.sub">Full-synthetic oils and hydraulic fluids meeting modern OEM approvals — engine, brake, coolant, transmission and steering.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">7</div>
+      <div class="chead__count-n" id="header-count">5</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,33 +767,25 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-401', name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' }, size: '5 L', sizeBucket: '5l',
-    tags: ['engineoil'], pack: 'single',
-    diff: { en: 'Low-SAPS, fuel-economy formulation. Meets BMW LL-04, MB 229.51, VW 504 00 / 507 00.',
-            fr: 'Formule faible SAPS économe en carburant. BMW LL-04, MB 229.51, VW 504 00 / 507 00.' } },
+    tags: ['engineoil'], form: 'liquid', pack: 'single',
+    diff: { en: 'Low-SAPS, fuel-economy formulation. BMW LL-04, MB 229.51, VW 504 00/507 00.',
+            fr: 'Formule faible SAPS économe en carburant. BMW LL-04, MB 229.51, VW 504 00/507 00.' } },
   { sku: 'KB-420', name: { en: 'DOT 4 Brake Fluid', fr: 'Liquide de frein DOT 4' }, size: '1 L', sizeBucket: '1l',
-    tags: ['brake'], pack: 'single',
-    diff: { en: 'Dry boiling point 265 °C, wet 175 °C. For ABS, ESP and modern hydraulic clutches.',
-            fr: 'Point d’ébullition à sec 265 °C, humide 175 °C. Pour ABS, ESP et embrayages hydrauliques modernes.' } },
+    tags: ['brake'], form: 'liquid', pack: 'single',
+    diff: { en: 'Dry BP 265 °C, wet 175 °C. ABS, ESP, modern hydraulic clutches.',
+            fr: 'Point d’ébullition à sec 265 °C, humide 175 °C. ABS, ESP, embrayages hydrauliques modernes.' } },
   { sku: 'KB-430', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
-    tags: ['coolant'], pack: 'single',
-    diff: { en: 'Ready-to-use OAT formulation. 5-year / 250,000 km drain interval. G12++ compatible.',
-            fr: 'Formule OAT prête à l’emploi. Intervalle 5 ans / 250 000 km. Compatible G12++.' } },
+    tags: ['coolant'], form: 'liquid', pack: 'single',
+    diff: { en: 'Ready-to-use OAT. 5-yr/250,000 km interval. G12++ compatible.',
+            fr: 'OAT prêt à l’emploi. Intervalle 5 ans/250 000 km. Compatible G12++.' } },
   { sku: 'KB-445', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
-    tags: ['trans'], pack: 'single',
-    diff: { en: 'Synthetic ATF covering 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1 and MB 236.14.',
-            fr: 'ATF synthétique couvrant plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1 et MB 236.14.' } },
+    tags: ['trans'], form: 'liquid', pack: 'single',
+    diff: { en: 'Covers 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.',
+            fr: 'Couvre plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.' } },
   { sku: 'KB-450', name: { en: 'Power Steering Fluid', fr: 'Liquide de direction assistée' }, size: '1 L', sizeBucket: '1l',
-    tags: ['steer'], pack: 'single',
-    diff: { en: 'Universal mineral-based fluid for hydraulic steering systems. −40 °C to 130 °C.',
-            fr: 'Liquide minéral universel pour systèmes de direction hydraulique. −40 °C à 130 °C.' } },
-  { sku: 'KB-405', name: { en: 'Engine Oil 0W-20 Full Synthetic', fr: 'Huile moteur 0W-20 entièrement synthétique' }, size: '5 L', sizeBucket: '5l',
-    tags: ['engineoil'], pack: 'single',
-    diff: { en: 'Low-viscosity synthetic for modern hybrid and turbo petrol engines. (Coming soon)',
-            fr: 'Synthétique basse viscosité pour moteurs hybrides et turbo essence modernes. (Bientôt)' } },
-  { sku: 'KB-435', name: { en: 'Concentrated Coolant', fr: 'Liquide de refroidissement concentré' }, size: '4 L', sizeBucket: '4l',
-    tags: ['coolant'], pack: 'case',
-    diff: { en: 'Concentrate for dilution to the required freeze point. (Coming soon)',
-            fr: 'Concentré à diluer selon le point de gel requis. (Bientôt)' } },
+    tags: ['steer'], form: 'liquid', pack: 'single',
+    diff: { en: 'Universal mineral fluid, −40 °C to 130 °C.',
+            fr: 'Liquide minéral universel, −40 °C à 130 °C.' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -812,6 +804,9 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '5l', label: { en: '5 L', fr: '5 L' } },
     { val: '1l', label: { en: '1 L', fr: '1 L' } },
@@ -819,7 +814,6 @@ const FACETS = [
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -842,7 +836,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Oils & Fluids',
 
-    'chead.eyebrow':    'OEM-spec fluids. No compromise.',
+    'chead.eyebrow':    'OEM-SPEC FLUIDS. NO COMPROMISE.',
     'chead.h1':         'Oils & Fluids',
     'chead.sub':        'Full-synthetic oils and hydraulic fluids meeting modern OEM approvals — engine, brake, coolant, transmission and steering.',
     'chead.countLabel': 'Products in this category',
@@ -890,7 +884,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Huiles et fluides',
 
-    'chead.eyebrow':    'Fluides aux normes OEM. Sans compromis.',
+    'chead.eyebrow':    'FLUIDES AUX NORMES OEM. SANS COMPROMIS.',
     'chead.h1':         'Huiles et fluides',
     'chead.sub':        'Huiles entièrement synthétiques et fluides hydrauliques conformes aux homologations OEM modernes — moteur, frein, refroidissement, transmission et direction.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -931,7 +925,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

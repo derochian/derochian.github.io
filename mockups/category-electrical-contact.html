@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Electrical & Contact Cleaners (Category)</title>
+<title>Electrical & Contact Cleaners — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Clean contacts. Reliable signal.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">CLEAN CONTACTS. RELIABLE SIGNAL.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Electrical & Contact Cleaners</h1>
       <p class="chead__sub" data-i18n="chead.sub">Plastic-safe, fast-drying cleaners for connectors, relays and ECUs — restore conductivity without attacking sensitive components.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">5</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,25 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-241', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['contact', 'sensor'], pack: 'single',
-    diff: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV / 2.5 mm.',
-            fr: 'Nettoyant de précision sûr pour plastiques : connecteurs, relais et calculateurs. Rigidité diélectrique 35 kV / 2,5 mm.' } },
-  { sku: 'KB-270', name: { en: 'Contact Cleaner — Fast Dry', fr: 'Nettoyant contacts séchage rapide' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['contact'], pack: 'single',
-    diff: { en: 'Flash-evaporating cleaner for energized and de-energized contacts. (Coming soon)',
-            fr: 'Nettoyant à évaporation éclair pour contacts sous tension et hors tension. (Bientôt)' } },
-  { sku: 'KB-275', name: { en: 'Electrical Degreaser', fr: 'Dégraissant électrique' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['degrease'], pack: 'single',
-    diff: { en: 'Heavy-duty degreaser for motors, terminals and connectors. (Coming soon)',
-            fr: 'Dégraissant puissant pour moteurs, bornes et connecteurs. (Bientôt)' } },
+    tags: ['contact', 'sensor'], form: 'aerosol', pack: 'single',
+    diff: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV/2.5 mm.',
+            fr: 'Nettoyant de précision sûr pour plastiques : connecteurs, relais et calculateurs. Rigidité diélectrique 35 kV/2,5 mm.' } },
   { sku: 'KB-280', name: { en: 'Sensor-Safe Cleaner', fr: 'Nettoyant sûr capteurs' }, size: '200 ml', sizeBucket: '200ml',
-    tags: ['sensor', 'contact'], pack: 'single',
+    tags: ['sensor', 'contact'], form: 'aerosol', pack: 'single',
     diff: { en: 'Targeted spray for O₂, MAF and ABS sensors. (Coming soon)',
             fr: 'Aérosol ciblé pour capteurs O₂, MAF et ABS. (Bientôt)' } },
-  { sku: 'KB-285', name: { en: 'Battery Terminal Protector', fr: 'Protecteur de bornes de batterie' }, size: '200 ml', sizeBucket: '200ml',
-    tags: ['contact'], pack: 'case',
-    diff: { en: 'Coats terminals to prevent corrosion and voltage drop. (Coming soon)',
-            fr: 'Recouvre les bornes pour prévenir corrosion et chute de tension. (Bientôt)' } },
+  { sku: 'KB-275', name: { en: 'Electrical Degreaser', fr: 'Dégraissant électrique' }, size: '400 ml', sizeBucket: '400ml',
+    tags: ['degrease'], form: 'aerosol', pack: 'single',
+    diff: { en: 'Heavy-duty degreaser for motors, terminals and connectors. (Coming soon)',
+            fr: 'Dégraissant puissant pour moteurs, bornes et connecteurs. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -802,14 +794,16 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'aerosol', label: { en: 'Aerosol', fr: 'Aérosol' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
-    { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
     { val: '200ml', label: { en: '200 ml', fr: '200 ml' } },
+    { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -832,7 +826,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Electrical & Contact Cleaners',
 
-    'chead.eyebrow':    'Clean contacts. Reliable signal.',
+    'chead.eyebrow':    'CLEAN CONTACTS. RELIABLE SIGNAL.',
     'chead.h1':         'Electrical & Contact Cleaners',
     'chead.sub':        'Plastic-safe, fast-drying cleaners for connectors, relays and ECUs — restore conductivity without attacking sensitive components.',
     'chead.countLabel': 'Products in this category',
@@ -880,7 +874,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Nettoyants électriques et contacts',
 
-    'chead.eyebrow':    'Contacts propres. Signal fiable.',
+    'chead.eyebrow':    'CONTACTS PROPRES. SIGNAL FIABLE.',
     'chead.h1':         'Nettoyants électriques et contacts',
     'chead.sub':        'Nettoyants à séchage rapide et sûrs pour plastiques destinés aux connecteurs, relais et calculateurs — rétablissez la conductivité sans agresser les composants sensibles.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -921,7 +915,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

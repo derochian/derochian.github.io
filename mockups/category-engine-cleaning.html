@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Engine Cleaning (Category)</title>
+<title>Engine Cleaning — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Strip the grime. Show the work.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">STRIP THE GRIME. SHOW THE WORK.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Engine Cleaning</h1>
       <p class="chead__sub" data-i18n="chead.sub">Degreasers and external engine cleaners that cut baked-on grime safely — shop-ready presentation and easier inspection.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">5</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,25 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-250', name: { en: 'Engine Degreaser', fr: 'Dégraissant moteur' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['degrease'], pack: 'single',
+    tags: ['degrease'], form: 'aerosol', pack: 'single',
     diff: { en: 'Foaming degreaser that lifts baked-on grease from engine bays. (Coming soon)',
             fr: 'Dégraissant moussant qui décolle la graisse incrustée des compartiments moteur. (Bientôt)' } },
   { sku: 'KB-810', name: { en: 'DPF Cleaner', fr: 'Nettoyant FAP' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['dpf'], pack: 'single',
+    tags: ['dpf'], form: 'liquid', pack: 'single',
     diff: { en: 'Regeneration aid that clears soot from diesel particulate filters. (Coming soon)',
             fr: 'Aide à la régénération qui élimine la suie des filtres à particules diesel. (Bientôt)' } },
   { sku: 'KB-815', name: { en: 'EGR & Intake Cleaner', fr: 'Nettoyant EGR et admission' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['intake'], pack: 'single',
+    tags: ['intake'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dissolves carbon from EGR valves and intake manifolds. (Coming soon)',
             fr: 'Dissout la calamine des vannes EGR et des collecteurs d’admission. (Bientôt)' } },
-  { sku: 'KB-820', name: { en: 'Engine Bay Degreaser', fr: 'Dégraissant compartiment moteur' }, size: '750 ml', sizeBucket: '750ml',
-    tags: ['degrease'], pack: 'case',
-    diff: { en: 'Spray-on, rinse-off degreaser for show-ready engine bays. (Coming soon)',
-            fr: 'Dégraissant à pulvériser et rincer pour compartiments impeccables. (Bientôt)' } },
-  { sku: 'KB-825', name: { en: 'Diesel Intake Foam', fr: 'Mousse d’admission diesel' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['intake', 'dpf'], pack: 'single',
-    diff: { en: 'Foaming cleaner for sooted diesel intake tracts. (Coming soon)',
-            fr: 'Nettoyant moussant pour admissions diesel encrassées. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -802,14 +794,16 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'aerosol', label: { en: 'Aerosol', fr: 'Aérosol' } },
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
     { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
-    { val: '750ml', label: { en: '750 ml', fr: '750 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -832,7 +826,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Engine Cleaning',
 
-    'chead.eyebrow':    'Strip the grime. Show the work.',
+    'chead.eyebrow':    'STRIP THE GRIME. SHOW THE WORK.',
     'chead.h1':         'Engine Cleaning',
     'chead.sub':        'Degreasers and external engine cleaners that cut baked-on grime safely — shop-ready presentation and easier inspection.',
     'chead.countLabel': 'Products in this category',
@@ -880,7 +874,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Nettoyage moteur',
 
-    'chead.eyebrow':    'Éliminez la crasse. Révélez le travail.',
+    'chead.eyebrow':    'ÉLIMINEZ LA CRASSE. RÉVÉLEZ LE TRAVAIL.',
     'chead.h1':         'Nettoyage moteur',
     'chead.sub':        'Dégraissants et nettoyants moteur externes qui éliminent la crasse incrustée en toute sécurité — présentation impeccable et inspection facilitée.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -921,7 +915,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

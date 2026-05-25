@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Engine Additives (Category)</title>
+<title>Engine Additives — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Restore compression. Protect the build.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">RESTORE COMPRESSION. PROTECT THE BUILD.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Engine Additives</h1>
-      <p class="chead__sub" data-i18n="chead.sub">German-engineered treatments that clean the lubrication circuit, quiet high-mileage engines, and protect against wear.</p>
+      <p class="chead__sub" data-i18n="chead.sub">German-engineered treatments that clean the lubrication circuit, quiet high-mileage engines, and protect against wear — flush to top-end protection.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">6</div>
+      <div class="chead__count-n" id="header-count">4</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,29 +767,21 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-340', name: { en: 'Engine Flush — Pro', fr: 'Nettoyant moteur — Pro' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['flush'], pack: 'single',
-    diff: { en: 'Removes carbon, sludge and varnish from the lubrication circuit in 15 minutes. Gasoline, diesel and DPF.',
-            fr: 'Élimine calamine, boues et vernis du circuit de lubrification en 15 minutes. Essence, diesel et FAP.' } },
+    tags: ['flush'], form: 'liquid', pack: 'single',
+    diff: { en: 'Removes carbon, sludge and varnish from the lubrication circuit in 15 min. Gasoline, diesel, DPF-equipped.',
+            fr: 'Élimine calamine, boues et vernis du circuit de lubrification en 15 min. Essence, diesel, compatible FAP.' } },
   { sku: 'KB-635', name: { en: 'Oil System Stabilizer', fr: 'Stabilisateur du circuit d’huile' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['treatment', 'highmile'], pack: 'single',
+    tags: ['treatment', 'highmile'], form: 'liquid', pack: 'single',
     diff: { en: 'Reduces oil consumption and quiets hydraulic lifters on high-mileage engines. ACEA A3/B4 compatible.',
-            fr: 'Réduit la consommation d’huile et apaise les poussoirs sur moteurs à fort kilométrage. Compatible ACEA A3/B4.' } },
+            fr: 'Réduit la consommation d’huile et apaise les poussoirs hydrauliques sur moteurs à fort kilométrage. Compatible ACEA A3/B4.' } },
   { sku: 'KB-360', name: { en: 'Anti-Friction Treatment', fr: 'Traitement anti-friction' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['treatment'], pack: 'single',
-    diff: { en: 'MoS₂-fortified treatment that lowers friction and operating temperature. (Coming soon)',
-            fr: 'Traitement enrichi au MoS₂ réduisant friction et température. (Bientôt)' } },
+    tags: ['treatment'], form: 'liquid', pack: 'single',
+    diff: { en: 'MoS₂-fortified anti-friction treatment that lowers friction and operating temperature. (Coming soon)',
+            fr: 'Traitement anti-friction enrichi au MoS₂ réduisant friction et température. (Bientôt)' } },
   { sku: 'KB-355', name: { en: 'Stop-Smoke Treatment', fr: 'Traitement anti-fumée' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['treatment', 'highmile'], pack: 'single',
+    tags: ['treatment', 'highmile'], form: 'liquid', pack: 'single',
     diff: { en: 'Thickens the oil film to cut blue smoke and oil burn on worn engines. (Coming soon)',
             fr: 'Épaissit le film d’huile pour réduire la fumée bleue sur moteurs usés. (Bientôt)' } },
-  { sku: 'KB-348', name: { en: 'Oil Leak Stop', fr: 'Anti-fuite d’huile' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['treatment', 'highmile'], pack: 'single',
-    diff: { en: 'Reconditions seals to stop external oil leaks without disassembly. (Coming soon)',
-            fr: 'Régénère les joints pour stopper les fuites d’huile externes sans démontage. (Bientôt)' } },
-  { sku: 'KB-342', name: { en: 'Diesel Engine Flush', fr: 'Nettoyant moteur diesel' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['flush'], pack: 'case',
-    diff: { en: 'Pre-oil-change flush tuned for high-soot diesel sumps. (Coming soon)',
-            fr: 'Rinçage pré-vidange conçu pour les carters diesel chargés en suie. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -806,13 +798,15 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
     { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -835,9 +829,9 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Engine Additives',
 
-    'chead.eyebrow':    'Restore compression. Protect the build.',
+    'chead.eyebrow':    'RESTORE COMPRESSION. PROTECT THE BUILD.',
     'chead.h1':         'Engine Additives',
-    'chead.sub':        'German-engineered treatments that clean the lubrication circuit, quiet high-mileage engines, and protect against wear.',
+    'chead.sub':        'German-engineered treatments that clean the lubrication circuit, quiet high-mileage engines, and protect against wear — flush to top-end protection.',
     'chead.countLabel': 'Products in this category',
 
     'chips.label':      'Sub-type',
@@ -883,9 +877,9 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Additifs moteur',
 
-    'chead.eyebrow':    'Restaurez la compression. Protégez le moteur.',
+    'chead.eyebrow':    'RESTAUREZ LA COMPRESSION. PROTÉGEZ LE MOTEUR.',
     'chead.h1':         'Additifs moteur',
-    'chead.sub':        'Traitements d’ingénierie allemande qui nettoient le circuit de lubrification, apaisent les moteurs à kilométrage élevé et protègent contre l’usure.',
+    'chead.sub':        'Traitements d’ingénierie allemande qui nettoient le circuit de lubrification, apaisent les moteurs à kilométrage élevé et protègent contre l’usure — du rinçage à la protection moteur.',
     'chead.countLabel': 'Produits dans cette catégorie',
 
     'chips.label':      'Sous-type',
@@ -924,7 +918,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

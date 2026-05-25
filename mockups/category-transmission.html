@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Transmission (Category)</title>
+<title>Transmission — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Smooth shifts. Protected gears.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">SMOOTH SHIFTS. PROTECTED GEARS.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Transmission</h1>
       <p class="chead__sub" data-i18n="chead.sub">Fluids and conditioners for automatic, CVT and manual gearboxes — restore smooth shifts and protect against heat and wear.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">6</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,29 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-445', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
-    tags: ['auto'], pack: 'single',
-    diff: { en: 'Synthetic ATF covering 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1 and MB 236.14.',
-            fr: 'ATF synthétique couvrant plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1 et MB 236.14.' } },
+    tags: ['auto'], form: 'liquid', pack: 'single',
+    diff: { en: 'Covers 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.',
+            fr: 'Couvre plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.' } },
   { sku: 'KB-460', name: { en: 'Transmission Conditioner', fr: 'Conditionneur de transmission' }, size: '235 ml', sizeBucket: '235ml',
-    tags: ['auto'], pack: 'single',
-    diff: { en: 'Restores smooth shifts and protects seals in automatic gearboxes. (Coming soon)',
-            fr: 'Restaure des passages doux et protège les joints des boîtes automatiques. (Bientôt)' } },
-  { sku: 'KB-462', name: { en: 'CVT Fluid', fr: 'Fluide CVT' }, size: '4 L', sizeBucket: '4l',
-    tags: ['cvt'], pack: 'single',
-    diff: { en: 'Full-synthetic fluid for continuously variable transmissions. (Coming soon)',
-            fr: 'Fluide entièrement synthétique pour transmissions à variation continue. (Bientôt)' } },
-  { sku: 'KB-465', name: { en: 'CVT Enhancer', fr: 'Additif CVT' }, size: '235 ml', sizeBucket: '235ml',
-    tags: ['cvt'], pack: 'single',
-    diff: { en: 'Reduces shudder and protects belt- and chain-type CVT units. (Coming soon)',
-            fr: 'Réduit les à-coups et protège les CVT à courroie et à chaîne. (Bientôt)' } },
-  { sku: 'KB-470', name: { en: 'Manual Transmission Fluid 75W-90', fr: 'Huile de boîte manuelle 75W-90' }, size: '1 L', sizeBucket: '1l',
-    tags: ['manual'], pack: 'single',
-    diff: { en: 'GL-4 synthetic gear oil for manual gearboxes and transaxles. (Coming soon)',
-            fr: 'Huile synthétique GL-4 pour boîtes manuelles et transaxles. (Bientôt)' } },
-  { sku: 'KB-475', name: { en: 'Limited-Slip Diff Oil 75W-140', fr: 'Huile de pont autobloquant 75W-140' }, size: '1 L', sizeBucket: '1l',
-    tags: ['manual'], pack: 'case',
-    diff: { en: 'GL-5 LS gear oil for limited-slip differentials. (Coming soon)',
-            fr: 'Huile GL-5 LS pour différentiels autobloquants. (Bientôt)' } },
+    tags: ['auto'], form: 'liquid', pack: 'single',
+    diff: { en: 'Restores smooth shifts and protects seals in automatic gearboxes. Expanding — full range coming soon.',
+            fr: 'Restaure des passages doux et protège les joints des boîtes automatiques. Gamme complète à venir.' } },
+  { sku: 'KB-465', name: { en: 'CVT Transmission Enhancer', fr: 'Additif transmission CVT' }, size: '235 ml', sizeBucket: '235ml',
+    tags: ['cvt'], form: 'liquid', pack: 'single',
+    diff: { en: 'Reduces shudder and protects belt- and chain-type CVT units. Expanding — full range coming soon.',
+            fr: 'Réduit les à-coups et protège les CVT à courroie et à chaîne. Gamme complète à venir.' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -806,14 +794,15 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '4l', label: { en: '4 L', fr: '4 L' } },
     { val: '235ml', label: { en: '235 ml', fr: '235 ml' } },
-    { val: '1l', label: { en: '1 L', fr: '1 L' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -836,7 +825,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Transmission',
 
-    'chead.eyebrow':    'Smooth shifts. Protected gears.',
+    'chead.eyebrow':    'SMOOTH SHIFTS. PROTECTED GEARS.',
     'chead.h1':         'Transmission',
     'chead.sub':        'Fluids and conditioners for automatic, CVT and manual gearboxes — restore smooth shifts and protect against heat and wear.',
     'chead.countLabel': 'Products in this category',
@@ -884,7 +873,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Transmission',
 
-    'chead.eyebrow':    'Passages doux. Engrenages protégés.',
+    'chead.eyebrow':    'PASSAGES DOUX. ENGRENAGES PROTÉGÉS.',
     'chead.h1':         'Transmission',
     'chead.sub':        'Fluides et conditionneurs pour boîtes automatiques, CVT et manuelles — retrouvez des passages doux et protégez contre la chaleur et l’usure.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -925,7 +914,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

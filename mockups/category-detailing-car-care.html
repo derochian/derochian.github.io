@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Detailing & Car Care (Category)</title>
+<title>Detailing & Car Care — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Finish like a pro.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">FINISH LIKE A PRO.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Detailing & Car Care</h1>
       <p class="chead__sub" data-i18n="chead.sub">Interior and exterior care that protects surfaces and delivers a professional finish between services.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">6</div>
+      <div class="chead__count-n" id="header-count">4</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,29 +767,21 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-700', name: { en: 'Glass Cleaner', fr: 'Nettoyant vitres' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['glass', 'interior'], pack: 'single',
+    tags: ['glass', 'interior'], form: 'liquid', pack: 'single',
     diff: { en: 'Streak-free, ammonia-free formula safe on tint. (Coming soon)',
             fr: 'Formule sans traces et sans ammoniaque, sûre sur films teintés. (Bientôt)' } },
   { sku: 'KB-705', name: { en: 'Interior Cleaner', fr: 'Nettoyant intérieur' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['interior'], pack: 'single',
+    tags: ['interior'], form: 'liquid', pack: 'single',
     diff: { en: 'All-surface cleaner for dashboards, trim and upholstery. (Coming soon)',
             fr: 'Nettoyant toutes surfaces pour tableaux de bord, garnitures et sellerie. (Bientôt)' } },
   { sku: 'KB-710', name: { en: 'Tyre & Trim Dressing', fr: 'Rénovateur pneus et plastiques' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['exterior', 'protect'], pack: 'single',
+    tags: ['exterior', 'protect'], form: 'aerosol', pack: 'single',
     diff: { en: 'Satin-finish dressing that restores and protects rubber and trim. (Coming soon)',
             fr: 'Rénovateur fini satiné qui restaure et protège caoutchouc et plastiques. (Bientôt)' } },
   { sku: 'KB-715', name: { en: 'Spray Wax & Sealant', fr: 'Cire et scellant en aérosol' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['exterior', 'protect'], pack: 'single',
+    tags: ['exterior', 'protect'], form: 'aerosol', pack: 'single',
     diff: { en: 'Quick-detailer wax that adds gloss and hydrophobic protection. (Coming soon)',
             fr: 'Cire de finition rapide qui ajoute brillance et protection hydrophobe. (Bientôt)' } },
-  { sku: 'KB-720', name: { en: 'All-Purpose Cleaner', fr: 'Nettoyant tout usage' }, size: '750 ml', sizeBucket: '750ml',
-    tags: ['interior', 'exterior'], pack: 'case',
-    diff: { en: 'Dilutable cleaner for interior and exterior detailing. (Coming soon)',
-            fr: 'Nettoyant diluable pour le détaillage intérieur et extérieur. (Bientôt)' } },
-  { sku: 'KB-725', name: { en: 'Wheel Cleaner', fr: 'Nettoyant jantes' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['exterior'], pack: 'single',
-    diff: { en: 'Acid-free wheel cleaner that lifts brake dust and road grime. (Coming soon)',
-            fr: 'Nettoyant jantes sans acide qui décolle poussière de frein et crasse. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -807,14 +799,16 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+    { val: 'aerosol', label: { en: 'Aerosol', fr: 'Aérosol' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
     { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
-    { val: '750ml', label: { en: '750 ml', fr: '750 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -837,7 +831,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Detailing & Car Care',
 
-    'chead.eyebrow':    'Finish like a pro.',
+    'chead.eyebrow':    'FINISH LIKE A PRO.',
     'chead.h1':         'Detailing & Car Care',
     'chead.sub':        'Interior and exterior care that protects surfaces and delivers a professional finish between services.',
     'chead.countLabel': 'Products in this category',
@@ -885,7 +879,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Détaillage et entretien auto',
 
-    'chead.eyebrow':    'Une finition de pro.',
+    'chead.eyebrow':    'UNE FINITION DE PRO.',
     'chead.h1':         'Détaillage et entretien auto',
     'chead.sub':        'Soins intérieurs et extérieurs qui protègent les surfaces et offrent une finition professionnelle entre les entretiens.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -926,7 +920,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

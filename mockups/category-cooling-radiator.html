@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Cooling & Radiator (Category)</title>
+<title>Cooling & Radiator — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Run cool. Stay sealed.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">RUN COOL. STAY SEALED.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Cooling & Radiator</h1>
       <p class="chead__sub" data-i18n="chead.sub">Coolants, flushes and stop-leaks that hold temperature and protect the cooling circuit through extreme duty cycles.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">5</div>
+      <div class="chead__count-n" id="header-count">4</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,25 +767,21 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-610', name: { en: 'Radiator Stop-Leak', fr: 'Anti-fuite radiateur' }, size: '250 ml', sizeBucket: '250ml',
-    tags: ['stopleak'], pack: 'single',
-    diff: { en: 'Permanently seals hairline leaks in the cooling circuit without clogging. Compatible with all OEM coolants.',
-            fr: 'Scelle durablement les microfuites du circuit de refroidissement sans obstruction. Compatible avec tous les liquides OEM.' } },
+    tags: ['stopleak'], form: 'liquid', pack: 'single',
+    diff: { en: 'Permanently seals hairline leaks without clogging. Compatible with all OEM coolants.',
+            fr: 'Scelle durablement les microfuites sans obstruction. Compatible avec tous les liquides OEM.' } },
   { sku: 'KB-430', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
-    tags: ['coolant'], pack: 'single',
-    diff: { en: 'Ready-to-use OAT formulation. 5-year / 250,000 km drain interval. G12++ compatible.',
-            fr: 'Formule OAT prête à l’emploi. Intervalle 5 ans / 250 000 km. Compatible G12++.' } },
+    tags: ['coolant'], form: 'liquid', pack: 'single',
+    diff: { en: 'Ready-to-use OAT. 5-yr/250,000 km interval. G12++ compatible.',
+            fr: 'OAT prêt à l’emploi. Intervalle 5 ans/250 000 km. Compatible G12++.' } },
   { sku: 'KB-620', name: { en: 'Radiator Flush', fr: 'Rinçage radiateur' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['flush'], pack: 'single',
+    tags: ['flush'], form: 'liquid', pack: 'single',
     diff: { en: 'Removes scale and rust before a coolant change. (Coming soon)',
             fr: 'Élimine tartre et rouille avant une vidange du liquide. (Bientôt)' } },
   { sku: 'KB-625', name: { en: 'Cooling System Conditioner', fr: 'Conditionneur de refroidissement' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['coolant'], pack: 'single',
+    tags: ['coolant'], form: 'liquid', pack: 'single',
     diff: { en: 'Lubricates the water pump and inhibits corrosion. (Coming soon)',
             fr: 'Lubrifie la pompe à eau et inhibe la corrosion. (Bientôt)' } },
-  { sku: 'KB-615', name: { en: 'Heavy-Duty Stop-Leak', fr: 'Anti-fuite haute performance' }, size: '250 ml', sizeBucket: '250ml',
-    tags: ['stopleak'], pack: 'case',
-    diff: { en: 'Reinforced sealer for larger cooling-system leaks. (Coming soon)',
-            fr: 'Scellant renforcé pour les fuites plus importantes du circuit de refroidissement. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -802,6 +798,9 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'liquid', label: { en: 'Liquid', fr: 'Liquide' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '250ml', label: { en: '250 ml', fr: '250 ml' } },
     { val: '4l', label: { en: '4 L', fr: '4 L' } },
@@ -809,7 +808,6 @@ const FACETS = [
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -832,7 +830,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Cooling & Radiator',
 
-    'chead.eyebrow':    'Run cool. Stay sealed.',
+    'chead.eyebrow':    'RUN COOL. STAY SEALED.',
     'chead.h1':         'Cooling & Radiator',
     'chead.sub':        'Coolants, flushes and stop-leaks that hold temperature and protect the cooling circuit through extreme duty cycles.',
     'chead.countLabel': 'Products in this category',
@@ -880,7 +878,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Refroidissement et radiateur',
 
-    'chead.eyebrow':    'Restez au frais. Restez étanche.',
+    'chead.eyebrow':    'RESTEZ AU FRAIS. RESTEZ ÉTANCHE.',
     'chead.h1':         'Refroidissement et radiateur',
     'chead.sub':        'Liquides de refroidissement, rinçages et anti-fuites qui maîtrisent la température et protègent le circuit de refroidissement dans les conditions extrêmes.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -921,7 +919,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

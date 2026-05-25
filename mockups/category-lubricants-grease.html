@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Lubricants & Grease (Category)</title>
+<title>Lubricants & Grease — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Less friction. Longer life.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">LESS FRICTION. LONGER LIFE.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Lubricants & Grease</h1>
       <p class="chead__sub" data-i18n="chead.sub">PTFE-fortified sprays and greases for chains, linkages and exposed hardware — sling off less, last longer, run quieter.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">6</div>
+      <div class="chead__count-n" id="header-count">5</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,29 +767,25 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-088', name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaîne synthétique' }, size: '400 g', sizeBucket: '400g',
-    tags: ['chain'], pack: 'single',
-    diff: { en: 'PTFE-fortified aerosol grease for drive chains and exposed linkages. Slings off less, lasts longer.',
-            fr: 'Graisse aérosol enrichie au PTFE pour chaînes et tringleries exposées. Moins de projections, plus de durée.' } },
+    tags: ['chain'], form: 'aerosol', pack: 'single',
+    diff: { en: 'PTFE-fortified aerosol grease for drive chains and exposed linkages.',
+            fr: 'Graisse aérosol enrichie au PTFE pour chaînes et tringleries exposées.' } },
   { sku: 'KB-090', name: { en: 'White Lithium Grease', fr: 'Graisse blanche au lithium' }, size: '400 g', sizeBucket: '400g',
-    tags: ['grease'], pack: 'single',
+    tags: ['grease'], form: 'grease', pack: 'single',
     diff: { en: 'Water-resistant lithium grease for hinges, latches and metal-on-metal contact. (Coming soon)',
             fr: 'Graisse au lithium résistante à l’eau pour charnières, loquets et contacts métal-métal. (Bientôt)' } },
   { sku: 'KB-095', name: { en: 'Penetrating Oil', fr: 'Dégrippant' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['pen'], pack: 'single',
+    tags: ['pen'], form: 'aerosol', pack: 'single',
     diff: { en: 'Fast-creeping penetrant that frees seized fasteners and rusted hardware. (Coming soon)',
             fr: 'Pénétrant à action rapide qui libère la boulonnerie grippée et rouillée. (Bientôt)' } },
-  { sku: 'KB-097', name: { en: 'Copper Anti-Seize', fr: 'Pâte cuivre antigrippage' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['seize'], pack: 'single',
-    diff: { en: 'Copper compound for high-temperature threads, brake hardware and exhaust bolts. (Coming soon)',
-            fr: 'Pâte au cuivre pour filetages haute température, visserie de frein et boulons d’échappement. (Bientôt)' } },
   { sku: 'KB-099', name: { en: 'Silicone Spray', fr: 'Lubrifiant silicone' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['pen'], pack: 'single',
+    tags: ['pen'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dry silicone lubricant safe on rubber, plastic and trim. (Coming soon)',
             fr: 'Lubrifiant silicone sec, sûr sur caoutchouc, plastique et garnitures. (Bientôt)' } },
-  { sku: 'KB-085', name: { en: 'Multi-Purpose Grease', fr: 'Graisse multi-usage' }, size: '500 g', sizeBucket: '500g',
-    tags: ['grease'], pack: 'case',
-    diff: { en: 'Lithium-complex grease for bearings, chassis and general lubrication. (Coming soon)',
-            fr: 'Graisse complexe au lithium pour roulements, châssis et lubrification générale. (Bientôt)' } },
+  { sku: 'KB-097', name: { en: 'Copper Anti-Seize', fr: 'Pâte cuivre antigrippage' }, size: '300 ml', sizeBucket: '300ml',
+    tags: ['seize'], form: 'paste', pack: 'single',
+    diff: { en: 'Copper compound for high-temperature threads, brake hardware and exhaust bolts. (Coming soon)',
+            fr: 'Pâte au cuivre pour filetages haute température, visserie de frein et boulons d’échappement. (Bientôt)' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -807,15 +803,18 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'aerosol', label: { en: 'Aerosol', fr: 'Aérosol' } },
+    { val: 'grease', label: { en: 'Grease', fr: 'Graisse' } },
+    { val: 'paste', label: { en: 'Paste', fr: 'Pâte' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '400g', label: { en: '400 g', fr: '400 g' } },
     { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
-    { val: '500g', label: { en: '500 g', fr: '500 g' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -838,7 +837,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Lubricants & Grease',
 
-    'chead.eyebrow':    'Less friction. Longer life.',
+    'chead.eyebrow':    'LESS FRICTION. LONGER LIFE.',
     'chead.h1':         'Lubricants & Grease',
     'chead.sub':        'PTFE-fortified sprays and greases for chains, linkages and exposed hardware — sling off less, last longer, run quieter.',
     'chead.countLabel': 'Products in this category',
@@ -886,7 +885,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Lubrifiants et graisses',
 
-    'chead.eyebrow':    'Moins de friction. Plus de durée de vie.',
+    'chead.eyebrow':    'MOINS DE FRICTION. PLUS DE DURÉE DE VIE.',
     'chead.h1':         'Lubrifiants et graisses',
     'chead.sub':        'Aérosols et graisses enrichis au PTFE pour chaînes, tringleries et quincaillerie exposée — moins de projections, plus de durée, fonctionnement plus silencieux.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -927,7 +926,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,

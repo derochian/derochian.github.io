@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>Kolben — Maintenance Sprays (Category)</title>
+<title>Maintenance Sprays — Kolben Chemicals</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -558,12 +558,12 @@
 <section class="chead">
   <div class="container chead__inner">
     <div class="chead__left">
-      <div class="chead__eyebrow" data-i18n="chead.eyebrow">Fast-acting. Residue-free.</div>
+      <div class="chead__eyebrow" data-i18n="chead.eyebrow">FAST-ACTING. RESIDUE-FREE.</div>
       <h1 class="chead__h1" data-i18n="chead.h1">Maintenance Sprays</h1>
       <p class="chead__sub" data-i18n="chead.sub">Shop-grade aerosols for cleaning, degreasing and prepping — fast-evaporating and safe on the surfaces that matter.</p>
     </div>
     <div class="chead__count">
-      <div class="chead__count-n" id="header-count">6</div>
+      <div class="chead__count-n" id="header-count">3</div>
       <div class="chead__count-l" data-i18n="chead.countLabel">Products in this category</div>
     </div>
   </div>
@@ -767,29 +767,17 @@
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   { sku: 'KB-225', name: { en: 'Throttle Body Cleaner', fr: 'Nettoyant boîtier papillon' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['intake', 'clean'], pack: 'single',
+    tags: ['intake'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dissolves carbon and gum from throttle plates and MAF sensors. Safe on coatings and seals.',
             fr: 'Dissout calamine et gomme des papillons et capteurs MAF. Sûr sur revêtements et joints.' } },
   { sku: 'KB-241', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
-    tags: ['clean'], pack: 'single',
-    diff: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV / 2.5 mm.',
-            fr: 'Nettoyant de précision sûr pour plastiques : connecteurs, relais et calculateurs. Rigidité diélectrique 35 kV / 2,5 mm.' } },
-  { sku: 'KB-210', name: { en: 'Brake & Parts Cleaner', fr: 'Nettoyant freins et pièces' }, size: '500 g', sizeBucket: '500g',
-    tags: ['degrease', 'clean'], pack: 'single',
-    diff: { en: 'Fast-evaporating, non-chlorinated solvent. High-pressure jet, leaves no residue.',
-            fr: 'Solvant non chloré à évaporation rapide. Jet haute pression, sans résidu.' } },
-  { sku: 'KB-250', name: { en: 'Engine Degreaser', fr: 'Dégraissant moteur' }, size: '500 ml', sizeBucket: '500ml',
-    tags: ['degrease'], pack: 'single',
-    diff: { en: 'Foaming degreaser that lifts grease from engine bays and parts. (Coming soon)',
-            fr: 'Dégraissant moussant qui décolle la graisse des compartiments moteur et des pièces. (Bientôt)' } },
-  { sku: 'KB-255', name: { en: 'Carb & Choke Cleaner', fr: 'Nettoyant carburateur' }, size: '400 ml', sizeBucket: '400ml',
-    tags: ['intake', 'clean'], pack: 'single',
-    diff: { en: 'High-solvency spray for carburetors, linkages and intake tracts. (Coming soon)',
-            fr: 'Aérosol à fort pouvoir solvant pour carburateurs, tringleries et admissions. (Bientôt)' } },
-  { sku: 'KB-260', name: { en: 'MAF Sensor Cleaner', fr: 'Nettoyant capteur MAF' }, size: '200 ml', sizeBucket: '200ml',
-    tags: ['clean'], pack: 'case',
-    diff: { en: 'Residue-free spray that restores mass-airflow sensor accuracy. (Coming soon)',
-            fr: 'Aérosol sans résidu qui restaure la précision du capteur de débit d’air. (Bientôt)' } },
+    tags: ['clean'], form: 'aerosol', pack: 'single',
+    diff: { en: 'Plastic-safe precision cleaner. Dielectric strength 35 kV/2.5 mm.',
+            fr: 'Nettoyant de précision sûr pour plastiques. Rigidité diélectrique 35 kV/2,5 mm.' } },
+  { sku: 'KB-210', name: { en: 'Brake & Parts Cleaner', fr: 'Nettoyant freins et pièces' }, size: '500 ml', sizeBucket: '500ml',
+    tags: ['degrease', 'clean'], form: 'aerosol', pack: 'single',
+    diff: { en: 'Fast-evaporating, non-chlorinated. High-pressure jet, no residue.',
+            fr: 'Évaporation rapide, non chloré. Jet haute pression, sans résidu.' } },
 ];
 
 /* ═══════════════════════════════════════════════════════════
@@ -806,16 +794,16 @@ const CHIPS = [
    FACETS — checkbox filter rail (AND across axes, OR within)
 ═══════════════════════════════════════════════════════════ */
 const FACETS = [
+  { key: 'form', label: { en: 'Form', fr: 'Forme' }, opts: [
+    { val: 'aerosol', label: { en: 'Aerosol', fr: 'Aérosol' } },
+  ] },
   { key: 'sizeBucket', label: { en: 'Container size', fr: 'Format du contenant' }, opts: [
     { val: '400ml', label: { en: '400 ml', fr: '400 ml' } },
     { val: '300ml', label: { en: '300 ml', fr: '300 ml' } },
-    { val: '500g', label: { en: '500 g', fr: '500 g' } },
     { val: '500ml', label: { en: '500 ml', fr: '500 ml' } },
-    { val: '200ml', label: { en: '200 ml', fr: '200 ml' } },
   ] },
   { key: 'pack', label: { en: 'Pack', fr: 'Conditionnement' }, opts: [
     { val: 'single', label: { en: 'Single', fr: 'Unité' } },
-    { val: 'case', label: { en: 'Case', fr: 'Caisse' } },
   ] },
 ];
 
@@ -838,7 +826,7 @@ const I18N = {
     'crumbs.products':  'Products',
     'crumbs.cat':       'Maintenance Sprays',
 
-    'chead.eyebrow':    'Fast-acting. Residue-free.',
+    'chead.eyebrow':    'FAST-ACTING. RESIDUE-FREE.',
     'chead.h1':         'Maintenance Sprays',
     'chead.sub':        'Shop-grade aerosols for cleaning, degreasing and prepping — fast-evaporating and safe on the surfaces that matter.',
     'chead.countLabel': 'Products in this category',
@@ -886,7 +874,7 @@ const I18N = {
     'crumbs.products':  'Produits',
     'crumbs.cat':       'Aérosols d’entretien',
 
-    'chead.eyebrow':    'Action rapide. Sans résidu.',
+    'chead.eyebrow':    'ACTION RAPIDE. SANS RÉSIDU.',
     'chead.h1':         'Aérosols d’entretien',
     'chead.sub':        'Aérosols de qualité atelier pour nettoyer, dégraisser et préparer — évaporation rapide et sûrs sur les surfaces sensibles.',
     'chead.countLabel': 'Produits dans cette catégorie',
@@ -927,7 +915,7 @@ const I18N = {
 const state = {
   lang: 'en',
   chip: 'all',
-  facets: { sizeBucket: [], pack: [] },
+  facets: { form: [], sizeBucket: [], pack: [] },
   sort: 'name',
   page: 1,
   perPage: 9,
