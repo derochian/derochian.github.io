@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Kolben — News &amp; Press</title>
 <link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
 <link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
@@ -643,8 +644,8 @@ body.kbn-locked{ overflow:hidden; }
 @media (max-width:1100px){
   .header .nav{ display:none !important; }
   .header .header__actions{ display:none !important; }
-  .kbn-burger{ display:inline-flex; align-items:center; gap:7px; cursor:pointer; background:none; border:0; padding:8px 4px; color:#0a0a0a; font:600 12px/1 'Jost',sans-serif; letter-spacing:.08em; text-transform:uppercase; }
-  .kbn-burger svg{ display:block; }
+  .kbn-burger{ display:inline-flex; align-items:center; gap:8px; cursor:pointer; background:none; border:0; padding:11px 8px; min-height:48px; color:#0a0a0a; font:600 13px/1 'Jost',sans-serif; letter-spacing:.08em; text-transform:uppercase; -webkit-tap-highlight-color:transparent; }
+  .kbn-burger svg{ display:block; width:27px; height:27px; }
   .cat-grid,.product-grid,.tile-grid,.industry-grid{ grid-template-columns:repeat(2,1fr) !important; }
   .hero__inner{ grid-template-columns:1fr !important; gap:40px !important; }
   .hero__inner > *{ min-width:0; }
@@ -658,6 +659,14 @@ body.kbn-locked{ overflow:hidden; }
 @media (max-width:768px){
   .util{ display:none !important; }
   .section-head{ flex-direction:column; align-items:flex-start; gap:18px; }
+  /* comfortable, consistent edge gutters */
+  .container{ padding-left:24px !important; padding-right:24px !important; }
+  /* finger-friendly touch targets */
+  .btn{ min-height:48px; padding:15px 24px; font-size:13px; }
+  .btn--lg{ min-height:54px; padding:17px 28px; font-size:14px; }
+  .chip{ min-height:44px; padding:12px 16px; font-size:12px; display:inline-flex; align-items:center; }
+  .nav__link,.cat,.tile,.ind-card,.pcard,.acard,.dl,.res-card{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
+  a,button{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
 }
 @media (max-width:600px){
   .cat-grid,.product-grid,.tile-grid,.industry-grid{ grid-template-columns:1fr !important; }
