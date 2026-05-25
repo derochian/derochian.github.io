@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Agriculture — Kolben Chemicals</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ───────── TOKENS — locked brand palette ───────── */
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --on-black-primary: rgba(255,255,255,.85);
+    --on-black-muted:   rgba(255,255,255,.70);
+    --on-black-border:  rgba(255,255,255,.16);
+    --on-black-hover:   rgba(255,255,255,.12);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a, input { font: inherit; }
+  button, a { cursor: pointer; }
+  button { border: 0; background: none; color: inherit; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ───────── UTILITY BAR ───────── */
+  .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid var(--on-black-border); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: var(--on-black-hover); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+
+  /* shared header dropdown */
+  .nav__caret { width: 8px; height: 5px; }
+
+  /* MEGA MENU */
+  .mega {
+    position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 720px; background: var(--white);
+    border: 1px solid var(--rule); border-top: 3px solid var(--red);
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    opacity: 0; pointer-events: none; transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Invisible bridge across the 12px gap between the nav link and the menu
+     so the hover doesn't drop while the cursor is travelling down to the panel. */
+  .mega::before {
+    content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px;
+  }
+  .nav__item:hover .mega,
+  .nav__item.is-open .mega { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .mega__col h5 {
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .mega__list { display: flex; flex-direction: column; gap: 2px; }
+  .mega__row {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px;
+    padding: 8px 10px; border-radius: 2px;
+    align-items: start;
+  }
+  .mega__row:hover { background: var(--offwhite); }
+  .mega__row strong { font: 600 13px/1.2 'Jost'; color: var(--black); }
+  .mega__row span { font: 400 11px/1.4 'Inter'; color: var(--muted); }
+  .mega__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    color: var(--red); margin-top: 1px;
+  }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ───────── BUTTONS ───────── */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
+  .btn--sm { padding: 11px 18px; font-size: 11px; }
+  .btn--lg { padding: 17px 28px; font-size: 13px; }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--ghost-light { background: transparent; color: var(--white); border: 1.5px solid var(--on-black-border); }
+  .btn--ghost-light:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ───────── BREADCRUMB ───────── */
+  .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
+  .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
+  .crumbs__inner a { color: var(--muted); transition: color 150ms; }
+  .crumbs__inner a:hover { color: var(--black); }
+  .crumbs__inner .sep { color: rgba(0,0,0,.25); }
+  .crumbs__inner .current { color: var(--black); }
+
+  /* ═══════════════════════════════════════════════════════════
+     HERO — black, 80×80 radial-masked grid
+  ═══════════════════════════════════════════════════════════ */
+  .hero {
+    position: relative; overflow: hidden;
+    background: var(--black); color: var(--white);
+    padding: 88px 0 84px;
+    border-bottom: 3px solid var(--red);
+  }
+  .hero__grid {
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 20% 90%, black, transparent 75%);
+    pointer-events: none;
+  }
+  .hero__inner {
+    position: relative;
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: end;
+  }
+  .hero__icon-wrap {
+    width: 80px; height: 80px;
+    border: 1px solid var(--on-black-border);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--red);
+    margin-bottom: 32px;
+    position: relative;
+  }
+  .hero__icon-wrap::before {
+    content: ''; position: absolute; top: -1px; left: -1px;
+    width: 12px; height: 12px;
+    border-top: 2px solid var(--red);
+    border-left: 2px solid var(--red);
+  }
+  .hero__icon-wrap svg { width: 44px; height: 44px; }
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: 14px; margin-bottom: 22px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white);
+  }
+  .hero__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .hero__h1 {
+    font-family: 'Jost'; font-weight: 700;
+    font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+    line-height: 0.98; letter-spacing: -0.035em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 24px;
+    text-wrap: balance;
+    max-width: 14ch;
+  }
+  .hero__h1 em { font-style: normal; color: var(--gold); }
+  .hero__sub {
+    font: 400 17px/1.55 'Inter'; color: var(--on-black-primary);
+    max-width: 54ch;
+  }
+  .hero__meta {
+    display: flex; flex-direction: column; gap: 18px;
+    border-left: 1px solid var(--on-black-border);
+    padding: 6px 0 6px 28px;
+    align-self: end;
+    min-width: 260px;
+  }
+  .hero__pain {
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .hero__pain-h {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--on-black-muted);
+  }
+  .hero__pain-list {
+    display: flex; flex-wrap: wrap; gap: 8px;
+  }
+  .hero__pain-chip {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--white);
+    padding: 8px 12px;
+    border: 1px solid var(--on-black-border);
+    border-radius: 2px;
+  }
+  .hero__pain-chip span.dot { color: var(--gold); padding-right: 6px; }
+
+  /* ═══════════════════════════════════════════════════════════
+     SECTOR CHALLENGES BAND — 3 short statements
+  ═══════════════════════════════════════════════════════════ */
+  .chal { background: var(--offwhite); border-bottom: 1px solid var(--rule); }
+  .chal__inner {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border-left: 1px solid var(--rule);
+    border-right: 1px solid var(--rule);
+  }
+  .chal__cell {
+    padding: 36px 32px;
+    border-right: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 22px;
+  }
+  .chal__cell:last-child { border-right: 0; }
+  .chal__icon {
+    width: 36px; height: 36px; color: var(--red); flex-shrink: 0;
+  }
+  .chal__icon svg { width: 100%; height: 100%; }
+  .chal__l { display: flex; flex-direction: column; gap: 4px; }
+  .chal__l-h {
+    font: 700 13px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+  }
+  .chal__l-sub {
+    font: 400 13px/1.45 'Inter'; color: var(--muted);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     RECOMMENDED — use-case → category cards (3 → 2 → 1)
+  ═══════════════════════════════════════════════════════════ */
+  .rec { background: var(--white); padding: 96px 0; }
+  .sec-head {
+    display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 48px; flex-wrap: wrap;
+  }
+  .sec-head__left { max-width: 720px; }
+  .sec-head__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+  }
+  .sec-head__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .sec-head__h {
+    font: 700 clamp(1.6rem, 2.8vw, 2.2rem)/1.05 'Jost';
+    letter-spacing: -0.025em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 10px;
+  }
+  .sec-head__h em { font-style: normal; color: var(--red); }
+  .sec-head__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); max-width: 60ch; }
+  .sec-head__count {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--muted);
+    align-self: end; padding-bottom: 6px;
+  }
+  .sec-head__count b { color: var(--black); font-weight: 500; padding-right: 6px; }
+
+  .rec-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+  }
+  .rec-card {
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 28px 26px 24px;
+    display: flex; flex-direction: column;
+    min-height: 280px;
+    position: relative; overflow: hidden;
+    transition: border-color 220ms var(--ease), transform 220ms var(--ease);
+  }
+  .rec-card:hover { border-color: rgba(0,0,0,.30); transform: translateY(-2px); }
+  /* red scale-in underline */
+  .rec-card::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 3px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .rec-card:hover::after { transform: scaleX(1); }
+  .rec-card__head {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    margin-bottom: 26px;
+  }
+  .rec-card__icon {
+    width: 40px; height: 40px; color: var(--red);
+    transition: transform 220ms var(--ease);
+  }
+  .rec-card__icon svg { width: 100%; height: 100%; }
+  .rec-card:hover .rec-card__icon { transform: translateY(-2px); }
+  .rec-card__num {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted);
+  }
+  .rec-card__usecase-l {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .rec-card__usecase {
+    font: 700 19px/1.15 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 12px;
+    text-wrap: balance;
+  }
+  .rec-card__line {
+    font: 400 13.5px/1.5 'Inter'; color: var(--muted);
+    flex: 1;
+    margin-bottom: 22px;
+  }
+  .rec-card__bridge {
+    padding-top: 18px; border-top: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .rec-card__bridge-l { display: flex; flex-direction: column; gap: 4px; }
+  .rec-card__bridge-eyebrow {
+    font: 500 9.5px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--red);
+  }
+  .rec-card__bridge-name {
+    font: 600 13px/1 'Jost'; letter-spacing: .04em; text-transform: uppercase; color: var(--black);
+  }
+  .rec-card__bridge .arrow {
+    font: 600 14px/1 'Jost'; color: var(--black);
+    transition: transform 220ms var(--ease);
+  }
+  .rec-card:hover .rec-card__bridge .arrow { transform: translate(3px, -3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     FEATURED PRODUCTS RAIL
+  ═══════════════════════════════════════════════════════════ */
+  .feat { background: var(--offwhite); padding: 96px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .feat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .pcard {
+    background: var(--white); border: 1px solid var(--rule);
+    display: flex; flex-direction: column;
+    transition: all 220ms var(--ease); position: relative; cursor: pointer;
+  }
+  .pcard:hover { transform: translateY(-2px); border-color: rgba(0,0,0,.25); box-shadow: 0 12px 30px -10px rgba(0,0,0,.15); }
+  .pcard__media {
+    background: var(--white); height: 240px; position: relative;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .pcard__media::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(0,0,0,.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 100%, black, transparent 75%);
+  }
+  .pcard__media img {
+    position: relative; height: 82%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 22px 22px rgba(0,0,0,.20));
+    transition: transform 320ms var(--ease);
+  }
+  .pcard:hover .pcard__media img { transform: translateY(-3px) scale(1.02); }
+  .pcard__head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 14px 18px 0; }
+  .pcard__sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--muted); }
+  .pcard__cat { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--red); text-transform: uppercase; }
+  .pcard__body { padding: 8px 18px 16px; display: flex; flex-direction: column; gap: 6px; }
+  .pcard__name { font: 700 17px/1.18 'Jost'; letter-spacing: -0.005em; color: var(--black); min-height: 2.4em; }
+  .pcard__size { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
+  .pcard__foot {
+    margin-top: auto; padding: 12px 18px;
+    border-top: 1px solid var(--rule-soft);
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    font: 600 10px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase; color: var(--black);
+  }
+  .pcard__foot .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .pcard:hover .pcard__foot .arrow { transform: translate(3px, -3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     RESOURCES — downloads row
+  ═══════════════════════════════════════════════════════════ */
+  .res { background: var(--white); padding: 96px 0; }
+  .res-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    border: 1px solid var(--rule);
+  }
+  .res-card {
+    padding: 28px 26px;
+    border-right: 1px solid var(--rule);
+    display: flex; align-items: center; gap: 22px;
+    background: var(--white);
+    transition: background 220ms var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .res-card:last-child { border-right: 0; }
+  .res-card:hover { background: var(--offwhite); }
+  .res-card::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .res-card:hover::after { transform: scaleX(1); }
+  .res-card__icon {
+    width: 48px; height: 48px;
+    flex-shrink: 0;
+    color: var(--black);
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .res-card__icon svg { width: 24px; height: 24px; }
+  .res-card__l { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 0; }
+  .res-card__eyebrow {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase; color: var(--red);
+  }
+  .res-card__name {
+    font: 700 16px/1.2 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black);
+  }
+  .res-card__meta {
+    font: 500 10.5px/1 'JetBrains Mono'; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+  }
+  .res-card__arrow {
+    font: 600 14px/1 'Jost'; color: var(--black);
+    transition: transform 220ms var(--ease);
+    flex-shrink: 0;
+  }
+  .res-card:hover .res-card__arrow { transform: translate(3px, -3px); }
+
+  /* ═══════════════════════════════════════════════════════════
+     RELATIONSHIP CTA (black)
+  ═══════════════════════════════════════════════════════════ */
+  .dist {
+    background: var(--black); color: var(--white);
+    padding: 80px 0;
+    position: relative; overflow: hidden;
+    border-top: 3px solid var(--red);
+  }
+  .dist::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 80% 30%, black, transparent 70%);
+  }
+  .dist__inner { position: relative; display: grid; grid-template-columns: 1.5fr 1fr; gap: 56px; align-items: center; }
+  .dist__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 18px;
+  }
+  .dist__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .dist__h {
+    font: 700 clamp(1.8rem, 3.4vw, 2.6rem)/1.02 'Jost';
+    letter-spacing: -0.03em; text-transform: uppercase; color: var(--white);
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+  .dist__h em { font-style: normal; color: var(--gold); }
+  .dist__sub { font: 400 15.5px/1.55 'Inter'; color: var(--on-black-primary); max-width: 56ch; }
+  .dist__actions {
+    display: flex; flex-direction: column; gap: 12px; align-items: stretch;
+    justify-self: end; min-width: 280px;
+  }
+  .dist__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
+
+  /* ═══════════════════════════════════════════════════════════
+     EXPLORE OTHER INDUSTRIES — condensed strip
+  ═══════════════════════════════════════════════════════════ */
+  .other { background: var(--white); padding: 88px 0; }
+  .other-head {
+    display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 32px; flex-wrap: wrap;
+  }
+  .other-head__h {
+    font: 700 clamp(1.4rem, 2.2vw, 1.8rem)/1.05 'Jost';
+    letter-spacing: -0.02em; text-transform: uppercase; color: var(--black);
+  }
+  .other-head__h em { font-style: normal; color: var(--red); }
+  .other-grid {
+    display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px;
+  }
+  .oc {
+    background: var(--white); border: 1px solid var(--rule);
+    padding: 20px 18px 18px;
+    display: flex; flex-direction: column; gap: 12px;
+    min-height: 160px;
+    position: relative; overflow: hidden;
+    transition: border-color 220ms var(--ease), transform 220ms var(--ease);
+  }
+  .oc:hover { border-color: rgba(0,0,0,.3); transform: translateY(-2px); }
+  .oc::after {
+    content: ''; position: absolute; left: 0; right: 0; bottom: 0;
+    height: 2px; background: var(--red);
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform 280ms var(--ease);
+  }
+  .oc:hover::after { transform: scaleX(1); }
+  .oc__icon { width: 28px; height: 28px; color: var(--red); }
+  .oc__icon svg { width: 100%; height: 100%; }
+  .oc__name {
+    font: 700 13px/1.2 'Jost'; letter-spacing: -0.005em; text-transform: uppercase; color: var(--black);
+    text-wrap: balance;
+    margin-top: auto;
+  }
+  .oc__skus {
+    font: 500 9.5px/1 'JetBrains Mono'; letter-spacing: .16em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* ───────── FOOTER ───────── */
+  .footer { background: #050505; color: var(--white); padding: 36px 0 28px; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
+  .footer__brand img { height: 28px; filter: brightness(0) invert(1); }
+  .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
+  .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
+
+  /* ───────── RESPONSIVE ───────── */
+  @media (max-width: 1280px) {
+    .other-grid { grid-template-columns: repeat(4, 1fr); }
+    .feat-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 1100px) {
+    .hero__inner { grid-template-columns: 1fr; gap: 40px; }
+    .hero__meta { border-left: 0; padding-left: 0; border-top: 1px solid var(--on-black-border); padding-top: 22px; }
+    .chal__inner { grid-template-columns: 1fr; }
+    .chal__cell { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .chal__cell:last-child { border-bottom: 0; }
+    .rec-grid { grid-template-columns: repeat(2, 1fr); }
+    .res-grid { grid-template-columns: 1fr; }
+    .res-card { border-right: 0; border-bottom: 1px solid var(--rule); }
+    .res-card:last-child { border-bottom: 0; }
+    .dist__inner { grid-template-columns: 1fr; gap: 32px; }
+    .dist__actions { justify-self: start; }
+    .feat-grid { grid-template-columns: repeat(2, 1fr); }
+    .other-grid { grid-template-columns: repeat(3, 1fr); }
+    .nav { display: none; }
+    .util__left { gap: 14px; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 22px; }
+    .util__inner { padding: 9px 22px; }
+    .rec-grid { grid-template-columns: 1fr; }
+    .feat-grid { grid-template-columns: 1fr; }
+    .other-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: SURFACE THEME — "Light" (default), "Mixed", "Industrial"
+     Progressively flips sections to dark surfaces so the Industries
+     world reads darker than the standard Products area, while keeping
+     the same type + palette tokens. Cards stay white.
+  ═══════════════════════════════════════════════════════════ */
+
+  /* MIXED — Sector-challenges band flips to black; Resources band moves
+     onto offwhite so the rhythm stays alternating. */
+  body[data-theme="mixed"] .chal,
+  body[data-theme="industrial"] .chal {
+    background: var(--black); color: var(--white);
+    border-top: 3px solid var(--red); border-bottom-color: var(--on-black-border);
+  }
+  body[data-theme="mixed"] .chal__inner,
+  body[data-theme="industrial"] .chal__inner { border-color: var(--on-black-border); }
+  body[data-theme="mixed"] .chal__cell,
+  body[data-theme="industrial"] .chal__cell { border-color: var(--on-black-border); }
+  body[data-theme="mixed"] .chal__l-h,
+  body[data-theme="industrial"] .chal__l-h { color: var(--white); }
+  body[data-theme="mixed"] .chal__l-sub,
+  body[data-theme="industrial"] .chal__l-sub { color: var(--on-black-primary); }
+
+  body[data-theme="mixed"] .res { background: var(--offwhite); }
+
+  /* INDUSTRIAL — also flips Featured-products + Other-industries to dark.
+     The product-card and other-card chrome stays light-on-dark with
+     hairline white borders so they keep reading as "white surface" cards
+     sitting on a darker section. */
+  body[data-theme="industrial"] .rec { background: var(--offwhite); }
+
+  body[data-theme="industrial"] .feat {
+    background: var(--black);
+    border-top: 1px solid var(--on-black-border);
+    border-bottom: 3px solid var(--red);
+  }
+  body[data-theme="industrial"] .feat .sec-head__h,
+  body[data-theme="industrial"] .feat .sec-head__count b { color: var(--white); }
+  body[data-theme="industrial"] .feat .sec-head__eyebrow { color: var(--white); }
+  body[data-theme="industrial"] .feat .sec-head__sub,
+  body[data-theme="industrial"] .feat .sec-head__count { color: var(--on-black-muted); }
+
+  body[data-theme="industrial"] .other {
+    background: var(--black);
+    border-top: 3px solid var(--red);
+  }
+  body[data-theme="industrial"] .other .other-head__h,
+  body[data-theme="industrial"] .other .sec-head__eyebrow { color: var(--white); }
+  body[data-theme="industrial"] .oc {
+    background: rgba(255,255,255,.04);
+    border-color: var(--on-black-border);
+  }
+  body[data-theme="industrial"] .oc:hover {
+    background: rgba(255,255,255,.08);
+    border-color: var(--white);
+  }
+  body[data-theme="industrial"] .oc__name { color: var(--white); }
+  body[data-theme="industrial"] .oc__skus { color: var(--on-black-muted); }
+  body[data-theme="industrial"] .other .btn--ghost-dark {
+    color: var(--white); border-color: var(--on-black-border);
+  }
+  body[data-theme="industrial"] .other .btn--ghost-dark:hover {
+    background: var(--white); color: var(--black); border-color: var(--white);
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: GOLD-LED — on dark surfaces only (per brand rule),
+     swap red eyebrow bars + em-highlights to gold, and tint
+     framing details (hero icon, dist accent).
+  ═══════════════════════════════════════════════════════════ */
+  body[data-gold-led="on"] .hero__eyebrow::before { background: var(--gold); }
+  body[data-gold-led="on"] .hero__h1 em { color: var(--gold); }
+  /* Gold-led: only the icon glyph and the 90° corner tick turn gold.
+     The outer frame stays on the default on-black hairline so the box
+     keeps its industrial outlined character. */
+  body[data-gold-led="on"] .hero__icon-wrap { color: var(--gold); }
+  body[data-gold-led="on"] .hero__icon-wrap::before { border-color: var(--gold); }
+  body[data-gold-led="on"] .hero__pain-chip .dot { color: var(--gold); }
+
+  body[data-gold-led="on"] .dist__eyebrow::before { background: var(--gold); }
+  body[data-gold-led="on"] .dist__h em { color: var(--gold); }
+
+  /* Challenges band — gold-led when inverted */
+  body[data-gold-led="on"][data-theme="mixed"] .chal__icon,
+  body[data-gold-led="on"][data-theme="industrial"] .chal__icon { color: var(--gold); }
+
+  /* Featured + Other industries — gold-led only when inverted */
+  body[data-gold-led="on"][data-theme="industrial"] .feat .sec-head__eyebrow::before { background: var(--gold); }
+  body[data-gold-led="on"][data-theme="industrial"] .feat .sec-head__h em { color: var(--gold); }
+  body[data-gold-led="on"][data-theme="industrial"] .other .sec-head__eyebrow::before { background: var(--gold); }
+  body[data-gold-led="on"][data-theme="industrial"] .other .other-head__h em { color: var(--gold); }
+  body[data-gold-led="on"][data-theme="industrial"] .oc__icon { color: var(--gold); }
+  body[data-gold-led="on"][data-theme="industrial"] .oc::after { background: var(--gold); }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: SECTION RULE — swap the 3px red section dividers for
+     gold on dark-bordered sections. Light-side rules stay red.
+  ═══════════════════════════════════════════════════════════ */
+  body[data-rule="gold"] .hero { border-bottom-color: var(--gold); }
+  body[data-rule="gold"] .dist { border-top-color: var(--gold); }
+  body[data-rule="gold"][data-theme="mixed"] .chal,
+  body[data-rule="gold"][data-theme="industrial"] .chal { border-top-color: var(--gold); }
+  body[data-rule="gold"][data-theme="industrial"] .feat { border-bottom-color: var(--gold); }
+  body[data-rule="gold"][data-theme="industrial"] .other { border-top-color: var(--gold); }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWEAK: CHEVRON — the red+gold 6px stripe from the homepage
+     showcase, planted at the top of major dark surfaces.
+  ═══════════════════════════════════════════════════════════ */
+  body[data-chevron="on"] .hero,
+  body[data-chevron="on"] .dist {
+    padding-top: 94px;
+    background-image:
+      linear-gradient(to right, var(--red) 0, var(--red) 50%, var(--gold) 50%, var(--gold) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 6px;
+    background-position: top left;
+  }
+  body[data-chevron="on"][data-theme="industrial"] .feat {
+    padding-top: 102px;
+    background-image:
+      linear-gradient(to right, var(--red) 0, var(--red) 50%, var(--gold) 50%, var(--gold) 100%),
+      linear-gradient(var(--black), var(--black));
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 6px, 100% 100%;
+    background-position: top left, 0 0;
+  }
+  body[data-chevron="on"][data-theme="industrial"] .other {
+    padding-top: 94px;
+    background-image:
+      linear-gradient(to right, var(--red) 0, var(--red) 50%, var(--gold) 50%, var(--gold) 100%),
+      linear-gradient(var(--black), var(--black));
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100% 6px, 100% 100%;
+    background-position: top left, 0 0;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     TWEAKS PANEL — floating bottom-right, brand-matched chrome
+  ═══════════════════════════════════════════════════════════ */
+  .tw-panel {
+    position: fixed; right: 20px; bottom: 20px;
+    width: 320px; max-height: calc(100vh - 40px);
+    background: var(--black); color: var(--white);
+    border: 1px solid var(--on-black-border);
+    border-top: 3px solid var(--red);
+    z-index: 9999;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0 24px 60px rgba(0,0,0,.45);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .tw-panel.is-open { display: flex; }
+  .tw-panel__head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--on-black-border);
+    cursor: grab;
+  }
+  .tw-panel__head:active { cursor: grabbing; }
+  .tw-panel__title {
+    font: 700 12px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 10px;
+  }
+  .tw-panel__title::before {
+    content: ''; width: 18px; height: 3px; background: var(--red);
+  }
+  .tw-panel__close {
+    width: 24px; height: 24px;
+    display: inline-flex; align-items: center; justify-content: center;
+    color: var(--on-black-muted);
+    border: 1px solid var(--on-black-border);
+    font: 500 12px/1 'JetBrains Mono';
+    transition: all 180ms var(--ease);
+  }
+  .tw-panel__close:hover { color: var(--white); border-color: var(--white); }
+  .tw-panel__body {
+    padding: 6px 16px 16px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .tw-section { padding: 14px 0; border-bottom: 1px solid var(--on-black-border); }
+  .tw-section:last-child { border-bottom: 0; }
+  .tw-section__l {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--on-black-muted); margin-bottom: 10px;
+  }
+  .tw-radio {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0;
+    border: 1px solid var(--on-black-border);
+  }
+  .tw-radio button {
+    padding: 10px 8px;
+    font: 600 10px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--on-black-muted);
+    border-right: 1px solid var(--on-black-border);
+    transition: all 180ms var(--ease);
+    background: transparent;
+  }
+  .tw-radio button:last-child { border-right: 0; }
+  .tw-radio button:hover { color: var(--white); background: var(--on-black-hover); }
+  .tw-radio button.is-on { background: var(--white); color: var(--black); }
+  .tw-toggle {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    padding: 4px 0; cursor: pointer;
+  }
+  .tw-toggle__l {
+    font: 600 11px/1.3 'Jost'; letter-spacing: .05em; color: var(--white);
+  }
+  .tw-toggle__sub {
+    font: 400 11px/1.4 'Inter'; color: var(--on-black-muted);
+    margin-top: 4px;
+  }
+  .tw-toggle__sw {
+    flex-shrink: 0;
+    width: 38px; height: 22px;
+    background: transparent;
+    border: 1px solid var(--on-black-border);
+    border-radius: 2px;
+    position: relative;
+    transition: all 180ms var(--ease);
+  }
+  .tw-toggle__sw::after {
+    content: ''; position: absolute;
+    top: 2px; left: 2px; width: 16px; height: 16px;
+    background: var(--on-black-muted);
+    transition: all 180ms var(--ease);
+  }
+  .tw-toggle.is-on .tw-toggle__sw { background: var(--red); border-color: var(--red); }
+  .tw-toggle.is-on .tw-toggle__sw::after { left: 18px; background: var(--white); }
+  body[data-gold-led="on"] .tw-toggle.is-on[data-key="goldLed"] .tw-toggle__sw { background: var(--gold); border-color: var(--gold); }
+  body[data-gold-led="on"] .tw-toggle.is-on[data-key="goldLed"] .tw-toggle__sw::after { background: var(--black); }
+
+  @media (max-width: 640px) {
+    .tw-panel { right: 10px; bottom: 10px; width: calc(100vw - 20px); max-width: 320px; }
+  }
+</style>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+</head>
+<body data-screen-label="Industry — Agriculture">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item" href="tel:18005652361">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item" href="where-to-buy.html">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="util.distributor">Find a Distributor</span>
+      </a>
+      <a class="util__item" href="compliance-sds.html" data-i18n="util.compliance">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"/></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;" id="lang-switch">
+        <span class="util__lang active" data-lang="en">EN</span>
+        <span class="util__lang" data-lang="fr">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
+      <div class="nav__item">
+        <a class="nav__link" href="products-hub.html"><span data-i18n="nav.products">Products</span>
+          <svg class="nav__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <div class="mega">
+          <div class="mega__col">
+            <h5>Featured Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg>
+                <div><strong>Brake Cleaners</strong><br/><span>Fast-dry, non-chlorinated &amp; high-pressure formulations</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg>
+                <div><strong>Engine Additives</strong><br/><span>Flushes, system cleaners, top-end conditioners</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg>
+                <div><strong>Fuel Additives</strong><br/><span>Diesel &amp; petrol injector cleaners, performance boosters</span></div>
+              </a>
+              <a class="mega__row" href="products-hub.html">
+                <svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg>
+                <div><strong>Lubricants &amp; Grease</strong><br/><span>Synthetic greases, penetrating oils, dry lubes</span></div>
+              </a>
+            </div>
+          </div>
+          <div class="mega__col">
+            <h5>All Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"></path>
+  <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"></path>
+  <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"></path>
+  <path d="M4.5 16h15"></path>
+  <path d="M19.5 8h-15"></path></svg><div><strong>Oils &amp; Fluids</strong><br/><span>Engine, ATF, brake, coolant</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg><div><strong>Maintenance Sprays</strong><br/><span>Contact cleaner, throttle body, electronic</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18.963 14.938a6.54 6.54 0 0 0 -.899 -4.06l-4.89 -7.26c-.42 -.626 -1.287 -.804 -1.936 -.398a1.376 1.376 0 0 0 -.41 .397l-1.282 1.9m-1.625 2.415l-1.986 2.946c-1.695 2.837 -1.035 6.44 1.567 8.545c2.602 2.105 6.395 2.105 8.996 0a6.83 6.83 0 0 0 1.376 -1.499"></path>
+  <path d="M3 3l18 18"></path></svg><div><strong>Sealants &amp; Stop Leaks</strong><br/><span>Cooling, transmission, power steering</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6"></path></svg><div><strong>Car Care</strong><br/><span>Detailing, interior, exterior</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__item"><a class="nav__link active" href="industries.html" data-i18n="nav.industries">Industries</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </nav>
+    <div class="header__actions">
+      <a class="btn btn--dark btn--sm" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary btn--sm" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </div>
+</header>
+
+<!-- ───────── BREADCRUMB ───────── -->
+<nav class="crumbs">
+  <div class="container crumbs__inner">
+    <a href="industries.html" data-i18n="crumbs.industries">Industries</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="crumbs.industry">Agriculture</span>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero__grid"></div>
+  <div class="container hero__inner">
+    <div>
+      <div class="hero__icon-wrap" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"/><path d="M7 15l0 .01"/><path d="M17 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M10.5 17l6.5 0"/><path d="M20 15.2v-4.2a1 1 0 0 0 -1 -1h-6l-2 -5h-6v6.5"/><path d="M18 5h-1a1 1 0 0 0 -1 1v4"/></svg>
+      </div>
+      <div class="hero__eyebrow" data-i18n="hero.eyebrow">BUILT FOR THE SEASON.</div>
+      <h1 class="hero__h1" data-i18n="hero.h1">Agriculture</h1>
+      <p class="hero__sub" data-i18n="hero.sub">Diesel-first protection for tractors, combines and harvesters — through long field hours, fuel-quality swings and winter storage.</p>
+    </div>
+    <div class="hero__meta">
+      <div class="hero__pain">
+        <div class="hero__pain-h" data-i18n="hero.painH">Operational pressures</div>
+        <div class="hero__pain-list">
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain1">High-hour stress</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain2">Injector fouling</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain3">Mixed fleet</span></span>
+          <span class="hero__pain-chip"><span class="dot">●</span><span data-i18n="hero.pain4">Winter storage</span></span>
+        </div>
+      </div>
+      <div class="hero__pain">
+        <div class="hero__pain-h" data-i18n="hero.fleetH">Scope</div>
+        <div class="hero__pain-list">
+          <span class="hero__pain-chip" data-i18n="hero.scope1">Tractors</span>
+          <span class="hero__pain-chip" data-i18n="hero.scope2">Combines</span>
+          <span class="hero__pain-chip" data-i18n="hero.scope3">Diesel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SECTOR CHALLENGES BAND
+═══════════════════════════════════════════════════════════ -->
+<section class="chal">
+  <div class="container">
+    <div class="chal__inner">
+      <div class="chal__cell">
+        <div class="chal__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="chal__l">
+          <div class="chal__l-h" data-i18n="chal.h1">Field hours</div>
+          <div class="chal__l-sub" data-i18n="chal.s1">Long days under load stress engines and transmissions — protection built for sustained heavy duty.</div>
+        </div>
+      </div>
+      <div class="chal__cell">
+        <div class="chal__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6 -6l4 4l8 -8"/><polyline points="14 7 21 7 21 14"/></svg>
+        </div>
+        <div class="chal__l">
+          <div class="chal__l-h" data-i18n="chal.h2">Fuel quality</div>
+          <div class="chal__l-sub" data-i18n="chal.s2">Remote-stored diesel fouls injectors and carries water — additives that restore spray pattern and disperse moisture.</div>
+        </div>
+      </div>
+      <div class="chal__cell">
+        <div class="chal__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6"/><path d="M12 16v6"/><path d="M4.93 4.93l4.24 4.24"/><path d="M14.83 14.83l4.24 4.24"/><path d="M2 12h6"/><path d="M16 12h6"/><path d="M4.93 19.07l4.24 -4.24"/><path d="M14.83 9.17l4.24 -4.24"/></svg>
+        </div>
+        <div class="chal__l">
+          <div class="chal__l-h" data-i18n="chal.h3">Seasonal downtime</div>
+          <div class="chal__l-sub" data-i18n="chal.s3">Harvest windows are unforgiving and winter storage invites corrosion — extended-interval protection keeps equipment ready.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RECOMMENDED CATEGORIES
+═══════════════════════════════════════════════════════════ -->
+<section class="rec">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__eyebrow" data-i18n="rec.eyebrow">Use case → product category</div>
+        <h2 class="sec-head__h" data-i18n="rec.h">Recommended for <em>Agriculture.</em></h2>
+        <p class="sec-head__sub" data-i18n="rec.sub">Each task this sector demands, mapped to the Kolben category engineered for it. Each card opens the full catalogue for that line.</p>
+      </div>
+      <div class="sec-head__count"><b>5</b><span data-i18n="rec.count">Categories</span></div>
+    </div>
+    <div class="rec-grid" id="rec-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURED PRODUCTS
+═══════════════════════════════════════════════════════════ -->
+<section class="feat">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__eyebrow" data-i18n="feat.eyebrow">In the Kolben range</div>
+        <h2 class="sec-head__h" data-i18n="feat.h">Featured products.</h2>
+        <p class="sec-head__sub" data-i18n="feat.sub">Top-moving SKUs from the Kolben range — sized for professional throughput.</p>
+      </div>
+      <div class="sec-head__count"><b>4</b><span data-i18n="feat.count">In rotation</span></div>
+    </div>
+    <div class="feat-grid" id="feat-grid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RESOURCES
+═══════════════════════════════════════════════════════════ -->
+<section class="res">
+  <div class="container">
+    <div class="sec-head">
+      <div class="sec-head__left">
+        <div class="sec-head__eyebrow" data-i18n="resHead.eyebrow">Documentation</div>
+        <h2 class="sec-head__h" data-i18n="resHead.h">Resources for this sector.</h2>
+        <p class="sec-head__sub" data-i18n="resHead.sub">Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence — same row, same weight.</p>
+      </div>
+      <div class="sec-head__count"><b>03</b><span data-i18n="resHead.count">Downloads</span></div>
+    </div>
+
+    <div class="res-grid">
+      <a class="res-card" href="compliance-sds.html">
+        <div class="res-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2V8z"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+        </div>
+        <div class="res-card__l">
+          <div class="res-card__eyebrow" data-i18n="res.r1.eyebrow">Safety Data Sheet · EN</div>
+          <div class="res-card__name" data-i18n="res.r1.name">Agriculture SDS — English</div>
+          <div class="res-card__meta">PDF · 1.4 MB · WHMIS 2015</div>
+        </div>
+        <span class="res-card__arrow">↓</span>
+      </a>
+      <a class="res-card" href="compliance-sds.html">
+        <div class="res-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v5h5"/><path d="M14 3H6a2 2 0 0 0 -2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2V8z"/><path d="M9 13h6"/><path d="M9 17h6"/></svg>
+        </div>
+        <div class="res-card__l">
+          <div class="res-card__eyebrow" data-i18n="res.r2.eyebrow">Fiche de données · FR</div>
+          <div class="res-card__name" data-i18n="res.r2.name">FDS Agriculture — Français</div>
+          <div class="res-card__meta" data-i18n="res.r2.meta">PDF · 1.4 MO · SIMDUT 2015</div>
+        </div>
+        <span class="res-card__arrow">↓</span>
+      </a>
+      <a class="res-card" href="compliance-sds.html">
+        <div class="res-card__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </div>
+        <div class="res-card__l">
+          <div class="res-card__eyebrow" data-i18n="res.r3.eyebrow">Industry one-pager</div>
+          <div class="res-card__name" data-i18n="res.r3.name">Agriculture Spec Guide 2026</div>
+          <div class="res-card__meta">PDF · 820 KB · EN / FR</div>
+        </div>
+        <span class="res-card__arrow">↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RELATIONSHIP CTA
+═══════════════════════════════════════════════════════════ -->
+<section class="dist is-light">
+  <div class="container dist__inner">
+    <div>
+      <div class="dist__eyebrow" data-i18n="dist.eyebrow">For fleet buyers &amp; distributors</div>
+      <h2 class="dist__h" data-i18n="dist.h">Stocked from <em>Mississauga and Edmonton.</em></h2>
+    </div>
+    <div class="dist__actions">
+      <a class="btn btn--primary btn--lg" href="become-a-distributor.html">
+        <span data-i18n="dist.a">Become a Distributor</span>
+        <span class="arrow">→</span>
+      </a>
+      <a class="btn btn--ghost-light btn--lg" href="contact.html">
+        <span data-i18n="dist.b">Talk to our team</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EXPLORE OTHER INDUSTRIES
+═══════════════════════════════════════════════════════════ -->
+<section class="other">
+  <div class="container">
+    <div class="other-head">
+      <div>
+        <div class="sec-head__eyebrow" data-i18n="other.eyebrow">Cross-sector</div>
+        <h2 class="other-head__h" data-i18n="other.h">Explore <em>other industries.</em></h2>
+      </div>
+      <a class="btn btn--ghost-dark btn--sm" href="industries.html">
+        <span data-i18n="other.viewAll">View all industries</span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="other-grid" id="other-grid"></div>
+  </div>
+</section>
+
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   RECOMMENDED CARDS — use-case → category mappings.
+   Use-case tasks paired with the right Kolben category.
+   Icons reused from the Lucide outline family @ 24-viewbox.
+═══════════════════════════════════════════════════════════ */
+const REC = [
+  {
+    n: '01',
+    use: { en: 'Fuel system', fr: 'Circuit carburant' },
+    line: { en: 'Injector cleaners, system cleaners and performance boosters for petrol and diesel.',
+            fr: 'Nettoyants d’injecteurs, nettoyants de circuit et activateurs pour essence et diesel.' },
+    catEy: { en: 'Category', fr: 'Catégorie' },
+    catName: { en: 'Fuel Additives', fr: 'Additifs carburant' },
+    href: 'category-fuel-additives.html',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"/> <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"/> <path d="M3 20l12 0"/> <path d="M18 7v1a1 1 0 0 0 1 1h1"/> <path d="M4 11l10 0"/> </svg>`,
+  },
+  {
+    n: '02',
+    use: { en: 'Oils &amp; fluids', fr: 'Huiles et fluides' },
+    line: { en: 'Full-synthetic oils and hydraulic fluids meeting modern OEM approvals.',
+            fr: 'Huiles entièrement synthétiques et fluides hydrauliques conformes aux homologations OEM.' },
+    catEy: { en: 'Category', fr: 'Catégorie' },
+    catName: { en: 'Oils &amp; Fluids', fr: 'Huiles et fluides' },
+    href: 'category-oils-fluids.html',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"/> <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"/> <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"/> <path d="M4.5 16h15"/> <path d="M19.5 8h-15"/> </svg>`,
+  },
+  {
+    n: '03',
+    use: { en: 'Cooling system', fr: 'Système de refroidissement' },
+    line: { en: 'Coolants, flushes and stop-leaks that hold temperature and protect the cooling circuit.',
+            fr: 'Liquides, rinçages et anti-fuites qui maîtrisent la température et protègent le circuit de refroidissement.' },
+    catEy: { en: 'Category', fr: 'Catégorie' },
+    catName: { en: 'Cooling &amp; Radiator', fr: 'Refroidissement et radiateur' },
+    href: 'category-cooling-radiator.html',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M10 4l2 1l2 -1"/> <path d="M12 2v6.5l3 1.72"/> <path d="M17.928 6.268l.134 2.232l1.866 1.232"/> <path d="M20.66 7l-5.629 3.25l.01 3.458"/> <path d="M19.928 14.268l-1.866 1.232l-.134 2.232"/> <path d="M20.66 17l-5.629 -3.25l-2.99 1.738"/> <path d="M14 20l-2 -1l-2 1"/> <path d="M12 22v-6.5l-3 -1.72"/> <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232"/> <path d="M3.34 17l5.629 -3.25l-.01 -3.458"/> <path d="M4.072 9.732l1.866 -1.232l.134 -2.232"/> <path d="M3.34 7l5.629 3.25l2.99 -1.738"/> </svg>`,
+  },
+  {
+    n: '04',
+    use: { en: 'Lubrication', fr: 'Lubrification' },
+    line: { en: 'PTFE-fortified sprays and greases for chains, linkages and exposed hardware.',
+            fr: 'Aérosols et graisses enrichis au PTFE pour chaînes, tringleries et quincaillerie exposée.' },
+    catEy: { en: 'Category', fr: 'Catégorie' },
+    catName: { en: 'Lubricants &amp; Grease', fr: 'Lubrifiants et graisses' },
+    href: 'category-lubricants-grease.html',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"/> </svg>`,
+  },
+  {
+    n: '05',
+    use: { en: 'Transmission service', fr: 'Entretien transmission' },
+    line: { en: 'Fluids and conditioners for automatic, CVT and manual gearboxes.',
+            fr: 'Fluides et conditionneurs pour boîtes automatiques, CVT et manuelles.' },
+    catEy: { en: 'Category', fr: 'Catégorie' },
+    catName: { en: 'Transmission', fr: 'Transmission' },
+    href: 'category-transmission.html',
+    icon: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"> <path d="M3 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M10 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M17 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M3 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M10 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M5 8l0 8"/> <path d="M12 8l0 8"/> <path d="M19 8v2a2 2 0 0 1 -2 2h-12"/> </svg>`,
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   FEATURED PRODUCTS — SKUs scoped to this sector.
+   All point at the brake-cleaner placeholder render; swap for real
+   PNGs when the catalogue ships.
+═══════════════════════════════════════════════════════════ */
+const FEAT = [
+  {
+    sku: 'KB-512',
+    cat: { en: 'Diesel · Fuel', fr: 'Diesel · Carburant' },
+    name: { en: 'Diesel Injector Cleaner', fr: 'Nettoyant injecteurs diesel' },
+    size: { en: '250 ml', fr: '250 ml' },
+    img: '../assets/products/brake-cleaner.png',
+  },
+  {
+    sku: 'KB-430',
+    cat: { en: 'Coolant', fr: 'Refroidissement' },
+    name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' },
+    size: { en: '4 L', fr: '4 L' },
+    img: '../assets/products/brake-cleaner.png',
+  },
+  {
+    sku: 'KB-401',
+    cat: { en: 'Oil', fr: 'Huile' },
+    name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' },
+    size: { en: '5 L', fr: '5 L' },
+    img: '../assets/products/brake-cleaner.png',
+  },
+  {
+    sku: 'KB-088',
+    cat: { en: 'Lubricant', fr: 'Lubrifiant' },
+    name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaîne synthétique' },
+    size: { en: '400 g', fr: '400 g' },
+    img: '../assets/products/brake-cleaner.png',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   OTHER INDUSTRIES — condensed strip (7 cards).
+   Icons + names reused verbatim from industries.html for consistency.
+═══════════════════════════════════════════════════════════ */
+const OTHER = [
+  { slug: 'automotive-repair', skus: '64 SKU',
+    name: { en: 'Automotive Repair', fr: 'Réparation auto' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5"/></svg>` },
+  { slug: 'heavy-truck-fleet', skus: '38 SKU',
+    name: { en: 'Heavy Truck &amp; Fleet', fr: 'Camions lourds et flottes' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5"/></svg>` },
+  { slug: 'aviation', skus: '18 SKU',
+    name: { en: 'Aviation', fr: 'Aviation' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.639 10.258l4.83 -1.294a2 2 0 1 1 1.035 3.863l-14.489 3.883l-4.45 -5.02l2.897 -.776l2.45 1.414l2.897 -.776l-3.743 -6.244l2.898 -.777l5.675 5.727"/><path d="M3 21h18"/></svg>` },
+  { slug: 'marine', skus: '26 SKU',
+    name: { en: 'Marine', fr: 'Marine' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1"/><path d="M4 18l-1 -3h18l-1 3"/><path d="M11 12h7l-7 -9v9"/><path d="M8 7l-2 5"/></svg>` },
+  { slug: 'mining-heavy-equipment', skus: '29 SKU',
+    name: { en: 'Mining &amp; Heavy Equip.', fr: 'Mines et engins lourds' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M11 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M13 19l-9 0"/><path d="M4 15l9 0"/><path d="M8 12v-5h2a3 3 0 0 1 3 3v5"/><path d="M5 15v-2a1 1 0 0 1 1 -1h7"/><path d="M21.12 9.88l-3.12 -4.88l-5 5"/><path d="M21.12 9.88a3 3 0 0 1 -2.12 5.12a3 3 0 0 1 -2.12 -.88l4.24 -4.24"/></svg>` },
+  { slug: 'industrial-manufacturing', skus: '41 SKU',
+    name: { en: 'Industrial &amp; Mfg.', fr: 'Industrie et fabrication' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21c1.147 -4.02 1.983 -8.027 2 -12h6c.017 3.973 .853 7.98 2 12"/><path d="M12.5 13h4.5c.025 2.612 .894 5.296 2 8"/><path d="M9 5a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1"/><path d="M3 21l19 0"/></svg>` },
+  { slug: 'motorsport', skus: '22 SKU',
+    name: { en: 'Motorsport', fr: 'Sport automobile' },
+    icon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a9 9 0 0 1 5.656 16h-11.312a9 9 0 0 1 5.656 -16"/><path d="M20 9h-8.8a1 1 0 0 0 -.968 1.246c.507 2 1.596 3.418 3.268 4.254c2 1 4.333 1.5 7 1.5"/></svg>` },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   I18N — page chrome strings
+═══════════════════════════════════════════════════════════ */
+const I18N = {
+  en: {
+    'util.distributor': 'Find a Distributor',
+    'util.compliance':  'Compliance & SDS',
+    'nav.home':         'Home',
+    'nav.products':     'Products',
+    'nav.industries':   'Industries',
+    'nav.about':        'About',
+    'nav.news':         'News',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Where to Buy',
+    'nav.distributor':  'Become a Distributor',
+
+    'crumbs.industries':'Industries',
+    'crumbs.industry':  'Agriculture',
+
+    'hero.eyebrow':     'BUILT FOR THE SEASON.',
+    'hero.h1':          'Agriculture',
+    'hero.sub':         'Diesel-first protection for tractors, combines and harvesters — through long field hours, fuel-quality swings and winter storage.',
+    'hero.painH':       'Operational pressures',
+    'hero.pain1':       'High-hour stress',
+    'hero.pain2':       'Injector fouling',
+    'hero.pain3':       'Mixed fleet',
+    'hero.pain4':       'Winter storage',
+    'hero.fleetH':      'Scope',
+    'hero.scope1':      'Tractors',
+    'hero.scope2':      'Combines',
+    'hero.scope3':      'Diesel',
+
+    'chal.h1':          'Field hours',
+    'chal.s1':          'Long days under load stress engines and transmissions — protection built for sustained heavy duty.',
+    'chal.h2':          'Fuel quality',
+    'chal.s2':          'Remote-stored diesel fouls injectors and carries water — additives that restore spray pattern and disperse moisture.',
+    'chal.h3':          'Seasonal downtime',
+    'chal.s3':          'Harvest windows are unforgiving and winter storage invites corrosion — extended-interval protection keeps equipment ready.',
+
+    'rec.eyebrow':      'Use case → product category',
+    'rec.h':            'Recommended for <em>Agriculture.</em>',
+    'rec.sub':          'Each task this sector demands, mapped to the Kolben category engineered for it. Each card opens the full catalogue for that line.',
+    'rec.count':        'Categories',
+    'rec.bridge':       'Browse category',
+
+    'feat.eyebrow':     'In the Kolben range',
+    'feat.h':           'Featured products.',
+    'feat.sub':         'Top-moving SKUs from the Kolben range — sized for professional throughput.',
+    'feat.count':       'In rotation',
+    'feat.view':        'View Product',
+
+    'resHead.eyebrow':  'Documentation',
+    'resHead.h':        'Resources for this sector.',
+    'resHead.sub':      'Bilingual Safety Data Sheets and an industry one-pager for fleet-maintenance directors. Equal prominence — same row, same weight.',
+    'resHead.count':    'Downloads',
+    'res.r1.eyebrow':   'Safety Data Sheet · EN',
+    'res.r1.name':      'Agriculture SDS — English',
+    'res.r2.eyebrow':   'Fiche de données · FR',
+    'res.r2.name':      'FDS Agriculture — Français',
+    'res.r2.meta':      'PDF · 1.4 MB · SIMDUT 2015',
+    'res.r3.eyebrow':   'Industry one-pager',
+    'res.r3.name':      'Agriculture Spec Guide 2026',
+
+    'dist.eyebrow':     'For fleet buyers & distributors',
+    'dist.h':           'Stocked from <em>Mississauga and Edmonton.</em>',
+    'dist.sub':         'No public cart, no sticker pricing. Become a distributor for trade terms, or contact our team to spec the right chemistries for your operation.',
+    'dist.a':           'Become a Distributor',
+    'dist.b':           'Talk to our team',
+
+    'other.eyebrow':    'Cross-sector',
+    'other.h':          'Explore <em>other industries.</em>',
+    'other.viewAll':    'View all industries',
+
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
+  },
+  fr: {
+    'util.distributor': 'Trouver un distributeur',
+    'util.compliance':  'Conformité et FDS',
+    'nav.home':         'Accueil',
+    'nav.products':     'Produits',
+    'nav.industries':   'Industries',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Où acheter',
+    'nav.distributor':  'Devenir distributeur',
+
+    'crumbs.industries':'Industries',
+    'crumbs.industry':  'Agriculture',
+
+    'hero.eyebrow':     'CONÇU POUR LA SAISON.',
+    'hero.h1':          'Agriculture',
+    'hero.sub':         'Protection avant tout diesel pour tracteurs, moissonneuses et combinés — longues heures aux champs, qualité de carburant variable et remisage hivernal.',
+    'hero.painH':       'Pressions d’exploitation',
+    'hero.pain1':       'Forte sollicitation',
+    'hero.pain2':       'Encrassement injecteurs',
+    'hero.pain3':       'Parc mixte',
+    'hero.pain4':       'Remisage hivernal',
+    'hero.fleetH':      'Portée',
+    'hero.scope1':      'Tracteurs',
+    'hero.scope2':      'Moissonneuses',
+    'hero.scope3':      'Diesel',
+
+    'chal.h1':          'Heures aux champs',
+    'chal.s1':          'De longues journées sous charge sollicitent moteurs et transmissions — une protection conçue pour le service intensif soutenu.',
+    'chal.h2':          'Qualité du carburant',
+    'chal.s2':          'Le diesel stocké en région encrasse les injecteurs et contient de l’eau — des additifs qui restaurent la pulvérisation et dispersent l’humidité.',
+    'chal.h3':          'Immobilisation saisonnière',
+    'chal.s3':          'Les fenêtres de récolte sont impitoyables et le remisage favorise la corrosion — une protection longue durée garde l’équipement prêt.',
+
+    'rec.eyebrow':      'Cas d’usage → catégorie',
+    'rec.h':            'Recommandé pour <em>Agriculture.</em>',
+    'rec.sub':          'Chaque tâche qu’exige ce secteur, associée à la catégorie Kolben conçue pour elle. Chaque carte ouvre le catalogue complet de cette gamme.',
+    'rec.count':        'Catégories',
+    'rec.bridge':       'Parcourir la catégorie',
+
+    'feat.eyebrow':     'Dans la gamme Kolben',
+    'feat.h':           'Produits en vedette.',
+    'feat.sub':         'Réf. les plus demandées de la gamme Kolben — dimensionnées pour la cadence professionnelle.',
+    'feat.count':       'En rotation',
+    'feat.view':        'Voir le produit',
+
+    'resHead.eyebrow':  'Documentation',
+    'resHead.h':        'Ressources pour ce secteur.',
+    'resHead.sub':      'Fiches de données de sécurité bilingues et fiche secteur pour directeurs de maintenance de flotte. Présence égale — même rangée, même poids.',
+    'resHead.count':    'Téléchargements',
+    'res.r1.eyebrow':   'Fiche de données · EN',
+    'res.r1.name':      'FDS Agriculture — Anglais',
+    'res.r2.eyebrow':   'Fiche de données · FR',
+    'res.r2.name':      'FDS Agriculture — Français',
+    'res.r2.meta':      'PDF · 1,4 Mo · SIMDUT 2015',
+    'res.r3.eyebrow':   'Fiche secteur',
+    'res.r3.name':      'Guide de spécification Agriculture 2026',
+
+    'dist.eyebrow':     'Pour acheteurs flotte et distributeurs',
+    'dist.h':           'Expédié de <em>Mississauga et Edmonton.</em>',
+    'dist.sub':         'Pas de panier public, pas de prix affiché. Devenez distributeur pour les conditions commerciales, ou contactez notre équipe pour cadrer les bonnes chimies.',
+    'dist.a':           'Devenir distributeur',
+    'dist.b':           'Parler à notre équipe',
+
+    'other.eyebrow':    'Inter-secteurs',
+    'other.h':          'Explorez les <em>autres industries.</em>',
+    'other.viewAll':    'Voir toutes les industries',
+
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
+  },
+};
+
+let state = { lang: 'en' };
+
+function renderRec() {
+  const t = I18N[state.lang];
+  document.getElementById('rec-grid').innerHTML = REC.map(r => `
+    <a class="rec-card" href="${r.href}">
+      <div class="rec-card__head">
+        <div class="rec-card__icon">${r.icon}</div>
+        <div class="rec-card__num">${r.n}</div>
+      </div>
+      <div class="rec-card__usecase-l">${t['rec.eyebrow'].split('→')[0].trim()}</div>
+      <div class="rec-card__usecase">${r.use[state.lang]}</div>
+      <div class="rec-card__line">${r.line[state.lang]}</div>
+      <div class="rec-card__bridge">
+        <div class="rec-card__bridge-l">
+          <div class="rec-card__bridge-eyebrow">${r.catEy[state.lang]}</div>
+          <div class="rec-card__bridge-name">${r.catName[state.lang]}</div>
+        </div>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+  `).join('');
+}
+
+function renderFeat() {
+  const t = I18N[state.lang];
+  document.getElementById('feat-grid').innerHTML = FEAT.map(p => `
+    <a class="pcard" href="product-detail.html">
+      <div class="pcard__media">
+        <img src="${p.img}" alt="${p.name[state.lang]}" />
+      </div>
+      <div class="pcard__head">
+        <span class="pcard__sku">${p.sku}</span>
+        <span class="pcard__cat">${p.cat[state.lang]}</span>
+      </div>
+      <div class="pcard__body">
+        <div class="pcard__name">${p.name[state.lang]}</div>
+        <div class="pcard__size">${p.size[state.lang]}</div>
+      </div>
+      <div class="pcard__foot">
+        <span>${t['feat.view']}</span>
+        <span class="arrow">→</span>
+      </div>
+    </a>
+  `).join('');
+}
+
+function renderOther() {
+  document.getElementById('other-grid').innerHTML = OTHER.map(o => `
+    <a class="oc" href="industry-${o.slug}.html">
+      <div class="oc__icon">${o.icon}</div>
+      <div class="oc__name">${o.name[state.lang]}</div>
+      <div class="oc__skus">${o.skus}</div>
+    </a>
+  `).join('');
+}
+
+function applyI18n(lang) {
+  const t = I18N[lang];
+  document.documentElement.setAttribute('lang', lang);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.getAttribute('data-i18n');
+    if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  document.querySelectorAll('#lang-switch .util__lang').forEach(s => {
+    s.classList.toggle('active', s.dataset.lang === lang);
+  });
+}
+
+function rerender() {
+  applyI18n(state.lang);
+  renderRec();
+  renderFeat();
+  renderOther();
+}
+
+document.getElementById('lang-switch').addEventListener('click', e => {
+  const t = e.target.closest('[data-lang]');
+  if (!t) return;
+  state.lang = t.dataset.lang;
+  rerender();
+});
+
+rerender();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TWEAKS PANEL — Industries-world differentiator controls.
+     Brand rule: gold ONLY on dark surfaces. Tweaks honour this.
+═══════════════════════════════════════════════════════════ -->
+<div class="tw-panel" id="tw-panel" role="region" aria-label="Tweaks">
+  <div class="tw-panel__head" id="tw-drag">
+    <span class="tw-panel__title">Tweaks</span>
+    <button class="tw-panel__close" id="tw-close" aria-label="Close">×</button>
+  </div>
+  <div class="tw-panel__body">
+
+    <div class="tw-section">
+      <div class="tw-section__l">Surface theme</div>
+      <div class="tw-radio" data-key="theme">
+        <button data-val="light">Light</button>
+        <button data-val="mixed">Mixed</button>
+        <button data-val="industrial">Industrial</button>
+      </div>
+      <p class="tw-toggle__sub" style="margin-top:10px;">How much of the page sits on black. Industrial flips the challenge band, featured products and other-industries strip onto dark.</p>
+    </div>
+
+    <div class="tw-section">
+      <div class="tw-section__l">Section rule</div>
+      <div class="tw-radio" data-key="rule">
+        <button data-val="red">Red</button>
+        <button data-val="gold">Gold</button>
+      </div>
+      <p class="tw-toggle__sub" style="margin-top:10px;">The 3px stripe between sections. Gold reads more "Industries" than the standard red.</p>
+    </div>
+
+    <div class="tw-section">
+      <label class="tw-toggle" data-key="goldLed">
+        <div>
+          <div class="tw-toggle__l">Gold-led accents</div>
+          <div class="tw-toggle__sub">Swap red eyebrow bars + em-highlights to gold on dark surfaces only. Light surfaces keep red.</div>
+        </div>
+        <span class="tw-toggle__sw"></span>
+      </label>
+    </div>
+
+    <div class="tw-section">
+      <label class="tw-toggle" data-key="chevron">
+        <div>
+          <div class="tw-toggle__l">Chevron stripe</div>
+          <div class="tw-toggle__sub">The red+gold 6px showcase stripe planted at the top of major dark sections.</div>
+        </div>
+        <span class="tw-toggle__sw"></span>
+      </label>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   TWEAK MODE — protocol + state.
+═══════════════════════════════════════════════════════════ */
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "theme": "light",
+  "rule": "gold",
+  "goldLed": true,
+  "chevron": false
+}/*EDITMODE-END*/;
+
+const tw = { ...TWEAK_DEFAULTS };
+
+function applyTweaks() {
+  document.body.setAttribute('data-theme',    tw.theme);
+  document.body.setAttribute('data-rule',     tw.rule);
+  document.body.setAttribute('data-gold-led', tw.goldLed ? 'on' : 'off');
+  document.body.setAttribute('data-chevron',  tw.chevron ? 'on' : 'off');
+
+  // Reflect into the panel UI
+  document.querySelectorAll('.tw-radio').forEach(r => {
+    const key = r.dataset.key;
+    r.querySelectorAll('button').forEach(b => {
+      b.classList.toggle('is-on', b.dataset.val === tw[key]);
+    });
+  });
+  document.querySelectorAll('.tw-toggle').forEach(t => {
+    const key = t.dataset.key;
+    t.classList.toggle('is-on', !!tw[key]);
+  });
+}
+
+function setTweak(patch) {
+  Object.assign(tw, patch);
+  applyTweaks();
+  try {
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*');
+  } catch (e) { /* noop */ }
+}
+
+/* Bind panel controls */
+document.querySelectorAll('.tw-radio').forEach(r => {
+  const key = r.dataset.key;
+  r.addEventListener('click', e => {
+    const b = e.target.closest('button[data-val]');
+    if (!b) return;
+    setTweak({ [key]: b.dataset.val });
+  });
+});
+document.querySelectorAll('.tw-toggle').forEach(t => {
+  const key = t.dataset.key;
+  t.addEventListener('click', () => setTweak({ [key]: !tw[key] }));
+});
+
+/* ── Edit-mode protocol (listener first, then announce) ── */
+const panel = document.getElementById('tw-panel');
+window.addEventListener('message', e => {
+  const d = e?.data; if (!d || typeof d !== 'object') return;
+  if (d.type === '__activate_edit_mode')   panel.classList.add('is-open');
+  if (d.type === '__deactivate_edit_mode') panel.classList.remove('is-open');
+});
+try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) {}
+
+document.getElementById('tw-close').addEventListener('click', () => {
+  panel.classList.remove('is-open');
+  try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) {}
+});
+
+/* ── Drag the panel by its header ── */
+(function () {
+  const head = document.getElementById('tw-drag');
+  let sx = 0, sy = 0, ox = 0, oy = 0, dragging = false;
+  head.addEventListener('mousedown', e => {
+    if (e.target.closest('#tw-close')) return;
+    dragging = true;
+    sx = e.clientX; sy = e.clientY;
+    const r = panel.getBoundingClientRect();
+    ox = r.left; oy = r.top;
+    panel.style.right = 'auto'; panel.style.bottom = 'auto';
+    panel.style.left = r.left + 'px'; panel.style.top = r.top + 'px';
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', e => {
+    if (!dragging) return;
+    panel.style.left = Math.max(0, Math.min(window.innerWidth - panel.offsetWidth, ox + (e.clientX - sx))) + 'px';
+    panel.style.top  = Math.max(0, Math.min(window.innerHeight - panel.offsetHeight, oy + (e.clientY - sy))) + 'px';
+  });
+  window.addEventListener('mouseup', () => { dragging = false; });
+})();
+
+applyTweaks();
+</script>
+<script>
+  /* Mega-menu hover with grace period.
+     Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
+     bounding box, which makes diagonal/lateral travel toward the panel feel
+     fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
+     mouseleave — the timer is cancelled if the cursor re-enters either the
+     nav__item OR the .mega within ~220ms, so cursor paths in any direction
+     are forgiving. CSS still honours :hover so the menu also works without JS. */
+  (function () {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      const mega = item.querySelector('.mega');
+      if (!mega) return; // only items WITH a mega panel need grace handling
+      let closeTimer = null;
+      const open = function () {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        item.classList.add('is-open');
+      };
+      const close = function () {
+        closeTimer = setTimeout(function () {
+          item.classList.remove('is-open');
+          closeTimer = null;
+        }, 220);
+      };
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', close);
+      mega.addEventListener('mouseenter', open);
+      mega.addEventListener('mouseleave', close);
+    });
+  })();
+</script>
+</body>
+</html>
