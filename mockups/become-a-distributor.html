@@ -1480,7 +1480,7 @@ rerender();
   drawer.addEventListener('keydown',function(e){ if(e.key!=='Tab') return; var f=drawer.querySelectorAll('a[href],button:not([disabled])'); if(!f.length) return; var first=f[0], last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){ e.preventDefault(); last.focus(); } else if(!e.shiftKey&&document.activeElement===last){ e.preventDefault(); first.focus(); } });
   var here=(location.pathname.split('/').pop()||'homepage-v2.html'); if(!here) here='homepage-v2.html';
   drawer.querySelectorAll('.kbn-link[data-kbn]').forEach(function(a){ if(a.getAttribute('data-kbn')===here) a.classList.add('is-current'); });
-  drawer.querySelectorAll('.kbn-lang button').forEach(function(b){ b.addEventListener('click',function(e){ e.stopPropagation(); var lang=b.getAttribute('data-lang'); var sw=document.querySelector('#lang-switch [data-lang="'+lang+'"]'); if(sw) sw.click(); drawer.querySelectorAll('.kbn-lang button').forEach(function(x){ x.classList.toggle('is-active',x===b); }); }); });
+  drawer.querySelectorAll('.kbn-lang button').forEach(function(b){ b.addEventListener('click',function(e){ e.stopPropagation(); var lang=b.getAttribute('data-lang'); var sw=Array.prototype.find.call(document.querySelectorAll('.util__lang'),function(el){return el.textContent.trim().toLowerCase()===lang;}); if(sw) sw.click(); drawer.querySelectorAll('.kbn-lang button').forEach(function(x){ x.classList.toggle('is-active',x===b); }); }); });
   window.addEventListener('resize',function(){ if(window.innerWidth>1100&&drawer.classList.contains('is-open')) close(); });
 })();
 </script>
