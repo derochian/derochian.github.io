@@ -874,23 +874,23 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-088', name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaîne synthétique' }, size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-088', img: 'synthetic-chain-lube.png', name: { en: 'Synthetic Chain Lube', fr: 'Lubrifiant chaîne synthétique' }, size: '400 g', sizeBucket: '400g',
     tags: ['chain'], form: 'aerosol', pack: 'single',
     diff: { en: 'PTFE-fortified aerosol grease for drive chains and exposed linkages.',
             fr: 'Graisse aérosol enrichie au PTFE pour chaînes et tringleries exposées.' } },
-  { sku: 'KB-090', name: { en: 'White Lithium Grease', fr: 'Graisse blanche au lithium' }, size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-090', img: 'white-lithium-grease.png', name: { en: 'White Lithium Grease', fr: 'Graisse blanche au lithium' }, size: '400 g', sizeBucket: '400g',
     tags: ['grease'], form: 'grease', pack: 'single',
     diff: { en: 'Water-resistant lithium grease for hinges, latches and metal-on-metal contact. (Coming soon)',
             fr: 'Graisse au lithium résistante à l’eau pour charnières, loquets et contacts métal-métal. (Bientôt)' } },
-  { sku: 'KB-095', name: { en: 'Penetrating Oil', fr: 'Dégrippant' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-095', img: 'penetrating-oil.png', name: { en: 'Penetrating Oil', fr: 'Dégrippant' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['pen'], form: 'aerosol', pack: 'single',
     diff: { en: 'Fast-creeping penetrant that frees seized fasteners and rusted hardware. (Coming soon)',
             fr: 'Pénétrant à action rapide qui libère la boulonnerie grippée et rouillée. (Bientôt)' } },
-  { sku: 'KB-099', name: { en: 'Silicone Spray', fr: 'Lubrifiant silicone' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-099', img: 'silicone-spray.png', name: { en: 'Silicone Spray', fr: 'Lubrifiant silicone' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['pen'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dry silicone lubricant safe on rubber, plastic and trim. (Coming soon)',
             fr: 'Lubrifiant silicone sec, sûr sur caoutchouc, plastique et garnitures. (Bientôt)' } },
-  { sku: 'KB-097', name: { en: 'Copper Anti-Seize', fr: 'Pâte cuivre antigrippage' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-097', img: 'copper-anti-seize.png', name: { en: 'Copper Anti-Seize', fr: 'Pâte cuivre antigrippage' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['seize'], form: 'paste', pack: 'single',
     diff: { en: 'Copper compound for high-temperature threads, brake hardware and exhaust bolts. (Coming soon)',
             fr: 'Pâte au cuivre pour filetages haute température, visserie de frein et boulons d’échappement. (Bientôt)' } },
@@ -1161,7 +1161,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

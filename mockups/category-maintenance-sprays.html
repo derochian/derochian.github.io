@@ -874,11 +874,11 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-225', name: { en: 'Throttle Body Cleaner', fr: 'Nettoyant boîtier papillon' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-225', img: 'throttle-body-cleaner.png', name: { en: 'Throttle Body Cleaner', fr: 'Nettoyant boîtier papillon' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['intake'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dissolves carbon and gum from throttle plates and MAF sensors. Safe on coatings and seals.',
             fr: 'Dissout calamine et gomme des papillons et capteurs MAF. Sûr sur revêtements et joints.' } },
-  { sku: 'KB-241', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-241', img: 'electronic-contact-cleaner.png', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['clean'], form: 'aerosol', pack: 'single',
     diff: { en: 'Plastic-safe precision cleaner. Dielectric strength 35 kV/2.5 mm.',
             fr: 'Nettoyant de précision sûr pour plastiques. Rigidité diélectrique 35 kV/2,5 mm.' } },
@@ -1150,7 +1150,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

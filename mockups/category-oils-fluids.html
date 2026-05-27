@@ -874,23 +874,23 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-401', name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' }, size: '5 L', sizeBucket: '5l',
+  { sku: 'KB-401', img: 'engine-oil-5w30-full-synthetic.png', name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' }, size: '5 L', sizeBucket: '5l',
     tags: ['engineoil'], form: 'liquid', pack: 'single',
     diff: { en: 'Low-SAPS, fuel-economy formulation. BMW LL-04, MB 229.51, VW 504 00/507 00.',
             fr: 'Formule faible SAPS économe en carburant. BMW LL-04, MB 229.51, VW 504 00/507 00.' } },
-  { sku: 'KB-420', name: { en: 'DOT 4 Brake Fluid', fr: 'Liquide de frein DOT 4' }, size: '1 L', sizeBucket: '1l',
+  { sku: 'KB-420', img: 'dot4-brake-fluid.png', name: { en: 'DOT 4 Brake Fluid', fr: 'Liquide de frein DOT 4' }, size: '1 L', sizeBucket: '1l',
     tags: ['brake'], form: 'liquid', pack: 'single',
     diff: { en: 'Dry BP 265 °C, wet 175 °C. ABS, ESP, modern hydraulic clutches.',
             fr: 'Point d’ébullition à sec 265 °C, humide 175 °C. ABS, ESP, embrayages hydrauliques modernes.' } },
-  { sku: 'KB-430', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
+  { sku: 'KB-430', img: 'long-life-coolant.png', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
     tags: ['coolant'], form: 'liquid', pack: 'single',
     diff: { en: 'Ready-to-use OAT. 5-yr/250,000 km interval. G12++ compatible.',
             fr: 'OAT prêt à l’emploi. Intervalle 5 ans/250 000 km. Compatible G12++.' } },
-  { sku: 'KB-445', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
+  { sku: 'KB-445', img: 'atf-multi-vehicle.png', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
     tags: ['trans'], form: 'liquid', pack: 'single',
     diff: { en: 'Covers 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.',
             fr: 'Couvre plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.' } },
-  { sku: 'KB-450', name: { en: 'Power Steering Fluid', fr: 'Liquide de direction assistée' }, size: '1 L', sizeBucket: '1l',
+  { sku: 'KB-450', img: 'power-steering-fluid.png', name: { en: 'Power Steering Fluid', fr: 'Liquide de direction assistée' }, size: '1 L', sizeBucket: '1l',
     tags: ['steer'], form: 'liquid', pack: 'single',
     diff: { en: 'Universal mineral fluid, −40 °C to 130 °C.',
             fr: 'Liquide minéral universel, −40 °C à 130 °C.' } },
@@ -1160,7 +1160,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

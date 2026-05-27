@@ -1348,13 +1348,13 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
    RELATED PRODUCTS — small dataset (mirrors hub card style)
    ═══════════════════════════════════════════════════════════ */
 const RELATED = [
-  { sku: 'KB-225', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
+  { sku: 'KB-225', img: 'throttle-body-cleaner.png', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
     name: { en: 'Throttle Body Cleaner',  fr: 'Nettoyant boîtier papillon' }, size: '400 ml' },
-  { sku: 'KB-241', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
+  { sku: 'KB-241', img: 'electronic-contact-cleaner.png', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
     name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml' },
-  { sku: 'KB-088', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
+  { sku: 'KB-088', img: 'synthetic-chain-lube.png', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
     name: { en: 'Synthetic Chain Lube',  fr: 'Lubrifiant chaîne synthétique' }, size: '400 g' },
-  { sku: 'KB-340', cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
+  { sku: 'KB-340', img: 'engine-flush-pro.png', cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
     name: { en: 'Engine Flush — Pro',    fr: 'Nettoyant moteur — Pro' }, size: '300 ml' },
 ];
 
@@ -1589,7 +1589,7 @@ function renderRelated(lang) {
   grid.innerHTML = RELATED.map(p => `
     <a class="pcard" href="#${p.sku}">
       <div class="pcard__media">
-        <img src="../assets/products/brake-cleaner.png" alt="${p.name[lang]}" />
+        <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[lang]}" />
       </div>
       <div class="pcard__head">
         <span class="pcard__sku">${p.sku}</span>

@@ -874,19 +874,19 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-700', name: { en: 'Glass Cleaner', fr: 'Nettoyant vitres' }, size: '500 ml', sizeBucket: '500ml',
+  { sku: 'KB-700', img: 'glass-cleaner.png', name: { en: 'Glass Cleaner', fr: 'Nettoyant vitres' }, size: '500 ml', sizeBucket: '500ml',
     tags: ['glass', 'interior'], form: 'liquid', pack: 'single',
     diff: { en: 'Streak-free, ammonia-free formula safe on tint. (Coming soon)',
             fr: 'Formule sans traces et sans ammoniaque, sûre sur films teintés. (Bientôt)' } },
-  { sku: 'KB-705', name: { en: 'Interior Cleaner', fr: 'Nettoyant intérieur' }, size: '500 ml', sizeBucket: '500ml',
+  { sku: 'KB-705', img: 'interior-cleaner.png', name: { en: 'Interior Cleaner', fr: 'Nettoyant intérieur' }, size: '500 ml', sizeBucket: '500ml',
     tags: ['interior'], form: 'liquid', pack: 'single',
     diff: { en: 'All-surface cleaner for dashboards, trim and upholstery. (Coming soon)',
             fr: 'Nettoyant toutes surfaces pour tableaux de bord, garnitures et sellerie. (Bientôt)' } },
-  { sku: 'KB-710', name: { en: 'Tyre & Trim Dressing', fr: 'Rénovateur pneus et plastiques' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-710', img: 'tyre-trim-dressing.png', name: { en: 'Tyre & Trim Dressing', fr: 'Rénovateur pneus et plastiques' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['exterior', 'protect'], form: 'aerosol', pack: 'single',
     diff: { en: 'Satin-finish dressing that restores and protects rubber and trim. (Coming soon)',
             fr: 'Rénovateur fini satiné qui restaure et protège caoutchouc et plastiques. (Bientôt)' } },
-  { sku: 'KB-715', name: { en: 'Spray Wax & Sealant', fr: 'Cire et scellant en aérosol' }, size: '500 ml', sizeBucket: '500ml',
+  { sku: 'KB-715', img: 'spray-wax-sealant.png', name: { en: 'Spray Wax & Sealant', fr: 'Cire et scellant en aérosol' }, size: '500 ml', sizeBucket: '500ml',
     tags: ['exterior', 'protect'], form: 'aerosol', pack: 'single',
     diff: { en: 'Quick-detailer wax that adds gloss and hydrophobic protection. (Coming soon)',
             fr: 'Cire de finition rapide qui ajoute brillance et protection hydrophobe. (Bientôt)' } },
@@ -1155,7 +1155,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

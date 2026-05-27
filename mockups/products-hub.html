@@ -955,68 +955,68 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
    ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
   // — Additives — engine + fuel + cooling chemistry that goes IN a system —
-  { sku: 'KB-340', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
+  { sku: 'KB-340', img: 'engine-flush-pro.png', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
     name: { en: 'Engine Flush — Pro',          fr: 'Nettoyant moteur — Pro' },
     size: '300 ml',
     desc: { en: 'Removes carbon, sludge and varnish from the lubrication circuit in 15 minutes. For gasoline, diesel and DPF-equipped engines.',
             fr: 'Élimine le carbone, les boues et le vernis du circuit de lubrification en 15 minutes. Essence, diesel et moteurs avec FAP.' } },
 
-  { sku: 'KB-512', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
+  { sku: 'KB-512', img: 'diesel-injector-cleaner.png', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
     name: { en: 'Diesel Injector Cleaner',     fr: 'Nettoyant injecteurs diesel' },
     size: '250 ml',
     desc: { en: 'Restores injector spray pattern. Cuts smoke, recovers lost power, lowers fuel consumption on common-rail diesels.',
             fr: 'Restaure la pulvérisation des injecteurs. Réduit la fumée, restaure la puissance et abaisse la consommation des diesels common-rail.' } },
 
-  { sku: 'KB-520', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
+  { sku: 'KB-520', img: 'petrol-system-cleaner.png', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
     name: { en: 'Petrol System Cleaner',       fr: 'Nettoyant circuit essence' },
     size: '300 ml',
     desc: { en: 'Cleans intake valves, ports and combustion chamber deposits on direct-injection petrol engines. One tank treatment.',
             fr: 'Nettoie soupapes d’admission, conduits et dépôts de combustion sur moteurs essence à injection directe. Un plein.' } },
 
-  { sku: 'KB-525', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
+  { sku: 'KB-525', img: 'cetane-booster-plus6.png', filter: 'add',  cat: { en: 'Fuel Additives',   fr: 'Additifs carburant' },
     name: { en: 'Cetane Booster +6',           fr: 'Activateur de cétane +6' },
     size: '300 ml',
     desc: { en: 'Raises cetane by up to six points. Sharper throttle response, quieter combustion, easier cold-start.',
             fr: 'Augmente l’indice de cétane jusqu’à six points. Réponse plus vive, combustion plus silencieuse, démarrage à froid facilité.' } },
 
-  { sku: 'KB-610', filter: 'add',  cat: { en: 'Sealants & Stop-Leaks', fr: 'Mastics et anti-fuites' },
+  { sku: 'KB-610', img: 'radiator-stop-leak.png', filter: 'add',  cat: { en: 'Sealants & Stop-Leaks', fr: 'Mastics et anti-fuites' },
     name: { en: 'Radiator Stop-Leak',          fr: 'Anti-fuite radiateur' },
     size: '250 ml',
     desc: { en: 'Permanently seals hairline leaks in the cooling circuit without clogging. Compatible with all OEM coolants.',
             fr: 'Scelle durablement les microfuites du circuit de refroidissement sans colmater. Compatible avec tous les liquides OEM.' } },
 
-  { sku: 'KB-635', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
+  { sku: 'KB-635', img: 'oil-system-stabilizer.png', filter: 'add',  cat: { en: 'Engine Additives', fr: 'Additifs moteur' },
     name: { en: 'Oil System Stabilizer',       fr: 'Stabilisateur du circuit d’huile' },
     size: '500 ml',
     desc: { en: 'Reduces oil consumption and quiets hydraulic lifters on high-mileage engines. ACEA A3/B4 compatible.',
             fr: 'Réduit la consommation d’huile et silencifie les poussoirs hydrauliques des moteurs à fort kilométrage. ACEA A3/B4 compatible.' } },
 
   // — Oils & Fluids — bulk wet chemistry that goes IN as the working fluid —
-  { sku: 'KB-401', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
+  { sku: 'KB-401', img: 'engine-oil-5w30-full-synthetic.png', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
     name: { en: 'Engine Oil 5W-30 Full Synthetic', fr: 'Huile moteur 5W-30 entièrement synthétique' },
     size: '5 L',
     desc: { en: 'Low-SAPS, fuel-economy formulation. Meets BMW LL-04, MB 229.51 and VW 504 00 / 507 00.',
             fr: 'Faible teneur en SAPS, formule économe. Conforme BMW LL-04, MB 229.51 et VW 504 00 / 507 00.' } },
 
-  { sku: 'KB-420', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
+  { sku: 'KB-420', img: 'dot4-brake-fluid.png', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
     name: { en: 'DOT 4 Brake Fluid',           fr: 'Liquide de frein DOT 4' },
     size: '1 L',
     desc: { en: 'Dry boiling point 265 °C, wet 175 °C. For ABS, ESP and modern hydraulic clutch systems.',
             fr: 'Point d’ébullition sec 265 °C, humide 175 °C. ABS, ESP et systèmes d’embrayage hydraulique modernes.' } },
 
-  { sku: 'KB-430', filter: 'oils', cat: { en: 'Cooling & Radiator', fr: 'Refroidissement et radiateur' },
+  { sku: 'KB-430', img: 'long-life-coolant.png', filter: 'oils', cat: { en: 'Cooling & Radiator', fr: 'Refroidissement et radiateur' },
     name: { en: 'Long-Life Coolant −38 °C',    fr: 'Liquide de refroidissement longue durée −38 °C' },
     size: '4 L',
     desc: { en: 'Ready-to-use OAT formulation. 5-year / 250,000 km drain interval. G12++ compatible.',
             fr: 'Formule OAT prête à l’emploi. Vidange tous les 5 ans / 250 000 km. Compatible G12++.' } },
 
-  { sku: 'KB-445', filter: 'oils', cat: { en: 'Transmission',     fr: 'Transmission' },
+  { sku: 'KB-445', img: 'atf-multi-vehicle.png', filter: 'oils', cat: { en: 'Transmission',     fr: 'Transmission' },
     name: { en: 'ATF Multi-Vehicle',           fr: 'ATF multi-véhicules' },
     size: '4 L',
     desc: { en: 'Synthetic automatic transmission fluid covering 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1 and MB 236.14.',
             fr: 'Fluide ATF synthétique couvrant plus de 30 spécifications OEM dont ZF Lifeguard 6/8, Aisin AW-1 et MB 236.14.' } },
 
-  { sku: 'KB-450', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
+  { sku: 'KB-450', img: 'power-steering-fluid.png', filter: 'oils', cat: { en: 'Oils & Fluids',    fr: 'Huiles et fluides' },
     name: { en: 'Power Steering Fluid',        fr: 'Liquide de direction assistée' },
     size: '1 L',
     desc: { en: 'Universal mineral-based fluid for hydraulic steering systems. Operating range −40 °C to 130 °C.',
@@ -1029,19 +1029,19 @@ const PRODUCTS = [
     desc: { en: 'Fast-evaporating, non-chlorinated solvent. High-pressure jet, leaves no residue on caliper or rotor.',
             fr: 'Solvant à évaporation rapide, non chloré. Jet haute pression, ne laisse aucun résidu sur étrier ou disque.' } },
 
-  { sku: 'KB-225', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
+  { sku: 'KB-225', img: 'throttle-body-cleaner.png', filter: 'maint', cat: { en: 'Maintenance Sprays', fr: 'Aérosols d’entretien' },
     name: { en: 'Throttle Body Cleaner',       fr: 'Nettoyant boîtier papillon' },
     size: '400 ml',
     desc: { en: 'Dissolves carbon and gum from throttle plates and MAF sensors. Safe on coatings and rubber seals.',
             fr: 'Dissout le carbone et la gomme des papillons et capteurs MAF. Sans danger pour revêtements et joints.' } },
 
-  { sku: 'KB-241', filter: 'maint', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
+  { sku: 'KB-241', img: 'electronic-contact-cleaner.png', filter: 'maint', cat: { en: 'Electrical & Contact', fr: 'Électrique et contacts' },
     name: { en: 'Electronic Contact Cleaner',  fr: 'Nettoyant contacts électroniques' },
     size: '300 ml',
     desc: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV / 2.5 mm.',
             fr: 'Nettoyant de précision sans danger pour plastiques. Connecteurs, relais et calculateurs. Rigidité 35 kV / 2,5 mm.' } },
 
-  { sku: 'KB-088', filter: 'maint', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
+  { sku: 'KB-088', img: 'synthetic-chain-lube.png', filter: 'maint', cat: { en: 'Lubricants & Grease', fr: 'Lubrifiants et graisses' },
     name: { en: 'Synthetic Chain Lube',        fr: 'Lubrifiant chaîne synthétique' },
     size: '400 g',
     desc: { en: 'PTFE-fortified aerosol grease for drive chains and exposed linkages. Slings off less, lasts longer.',
@@ -1185,7 +1185,7 @@ function renderProducts(lang, filter) {
   grid.innerHTML = list.map(p => `
     <a class="pcard" href="#${p.sku}">
       <div class="pcard__media">
-        <img src="../assets/products/brake-cleaner.png" alt="${p.name[lang]}" />
+        <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[lang]}" />
       </div>
       <div class="pcard__head">
         <span class="pcard__sku">${p.sku}</span>

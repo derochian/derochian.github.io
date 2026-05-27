@@ -874,19 +874,19 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-340', name: { en: 'Engine Flush — Pro', fr: 'Nettoyant moteur — Pro' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-340', img: 'engine-flush-pro.png', name: { en: 'Engine Flush — Pro', fr: 'Nettoyant moteur — Pro' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['flush'], form: 'liquid', pack: 'single',
     diff: { en: 'Removes carbon, sludge and varnish from the lubrication circuit in 15 min. Gasoline, diesel, DPF-equipped.',
             fr: 'Élimine calamine, boues et vernis du circuit de lubrification en 15 min. Essence, diesel, compatible FAP.' } },
-  { sku: 'KB-635', name: { en: 'Oil System Stabilizer', fr: 'Stabilisateur du circuit d’huile' }, size: '500 ml', sizeBucket: '500ml',
+  { sku: 'KB-635', img: 'oil-system-stabilizer.png', name: { en: 'Oil System Stabilizer', fr: 'Stabilisateur du circuit d’huile' }, size: '500 ml', sizeBucket: '500ml',
     tags: ['treatment', 'highmile'], form: 'liquid', pack: 'single',
     diff: { en: 'Reduces oil consumption and quiets hydraulic lifters on high-mileage engines. ACEA A3/B4 compatible.',
             fr: 'Réduit la consommation d’huile et apaise les poussoirs hydrauliques sur moteurs à fort kilométrage. Compatible ACEA A3/B4.' } },
-  { sku: 'KB-360', name: { en: 'Anti-Friction Treatment', fr: 'Traitement anti-friction' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-360', img: 'anti-friction-treatment.png', name: { en: 'Anti-Friction Treatment', fr: 'Traitement anti-friction' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['treatment'], form: 'liquid', pack: 'single',
     diff: { en: 'MoS₂-fortified anti-friction treatment that lowers friction and operating temperature. (Coming soon)',
             fr: 'Traitement anti-friction enrichi au MoS₂ réduisant friction et température. (Bientôt)' } },
-  { sku: 'KB-355', name: { en: 'Stop-Smoke Treatment', fr: 'Traitement anti-fumée' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-355', img: 'stop-smoke-treatment.png', name: { en: 'Stop-Smoke Treatment', fr: 'Traitement anti-fumée' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['treatment', 'highmile'], form: 'liquid', pack: 'single',
     diff: { en: 'Thickens the oil film to cut blue smoke and oil burn on worn engines. (Coming soon)',
             fr: 'Épaissit le film d’huile pour réduire la fumée bleue sur moteurs usés. (Bientôt)' } },
@@ -1153,7 +1153,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

@@ -874,15 +874,15 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-512', name: { en: 'Diesel Injector Cleaner', fr: 'Nettoyant injecteurs diesel' }, size: '250 ml', sizeBucket: '250ml',
+  { sku: 'KB-512', img: 'diesel-injector-cleaner.png', name: { en: 'Diesel Injector Cleaner', fr: 'Nettoyant injecteurs diesel' }, size: '250 ml', sizeBucket: '250ml',
     tags: ['diesel'], form: 'liquid', pack: 'single',
     diff: { en: 'Restores injector spray pattern. Cuts smoke, recovers power on common-rail diesels.',
             fr: 'Restaure la pulvérisation des injecteurs. Réduit la fumée, récupère la puissance sur diesels common-rail.' } },
-  { sku: 'KB-520', name: { en: 'Petrol System Cleaner', fr: 'Nettoyant circuit essence' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-520', img: 'petrol-system-cleaner.png', name: { en: 'Petrol System Cleaner', fr: 'Nettoyant circuit essence' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['petrol'], form: 'liquid', pack: 'single',
     diff: { en: 'Cleans intake valves, ports and combustion deposits on direct-injection petrol engines. One-tank treatment.',
             fr: 'Nettoie soupapes, conduits et dépôts de combustion sur moteurs essence à injection directe. Traitement d’un plein.' } },
-  { sku: 'KB-525', name: { en: 'Cetane Booster +6', fr: 'Activateur de cétane +6' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-525', img: 'cetane-booster-plus6.png', name: { en: 'Cetane Booster +6', fr: 'Activateur de cétane +6' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['diesel', 'perf'], form: 'liquid', pack: 'single',
     diff: { en: 'Raises cetane up to six points. Sharper response, quieter combustion, easier cold-start.',
             fr: 'Augmente le cétane jusqu’à six points. Réponse plus vive, combustion plus douce, démarrage à froid facilité.' } },
@@ -1149,7 +1149,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

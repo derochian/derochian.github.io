@@ -874,19 +874,19 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-610', name: { en: 'Radiator Stop-Leak', fr: 'Anti-fuite radiateur' }, size: '250 ml', sizeBucket: '250ml',
+  { sku: 'KB-610', img: 'radiator-stop-leak.png', name: { en: 'Radiator Stop-Leak', fr: 'Anti-fuite radiateur' }, size: '250 ml', sizeBucket: '250ml',
     tags: ['stopleak'], form: 'liquid', pack: 'single',
     diff: { en: 'Permanently seals hairline leaks without clogging. Compatible with all OEM coolants.',
             fr: 'Scelle durablement les microfuites sans obstruction. Compatible avec tous les liquides OEM.' } },
-  { sku: 'KB-430', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
+  { sku: 'KB-430', img: 'long-life-coolant.png', name: { en: 'Long-Life Coolant −38 °C', fr: 'Liquide de refroidissement longue durée −38 °C' }, size: '4 L', sizeBucket: '4l',
     tags: ['coolant'], form: 'liquid', pack: 'single',
     diff: { en: 'Ready-to-use OAT. 5-yr/250,000 km interval. G12++ compatible.',
             fr: 'OAT prêt à l’emploi. Intervalle 5 ans/250 000 km. Compatible G12++.' } },
-  { sku: 'KB-620', name: { en: 'Radiator Flush', fr: 'Rinçage radiateur' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-620', img: 'radiator-flush.png', name: { en: 'Radiator Flush', fr: 'Rinçage radiateur' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['flush'], form: 'liquid', pack: 'single',
     diff: { en: 'Removes scale and rust before a coolant change. (Coming soon)',
             fr: 'Élimine tartre et rouille avant une vidange du liquide. (Bientôt)' } },
-  { sku: 'KB-625', name: { en: 'Cooling System Conditioner', fr: 'Conditionneur de refroidissement' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-625', img: 'cooling-system-conditioner.png', name: { en: 'Cooling System Conditioner', fr: 'Conditionneur de refroidissement' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['coolant'], form: 'liquid', pack: 'single',
     diff: { en: 'Lubricates the water pump and inhibits corrosion. (Coming soon)',
             fr: 'Lubrifie la pompe à eau et inhibe la corrosion. (Bientôt)' } },
@@ -1154,7 +1154,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

@@ -874,15 +874,15 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-241', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
+  { sku: 'KB-241', img: 'electronic-contact-cleaner.png', name: { en: 'Electronic Contact Cleaner', fr: 'Nettoyant contacts électroniques' }, size: '300 ml', sizeBucket: '300ml',
     tags: ['contact', 'sensor'], form: 'aerosol', pack: 'single',
     diff: { en: 'Plastic-safe precision cleaner for connectors, relays and ECUs. Dielectric strength 35 kV/2.5 mm.',
             fr: 'Nettoyant de précision sûr pour plastiques : connecteurs, relais et calculateurs. Rigidité diélectrique 35 kV/2,5 mm.' } },
-  { sku: 'KB-280', name: { en: 'Sensor-Safe Cleaner', fr: 'Nettoyant sûr capteurs' }, size: '200 ml', sizeBucket: '200ml',
+  { sku: 'KB-280', img: 'sensor-safe-cleaner.png', name: { en: 'Sensor-Safe Cleaner', fr: 'Nettoyant sûr capteurs' }, size: '200 ml', sizeBucket: '200ml',
     tags: ['sensor', 'contact'], form: 'aerosol', pack: 'single',
     diff: { en: 'Targeted spray for O₂, MAF and ABS sensors. (Coming soon)',
             fr: 'Aérosol ciblé pour capteurs O₂, MAF et ABS. (Bientôt)' } },
-  { sku: 'KB-275', name: { en: 'Electrical Degreaser', fr: 'Dégraissant électrique' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-275', img: 'electrical-degreaser.png', name: { en: 'Electrical Degreaser', fr: 'Dégraissant électrique' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['degrease'], form: 'aerosol', pack: 'single',
     diff: { en: 'Heavy-duty degreaser for motors, terminals and connectors. (Coming soon)',
             fr: 'Dégraissant puissant pour moteurs, bornes et connecteurs. (Bientôt)' } },
@@ -1150,7 +1150,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

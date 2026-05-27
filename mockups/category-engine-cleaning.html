@@ -874,15 +874,15 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-250', name: { en: 'Engine Degreaser', fr: 'Dégraissant moteur' }, size: '500 ml', sizeBucket: '500ml',
+  { sku: 'KB-250', img: 'engine-degreaser.png', name: { en: 'Engine Degreaser', fr: 'Dégraissant moteur' }, size: '500 ml', sizeBucket: '500ml',
     tags: ['degrease'], form: 'aerosol', pack: 'single',
     diff: { en: 'Foaming degreaser that lifts baked-on grease from engine bays. (Coming soon)',
             fr: 'Dégraissant moussant qui décolle la graisse incrustée des compartiments moteur. (Bientôt)' } },
-  { sku: 'KB-810', name: { en: 'DPF Cleaner', fr: 'Nettoyant FAP' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-810', img: 'dpf-cleaner.png', name: { en: 'DPF Cleaner', fr: 'Nettoyant FAP' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['dpf'], form: 'liquid', pack: 'single',
     diff: { en: 'Regeneration aid that clears soot from diesel particulate filters. (Coming soon)',
             fr: 'Aide à la régénération qui élimine la suie des filtres à particules diesel. (Bientôt)' } },
-  { sku: 'KB-815', name: { en: 'EGR & Intake Cleaner', fr: 'Nettoyant EGR et admission' }, size: '400 ml', sizeBucket: '400ml',
+  { sku: 'KB-815', img: 'egr-intake-cleaner.png', name: { en: 'EGR & Intake Cleaner', fr: 'Nettoyant EGR et admission' }, size: '400 ml', sizeBucket: '400ml',
     tags: ['intake'], form: 'aerosol', pack: 'single',
     diff: { en: 'Dissolves carbon from EGR valves and intake manifolds. (Coming soon)',
             fr: 'Dissout la calamine des vannes EGR et des collecteurs d’admission. (Bientôt)' } },
@@ -1150,7 +1150,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

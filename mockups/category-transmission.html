@@ -874,15 +874,15 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
      - pack        → 'single' | 'case' | 'pallet'
 ═══════════════════════════════════════════════════════════ */
 const PRODUCTS = [
-  { sku: 'KB-445', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
+  { sku: 'KB-445', img: 'atf-multi-vehicle.png', name: { en: 'ATF Multi-Vehicle', fr: 'ATF multi-véhicules' }, size: '4 L', sizeBucket: '4l',
     tags: ['auto'], form: 'liquid', pack: 'single',
     diff: { en: 'Covers 30+ OEM specs incl. ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.',
             fr: 'Couvre plus de 30 normes OEM dont ZF Lifeguard 6/8, Aisin AW-1, MB 236.14.' } },
-  { sku: 'KB-460', name: { en: 'Transmission Conditioner', fr: 'Conditionneur de transmission' }, size: '235 ml', sizeBucket: '235ml',
+  { sku: 'KB-460', img: 'transmission-conditioner.png', name: { en: 'Transmission Conditioner', fr: 'Conditionneur de transmission' }, size: '235 ml', sizeBucket: '235ml',
     tags: ['auto'], form: 'liquid', pack: 'single',
     diff: { en: 'Restores smooth shifts and protects seals in automatic gearboxes. Expanding — full range coming soon.',
             fr: 'Restaure des passages doux et protège les joints des boîtes automatiques. Gamme complète à venir.' } },
-  { sku: 'KB-465', name: { en: 'CVT Transmission Enhancer', fr: 'Additif transmission CVT' }, size: '235 ml', sizeBucket: '235ml',
+  { sku: 'KB-465', img: 'cvt-transmission-enhancer.png', name: { en: 'CVT Transmission Enhancer', fr: 'Additif transmission CVT' }, size: '235 ml', sizeBucket: '235ml',
     tags: ['cvt'], form: 'liquid', pack: 'single',
     diff: { en: 'Reduces shudder and protects belt- and chain-type CVT units. Expanding — full range coming soon.',
             fr: 'Réduit les à-coups et protège les CVT à courroie et à chaîne. Gamme complète à venir.' } },
@@ -1149,7 +1149,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>

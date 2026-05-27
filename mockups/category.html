@@ -879,7 +879,7 @@ const PRODUCTS = [
     diff: { en: 'Non-chlorinated, high-pressure aerosol. Leaves no residue.',
             fr: 'Aérosol non chloré haute pression. Sans résidu.' } },
 
-  { sku: 'KB-B002B', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et pièces' },        size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-B002B', img: 'brake-parts-cleaner-case.png', name: { en: 'Brake & Parts Cleaner',     fr: 'Nettoyant freins et pièces' },        size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'case',
     diff: { en: '12-can case format for high-volume workshops.',
             fr: 'Caisse de 12 bombes pour ateliers à fort volume.' } },
@@ -904,22 +904,22 @@ const PRODUCTS = [
     diff: { en: 'Indoor-rated. Safe near hot brakes and welding bays.',
             fr: 'Classé intérieur. Sûr près des freins chauds et postes de soudure.' } },
 
-  { sku: 'KB-B010',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '5 L',   sizeBucket: 'bulk',
+  { sku: 'KB-B010', img: 'brake-cleaner-refill-5l.png',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '5 L',   sizeBucket: 'bulk',
     tags: ['nonchlor','bulk'],             voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: 'Bulk refill drum for parts-washer reservoirs.',
             fr: 'Bidon de recharge pour bacs de lavage de pièces.' } },
 
-  { sku: 'KB-B012',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '20 L',  sizeBucket: 'bulk',
+  { sku: 'KB-B012', img: 'brake-cleaner-refill-20l.png',  name: { en: 'Brake Cleaner Refill',      fr: 'Recharge nettoyant freins' },          size: '20 L',  sizeBucket: 'bulk',
     tags: ['nonchlor','bulk'],             voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: '20-litre drum for fleet workshops and high-throughput bays.',
             fr: 'Fût de 20 litres pour ateliers de flotte à haute cadence.' } },
 
-  { sku: 'KB-B015',  name: { en: 'Fleet Brake Cleaner',       fr: 'Nettoyant freins flotte' },            size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-B015', img: 'fleet-brake-cleaner-pallet.png',  name: { en: 'Fleet Brake Cleaner',       fr: 'Nettoyant freins flotte' },            size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'pallet',
     diff: { en: 'Pallet format. 96 cases per pallet for distributor stocking.',
             fr: 'Format palette. 96 caisses par palette pour distributeurs.' } },
 
-  { sku: 'KB-B020',  name: { en: 'CSA Brake Cleaner',         fr: 'Nettoyant freins CSA' },              size: '500 g', sizeBucket: '500g',
+  { sku: 'KB-B020', img: 'csa-brake-cleaner-case.png',  name: { en: 'CSA Brake Cleaner',         fr: 'Nettoyant freins CSA' },              size: '500 g', sizeBucket: '500g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'case',
     diff: { en: 'Bilingual CSA label. Canadian retail-channel SKU.',
             fr: 'Étiquette CSA bilingue. Réf. canal de détail canadien.' } },
@@ -929,7 +929,7 @@ const PRODUCTS = [
     diff: { en: 'Plastic-safe formulation. ABS sensors and modern coatings.',
             fr: 'Formule sûre plastiques. Capteurs ABS et revêtements modernes.' } },
 
-  { sku: 'KB-B030',  name: { en: 'Caliper Detail Cleaner',    fr: 'Nettoyant détail étrier' },           size: '400 g', sizeBucket: '400g',
+  { sku: 'KB-B030', img: 'caliper-detail-cleaner.png',  name: { en: 'Caliper Detail Cleaner',    fr: 'Nettoyant détail étrier' },           size: '400 g', sizeBucket: '400g',
     tags: ['nonchlor','aerosol'],          voc: 'low',  flam: 'flam',    pack: 'single',
     diff: { en: 'Surgical applicator nozzle for caliper rebuild kits.',
             fr: 'Buse applicatrice de précision pour kits d’étriers.' } },
@@ -1207,7 +1207,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="product-detail.html#${p.sku}">
         <div class="pcard__media">
-          <img src="../assets/products/brake-cleaner.png" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>
