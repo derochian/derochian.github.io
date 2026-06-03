@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kolben — Oil Stop-Leak KB-650 (Product Detail)</title>
+<link rel="icon" type="image/png" href="../assets/favicon-kolben.png" />
+<link rel="apple-touch-icon" href="../assets/favicon-kolben.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* ───────── TOKENS — locked brand palette ───────── */
+  :root {
+    --black: #000000;
+    --ink: #0a0a0a;
+    --red: #DE1F26;
+    --red-dark: #b41a20;
+    --gold: #FDCF09;
+    --white: #FFFFFF;
+    --offwhite: #f6f5f3;
+    --silver-50: #e9eaec;
+    --silver-100: #d3d5d9;
+    --silver-200: #b9bcc2;
+    --rule: rgba(0,0,0,.10);
+    --rule-soft: rgba(0,0,0,.06);
+    --muted: rgba(0,0,0,.60);
+    --on-black-primary: rgba(255,255,255,.85);
+    --on-black-muted:   rgba(255,255,255,.70);
+    --on-black-border:  rgba(255,255,255,.16);
+    --on-black-hover:   rgba(255,255,255,.12);
+    --ease: cubic-bezier(0.16, 1, 0.3, 1);
+    --brushed:
+      linear-gradient(180deg, rgba(255,255,255,.55) 0%, rgba(255,255,255,0) 26%, rgba(0,0,0,.05) 78%, rgba(0,0,0,.18) 100%),
+      repeating-linear-gradient(90deg,
+        rgba(255,255,255,.5) 0px, rgba(255,255,255,.5) 1px,
+        rgba(255,255,255,0) 2px, rgba(255,255,255,0) 3px,
+        rgba(0,0,0,.04) 4px, rgba(0,0,0,.04) 5px,
+        rgba(255,255,255,0) 6px, rgba(255,255,255,0) 9px),
+      linear-gradient(90deg, #c8cad0 0%, #e6e7ea 35%, #f2f3f5 50%, #e6e7ea 65%, #b9bcc2 100%);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--white); font-family: 'Inter', system-ui, sans-serif; color: var(--ink); }
+  img, svg { display: block; max-width: 100%; }
+  button, a { font: inherit; cursor: pointer; }
+  button { border: 0; background: none; color: inherit; }
+  a { text-decoration: none; color: inherit; }
+  .container { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+
+  /* ───────── UTILITY BAR ───────── */
+  .util { background: var(--black); color: var(--on-black-primary); font: 500 12px/1 'Jost'; letter-spacing: .04em; }
+  .util__inner { display: flex; align-items: center; justify-content: space-between; padding: 9px 40px; max-width: 1440px; margin: 0 auto; }
+  .util__left { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .util__item { display: inline-flex; align-items: center; gap: 8px; padding: 4px 0; }
+  .util__item svg { opacity: .8; }
+  .util__right { display: flex; align-items: center; gap: 18px; }
+  .util__lang { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid var(--on-black-border); border-radius: 2px; letter-spacing: .14em; font-size: 10.5px; cursor: pointer; transition: background 150ms, color 150ms, border-color 150ms; }
+  .util__lang:hover { background: var(--on-black-hover); }
+  .util__lang.active { background: var(--white); color: var(--black); border-color: var(--white); }
+  .util__country { display: inline-flex; align-items: center; gap: 6px; color: var(--on-black-muted); }
+
+  /* ───────── HEADER ───────── */
+  .header { background: var(--white); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 60; }
+  .header__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 16px 0; }
+  .header__logo img { height: 48px; }
+  .nav { display: flex; gap: 0; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; font: 600 13px/1 'Jost'; letter-spacing: .04em; color: var(--black); border-radius: 2px; white-space: nowrap; }
+  .nav__link:hover { background: rgba(0,0,0,.05); }
+  .nav__link.active { background: var(--black); color: var(--white); }
+
+  /* shared header dropdown */
+  .nav__caret { width: 8px; height: 5px; }
+
+  /* MEGA MENU */
+  .mega {
+    position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%) translateY(-4px);
+    width: 720px; background: var(--white);
+    border: 1px solid var(--rule); border-top: 3px solid var(--red);
+    box-shadow: 0 24px 60px rgba(0,0,0,.18);
+    padding: 24px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+    opacity: 0; pointer-events: none; transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  /* Invisible bridge across the 12px gap between the nav link and the menu
+     so the hover doesn't drop while the cursor is travelling down to the panel. */
+  .mega::before {
+    content: ''; position: absolute; left: 0; right: 0; top: -12px; height: 12px;
+  }
+  .nav__item:hover .mega,
+  .nav__item.is-open .mega { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+  .mega__col h5 {
+    font: 600 10px/1 'Jost'; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 14px;
+    padding-bottom: 10px; border-bottom: 1px solid var(--rule);
+  }
+  .mega__list { display: flex; flex-direction: column; gap: 2px; }
+  .mega__row {
+    display: grid; grid-template-columns: auto 1fr; gap: 10px;
+    padding: 8px 10px; border-radius: 2px;
+    align-items: start;
+  }
+  .mega__row:hover { background: var(--offwhite); }
+  .mega__row strong { font: 600 13px/1.2 'Jost'; color: var(--black); }
+  .mega__row span { font: 400 11px/1.4 'Inter'; color: var(--muted); }
+  .mega__icon {
+    width: 22px; height: 22px; flex-shrink: 0;
+    color: var(--red); margin-top: 1px;
+  }
+  .nav__caret { width: 8px; height: 5px; }
+  .header__actions { display: flex; align-items: center; gap: 10px; }
+
+  /* ───────── BUTTONS ───────── */
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; font: 600 12px/1 'Jost'; letter-spacing: .1em; text-transform: uppercase; border-radius: 2px; transition: all 220ms var(--ease); white-space: nowrap; }
+  .btn--sm { padding: 11px 18px; font-size: 11px; }
+  .btn--lg { padding: 17px 28px; font-size: 13px; }
+  .btn--block { width: 100%; justify-content: space-between; padding-left: 24px; padding-right: 22px; }
+  .btn--primary { background: var(--red); color: var(--white); }
+  .btn--primary:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(222,31,38,.32); }
+  .btn--dark { background: var(--black); color: var(--white); }
+  .btn--dark:hover { background: var(--red); }
+  .btn--ghost-dark { background: transparent; color: var(--black); border: 1.5px solid var(--black); }
+  .btn--ghost-dark:hover { background: var(--black); color: var(--white); }
+  .btn--ghost-light { background: transparent; color: var(--white); border: 1.5px solid var(--on-black-border); }
+  .btn--ghost-light:hover { background: var(--on-black-hover); border-color: var(--white); }
+  .btn .arrow { transition: transform 220ms var(--ease); display: inline-block; }
+  .btn:hover .arrow { transform: translateX(3px); }
+
+  /* ───────── BREADCRUMB ───────── */
+  .crumbs { background: var(--white); border-bottom: 1px solid var(--rule); }
+  .crumbs__inner { padding: 18px 0; display: flex; align-items: center; gap: 8px; font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
+  .crumbs__inner a { color: var(--muted); transition: color 150ms; }
+  .crumbs__inner a:hover { color: var(--black); }
+  .crumbs__inner .sep { color: rgba(0,0,0,.25); }
+  .crumbs__inner .current { color: var(--black); }
+
+  /* ═══════════════════════════════════════════════════════════
+     2. PRODUCT HEADER
+     ═══════════════════════════════════════════════════════════ */
+  .phead { padding: 56px 0 80px; background: var(--white); position: relative; overflow: hidden; }
+  .phead__grid {
+    position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,0,0,.025) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent 80%);
+  }
+  .phead__inner {
+    position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+  }
+
+  /* Showcase — brushed metal */
+  .gallery { display: flex; flex-direction: column; gap: 14px; }
+  .showcase {
+    position: relative; width: 100%; aspect-ratio: 4 / 5;
+    background: var(--brushed);
+    border-radius: 4px;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.6) inset,
+      0 -1px 0 rgba(0,0,0,.15) inset,
+      0 30px 60px -20px rgba(0,0,0,.25),
+      0 10px 30px -10px rgba(0,0,0,.15);
+    overflow: hidden;
+  }
+  .showcase__chevron {
+    position: absolute; top: 0; left: 0; right: 0; height: 6px; display: flex; z-index: 4;
+  }
+  .showcase__chevron div:nth-child(1) { flex: 1; background: var(--red); }
+  .showcase__chevron div:nth-child(2) { flex: 1; background: var(--gold); }
+  .showcase__featured {
+    position: absolute; top: 18px; right: 18px; z-index: 4;
+    display: inline-flex; align-items: center; gap: 7px;
+    padding: 7px 10px;
+    font: 600 10px/1 'JetBrains Mono';
+    letter-spacing: .18em; text-transform: uppercase;
+    color: var(--black); background: rgba(255,255,255,.78);
+    backdrop-filter: blur(6px); border: 1px solid var(--rule);
+  }
+  .showcase__featured-dot { width: 6px; height: 6px; background: var(--red); border-radius: 50%; animation: pulse 1.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
+  .showcase__bottle {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    height: 86%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 30px 30px rgba(0,0,0,.35));
+    transition: opacity 220ms var(--ease);
+  }
+  /* Black gold-SKU tag in the corner — matches homepage showcase */
+  .showcase__tag {
+    position: absolute; bottom: 18px; left: 18px; z-index: 4;
+    background: var(--black); color: var(--white);
+    padding: 11px 14px; min-width: 200px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .showcase__tag-sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--gold); }
+  .showcase__tag-name { font: 600 14px/1.1 'Jost'; letter-spacing: -0.005em; }
+
+  /* Thumbnail strip */
+  .thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .thumb {
+    aspect-ratio: 1; position: relative; overflow: hidden;
+    background: var(--brushed); border-radius: 2px;
+    transition: outline-color 200ms var(--ease);
+    outline: 1px solid var(--rule); outline-offset: -1px;
+  }
+  .thumb img {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    height: 78%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,.25));
+  }
+  .thumb::after {
+    content: ''; position: absolute; inset: 0;
+    background: rgba(0,0,0,.05); transition: opacity 200ms var(--ease); pointer-events: none;
+  }
+  .thumb:hover::after { opacity: 0; }
+  .thumb.is-active { outline: 2px solid var(--black); }
+  .thumb.is-active::after { opacity: 0; }
+  .thumb__label {
+    position: absolute; bottom: 6px; left: 8px; right: 8px;
+    font: 500 9px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--black); opacity: .65; z-index: 2;
+  }
+
+  /* Identity column (right) */
+  .ident__row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .ident__cat { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase; color: var(--red); }
+  .ident__sku-sep { width: 1px; height: 12px; background: var(--rule); }
+  .ident__sku { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); }
+  .ident__name {
+    font: 700 clamp(2.2rem, 4.2vw, 3.2rem)/1.02 'Jost';
+    letter-spacing: -0.025em; text-transform: none;
+    color: var(--black); margin: 0 0 14px;
+    text-wrap: balance;
+  }
+  .ident__lede { font: 400 17px/1.55 'Inter'; color: var(--muted); max-width: 540px; margin: 0 0 28px; }
+  .ident__certs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 32px; }
+  .cert {
+    display: inline-block; padding: 6px 11px;
+    border: 1px solid var(--rule); border-radius: 2px;
+    font: 500 11px/1 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* Pack-size selector */
+  .packs {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+    padding: 18px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 24px;
+  }
+  .packs__label {
+    grid-column: 1 / -1;
+    font: 600 10px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 4px;
+  }
+  .pack {
+    display: flex; flex-direction: column; gap: 6px; align-items: flex-start;
+    padding: 14px 16px;
+    background: var(--white); color: var(--black);
+    border: 1px solid var(--rule); border-radius: 2px;
+    transition: all 200ms var(--ease); cursor: pointer; text-align: left;
+  }
+  .pack:hover { border-color: rgba(0,0,0,.35); }
+  .pack.is-active { background: var(--black); color: var(--white); border-color: var(--black); }
+  .pack__size { font: 700 18px/1 'Jost'; letter-spacing: -0.01em; }
+  .pack__sku { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; opacity: .6; }
+  .pack.is-active .pack__sku { color: var(--gold); opacity: 1; }
+  .pack__form { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; opacity: .55; }
+  .pack.is-active .pack__form { opacity: .65; }
+
+  /* CTAs */
+  .ident__actions { display: flex; flex-direction: column; gap: 10px; }
+  .ident__note {
+    margin-top: 10px;
+    font: 500 11px/1.4 'JetBrains Mono';
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--muted);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .ident__note::before { content: ''; width: 5px; height: 5px; background: var(--red); border-radius: 50%; }
+
+  /* ═══════════════════════════════════════════════════════════
+     3. FEATURE / BENEFIT ICON ROW
+     ═══════════════════════════════════════════════════════════ */
+  .features {
+    background: var(--offwhite);
+    border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule);
+    padding: 40px 0;
+  }
+  .features__grid {
+    display: grid; grid-template-columns: repeat(6, 1fr); gap: 1px;
+    background: var(--rule); border: 1px solid var(--rule);
+  }
+  .feat {
+    background: var(--offwhite); padding: 24px 18px;
+    display: flex; flex-direction: column; gap: 14px; align-items: flex-start;
+    min-height: 130px;
+  }
+  .feat__icon {
+    width: 36px; height: 36px; color: var(--red);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .feat__label {
+    font: 600 11px/1.25 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--black); text-wrap: balance;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     4. APPLICATIONS + DIRECTIONS (two-column body)
+     ═══════════════════════════════════════════════════════════ */
+  .body { padding: 96px 0 80px; background: var(--white); }
+  .body__inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+  }
+  .module__eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--black);
+    margin-bottom: 18px;
+  }
+  .module__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .module__title {
+    font: 700 clamp(1.4rem, 2.2vw, 1.8rem)/1.05 'Jost';
+    letter-spacing: -0.02em; text-transform: uppercase;
+    color: var(--black); margin-bottom: 22px;
+  }
+
+  /* Applications list */
+  .applist { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); }
+  .applist li {
+    list-style: none;
+    padding: 14px 18px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font: 500 13px/1.3 'Jost'; letter-spacing: .02em; text-transform: uppercase;
+    color: var(--black);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .applist li:nth-child(2n) { border-right: 0; }
+  .applist li:nth-last-child(-n+2) { border-bottom: 0; }
+  .applist li::before {
+    content: ''; width: 6px; height: 6px; background: var(--red); flex-shrink: 0;
+  }
+  .compat-caution {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--offwhite);
+    border-left: 3px solid var(--black);
+    font: 400 13px/1.5 'Inter'; color: var(--ink);
+  }
+  .compat-caution b { font-family: 'Jost'; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-right: 6px; color: var(--black); }
+
+  /* Directions */
+  .steps { display: flex; flex-direction: column; gap: 16px; }
+  .step {
+    display: grid; grid-template-columns: 56px 1fr; gap: 18px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .step:last-child { border-bottom: 0; }
+  .step__n {
+    font: 700 36px/1 'Jost';
+    letter-spacing: -0.04em; color: var(--red);
+    font-variant-numeric: tabular-nums;
+  }
+  .step__body { display: flex; flex-direction: column; gap: 8px; padding-top: 4px; }
+  .step__t { font: 600 14px/1.25 'Jost'; letter-spacing: 0.02em; text-transform: uppercase; color: var(--black); }
+  .step__d { font: 400 14px/1.55 'Inter'; color: var(--muted); }
+  .step__dwell {
+    display: inline-flex; align-items: center; gap: 8px;
+    margin-top: 4px;
+    padding: 5px 9px; align-self: flex-start;
+    background: var(--black); color: var(--white);
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em; text-transform: uppercase;
+  }
+  .step__dwell::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+
+  /* ═══════════════════════════════════════════════════════════
+     5. SPECIFICATION TABLE
+     ═══════════════════════════════════════════════════════════ */
+  .specs { background: var(--offwhite); padding: 80px 0; border-top: 1px solid var(--rule); }
+  .specs__head { margin-bottom: 40px; max-width: 720px; }
+  .specs__sub { font: 400 15px/1.55 'Inter'; color: var(--muted); margin-top: 12px; }
+  .specs__grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .specblk {
+    background: var(--white); padding: 28px 26px;
+  }
+  .specblk__head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 14px; border-bottom: 1px solid var(--rule);
+    margin-bottom: 6px;
+  }
+  .specblk__h {
+    font: 700 12px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--black);
+  }
+  .specblk__no {
+    font: 500 10px/1 'JetBrains Mono'; letter-spacing: .18em;
+    color: var(--muted);
+  }
+  .specblk dl { display: grid; grid-template-columns: 1fr; gap: 0; }
+  .specblk dl > div {
+    display: grid; grid-template-columns: 1fr auto; gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--rule-soft);
+    align-items: baseline;
+  }
+  .specblk dl > div:last-child { border-bottom: 0; }
+  .specblk dt {
+    font: 500 11px/1.2 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+    text-wrap: balance;
+  }
+  .specblk dd {
+    font: 500 13px/1.3 'JetBrains Mono'; letter-spacing: .04em;
+    color: var(--black); text-align: right;
+    white-space: nowrap;
+  }
+  /* Inline override for unit glyphs (g, kg, ml) inside otherwise-cased mono runs.
+     Used as `500 <span class="lc">g</span>` — keeps units in their proper case
+     even if a parent rule wants to UPPERCASE the row. */
+  .lc { text-transform: none; }
+  .specblk dd.placeholder {
+    color: var(--muted); font-style: normal;
+    border: 1px dashed rgba(0,0,0,.2); padding: 4px 8px;
+    text-transform: uppercase; letter-spacing: .14em;
+    font-size: 10px;
+  }
+
+  /* Hazard / first-aid placeholder strip (NOT fabricated) */
+  .hazard {
+    margin-top: 24px;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    padding: 24px 28px;
+    display: grid; grid-template-columns: 200px 1fr; gap: 24px; align-items: start;
+  }
+  .hazard__label {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .hazard__label b {
+    font: 700 12px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--black);
+  }
+  .hazard__label span {
+    font: 500 10px/1.4 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hazard__rows { display: flex; flex-direction: column; gap: 10px; }
+  .hazard__row {
+    display: grid; grid-template-columns: 200px 1fr; gap: 18px; align-items: center;
+  }
+  .hazard__row dt {
+    font: 500 11px/1.2 'Jost'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .hazard__row dd {
+    font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--muted);
+    padding: 6px 10px;
+    border: 1px dashed rgba(0,0,0,.22);
+    align-self: start; justify-self: start;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     6. DOWNLOADS BLOCK
+     ═══════════════════════════════════════════════════════════ */
+  .downloads { padding: 80px 0; background: var(--white); border-top: 1px solid var(--rule); }
+  .dl-grid {
+    margin-top: 24px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+  .dl {
+    background: var(--white);
+    display: grid; grid-template-columns: 56px 1fr auto; gap: 18px;
+    padding: 22px 24px;
+    align-items: center;
+    transition: background 200ms var(--ease);
+    cursor: pointer;
+  }
+  .dl:hover { background: var(--offwhite); }
+  .dl:hover .dl__arrow { transform: translateY(2px); color: var(--red); }
+  .dl__icon {
+    width: 44px; height: 56px;
+    border: 1.5px solid var(--black);
+    color: var(--black);
+    display: flex; align-items: end; justify-content: center;
+    padding-bottom: 7px;
+    font: 700 9px/1 'JetBrains Mono'; letter-spacing: .14em;
+    position: relative;
+    background:
+      linear-gradient(135deg, transparent 0%, transparent 70%, var(--black) 70%, var(--black) 78%, transparent 78%) top right / 14px 14px no-repeat,
+      var(--white);
+  }
+  .dl__icon span { font-size: 8px; }
+  .dl__meta { display: flex; flex-direction: column; gap: 6px; }
+  .dl__title { font: 600 14px/1.25 'Jost'; letter-spacing: -0.005em; color: var(--black); }
+  .dl__sub { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .dl__arrow { color: var(--black); width: 22px; height: 22px; transition: transform 220ms var(--ease), color 220ms var(--ease); }
+
+  /* ═══════════════════════════════════════════════════════════
+     7. RELATED PRODUCTS
+     ═══════════════════════════════════════════════════════════ */
+  .related { padding: 80px 0 96px; background: var(--offwhite); border-top: 1px solid var(--rule); }
+  .related__head { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 32px; flex-wrap: wrap; }
+  .related__grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  .pcard {
+    background: var(--white); border: 1px solid var(--rule);
+    display: flex; flex-direction: column;
+    transition: all 220ms var(--ease); position: relative; cursor: pointer;
+  }
+  .pcard:hover { transform: translateY(-2px); border-color: rgba(0,0,0,.25); box-shadow: 0 12px 30px -10px rgba(0,0,0,.15); }
+  .pcard__media {
+    background: var(--white); height: 220px; position: relative;
+    display: flex; align-items: center; justify-content: center; overflow: hidden;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .pcard__media img {
+    height: 84%; width: auto; object-fit: contain;
+    filter: drop-shadow(0 18px 18px rgba(0,0,0,.18));
+    transition: transform 320ms var(--ease);
+  }
+  .pcard:hover .pcard__media img { transform: translateY(-3px) scale(1.02); }
+  .pcard__head { display: flex; align-items: baseline; justify-content: space-between; padding: 14px 18px 0; gap: 8px; }
+  .pcard__sku { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--muted); }
+  .pcard__cat { font: 500 10px/1 'JetBrains Mono'; letter-spacing: .16em; color: var(--red); text-transform: uppercase; }
+  .pcard__body { padding: 8px 18px 18px; display: flex; flex-direction: column; gap: 6px; }
+  .pcard__name { font: 700 16px/1.18 'Jost'; letter-spacing: -0.005em; color: var(--black); }
+  .pcard__size { font: 500 11px/1 'JetBrains Mono'; letter-spacing: .14em; color: var(--muted); text-transform: uppercase; }
+
+  /* ═══════════════════════════════════════════════════════════
+     8. DISTRIBUTOR CTA BAND + FOOTER
+     ═══════════════════════════════════════════════════════════ */
+  .dist {
+    background: var(--black); color: var(--white);
+    padding: 80px 0; position: relative; overflow: hidden;
+    border-top: 3px solid var(--red);
+  }
+  .dist::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 80% 60% at 80% 30%, black, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 80% 30%, black, transparent 70%);
+  }
+  .dist__inner { position: relative; display: grid; grid-template-columns: 1.6fr 1fr; gap: 64px; align-items: center; }
+  .dist__eyebrow { display: inline-flex; align-items: center; gap: 12px; font: 600 11px/1 'Jost'; letter-spacing: .22em; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+  .dist__eyebrow::before { content: ''; width: 36px; height: 3px; background: var(--red); }
+  .dist__title { font: 700 clamp(1.6rem, 3vw, 2.2rem)/1.04 'Jost'; letter-spacing: -0.03em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
+  .dist__title em { font-style: normal; color: var(--gold); }
+  .dist__sub { font: 400 16px/1.55 'Inter'; color: var(--on-black-primary); max-width: 560px; }
+  .dist__actions { display: flex; flex-direction: column; gap: 12px; justify-self: end; min-width: 280px; }
+  .dist__actions .btn { justify-content: space-between; padding-left: 24px; padding-right: 22px; }
+
+  .footer { background: #050505; color: var(--white); padding: 48px 0 24px; }
+  .footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap; }
+  .footer__brand { display: flex; align-items: center; gap: 14px; font: 500 12px/1 'Jost'; letter-spacing: .12em; text-transform: uppercase; color: var(--on-black-muted); }
+  .footer__brand img { height: 28px; filter: brightness(0) invert(1); }
+  .footer__copy { font: 400 12px/1.5 'Inter'; color: rgba(255,255,255,.45); }
+  .footer__tag { font: 600 11px/1 'Jost'; letter-spacing: .18em; text-transform: uppercase; color: var(--on-black-muted); }
+
+  /* ───────── RESPONSIVE ───────── */
+  @media (max-width: 1100px) {
+    .nav { display: none; }
+    .util__left { gap: 14px; }
+    .phead__inner { grid-template-columns: 1fr; gap: 48px; }
+    .gallery { max-width: 480px; }
+    .features__grid { grid-template-columns: repeat(3, 1fr); }
+    .body__inner { grid-template-columns: 1fr; gap: 48px; }
+    .specs__grid { grid-template-columns: 1fr; }
+    .dl-grid { grid-template-columns: 1fr; }
+    .related__grid { grid-template-columns: repeat(2, 1fr); }
+    .dist__inner { grid-template-columns: 1fr; }
+    .dist__actions { justify-self: start; }
+    .hazard { grid-template-columns: 1fr; gap: 16px; }
+    .hazard__row { grid-template-columns: 1fr; gap: 6px; }
+  }
+  @media (max-width: 640px) {
+    .container { padding: 0 22px; }
+    .util__inner { padding: 9px 22px; }
+    .features__grid { grid-template-columns: repeat(2, 1fr); }
+    .applist { grid-template-columns: 1fr; }
+    .applist li { border-right: 0 !important; }
+    .related__grid { grid-template-columns: 1fr; }
+    .thumbs { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+</style>
+  <link rel="stylesheet" href="footer.css">
+  <script defer src="footer-i18n.js"></script>
+<style id="kbn-mobile">
+/* ===== Kolben shared mobile menu + responsive reflow (additive, <=1100px) ===== */
+.kbn-burger{ display:none; }
+.kbn-shell{ position:fixed; inset:0; z-index:1000; overflow:hidden; pointer-events:none; }
+.kbn-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.5); opacity:0; pointer-events:none; transition:opacity .25s ease; }
+.kbn-backdrop.is-open{ opacity:1; pointer-events:auto; }
+.kbn-drawer{ position:absolute; top:0; right:0; height:100%; width:min(86vw,360px); background:#0a0a0a; color:#fff; pointer-events:auto; transform:translateX(100%); transition:transform .28s cubic-bezier(.16,1,.3,1); display:flex; flex-direction:column; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+.kbn-drawer.is-open{ transform:translateX(0); }
+.kbn-drawer__top{ display:flex; align-items:center; justify-content:space-between; padding:18px 20px; border-bottom:1px solid rgba(255,255,255,.12); }
+.kbn-drawer__brand{ font:600 11px/1 'Jost',sans-serif; letter-spacing:.18em; text-transform:uppercase; color:#FDCF09; }
+.kbn-drawer__close{ background:none; border:0; color:#fff; cursor:pointer; padding:4px; line-height:0; }
+.kbn-drawer__nav{ display:flex; flex-direction:column; padding:8px 0; }
+.kbn-link,.kbn-acc__btn{ display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%; text-align:left; background:none; border:0; cursor:pointer; padding:15px 22px; min-height:52px; color:#fff; font:600 15px/1.2 'Jost',sans-serif; letter-spacing:.02em; text-decoration:none; }
+.kbn-link:hover,.kbn-acc__btn:hover{ background:rgba(255,255,255,.06); }
+.kbn-link.is-current{ color:#FDCF09; }
+.kbn-acc__caret{ width:11px; height:7px; transition:transform .2s ease; flex:0 0 auto; }
+.kbn-acc.is-open .kbn-acc__caret{ transform:rotate(180deg); }
+.kbn-acc__panel{ display:none; flex-direction:column; padding:2px 0 8px; background:rgba(255,255,255,.03); }
+.kbn-acc.is-open .kbn-acc__panel{ display:flex; }
+.kbn-sublink{ display:flex; align-items:center; padding:12px 22px 12px 34px; min-height:46px; color:rgba(255,255,255,.78); font:400 14px/1.3 'Inter',sans-serif; text-decoration:none; }
+.kbn-sublink:hover{ color:#fff; }
+.kbn-drawer__util{ margin-top:auto; padding:16px 22px; border-top:1px solid rgba(255,255,255,.12); display:flex; flex-direction:column; gap:13px; }
+.kbn-util{ color:rgba(255,255,255,.72); font:400 13px/1.2 'Inter',sans-serif; text-decoration:none; }
+.kbn-util:hover{ color:#fff; }
+.kbn-lang{ display:flex; gap:6px; margin-top:2px; }
+.kbn-lang button{ background:none; border:1px solid rgba(255,255,255,.22); color:rgba(255,255,255,.72); padding:7px 13px; font:600 11px/1 'Jost',sans-serif; letter-spacing:.06em; cursor:pointer; border-radius:2px; }
+.kbn-lang button.is-active{ background:#fff; color:#0a0a0a; border-color:#fff; }
+.kbn-drawer__cta{ padding:16px 22px 26px; display:flex; flex-direction:column; gap:10px; }
+.kbn-drawer__cta .btn{ width:100%; justify-content:center; text-align:center; }
+.kbn-drawer__cta .btn--dark{ background:#fff; color:#0a0a0a; border-color:#fff; }
+body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
+
+@media (max-width:1100px){
+  .header .nav{ display:none !important; }
+  .header .header__actions{ display:none !important; }
+  .kbn-burger{ display:inline-flex; align-items:center; gap:8px; cursor:pointer; background:none; border:0; padding:11px 8px; min-height:48px; color:#0a0a0a; font:600 13px/1 'Jost',sans-serif; letter-spacing:.08em; text-transform:uppercase; -webkit-tap-highlight-color:transparent; }
+  .kbn-burger svg{ display:block; width:27px; height:27px; }
+  .cat-grid,.product-grid,.tile-grid,.industry-grid{ grid-template-columns:repeat(2,1fr) !important; }
+  .hero__inner{ grid-template-columns:1fr !important; gap:40px !important; }
+  .hero__inner > *{ min-width:0; }
+  .carousel{ min-width:0 !important; max-width:100% !important; overflow:hidden !important; }
+  .showcase,.showcase__caption{ max-width:100% !important; overflow:hidden !important; }
+  .hero{ padding:56px 0 56px !important; }
+  .hero__sub{ font-size:16px !important; }
+  .specs{ grid-template-columns:repeat(2,1fr) !important; row-gap:24px; }
+  .spec + .spec{ border-left:0 !important; padding-left:0 !important; }
+}
+@media (max-width:768px){
+  .util{ display:none !important; }
+  .section-head{ flex-direction:column; align-items:flex-start; gap:18px; }
+  /* comfortable, consistent edge gutters */
+  .container{ padding-left:24px !important; padding-right:24px !important; }
+  /* restore header vertical padding (inner pages' .container{padding:0 22px} zeroed it) so the top bar matches the homepage */
+  .header__inner{ padding-top:16px !important; padding-bottom:16px !important; }
+  /* finger-friendly touch targets */
+  .btn{ min-height:48px; padding:15px 24px; font-size:13px; }
+  .btn--lg{ min-height:54px; padding:17px 28px; font-size:14px; }
+  .chip{ min-height:44px; padding:12px 16px; font-size:12px; display:inline-flex; align-items:center; }
+  /* category/listing pages: stack the filter rail + grid, kill sticky overlap */
+  .body__inner{ grid-template-columns:1fr !important; gap:28px !important; }
+  .chips-bar,.rail{ position:static !important; top:auto !important; }
+  .nav__link,.cat,.tile,.ind-card,.pcard,.acard,.dl,.res-card{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
+  a,button{ -webkit-tap-highlight-color:rgba(222,31,38,.12); }
+}
+@media (max-width:600px){
+  .cat-grid,.product-grid,.tile-grid,.industry-grid{ grid-template-columns:1fr !important; }
+  .hero__title{ font-size:2.3rem !important; line-height:1.02 !important; }
+  .hero__actions{ flex-direction:column; }
+  .hero__actions .btn,.hero__actions a{ width:100%; justify-content:center; text-align:center; }
+  .specs{ row-gap:18px; }
+}
+@media (prefers-reduced-motion:reduce){
+  .kbn-drawer,.kbn-backdrop{ transition:none; }
+}
+</style>
+  <script src="product-pages.js"></script>
+</head>
+<body data-screen-label="Product · KB-650">
+<div class="util">
+  <div class="util__inner">
+    <div class="util__left">
+      <a class="util__item" href="tel:18005652361">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        1-800-KOLBEN-1
+      </a>
+      <a class="util__item" href="where-to-buy.html">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="util.distributor">Find a Distributor</span>
+      </a>
+      <a class="util__item" href="compliance-sds.html" data-i18n="util.compliance">Compliance &amp; SDS</a>
+    </div>
+    <div class="util__right">
+      <div class="util__country">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"/></svg>
+        Canada
+      </div>
+      <div style="display:flex; gap: 4px;" id="lang-switch">
+        <span class="util__lang active" data-lang="en">EN</span>
+        <span class="util__lang" data-lang="fr">FR</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header class="header">
+  <div class="container header__inner">
+    <a class="header__logo" href="homepage-v2.html"><img src="../assets/kolben-k.png" alt="Kolben — German Engineered" /></a>
+    <nav class="nav">
+      <div class="nav__item"><a class="nav__link" href="homepage-v2.html" data-i18n="nav.home">Home</a></div>
+      <div class="nav__item">
+        <a class="nav__link active" href="products-hub.html"><span data-i18n="nav.products">Products</span>
+          <svg class="nav__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+                <div class="mega">
+          <div class="mega__col">
+            <h5>Featured Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="category.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+  <path d="M11 12a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+  <path d="M7 12a5 5 0 0 1 5 -5"></path>
+  <path d="M12 17a5 5 0 0 0 5 -5"></path></svg><div><strong>Brake Cleaners</strong><br/><span>Fast-dry, non-chlorinated &amp; high-pressure formulations</span></div></a>
+              <a class="mega__row" href="category-engine-additives.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M3 10v6"></path>
+  <path d="M12 5v3"></path>
+  <path d="M10 5h4"></path>
+  <path d="M5 13h-2"></path>
+  <path d="M6 10h2l2 -2h3.382a1 1 0 0 1 .894 .553l1.448 2.894a1 1 0 0 0 .894 .553h1.382v-2h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2v-2h-3v2a1 1 0 0 1 -1 1h-3.465a1 1 0 0 1 -.832 -.445l-1.703 -2.555h-2v-6"></path></svg><div><strong>Engine Additives</strong><br/><span>Flushes, system cleaners, top-end conditioners</span></div></a>
+              <a class="mega__row" href="category-fuel-additives.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M14 11h1a2 2 0 0 1 2 2v3a1.5 1.5 0 0 0 3 0v-7l-3 -3"></path>
+  <path d="M4 20v-14a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v14"></path>
+  <path d="M3 20l12 0"></path>
+  <path d="M18 7v1a1 1 0 0 0 1 1h1"></path>
+  <path d="M4 11l10 0"></path></svg><div><strong>Fuel Additives</strong><br/><span>Diesel &amp; petrol injector cleaners, performance boosters</span></div></a>
+              <a class="mega__row" href="category-lubricants-grease.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546"></path></svg><div><strong>Lubricants &amp; Grease</strong><br/><span>Synthetic greases, penetrating oils, dry lubes</span></div></a>
+              <a class="mega__row" href="category-oils-fluids.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M7.278 4h9.444a2 2 0 0 1 1.841 1.22c.958 2.26 1.437 4.52 1.437 6.78c0 2.26 -.479 4.52 -1.437 6.78a2 2 0 0 1 -1.841 1.22h-9.444a2 2 0 0 1 -1.841 -1.22c-.958 -2.26 -1.437 -4.52 -1.437 -6.78c0 -2.26 .479 -4.52 1.437 -6.78a2 2 0 0 1 1.841 -1.22"></path>
+  <path d="M14 4c.667 2.667 1 5.333 1 8s-.333 5.333 -1 8"></path>
+  <path d="M10 4c-.667 2.667 -1 5.333 -1 8s.333 5.333 1 8"></path>
+  <path d="M4.5 16h15"></path>
+  <path d="M19.5 8h-15"></path></svg><div><strong>Oils &amp; Fluids</strong><br/><span>Engine, ATF, brake, coolant</span></div></a>
+              <a class="mega__row" href="category-maintenance-sprays.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 12a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v7a2 2 0 0 1 -2 2h-4a2 2 0 0 1 -2 -2l0 -7"></path>
+  <path d="M6 10v-4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4"></path>
+  <path d="M15 7h.01"></path>
+  <path d="M18 9h.01"></path>
+  <path d="M18 5h.01"></path>
+  <path d="M21 3h.01"></path>
+  <path d="M21 7h.01"></path>
+  <path d="M21 11h.01"></path>
+  <path d="M10 7h1"></path></svg><div><strong>Maintenance Sprays</strong><br/><span>Contact cleaner, throttle body, electronic</span></div></a>
+            </div>
+          </div>
+          <div class="mega__col">
+            <h5>All Categories</h5>
+            <div class="mega__list">
+              <a class="mega__row" href="category-transmission.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M10 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M17 6a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M3 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M10 18a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/> <path d="M5 8l0 8"/> <path d="M12 8l0 8"/> <path d="M19 8v2a2 2 0 0 1 -2 2h-12"/></svg><div><strong>Transmission</strong><br/><span>ATF, CVT fluid, conditioners</span></div></a>
+              <a class="mega__row" href="category-cooling-radiator.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 4l2 1l2 -1"/> <path d="M12 2v6.5l3 1.72"/> <path d="M17.928 6.268l.134 2.232l1.866 1.232"/> <path d="M20.66 7l-5.629 3.25l.01 3.458"/> <path d="M19.928 14.268l-1.866 1.232l-.134 2.232"/> <path d="M20.66 17l-5.629 -3.25l-2.99 1.738"/> <path d="M14 20l-2 -1l-2 1"/> <path d="M12 22v-6.5l-3 -1.72"/> <path d="M6.072 17.732l-.134 -2.232l-1.866 -1.232"/> <path d="M3.34 17l5.629 -3.25l-.01 -3.458"/> <path d="M4.072 9.732l1.866 -1.232l.134 -2.232"/> <path d="M3.34 7l5.629 3.25l2.99 -1.738"/></svg><div><strong>Cooling &amp; Radiator</strong><br/><span>Coolant, flush, stop-leak</span></div></a>
+              <a class="mega__row" href="category-electrical-contact.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 12l5 5l-1.5 1.5a3.536 3.536 0 1 1 -5 -5l1.5 -1.5"/> <path d="M17 12l-5 -5l1.5 -1.5a3.536 3.536 0 1 1 5 5l-1.5 1.5"/> <path d="M3 21l2.5 -2.5"/> <path d="M18.5 5.5l2.5 -2.5"/> <path d="M10 11l-2 2"/> <path d="M13 14l-2 2"/></svg><div><strong>Electrical &amp; Contact Cleaners</strong><br/><span>Contact cleaner, sensor-safe, degreaser</span></div></a>
+              <a class="mega__row" href="category-sealants-stop-leaks.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M18.963 14.938a6.54 6.54 0 0 0 -.899 -4.06l-4.89 -7.26c-.42 -.626 -1.287 -.804 -1.936 -.398a1.376 1.376 0 0 0 -.41 .397l-1.282 1.9m-1.625 2.415l-1.986 2.946c-1.695 2.837 -1.035 6.44 1.567 8.545c2.602 2.105 6.395 2.105 8.996 0a6.83 6.83 0 0 0 1.376 -1.499"></path>
+  <path d="M3 3l18 18"></path></svg><div><strong>Sealants &amp; Stop-Leaks</strong><br/><span>Cooling, oil &amp; transmission sealers</span></div></a>
+              <a class="mega__row" href="category-detailing-car-care.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M16 18a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m0 -12a2 2 0 0 1 2 2a2 2 0 0 1 2 -2a2 2 0 0 1 -2 -2a2 2 0 0 1 -2 2m-7 12a6 6 0 0 1 6 -6a6 6 0 0 1 -6 -6a6 6 0 0 1 -6 6a6 6 0 0 1 6 6"></path></svg><div><strong>Detailing &amp; Car Care</strong><br/><span>Detailing, interior, exterior</span></div></a>
+              <a class="mega__row" href="category-engine-cleaning.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9h1a1 1 0 0 1 1 1v2a4 4 0 0 1 -4 4h-1"/> <path d="M3 19h13v-10a2 2 0 0 0 -2 -2h-8a2 2 0 0 0 -2 2v10z"/> <path d="M5 7v-2a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v2"/> <path d="M16 11h1"/> <path d="M8 15l4 0"/></svg><div><strong>Engine Cleaning</strong><br/><span>Degreaser, DPF, intake cleaner</span></div></a>
+              <a class="mega__row" href="products-hub.html"><svg class="mega__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+  <path d="M4 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 5a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M4 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path>
+  <path d="M14 15a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1l0 -4"></path></svg><div><strong>All products A–Z</strong><br/><span>Browse the complete catalog</span></div></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nav__item"><a class="nav__link" href="industries.html" data-i18n="nav.industries">Industries</a></div>
+      <div class="nav__item"><a class="nav__link" href="about.html" data-i18n="nav.about">About</a></div>
+      <div class="nav__item"><a class="nav__link" href="news.html" data-i18n="nav.news">News</a></div>
+      <div class="nav__item"><a class="nav__link" href="contact.html" data-i18n="nav.contact">Contact</a></div>
+    </nav>
+    <button class="kbn-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="kbn-drawer"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg><span>Menu</span></button>
+    <div class="header__actions">
+      <a class="btn btn--dark btn--sm" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary btn--sm" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </div>
+</header>
+<div class="kbn-shell" id="kbn-shell">
+  <div class="kbn-backdrop" id="kbn-backdrop"></div>
+  <aside class="kbn-drawer" id="kbn-drawer" aria-hidden="true" aria-label="Site navigation">
+    <div class="kbn-drawer__top">
+      <span class="kbn-drawer__brand">Menu</span>
+      <button class="kbn-drawer__close" type="button" aria-label="Close menu"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <nav class="kbn-drawer__nav">
+      <a class="kbn-link" href="homepage-v2.html" data-kbn="homepage-v2.html"><span data-i18n="nav.home">Home</span></a>
+      <div class="kbn-acc">
+        <button class="kbn-acc__btn" type="button" aria-expanded="false"><span data-i18n="nav.products">Products</span><svg class="kbn-acc__caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <div class="kbn-acc__panel">
+          <a class="kbn-sublink" href="category.html">Brake Cleaners</a>
+          <a class="kbn-sublink" href="category-engine-additives.html">Engine Additives</a>
+          <a class="kbn-sublink" href="category-fuel-additives.html">Fuel Additives</a>
+          <a class="kbn-sublink" href="category-oils-fluids.html">Oils &amp; Fluids</a>
+          <a class="kbn-sublink" href="category-maintenance-sprays.html">Maintenance Sprays</a>
+          <a class="kbn-sublink" href="category-sealants-stop-leaks.html">Sealants &amp; Stop Leaks</a>
+          <a class="kbn-sublink" href="category-detailing-car-care.html">Car Care</a>
+          <a class="kbn-sublink" href="products-hub.html">All products A–Z</a>
+        </div>
+      </div>
+      <a class="kbn-link" href="industries.html" data-kbn="industries.html"><span data-i18n="nav.industries">Industries</span></a>
+      <a class="kbn-link" href="about.html" data-kbn="about.html"><span data-i18n="nav.about">About</span></a>
+      <a class="kbn-link" href="news.html" data-kbn="news.html"><span data-i18n="nav.news">News</span></a>
+      <a class="kbn-link" href="contact.html" data-kbn="contact.html"><span data-i18n="nav.contact">Contact</span></a>
+    </nav>
+    <div class="kbn-drawer__util">
+      <a class="kbn-util" href="where-to-buy.html"><span data-i18n="util.distributor">Find a Distributor</span></a>
+      <a class="kbn-util" href="compliance-sds.html"><span data-i18n="util.compliance">Compliance &amp; SDS</span></a>
+      <a class="kbn-util" href="tel:18005652361">1-800-KOLBEN-1</a>
+      <div class="kbn-lang"><button type="button" data-lang="en" class="is-active">EN</button><button type="button" data-lang="fr">FR</button></div>
+    </div>
+    <div class="kbn-drawer__cta">
+      <a class="btn btn--dark" href="where-to-buy.html" data-i18n="nav.whereToBuy">Where to Buy</a>
+      <a class="btn btn--primary" href="become-a-distributor.html" data-i18n="nav.distributor">Become a Distributor</a>
+    </div>
+  </aside>
+</div>
+
+
+<!-- ───────── BREADCRUMB ───────── -->
+<nav class="crumbs">
+  <div class="container crumbs__inner">
+    <a href="products-hub.html" data-i18n="crumbs.products">Products</a>
+    <span class="sep">/</span>
+    <a href="category-sealants-stop-leaks.html" data-i18n="crumbs.cat">Sealants &amp; Stop-Leaks</a>
+    <span class="sep">/</span>
+    <span class="current" data-i18n="crumbs.name">Oil Stop-Leak</span>
+  </div>
+</nav>
+
+<!-- ═══════════════ PRODUCT HEADER ═══════════════ -->
+<section class="phead">
+  <div class="phead__grid"></div>
+  <div class="container phead__inner">
+    <div class="gallery">
+      <div class="showcase">
+        <div class="showcase__chevron"><div></div><div></div></div>
+        <img id="hero-img" class="showcase__bottle" src="../assets/products/oil-stop-leak.png" alt="Oil Stop-Leak" />
+        <div class="showcase__tag">
+          <div class="showcase__tag-sku" id="showcase-sku">KB-650</div>
+          <div class="showcase__tag-name" data-i18n="phead.tagName">Oil Stop-Leak</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ident">
+      <div class="ident__row">
+        <span class="ident__cat" data-i18n="ident.cat">Sealants &amp; Stop-Leaks</span>
+        <span class="ident__sku-sep"></span>
+        <span class="ident__sku" id="ident-sku">SKU KB-650</span>
+      </div>
+      <h1 class="ident__name" data-i18n="ident.name">Oil Stop-Leak</h1>
+      <p class="ident__lede" data-i18n="ident.lede">Reconditions seals to stop engine oil leaks. (Coming soon)</p>
+
+      <div class="ident__certs">
+        <span class="cert">ISO 9001</span>
+        <span class="cert">IATF 16949</span>
+      </div>
+
+      <div class="packs" id="packs">
+        <div class="packs__label" data-i18n="packs.label">Format</div>
+        <button class="pack is-active" data-pack="main">
+          <div class="pack__size">300 ml</div>
+          <div class="pack__form" data-i18n="packs.form">Pour Can</div>
+          <div class="pack__sku">SKU KB-650</div>
+        </button>
+      </div>
+
+      <div class="ident__actions">
+        <a class="btn btn--primary btn--lg btn--block" href="become-a-distributor.html">
+          <span data-i18n="ident.cta1">Request Distributor Pricing</span><span class="arrow">→</span>
+        </a>
+        <a class="btn btn--ghost-dark btn--lg btn--block" href="compliance-sds.html">
+          <span data-i18n="ident.cta2">Download SDS (PDF)</span><span class="arrow">↓</span>
+        </a>
+      </div>
+      <div class="ident__note" data-i18n="ident.note">Trade-only pricing · 48-hour fulfilment from Mississauga &amp; Edmonton</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SPECIFICATION ═══════════════ -->
+<section class="specs"><div class="container">
+  <div class="specs__head">
+    <div class="module__eyebrow" data-i18n="spec.eyebrow">Trade Specification</div>
+    <h2 class="module__title" data-i18n="spec.title">Specifications</h2>
+    <p class="specs__sub" id="spec-sub" data-i18n="spec.sub">Product reference. Full technical &amp; regulatory data verbatim from the current Safety Data Sheet.</p>
+  </div>
+  <div class="specs__grid">
+    <div class="specblk">
+      <div class="specblk__head"><span class="specblk__h" data-i18n="spec.prod.h">Product</span><span class="specblk__no">01</span></div>
+      <dl>
+        <div><dt data-i18n="spec.t1">Net contents</dt><dd id="dd-net">300 ml</dd></div>
+        <div><dt data-i18n="spec.t2">Container</dt><dd data-i18n="spec.t2v">Pour Can / Bottle</dd></div>
+        <div><dt data-i18n="spec.cat">Category</dt><dd data-i18n="spec.catv">Sealants &amp; Stop-Leaks</dd></div>
+      </dl>
+    </div>
+    <div class="specblk">
+      <div class="specblk__head"><span class="specblk__h" data-i18n="spec.reg.h">Regulatory (Canada)</span><span class="specblk__no">02</span></div>
+      <dl>
+        <div><dt data-i18n="spec.r4">Country of origin</dt><dd data-i18n="spec.r4v">See Container</dd></div>
+        <div><dt data-i18n="spec.r5">Label</dt><dd>EN / FR</dd></div>
+        <div><dt data-i18n="spec.r6">Classification</dt><dd class="placeholder" data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+      </dl>
+    </div>
+  </div>
+
+  <!-- HAZARD — placeholders only, NOT fabricated. Verbatim from current SDS. -->
+  <div class="hazard">
+    <div class="hazard__label">
+      <b data-i18n="haz.lbl">Hazard &amp; First Aid</b>
+      <span data-i18n="haz.note">Wording sourced verbatim from current SDS — do not fabricate.</span>
+    </div>
+    <div class="hazard__rows">
+      <div class="hazard__row"><dt data-i18n="haz.r1">Signal word</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+      <div class="hazard__row"><dt data-i18n="haz.r2">GHS pictograms</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+      <div class="hazard__row"><dt data-i18n="haz.r3">Hazard (H) statements</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+      <div class="hazard__row"><dt data-i18n="haz.r4">Precautionary (P) statements</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+      <div class="hazard__row"><dt data-i18n="haz.r5">First-aid measures</dt><dd data-i18n="haz.placeholder">SDS Placeholder</dd></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ═══════════════ DOWNLOADS ═══════════════ -->
+<section class="downloads"><div class="container">
+  <div class="module__eyebrow" data-i18n="dl.eyebrow">Documentation</div>
+  <h2 class="module__title" data-i18n="dl.title">Downloads</h2>
+  <div class="dl-grid">
+    <a class="dl" href="compliance-sds.html"><div class="dl__icon">PDF<span></span></div>
+      <div class="dl__meta"><div class="dl__title" data-i18n="dl.sds.en">Safety Data Sheet — English</div>
+      <div class="dl__sub" id="dl-sds-en-sub">KB-650 · SDS · EN</div></div>
+      <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/><path d="M5 20h14"/></svg></a>
+    <a class="dl" href="compliance-sds.html"><div class="dl__icon">PDF<span></span></div>
+      <div class="dl__meta"><div class="dl__title" data-i18n="dl.sds.fr">Fiche de données de sécurité — Français</div>
+      <div class="dl__sub" id="dl-sds-fr-sub">KB-650 · FDS · FR</div></div>
+      <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/><path d="M5 20h14"/></svg></a>
+    <a class="dl" href="compliance-sds.html"><div class="dl__icon">PDF<span></span></div>
+      <div class="dl__meta"><div class="dl__title" data-i18n="dl.tds">Technical Data Sheet</div>
+      <div class="dl__sub" id="dl-tds-sub">KB-650 · TDS · EN / FR</div></div>
+      <svg class="dl__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v14m0 0l-5 -5m5 5l5 -5"/><path d="M5 20h14"/></svg></a>
+  </div>
+</div></section>
+
+<!-- ═══════════════ RELATED ═══════════════ -->
+<section class="related"><div class="container">
+  <div class="related__head"><div>
+    <div class="module__eyebrow" data-i18n="rel.eyebrow">Pair It With</div>
+    <h2 class="module__title" data-i18n="rel.title">Related Products</h2></div>
+    <a class="btn btn--ghost-dark" href="products-hub.html"><span data-i18n="rel.viewAll">View Full Catalogue</span><span class="arrow">→</span></a>
+  </div>
+  <div class="related__grid" id="related-grid"></div>
+</div></section>
+
+<!-- ═══════════════ DISTRIBUTOR CTA ═══════════════ -->
+<section class="dist is-light"><div class="container dist__inner">
+  <div><div class="dist__eyebrow" data-i18n="dist.eyebrow">Stock this product</div>
+  <h2 class="dist__title" data-i18n="dist.title">Add it to your <em>shelves.</em></h2></div>
+  <div class="dist__actions">
+    <a class="btn btn--primary btn--lg" href="become-a-distributor.html"><span data-i18n="dist.a">Become a Distributor</span><span class="arrow">→</span></a>
+    <a class="btn btn--ghost-light btn--lg" href="compliance-sds.html"><span data-i18n="dist.b">Download SDS</span><span class="arrow">↓</span></a>
+  </div>
+</div></section>
+<!-- ───────── SITE FOOTER (shared 3-tier) ───────── -->
+<footer class="site-footer">
+
+  <!-- TIER 1 — value band -->
+  <div class="ft-band">
+    <div class="container ft-band__grid">
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.compliance.h">Canadian compliance</p>
+          <p class="ft-band__p" data-ft-i18n="band.compliance.p">Every SKU ships with bilingual EN/FR labels and SDS — CCCR, HPR &amp; TDG baseline.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.bilingual.h">Bilingual service</p>
+          <p class="ft-band__p" data-ft-i18n="band.bilingual.p">Buyers, partners and technical questions reach a person — EN or FR — within one business day.</p>
+        </div>
+      </div>
+      <div class="ft-band__item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h13v9H3z"/><path d="M16 12h4l1 3v3h-5"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="17.5" cy="18.5" r="1.5"/></svg>
+        <div>
+          <p class="ft-band__h" data-ft-i18n="band.supply.h">Reliable supply</p>
+          <p class="ft-band__p" data-ft-i18n="band.supply.p">Two stocking warehouses and 48-hour shipping on stocking SKUs across Canada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 — navigation -->
+  <div class="ft-nav">
+    <div class="container ft-nav__grid">
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.products">Products</p>
+        <ul>
+          <li><a href="category.html" data-ft-i18n="link.brake">Brake Cleaners</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.engine">Engine Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.fuel">Fuel Additives</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.oils">Oils &amp; Fluids</a></li>
+          <li><a href="products-hub.html" data-ft-i18n="link.allProducts">All products →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.industries">Industries</p>
+        <ul>
+          <li><a href="industry-heavy-truck-fleet.html" data-ft-i18n="link.heavy">Heavy Truck &amp; Fleet</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.auto">Automotive Repair</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.agri">Agriculture</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.marine">Marine</a></li>
+          <li><a href="industries.html" data-ft-i18n="link.allInd">All industries →</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.company">Company</p>
+        <ul>
+          <li><a href="about.html" data-ft-i18n="link.about">About Kolben</a></li>
+          <li><a href="compliance-sds.html" data-ft-i18n="link.compliance">Compliance &amp; SDS</a></li>
+          <li><a href="where-to-buy.html" data-ft-i18n="link.where">Where to Buy</a></li>
+          <li><a href="become-a-distributor.html" data-ft-i18n="link.distributor">Become a Distributor</a></li>
+          <li><a href="contact.html" data-ft-i18n="link.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="ft-nav__head" data-ft-i18n="col.contact">Get in touch</p>
+        <div class="ft-nav__contact">
+          1200 Aerowood Drive<br>Mississauga, ON L4W 2S7<br>
+          1-800-KOLBEN-1<br><a href="mailto:info@kolbenchemicals.ca">info@kolbenchemicals.ca</a>
+        </div>
+        <div class="ft-nav__social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h2.5M14 8V6.5a2 2 0 0 1 2-2h1M14 8v12M14 12h3"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M11 9l4 3-4 3z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M7 7v.01M11 17v-4a2 2 0 0 1 4 0v4M11 17v-7"/></svg></a>
+        </div>
+        <form class="ft-nav__news" novalidate>
+          <input type="email" placeholder="Email for trade updates" aria-label="Email for trade updates" data-ft-i18n-placeholder="news.placeholder">
+          <button type="submit" data-ft-i18n="news.btn">Join</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 — bottom bar -->
+  <div class="ft-base">
+    <div class="container ft-base__inner">
+      <div class="ft-base__left">
+        <img src="../assets/kolben-logo.svg" alt="Kolben">
+        <span class="ft-base__copy" data-ft-i18n="base.copy">© 2026 Kolben Chemicals Canada.</span>
+        <span class="ft-base__certs">ISO 9001 · IATF 16949 · SGS</span>
+      </div>
+      <div class="ft-base__right">
+        <a href="#" data-ft-i18n="base.privacy">Privacy</a>
+        <a href="#" data-ft-i18n="base.terms">Terms</a>
+        <span class="ft-base__tag" data-ft-i18n="base.tag">Power · Performance · Kolben</span>
+      </div>
+    </div>
+  </div>
+
+</footer>
+<!-- ───────── /SITE FOOTER ───────── -->
+<script>
+const I18N = {
+  en: {
+    'util.distributor': 'Find a Distributor',
+    'util.compliance':  'Compliance & SDS',
+    'nav.home':         'Home',
+    'nav.products':     'Products',
+    'nav.industries':   'Industries',
+    'nav.about':        'About',
+    'nav.news':         'News',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Where to Buy',
+    'nav.distributor':  'Become a Distributor',
+
+    'crumbs.products':  'Products',
+    'crumbs.cat':       'Brake Cleaners',
+    'crumbs.name':      'Brake & Parts Cleaner',
+
+    'phead.inStock':    'In Distribution',
+    'phead.tagName':    'Brake & Parts Cleaner',
+
+    'ident.cat':        'Brake Cleaners',
+    'ident.sku':        'SKU B002A',
+    'ident.name':       'Brake & Parts Cleaner',
+    'ident.lede':       'Non-chlorinated, high-pressure aerosol. Strips brake dust, oil and grease from caliper and rotor assemblies, then evaporates cleanly without residue.',
+    'cert.csa':         'CSA Compliant',
+    'cert.nonchlor':    'Non-Chlorinated',
+
+    'packs.label':      'Select Pack Size',
+    'packs.aerosol':    'Aerosol Can',
+
+    'ident.cta1':       'Request Distributor Pricing',
+    'ident.cta2':       'Download SDS (PDF)',
+    'ident.note':       'Trade-only pricing · 48-hour fulfilment from Mississauga & Edmonton',
+
+    'feat.1':           'Non-Chlorinated',
+    'feat.2':           'Fast-Evaporating',
+    'feat.3':           'No Residue',
+    'feat.4':           'Plastic & Seal-Safe',
+    'feat.5':           'High-Pressure Jet',
+    'feat.6':           'CSA Bilingual Label',
+
+    'apps.eyebrow':     'Compatible Surfaces',
+    'apps.title':       'Applications',
+    'apps.1':           'Brake Discs & Rotors',
+    'apps.2':           'Drum Brake Assemblies',
+    'apps.3':           'Calipers & Caliper Pins',
+    'apps.4':           'Pad Backing Plates',
+    'apps.5':           'Clutch Components',
+    'apps.6':           'Pressure Plates',
+    'apps.7':           'Wheel Hubs & Bearings',
+    'apps.8':           'ABS Sensor Mounts',
+    'apps.cautionLbl':  'Compatibility:',
+    'apps.caution':     'not recommended on painted, rubber or polycarbonate surfaces. Test inconspicuous area before full application.',
+
+    'dir.eyebrow':      'Directions for Use',
+    'dir.title':        'How to Apply',
+    'dir.s1t':          'Shake & Prepare',
+    'dir.s1d':          'Shake the can vigorously for 30 seconds before use. Ensure the work area is well-ventilated and the brake assembly is cool to the touch.',
+    'dir.s2t':          'Spray at Distance',
+    'dir.s2d':          'Hold the can 20–30 cm from the surface. Apply in short bursts to remove brake dust, oil and grease from rotors, calipers and linings.',
+    'dir.s3t':          'Air-Dry, No Wipe',
+    'dir.s3d':          'Allow the surface to air-dry. No wipe-down required. Reapply on heavily contaminated assemblies.',
+    'dir.s3dwell':      'Typical dwell: < 60 s',
+
+    'spec.eyebrow':     'Trade Specification',
+    'spec.title':       'Specifications',
+    'spec.sub':         'Representative values for SKU B002A (500 g aerosol). Final figures verbatim from the current Safety Data Sheet.',
+    'spec.tech.h':      'Technical',
+    'spec.t1':'Net contents','spec.t2':'Container','spec.t2v':'Steel Aerosol',
+    'spec.t3':'Propellant','spec.t4':'Appearance','spec.t4v':'Clear, Colourless',
+    'spec.t5':'Flash point','spec.t6':'UN no. / class','spec.t7':'Shelf life','spec.t7v':'36 Months',
+    'spec.reg.h':       'Regulatory (Canada)',
+    'spec.r1':'VOC, % by weight','spec.r2':'VOC, g/L',
+    'spec.r3':'Date-code location','spec.r3v':'Base of Can',
+    'spec.r4':'Country of origin','spec.r4v':'See Container',
+    'spec.r5':'Label','spec.r6':'WHMIS 2015','spec.r6v':'Conforms',
+    'spec.r7':'CCCR, 2001','spec.r7v':'Conforms',
+    'spec.log.h':       'Logistics',
+    'spec.l1':'Units per case','spec.l2':'Cases per pallet','spec.l3':'Pallet count',
+    'spec.l4':'Case dim. (L×W×H)','spec.l5':'Case weight','spec.l6':'UPC (unit)','spec.l7':'Case part no.',
+
+    'haz.lbl':          'Hazard & First Aid',
+    'haz.note':         'Wording sourced verbatim from current SDS — do not fabricate.',
+    'haz.r1':           'Signal word',
+    'haz.r2':           'GHS pictograms',
+    'haz.r3':           'Hazard (H) statements',
+    'haz.r4':           'Precautionary (P) statements',
+    'haz.r5':           'First-aid measures',
+    'haz.placeholder':  'SDS Placeholder',
+
+    'dl.eyebrow':       'Documentation',
+    'dl.title':         'Downloads',
+    'dl.sds.en':        'Safety Data Sheet — English',
+    'dl.sds.fr':        'Fiche de données de sécurité — Français',
+    'dl.tds':           'Technical Data Sheet',
+
+    'rel.eyebrow':      'Pair It With',
+    'rel.title':        'Related Products',
+    'rel.viewAll':      'View Full Catalogue',
+
+    'dist.eyebrow':     'Stock this product',
+    'dist.title':       'Add it to your <em>shelves.</em>',
+    'dist.a':           'Become a Distributor',
+    'dist.b':           'Download SDS',
+
+    'footer.tag':       'Power · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Engineered in Hannover.',
+    'footer.tagline':   'German Precision · Engine Perfection',
+  },
+
+  fr: {
+    'util.distributor': 'Trouver un distributeur',
+    'util.compliance':  'Conformité et FDS',
+    'nav.home':         'Accueil',
+    'nav.products':     'Produits',
+    'nav.industries':   'Industries',
+    'nav.about':        'À propos',
+    'nav.news':         'Actualités',
+    'nav.contact':      'Contact',
+    'nav.whereToBuy':   'Où acheter',
+    'nav.distributor':  'Devenir distributeur',
+
+    'crumbs.products':  'Produits',
+    'crumbs.cat':       'Nettoyants freins',
+    'crumbs.name':      'Nettoyant freins et pièces',
+
+    'phead.inStock':    'En distribution',
+    'phead.tagName':    'Nettoyant freins et pièces',
+
+    'ident.cat':        'Nettoyants freins',
+    'ident.sku':        'RÉF B002A',
+    'ident.name':       'Nettoyant freins et pièces',
+    'ident.lede':       'Aérosol haute pression non chloré. Élimine la poussière de freins, l’huile et la graisse des étriers et disques, puis s’évapore proprement sans laisser de résidu.',
+    'cert.csa':         'Conforme CSA',
+    'cert.nonchlor':    'Non chloré',
+
+    'packs.label':      'Choisir le format',
+    'packs.aerosol':    'Aérosol',
+
+    'ident.cta1':       'Demander un tarif distributeur',
+    'ident.cta2':       'Télécharger la FDS (PDF)',
+    'ident.note':       'Tarif réservé au commerce · Livraison en 48 h depuis Mississauga et Edmonton',
+
+    'feat.1':           'Non chloré',
+    'feat.2':           'Évaporation rapide',
+    'feat.3':           'Sans résidu',
+    'feat.4':           'Sûr plastiques et joints',
+    'feat.5':           'Jet haute pression',
+    'feat.6':           'Étiquette CSA bilingue',
+
+    'apps.eyebrow':     'Surfaces compatibles',
+    'apps.title':       'Applications',
+    'apps.1':           'Disques et rotors de frein',
+    'apps.2':           'Tambours de frein',
+    'apps.3':           'Étriers et axes d’étrier',
+    'apps.4':           'Plaques support de plaquette',
+    'apps.5':           'Composants d’embrayage',
+    'apps.6':           'Plateaux de pression',
+    'apps.7':           'Moyeux et roulements',
+    'apps.8':           'Supports de capteur ABS',
+    'apps.cautionLbl':  'Compatibilité :',
+    'apps.caution':     'déconseillé sur surfaces peintes, en caoutchouc ou en polycarbonate. Tester une zone discrète avant application complète.',
+
+    'dir.eyebrow':      'Mode d’emploi',
+    'dir.title':        'Comment appliquer',
+    'dir.s1t':          'Agiter et préparer',
+    'dir.s1d':          'Agiter vigoureusement la bombe pendant 30 secondes avant utilisation. Veiller à ce que la zone soit bien ventilée et que le système de frein soit froid au toucher.',
+    'dir.s2t':          'Pulvériser à distance',
+    'dir.s2d':          'Tenir la bombe à 20–30 cm de la surface. Appliquer en brèves projections pour décoller la poussière de freins, l’huile et la graisse des rotors, étriers et garnitures.',
+    'dir.s3t':          'Laisser sécher à l’air',
+    'dir.s3d':          'Laisser sécher à l’air libre. Aucun essuyage requis. Réappliquer sur les pièces très encrassées.',
+    'dir.s3dwell':      'Temps de séchage typique : < 60 s',
+
+    'spec.eyebrow':     'Spécification commerciale',
+    'spec.title':       'Spécifications',
+    'spec.sub':         'Valeurs représentatives pour la réf. B002A (aérosol 500 g). Données finales reprises verbatim de la fiche de données de sécurité en vigueur.',
+    'spec.tech.h':      'Technique',
+    'spec.t1':'Contenu net','spec.t2':'Contenant','spec.t2v':'Aérosol acier',
+    'spec.t3':'Gaz propulseur','spec.t4':'Aspect','spec.t4v':'Limpide, incolore',
+    'spec.t5':'Point d’éclair','spec.t6':'N° ONU / classe','spec.t7':'Durée de conservation','spec.t7v':'36 mois',
+    'spec.reg.h':       'Réglementaire (Canada)',
+    'spec.r1':'COV, % en poids','spec.r2':'COV, g/L',
+    'spec.r3':'Emplacement du code-date','spec.r3v':'Fond de la bombe',
+    'spec.r4':'Pays d’origine','spec.r4v':'Voir contenant',
+    'spec.r5':'Étiquetage','spec.r6':'SIMDUT 2015','spec.r6v':'Conforme',
+    'spec.r7':'RPCC, 2001','spec.r7v':'Conforme',
+    'spec.log.h':       'Logistique',
+    'spec.l1':'Unités par caisse','spec.l2':'Caisses par palette','spec.l3':'Total par palette',
+    'spec.l4':'Dim. caisse (L×l×H)','spec.l5':'Poids caisse','spec.l6':'CUP (unité)','spec.l7':'Réf. caisse',
+
+    'haz.lbl':          'Dangers et premiers soins',
+    'haz.note':         'Texte repris verbatim de la FDS en vigueur — ne pas inventer.',
+    'haz.r1':           'Mention d’avertissement',
+    'haz.r2':           'Pictogrammes SGH',
+    'haz.r3':           'Mentions de danger (H)',
+    'haz.r4':           'Conseils de prudence (P)',
+    'haz.r5':           'Premiers soins',
+    'haz.placeholder':  'Repère FDS',
+
+    'dl.eyebrow':       'Documentation',
+    'dl.title':         'Téléchargements',
+    'dl.sds.en':        'Safety Data Sheet — English',
+    'dl.sds.fr':        'Fiche de données de sécurité — Français',
+    'dl.tds':           'Fiche technique produit',
+
+    'rel.eyebrow':      'À associer avec',
+    'rel.title':        'Produits associés',
+    'rel.viewAll':      'Voir tout le catalogue',
+
+    'dist.eyebrow':     'Stocker ce produit',
+    'dist.title':       'Ajoutez-le à vos <em>tablettes.</em>',
+    'dist.a':           'Devenir distributeur',
+    'dist.b':           'Télécharger la FDS',
+
+    'footer.tag':       'Puissance · Performance · Kolben',
+    'footer.copy':      '© 2026 Kolben Chemicals Canada. Conçu à Hanovre.',
+    'footer.tagline':   'Précision allemande · Perfection du moteur',
+  },
+};
+const OVERRIDE = {
+  "en": {
+    "crumbs.cat": "Sealants & Stop-Leaks",
+    "crumbs.name": "Oil Stop-Leak",
+    "phead.tagName": "Oil Stop-Leak",
+    "ident.cat": "Sealants & Stop-Leaks",
+    "ident.name": "Oil Stop-Leak",
+    "ident.lede": "Reconditions seals to stop engine oil leaks. (Coming soon)",
+    "packs.label": "Format",
+    "packs.form": "Pour Can",
+    "spec.prod.h": "Product",
+    "spec.cat": "Category",
+    "spec.catv": "Sealants & Stop-Leaks",
+    "spec.t2v": "Pour Can / Bottle",
+    "spec.sub": "Product reference. Full technical & regulatory data verbatim from the current Safety Data Sheet.",
+    "spec.r6": "Classification"
+  },
+  "fr": {
+    "crumbs.cat": "Mastics et anti-fuites",
+    "crumbs.name": "Anti-fuite d’huile",
+    "phead.tagName": "Anti-fuite d’huile",
+    "ident.cat": "Mastics et anti-fuites",
+    "ident.name": "Anti-fuite d’huile",
+    "ident.lede": "Régénère les joints pour stopper les fuites d’huile moteur. (Bientôt)",
+    "packs.label": "Format",
+    "packs.form": "Contenant",
+    "spec.prod.h": "Produit",
+    "spec.cat": "Catégorie",
+    "spec.catv": "Mastics et anti-fuites",
+    "spec.t2v": "Bidon / flacon",
+    "spec.sub": "Référence produit. Données techniques et réglementaires complètes reprises verbatim de la FDS en vigueur.",
+    "spec.r6": "Classification"
+  }
+};
+['en','fr'].forEach(function(l){ Object.assign(I18N[l], OVERRIDE[l]); });
+
+const RELATED = [
+  { sku:'KB-655', img:'transmission-stop-leak.png', page:'transmission-stop-leak.html', cat:{en:'Sealants & Stop-Leaks',fr:'Mastics et anti-fuites'}, name:{en:'Transmission Stop-Leak',fr:'Anti-fuite transmission'}, size:'300 ml' }
+];
+
+function renderRelated(lang){
+  const grid = document.getElementById('related-grid'); if(!grid) return;
+  grid.innerHTML = RELATED.map(function(p){ return `
+    <a class="pcard" href="${p.page}">
+      <div class="pcard__media"><img src="../assets/products/${p.img}" alt="${p.name[lang]}" /></div>
+      <div class="pcard__head"><span class="pcard__sku">${p.sku}</span><span class="pcard__cat">${p.cat[lang]}</span></div>
+      <div class="pcard__body"><div class="pcard__name">${p.name[lang]}</div><div class="pcard__size">${p.size}</div></div>
+    </a>`; }).join('');
+}
+
+function applyI18n(lang){
+  const t = I18N[lang];
+  document.documentElement.setAttribute('lang', lang === 'fr' ? 'fr-CA' : 'en');
+  document.querySelectorAll('[data-i18n]').forEach(function(el){
+    const k = el.getAttribute('data-i18n'); if (t[k] !== undefined) el.innerHTML = t[k];
+  });
+  document.querySelectorAll('#lang-switch .util__lang').forEach(function(s){
+    s.classList.toggle('active', s.dataset.lang === lang);
+  });
+}
+
+let state = { lang: 'en' };
+try { state.lang = localStorage.getItem('kolbenLang') || 'en'; } catch(e) {}
+
+function rerender(){ applyI18n(state.lang); renderRelated(state.lang); }
+
+document.getElementById('lang-switch').addEventListener('click', function(e){
+  const t = e.target.closest('[data-lang]'); if(!t) return;
+  state.lang = t.dataset.lang;
+  try { localStorage.setItem('kolbenLang', state.lang); } catch(e) {}
+  rerender();
+});
+
+rerender();
+</script>
+<script>
+  /* Mega-menu hover with grace period.
+     Pure CSS :hover drops the menu the instant the cursor exits the nav-link's
+     bounding box, which makes diagonal/lateral travel toward the panel feel
+     fragile. Here we add `.is-open` on mouseenter and clear it on a delayed
+     mouseleave — the timer is cancelled if the cursor re-enters either the
+     nav__item OR the .mega within ~220ms, so cursor paths in any direction
+     are forgiving. CSS still honours :hover so the menu also works without JS. */
+  (function () {
+    document.querySelectorAll('.nav__item').forEach(function (item) {
+      const mega = item.querySelector('.mega');
+      if (!mega) return; // only items WITH a mega panel need grace handling
+      let closeTimer = null;
+      const open = function () {
+        if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; }
+        item.classList.add('is-open');
+      };
+      const close = function () {
+        closeTimer = setTimeout(function () {
+          item.classList.remove('is-open');
+          closeTimer = null;
+        }, 220);
+      };
+      item.addEventListener('mouseenter', open);
+      item.addEventListener('mouseleave', close);
+      mega.addEventListener('mouseenter', open);
+      mega.addEventListener('mouseleave', close);
+    });
+  })();
+</script>
+<script id="kbn-mobile-js">
+(function(){
+  var burger=document.querySelector('.kbn-burger'),
+      drawer=document.getElementById('kbn-drawer'),
+      backdrop=document.getElementById('kbn-backdrop');
+  if(!burger||!drawer||!backdrop) return;
+  var closeBtn=drawer.querySelector('.kbn-drawer__close'), lastFocus=null, scrollLockY=0;
+  function open(){ lastFocus=document.activeElement; scrollLockY=window.pageYOffset||document.documentElement.scrollTop||0; document.body.style.top=(-scrollLockY)+'px'; document.body.classList.add('kbn-locked'); drawer.classList.add('is-open'); backdrop.classList.add('is-open'); drawer.setAttribute('aria-hidden','false'); burger.setAttribute('aria-expanded','true'); if(closeBtn) closeBtn.focus({preventScroll:true}); }
+  function close(){ drawer.classList.remove('is-open'); backdrop.classList.remove('is-open'); drawer.setAttribute('aria-hidden','true'); burger.setAttribute('aria-expanded','false'); document.body.classList.remove('kbn-locked'); document.body.style.top=''; window.scrollTo(0,scrollLockY); if(lastFocus&&lastFocus.focus){ try{ lastFocus.focus({preventScroll:true}); }catch(e){ lastFocus.focus(); } } }
+  burger.addEventListener('click',open);
+  if(closeBtn) closeBtn.addEventListener('click',close);
+  backdrop.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&drawer.classList.contains('is-open')) close(); });
+  drawer.querySelectorAll('a[href]').forEach(function(a){ a.addEventListener('click',close); });
+  drawer.querySelectorAll('.kbn-acc__btn').forEach(function(btn){ btn.addEventListener('click',function(){ var acc=btn.parentElement, isOpen=acc.classList.toggle('is-open'); btn.setAttribute('aria-expanded',isOpen?'true':'false'); drawer.querySelectorAll('.kbn-acc').forEach(function(o){ if(o!==acc){ o.classList.remove('is-open'); var b=o.querySelector('.kbn-acc__btn'); if(b) b.setAttribute('aria-expanded','false'); } }); }); });
+  drawer.addEventListener('keydown',function(e){ if(e.key!=='Tab') return; var f=drawer.querySelectorAll('a[href],button:not([disabled])'); if(!f.length) return; var first=f[0], last=f[f.length-1]; if(e.shiftKey&&document.activeElement===first){ e.preventDefault(); last.focus(); } else if(!e.shiftKey&&document.activeElement===last){ e.preventDefault(); first.focus(); } });
+  var here=(location.pathname.split('/').pop()||'homepage-v2.html'); if(!here) here='homepage-v2.html';
+  drawer.querySelectorAll('.kbn-link[data-kbn]').forEach(function(a){ if(a.getAttribute('data-kbn')===here) a.classList.add('is-current'); });
+  drawer.querySelectorAll('.kbn-lang button').forEach(function(b){ b.addEventListener('click',function(e){ e.stopPropagation(); var lang=b.getAttribute('data-lang'); var sw=Array.prototype.find.call(document.querySelectorAll('.util__lang'),function(el){return el.textContent.trim().toLowerCase()===lang;}); if(sw) sw.click(); drawer.querySelectorAll('.kbn-lang button').forEach(function(x){ x.classList.toggle('is-active',x===b); }); }); });
+  window.addEventListener('resize',function(){ if(window.innerWidth>1100&&drawer.classList.contains('is-open')) close(); });
+})();
+</script>
+
+</body>
+</html>

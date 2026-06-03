@@ -125,13 +125,13 @@
     // ── Carousel captions ───────────────────────────────────────────
     "KB-210 · MAINTENANCE":                                                   "KB-210 · ENTRETIEN",
     "Brake Cleaner":                                                          "Nettoyant à freins",
-    "400 g · AEROSOL · GERMAN ENGINEERED":                                              "400 g · AÉROSOL · ALLEMANDE",
+    "400 g · AEROSOL":                                              "400 g · AÉROSOL",
     "KB-340 · ENGINE":                                                        "KB-340 · MOTEUR",
     "Engine Flush":                                                           "Rinçage de moteur",
-    "300 mL · LIQUID · GERMAN ENGINEERED":                                              "300 mL · LIQUIDE · ALLEMANDE",
+    "300 mL · LIQUID":                                              "300 mL · LIQUIDE",
     "KB-512 · FUEL":                                                          "KB-512 · CARBURANT",
     "Diesel Injector Cleaner":                                                "Nettoyant d’injecteurs diesel",
-    "250 mL · LIQUID · GERMAN ENGINEERED":                                              "250 mL · LIQUIDE · ALLEMANDE",
+    "250 mL · LIQUID":                                              "250 mL · LIQUIDE",
     "KB-088 · LUBE":                                                          "KB-088 · LUBRIFIANT",
     "Synthetic Chain Lube":                                                   "Lubrifiant synthétique pour chaîne"
   };

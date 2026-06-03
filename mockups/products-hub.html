@@ -398,6 +398,7 @@ body.kbn-locked{ position:fixed; left:0; right:0; width:100%; overflow:hidden; }
   .kbn-drawer,.kbn-backdrop{ transition:none; }
 }
 </style>
+  <script src="product-pages.js"></script>
 </head>
 <body data-screen-label="01 Products Hub">
 
@@ -1183,7 +1184,7 @@ function renderProducts(lang, filter) {
   }
 
   grid.innerHTML = list.map(p => `
-    <a class="pcard" href="#${p.sku}">
+    <a class="pcard" href="${(window.KBN_PAGE&&window.KBN_PAGE[p.sku])||('product-detail.html#'+p.sku)}">
       <div class="pcard__media">
         <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[lang]}" />
       </div>
