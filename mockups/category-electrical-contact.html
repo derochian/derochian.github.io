@@ -1151,7 +1151,7 @@ function renderGrid() {
     return `
       <a class="pcard" href="${(window.KBN_PAGE&&window.KBN_PAGE[p.sku])||('product-detail.html#'+p.sku)}">
         <div class="pcard__media">
-          <img src="../assets/products/${p.img || 'brake-cleaner.png'}" alt="${p.name[state.lang]}" />
+          <img src="../assets/products/${p.img || 'brake-cleaner.png?v=2'}" alt="${p.name[state.lang]}" />
         </div>
         <div class="pcard__head">
           <span class="pcard__sku">${p.sku}</span>
