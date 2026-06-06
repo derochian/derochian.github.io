@@ -76,7 +76,7 @@
 
     // ── Ticker ──────────────────────────────────────────────────────
     "German Engineered":                                                      "Ingénierie allemande",
-    "OEM Certified":                                                          "Certifié OEM",
+    "OEM-Grade":                                                              "De qualité OEM",
     "Canadian Distribution":                                                  "Distribution canadienne",
     "SGS Verified":                                                           "Vérifié SGS",
     "Power · Performance · Kolben":                                           "Puissance · Performance · Kolben",

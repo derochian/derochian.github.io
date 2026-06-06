@@ -1,0 +1,29 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Secrets / environment (never commit)
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# Claude Design / AI design-tool export artifacts — do not publish on the live site
+SKILL.md
+Home.jsx
+*.thumbnail
+ui_kits/
+preview/
+screenshots/
+uploads/
